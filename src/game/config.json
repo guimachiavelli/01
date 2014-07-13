@@ -1,0 +1,14 @@
+{
+	"info": {
+		"title" : "Bavarian Daddy",
+	}
+
+	"setup" : {
+		"commands" : [
+			"go",
+			"talk",
+			"fuck"
+		]
+	}
+
+}

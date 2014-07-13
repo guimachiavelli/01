@@ -1,0 +1,27 @@
+{
+  "name": "bavarian-daddy",
+  "version": "0.0.1",
+  "private" : true,
+  "devDependencies": {
+    "browserify": "^4.2.0",
+    "browserify-shim": "^3.6.0",
+    "gulp": "^3.8.6",
+    "gulp-concat": "^2.3.3",
+    "gulp-rename": "^1.2.0",
+    "reactify": "^0.13.1",
+    "vinyl-source-stream": "^0.1.1"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "envify": "^1.2.1",
+    "react": "^0.10.0"
+  },
+  "browserify": {
+    "debug": true,
+    "transform": [
+      "reactify"
+    ]
+  }
+}
