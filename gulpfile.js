@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-	react = require('gulp-react'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
 	source = require('vinyl-source-stream'),
