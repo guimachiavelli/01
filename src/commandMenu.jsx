@@ -6,14 +6,20 @@
 	var CommandMenu = React.createClass({
 
 		render: function() {
-			var link = '';
-			if (this.props.commands) {
-				link = this.props.commands.commands[0];
+			var commands = [];
+
+			if (this.props.commands.length) {
+				commands = this.props.commands.map(function (command) {
+					return (
+						<li><a href="#">{command}</a></li>
+					)
+				});
 			}
 
+
 			return (
-				<div className="commandMenu" test={this.props}>
-					<li><a href="#">{link}</a></li>
+				<div className="commandMenu">
+					{commands}
 				</div>
 			)
 		}

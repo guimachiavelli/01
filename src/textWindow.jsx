@@ -1,14 +1,34 @@
-var React = require('react');
+(function() {
+	'use strict';
 
-var TextWindow = React.createClass({
-	render: function() {
-		return (
-			<div className="textWindow">
-				placeholder content
-			</div>
-		)
-	}
-});
+	var React = require('react');
 
-module.exports = TextWindow;
+	var Item = require('./item.jsx');
+
+
+	var TextWindow = React.createClass({
+
+		showObjects: function(objects) {
+			if (!objects) return '';
+
+			return (
+				<p>You see: <Item name={objects[0]} /></p>
+			);
+		},
+
+		render: function() {
+
+			var objs = this.showObjects(this.props.objects);
+
+			return (
+				<div className="textWindow">
+					{this.props.text}
+					{objs}
+				</div>
+			);
+		}
+	});
+
+	module.exports = TextWindow;
+}());
 
