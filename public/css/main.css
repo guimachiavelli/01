@@ -2,4 +2,24 @@
 	height: 200px;
 	width: 300px;
 	border: 1px solid #000bff;
+	padding: 1em;
+	float: left;
+	margin-right: 1em;
+}
+
+button, a {
+	border: 0;
+	background: #000bff;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button:hover, a:hover {
+	background: transparent;
+	color: #000bff;
+}
+
+li {
+	list-style: none;
 }
