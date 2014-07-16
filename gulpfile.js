@@ -18,6 +18,6 @@ gulp.task('react', function() {
 
 });
 
-gulp.task('react:watch', function() {
-	gulp.watch('src/*.jsx', ['react']);
+gulp.task('develop', function() {
+	gulp.watch(['src/*.jsx', 'src/js/*.js'], ['react']);
 });
