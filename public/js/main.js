@@ -17408,13 +17408,15 @@ module.exports = require('./lib/React');
 	var App = React.createClass({displayName: 'App',
 		getInitialState: function() {
 			return {
-				scene: new Scene('../src/game/intro.json')
+				//XXX not too sure about this callback
+				scene: new Scene('../src/game/intro.json', this.setState.bind(this))
 			};
 		},
 
-		componentDidMount: function() {
-			this.setState({scene: new Scene('../src/game/intro.json')})
-			console.log(this.state.scene);
+		//FIXME this whole part makes no sense at all
+		onCommand: function(command) {
+			var exec = this.state.scene.executeCommand(command, this.setState.bind(this));
+			this.setState({scene: new Scene('../src/game/' + exec.leadsTo + '.json', this.setState.bind(this))})
 		},
 
 		render: function() {
@@ -17422,7 +17424,7 @@ module.exports = require('./lib/React');
 				/* jshint ignore:start */
 				React.DOM.div( {className:"app"}, 
 					TextWindow( {text:this.state.scene.text, objects:this.state.scene.objects} ),
-					CommandMenu( {commands:this.state.scene.commands} )
+					CommandMenu( {onCommand:this.onCommand, commands:this.state.scene.commands} )
 				)
 				/* jshint ignore:end */
 			);
@@ -17435,28 +17437,59 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":138,"./js/scene":140,"./statusWindow.jsx":142,"./textWindow.jsx":143,"react":136}],138:[function(require,module,exports){
+},{"./commandMenu.jsx":139,"./js/scene":141,"./statusWindow.jsx":143,"./textWindow.jsx":144,"react":136}],138:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
 	var React = require('react');
 
-	var CommandMenu = React.createClass({displayName: 'CommandMenu',
+	var Command = React.createClass({displayName: 'Command',
+		onClick: function(e) {
+			e.preventDefault();
+
+			this.props.onCommandClick(this.props.name);
+		},
 
 		render: function() {
-			var commands = [];
+			return (
+				React.DOM.button( {onClick:this.onClick, className:"Item"}, this.props.name)
+			);
+		}
+
+	});
+
+	module.exports = Command;
+
+}());
+
+},{"react":136}],139:[function(require,module,exports){
+/** @jsx React.DOM */(function() {
+	'use strict';
+
+	var React = require('react');
+
+	var Command = require('./command.jsx');
+
+	var CommandMenu = React.createClass({displayName: 'CommandMenu',
+
+		onCommandClick: function(command)  {
+			this.props.onCommand(command);
+		},
+
+		render: function() {
+			var commands = [], self = this;
 
 			if (this.props.commands.length) {
 				commands = this.props.commands.map(function (command) {
 					return (
-						React.DOM.li(null, React.DOM.a( {href:"#"}, command))
+						React.DOM.li(null, Command( {onCommandClick:self.onCommandClick, name:command} ))
 					)
 				});
 			}
 
 
 			return (
-				React.DOM.div( {className:"commandMenu"}, 
+				React.DOM.ul( {className:"commandMenu"}, 
 					commands
 				)
 			)
@@ -17468,7 +17501,7 @@ module.exports = require('./lib/React');
 }());
 
 
-},{"react":136}],139:[function(require,module,exports){
+},{"./command.jsx":138,"react":136}],140:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -17478,27 +17511,28 @@ module.exports = require('./lib/React');
 
 		render: function() {
 			return (
-				React.DOM.button( {className:"Item"} , this.props.name)
+				React.DOM.button( {className:"Item"}, this.props.name)
 			);
 		}
 
 	});
 
 	module.exports = Item;
+
 }());
 
-
-
-},{"react":136}],140:[function(require,module,exports){
+},{"react":136}],141:[function(require,module,exports){
 (function() {
 	'use strict';
 
 	// gets scene via ajax
-	var Scene = function(url) {
+	var Scene = function(url, ajaxCallback) {
 		this.available_objects = {};
 		this.commands = {};
 		this.info = {};
 		this.text = 'test';
+
+		this.ajaxCallback = ajaxCallback;
 
 		if (url) {
 			this.fetch(url);
@@ -17515,28 +17549,40 @@ module.exports = require('./lib/React');
 	};
 
 	Scene.prototype.loadAjax = function(request) {
+		if (request.status < 200 && request.status > 400) return;
 		var data;
-		if (request.status >= 200 && request.status < 400) {
-			data = JSON.parse(request.responseText);
 
-			this.info = data.info;
-			this.commands = data.setup.commands;
-			this.available_objects = data.setup.available_objects;
-			this.text = data.setup.output;
+		data = JSON.parse(request.responseText);
 
-		} else {
-			// We reached our target server, but it returned an error
-		}
+		this.info = data.info;
+		this.commands = data.setup.commands;
+		this.available_objects = data.setup.available_objects;
+		this.text = data.setup.output;
+		this.exec_commands = data.commands;
+
+		this.ajaxCallback({scene: this});
 	};
 
 	Scene.prototype.ajaxError = function(e) {
 		console.log(e);
 	};
 
+	//FIXME this whole part makes no sense at all
+	Scene.prototype.executeCommand = function(command, callback) {
+		var exec = this.getCommand(command);
+		return exec;
+	};
+	Scene.prototype.getCommand = function(command) {
+		if (!this.exec_commands[command]) {
+			throw new Error('command does not exist');
+		}
+		return this.exec_commands[command];
+	}
+
 	module.exports = Scene;
 }());
 
-},{}],141:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./app.jsx');
@@ -17546,7 +17592,7 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./app.jsx":137,"react":136}],142:[function(require,module,exports){
+},{"./app.jsx":137,"react":136}],143:[function(require,module,exports){
 /** @jsx React.DOM */var React = require('react');
 
 var StatusWindow = React.createClass({displayName: 'StatusWindow',
@@ -17561,7 +17607,7 @@ var StatusWindow = React.createClass({displayName: 'StatusWindow',
 
 module.exports = StatusWindow;
 
-},{"react":136}],143:[function(require,module,exports){
+},{"react":136}],144:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -17584,8 +17630,6 @@ module.exports = StatusWindow;
 
 			var objs = this.showObjects(this.props.objects);
 
-			console.log(this.props.text);
-
 			return (
 				React.DOM.div( {className:"textWindow"}, 
 					this.props.text,
@@ -17599,4 +17643,4 @@ module.exports = StatusWindow;
 }());
 
 
-},{"./item.jsx":139,"react":136}]},{},[141])
+},{"./item.jsx":140,"react":136}]},{},[142])

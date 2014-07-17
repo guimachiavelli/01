@@ -11,13 +11,15 @@
 	var App = React.createClass({
 		getInitialState: function() {
 			return {
-				scene: new Scene('../src/game/intro.json')
+				//XXX not too sure about this callback
+				scene: new Scene('../src/game/intro.json', this.setState.bind(this))
 			};
 		},
 
-		componentDidMount: function() {
-			this.setState({scene: new Scene('../src/game/intro.json')})
-			console.log(this.state.scene);
+		//FIXME this whole part makes no sense at all
+		onCommand: function(command) {
+			var exec = this.state.scene.executeCommand(command, this.setState.bind(this));
+			this.setState({scene: new Scene('../src/game/' + exec.leadsTo + '.json', this.setState.bind(this))})
 		},
 
 		render: function() {
@@ -25,7 +27,7 @@
 				/* jshint ignore:start */
 				<div className="app">
 					<TextWindow text={this.state.scene.text} objects={this.state.scene.objects} />
-					<CommandMenu commands={this.state.scene.commands} />
+					<CommandMenu onCommand={this.onCommand} commands={this.state.scene.commands} />
 				</div>
 				/* jshint ignore:end */
 			);

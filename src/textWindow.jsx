@@ -20,8 +20,6 @@
 
 			var objs = this.showObjects(this.props.objects);
 
-			console.log(this.props.text);
-
 			return (
 				<div className="textWindow">
 					{this.props.text}

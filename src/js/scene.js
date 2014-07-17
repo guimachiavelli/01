@@ -2,11 +2,13 @@
 	'use strict';
 
 	// gets scene via ajax
-	var Scene = function(url) {
+	var Scene = function(url, ajaxCallback) {
 		this.available_objects = {};
 		this.commands = {};
 		this.info = {};
 		this.text = 'test';
+
+		this.ajaxCallback = ajaxCallback;
 
 		if (url) {
 			this.fetch(url);
@@ -23,23 +25,35 @@
 	};
 
 	Scene.prototype.loadAjax = function(request) {
+		if (request.status < 200 && request.status > 400) return;
 		var data;
-		if (request.status >= 200 && request.status < 400) {
-			data = JSON.parse(request.responseText);
 
-			this.info = data.info;
-			this.commands = data.setup.commands;
-			this.available_objects = data.setup.available_objects;
-			this.text = data.setup.output;
+		data = JSON.parse(request.responseText);
 
-		} else {
-			// We reached our target server, but it returned an error
-		}
+		this.info = data.info;
+		this.commands = data.setup.commands;
+		this.available_objects = data.setup.available_objects;
+		this.text = data.setup.output;
+		this.exec_commands = data.commands;
+
+		this.ajaxCallback({scene: this});
 	};
 
 	Scene.prototype.ajaxError = function(e) {
 		console.log(e);
 	};
+
+	//FIXME this whole part makes no sense at all
+	Scene.prototype.executeCommand = function(command, callback) {
+		var exec = this.getCommand(command);
+		return exec;
+	};
+	Scene.prototype.getCommand = function(command) {
+		if (!this.exec_commands[command]) {
+			throw new Error('command does not exist');
+		}
+		return this.exec_commands[command];
+	}
 
 	module.exports = Scene;
 }());

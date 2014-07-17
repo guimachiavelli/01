@@ -3,24 +3,30 @@
 
 	var React = require('react');
 
+	var Command = require('./command.jsx');
+
 	var CommandMenu = React.createClass({
 
+		onCommandClick: function(command)  {
+			this.props.onCommand(command);
+		},
+
 		render: function() {
-			var commands = [];
+			var commands = [], self = this;
 
 			if (this.props.commands.length) {
 				commands = this.props.commands.map(function (command) {
 					return (
-						<li><a href="#">{command}</a></li>
+						<li><Command onCommandClick={self.onCommandClick} name={command} /></li>
 					)
 				});
 			}
 
 
 			return (
-				<div className="commandMenu">
+				<ul className="commandMenu">
 					{commands}
-				</div>
+				</ul>
 			)
 		}
 	});

@@ -5,13 +5,10 @@
 
 	"setup" : {
 		"commands" : [
-			"go",
-			"talk",
-			"suck",
-			"fuck"
+			"go back"
 		],
 
-		"output" : "you just arrived from your last public bathroom incursion. ♥bathroom_fairy68♥ finally gave the tip you were looking for. a list of websites and places where you will be able to meet bavarian daddy and get to the bottom of the issue. at last. \n you spent the 5 last years trying to track the organisation, and now you can feel that it's just around the corner.",
+		"output" : "new scene",
 
 		"available_objects": [
 			"cum-stained paper"
@@ -19,9 +16,9 @@
 	},
 
 	"commands": {
-		"go": {
+		"go back": {
 			"changeScene" : true,
-			"leadsTo": "scene1"
+			"leadsTo": "intro"
 		}
 	},
 

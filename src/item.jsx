@@ -7,13 +7,12 @@
 
 		render: function() {
 			return (
-				<button className="Item" >{this.props.name}</button>
+				<button className="Item">{this.props.name}</button>
 			);
 		}
 
 	});
 
 	module.exports = Item;
+
 }());
-
-
