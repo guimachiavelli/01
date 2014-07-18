@@ -6,7 +6,7 @@
 	var CommandMenu = require('./commandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
-		Game = require('./js/player'),
+		Game = require('./js/game'),
 		Scene = require('./js/scene');
 
 
