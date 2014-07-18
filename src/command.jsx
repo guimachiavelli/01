@@ -7,7 +7,7 @@
 		onClick: function(e) {
 			e.preventDefault();
 
-			window.dispatchEvent(new CustomEvent('app:command', {detail: this.props.name}));
+			this.props.pubsub.publish('app:command', {detail: this.props.name});
 		},
 
 		render: function() {

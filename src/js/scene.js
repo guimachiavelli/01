@@ -2,18 +2,19 @@
 	'use strict';
 
 	// gets scene via ajax
-	var Scene = function(url, ajaxCallback) {
+	var Scene = function(url, pubsub) {
 		this.available_objects = {};
 		this.commands = {};
 		this.info = {};
 		this.text = 'test';
 		this.url = url;
+		this.pubsub = pubsub;
 
 		if (url) {
 			this.fetch(url);
 		}
 
-		window.addEventListener('app:command', this.executeCommand.bind(this))
+		this.pubsub.subscribe('app:command', this.executeCommand.bind(this));
 	};
 
 	Scene.prototype.fetch = function() {
@@ -39,7 +40,7 @@
 		this.exec_commands = data.commands;
 
 
-		window.dispatchEvent(new Event('scene:loaded'));
+		this.pubsub.publish('scene:loaded');
 	};
 
 	Scene.prototype.ajaxError = function(e) {
@@ -50,8 +51,8 @@
 		this.fetch(url);
 	};
 
-	Scene.prototype.executeCommand = function(e) {
-		var command = e.detail;
+	Scene.prototype.executeCommand = function(e, args) {
+		var command = args.detail;
 		var exec = this.getCommand(command);
 		console.log(exec);
 

@@ -1,8 +1,9 @@
 (function() {
 	'use strict';
 
-	var Game = function(scene) {
+	var Game = function(scene, pubsub) {
 		this.scene = scene;
+		this.pubsub = pubsub;
 	};
 
 	Game.prototype.updateScene = function() {

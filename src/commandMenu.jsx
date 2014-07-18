@@ -13,7 +13,7 @@
 			if (this.props.commands.length) {
 				commands = this.props.commands.map(function (command) {
 					return (
-						<li><Command name={command} /></li>
+						<li><Command pubsub={self.props.pubsub} name={command} /></li>
 					)
 				});
 			}
