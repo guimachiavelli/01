@@ -17426,11 +17426,17 @@ module.exports = require('./lib/React');
 
 			pubsub.subscribe('scene:loaded', function() {
 				self.setState({
-					text: game.scene.text,
 					objects: game.scene.available_objects,
 					commands: game.scene.commands
 				})
 			});
+
+			pubsub.subscribe('text:update', function() {
+				self.setState({
+					text: game.text
+				})
+			});
+
 		},
 
 		render: function() {
@@ -17540,14 +17546,18 @@ module.exports = require('./lib/React');
 	var Game = function(scene, pubsub) {
 		this.scene = scene;
 		this.pubsub = pubsub;
+		this.text = [];
+
+		this.pubsub.subscribe('scene:loaded', this.updateText.bind(this))
 	};
 
 	Game.prototype.updateScene = function() {
 		this.scene.fetch();
 	};
 
-	Game.prototype.updateText =  function(text) {
-		this.textWindow.push(text);
+	Game.prototype.updateText =  function(e) {
+		this.text.push(this.scene.text);
+		this.pubsub.publish('text:update')
 	};
 
 	module.exports = Game;
@@ -17563,7 +17573,6 @@ module.exports = require('./lib/React');
 	};
 
 	PubSub.prototype.publish = function (topic, args) {
-		console.log('published event ' + topic + ' with args: ', args);
 		if (this.topics[topic] === undefined) {
 			return false;
 		}
@@ -17583,7 +17592,6 @@ module.exports = require('./lib/React');
 	}
 
 	PubSub.prototype.subscribe = function(topic, func) {
-		console.log('subscribed to ' + topic);
 
 		if (this.topics[topic] === undefined) {
 			this.topics[topic] = [];
@@ -17667,7 +17675,6 @@ module.exports = require('./lib/React');
 		this.text = data.setup.output;
 		this.exec_commands = data.commands;
 
-
 		this.pubsub.publish('scene:loaded');
 	};
 
@@ -17676,13 +17683,13 @@ module.exports = require('./lib/React');
 	};
 
 	Scene.prototype.changeScene = function(url) {
-		this.fetch(url);
+		this.url = url;
+		this.fetch();
 	};
 
 	Scene.prototype.executeCommand = function(e, args) {
 		var command = args.detail;
 		var exec = this.getCommand(command);
-		console.log(exec);
 
 		if (exec.changeScene === true) {
 			this.changeScene('../src/game/' + exec.leadsTo + '.json');
@@ -17743,13 +17750,31 @@ module.exports = StatusWindow;
 			);
 		},
 
-		render: function() {
+		printText: function(textArray) {
+			if (textArray.length < 1) return;
 
-			var objs = this.showObjects(this.props.objects);
+			return textArray.map(function(text){
+				return (
+					React.DOM.p(null, text)
+				);
+			})
+
+		},
+
+		componentDidUpdate: function() {
+			var el = this.getDOMNode();
+			el.scrollTop = el.scrollHeight;
+		},
+
+		render: function() {
+			var objs, text;
+
+			objs = this.showObjects(this.props.objects);
+			text = this.printText(this.props.text);
 
 			return (
 				React.DOM.div( {className:"textWindow"}, 
-					this.props.text,
+					text,
 					objs
 				)
 			);

@@ -29,11 +29,17 @@
 
 			pubsub.subscribe('scene:loaded', function() {
 				self.setState({
-					text: game.scene.text,
 					objects: game.scene.available_objects,
 					commands: game.scene.commands
 				})
 			});
+
+			pubsub.subscribe('text:update', function() {
+				self.setState({
+					text: game.text
+				})
+			});
+
 		},
 
 		render: function() {

@@ -16,13 +16,31 @@
 			);
 		},
 
-		render: function() {
+		printText: function(textArray) {
+			if (textArray.length < 1) return;
 
-			var objs = this.showObjects(this.props.objects);
+			return textArray.map(function(text){
+				return (
+					<p>{text}</p>
+				);
+			})
+
+		},
+
+		componentDidUpdate: function() {
+			var el = this.getDOMNode();
+			el.scrollTop = el.scrollHeight;
+		},
+
+		render: function() {
+			var objs, text;
+
+			objs = this.showObjects(this.props.objects);
+			text = this.printText(this.props.text);
 
 			return (
 				<div className="textWindow">
-					{this.props.text}
+					{text}
 					{objs}
 				</div>
 			);

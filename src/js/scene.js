@@ -39,7 +39,6 @@
 		this.text = data.setup.output;
 		this.exec_commands = data.commands;
 
-
 		this.pubsub.publish('scene:loaded');
 	};
 
@@ -48,13 +47,13 @@
 	};
 
 	Scene.prototype.changeScene = function(url) {
-		this.fetch(url);
+		this.url = url;
+		this.fetch();
 	};
 
 	Scene.prototype.executeCommand = function(e, args) {
 		var command = args.detail;
 		var exec = this.getCommand(command);
-		console.log(exec);
 
 		if (exec.changeScene === true) {
 			this.changeScene('../src/game/' + exec.leadsTo + '.json');

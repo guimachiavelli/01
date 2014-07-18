@@ -7,7 +7,6 @@
 	};
 
 	PubSub.prototype.publish = function (topic, args) {
-		console.log('published event ' + topic + ' with args: ', args);
 		if (this.topics[topic] === undefined) {
 			return false;
 		}
@@ -27,7 +26,6 @@
 	}
 
 	PubSub.prototype.subscribe = function(topic, func) {
-		console.log('subscribed to ' + topic);
 
 		if (this.topics[topic] === undefined) {
 			this.topics[topic] = [];

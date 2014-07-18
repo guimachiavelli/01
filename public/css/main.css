@@ -5,6 +5,7 @@
 	padding: 1em;
 	float: left;
 	margin-right: 1em;
+	overflow: auto;
 }
 
 button, a {
