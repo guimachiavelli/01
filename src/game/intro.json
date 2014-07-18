@@ -21,7 +21,8 @@
 	"commands": {
 		"go": {
 			"changeScene" : true,
-			"leadsTo": "scene1"
+			"leadsTo": "scene1",
+			"output" : "you leave your room"
 		}
 	},
 

@@ -17403,33 +17403,54 @@ module.exports = require('./lib/React');
 	var CommandMenu = require('./commandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
+		Game = require('./js/player'),
 		Scene = require('./js/scene');
+
+
+	var scene = new Scene('../src/game/intro.json');
+	var game = new Game(scene);
+
+
+	window.addEventListener('app:command', function(e) {
+		console.log(e);
+	});
+
 
 	var App = React.createClass({displayName: 'App',
 		getInitialState: function() {
 			return {
-				//XXX not too sure about this callback
-				scene: new Scene('../src/game/intro.json', this.setState.bind(this))
+				text: '',
+				objects: [],
+				commands: []
 			};
 		},
 
-		//FIXME this whole part makes no sense at all
-		onCommand: function(command) {
-			var exec = this.state.scene.executeCommand(command, this.setState.bind(this));
-			this.setState({scene: new Scene('../src/game/' + exec.leadsTo + '.json', this.setState.bind(this))})
+		componentWillMount: function() {
+			var self = this;
+
+			window.addEventListener('scene:loaded', function() {
+				console.log(game.scene.text);
+				self.setState({
+					text: game.scene.text,
+					objects: game.scene.available_objects,
+					commands: game.scene.commands
+				})
+			});
 		},
 
 		render: function() {
 			return (
 				/* jshint ignore:start */
 				React.DOM.div( {className:"app"}, 
-					TextWindow( {text:this.state.scene.text, objects:this.state.scene.objects} ),
-					CommandMenu( {onCommand:this.onCommand, commands:this.state.scene.commands} )
+					TextWindow( {text:this.state.text, objects:this.state.objects} ),
+					CommandMenu( {commands:this.state.commands} )
 				)
 				/* jshint ignore:end */
 			);
 		}
 	});
+
+
 
 	module.exports = App;
 
@@ -17437,7 +17458,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":139,"./js/scene":141,"./statusWindow.jsx":143,"./textWindow.jsx":144,"react":136}],138:[function(require,module,exports){
+},{"./commandMenu.jsx":139,"./js/player":141,"./js/scene":142,"./statusWindow.jsx":144,"./textWindow.jsx":145,"react":136}],138:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -17447,7 +17468,7 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.onCommandClick(this.props.name);
+			window.dispatchEvent(new CustomEvent('app:command', {detail: this.props.name}));
 		},
 
 		render: function() {
@@ -17472,17 +17493,13 @@ module.exports = require('./lib/React');
 
 	var CommandMenu = React.createClass({displayName: 'CommandMenu',
 
-		onCommandClick: function(command)  {
-			this.props.onCommand(command);
-		},
-
 		render: function() {
 			var commands = [], self = this;
 
 			if (this.props.commands.length) {
 				commands = this.props.commands.map(function (command) {
 					return (
-						React.DOM.li(null, Command( {onCommandClick:self.onCommandClick, name:command} ))
+						React.DOM.li(null, Command( {name:command} ))
 					)
 				});
 			}
@@ -17525,28 +17542,49 @@ module.exports = require('./lib/React');
 (function() {
 	'use strict';
 
+	var Game = function(scene) {
+		this.scene = scene;
+	};
+
+	Game.prototype.updateScene = function() {
+		this.scene.fetch();
+	};
+
+	Game.prototype.updateText =  function(text) {
+		this.textWindow.push(text);
+	};
+
+	module.exports = Game;
+}());
+
+},{}],142:[function(require,module,exports){
+(function() {
+	'use strict';
+
 	// gets scene via ajax
 	var Scene = function(url, ajaxCallback) {
 		this.available_objects = {};
 		this.commands = {};
 		this.info = {};
 		this.text = 'test';
-
-		this.ajaxCallback = ajaxCallback;
+		this.url = url;
 
 		if (url) {
 			this.fetch(url);
 		}
+
+		window.addEventListener('app:command', this.executeCommand.bind(this))
 	};
 
-	Scene.prototype.fetch = function(url) {
+	Scene.prototype.fetch = function() {
 		var request;
 		request = new XMLHttpRequest();
-		request.open('GET', url, true);
+		request.open('GET', this.url, true);
 		request.onload = this.loadAjax.bind(this, request);
 		request.onerror = this.ajaxError.bind(this);
 		request.send();
 	};
+
 
 	Scene.prototype.loadAjax = function(request) {
 		if (request.status < 200 && request.status > 400) return;
@@ -17560,18 +17598,28 @@ module.exports = require('./lib/React');
 		this.text = data.setup.output;
 		this.exec_commands = data.commands;
 
-		this.ajaxCallback({scene: this});
+
+		window.dispatchEvent(new Event('scene:loaded'));
 	};
 
 	Scene.prototype.ajaxError = function(e) {
 		console.log(e);
 	};
 
-	//FIXME this whole part makes no sense at all
-	Scene.prototype.executeCommand = function(command, callback) {
-		var exec = this.getCommand(command);
-		return exec;
+	Scene.prototype.changeScene = function(url) {
+		this.fetch(url);
 	};
+
+	Scene.prototype.executeCommand = function(e) {
+		var command = e.detail;
+		var exec = this.getCommand(command);
+		console.log(exec);
+
+		if (exec.changeScene === true) {
+			this.changeScene('../src/game/' + exec.leadsTo + '.json');
+		}
+	};
+
 	Scene.prototype.getCommand = function(command) {
 		if (!this.exec_commands[command]) {
 			throw new Error('command does not exist');
@@ -17582,7 +17630,7 @@ module.exports = require('./lib/React');
 	module.exports = Scene;
 }());
 
-},{}],142:[function(require,module,exports){
+},{}],143:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./app.jsx');
@@ -17592,7 +17640,7 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./app.jsx":137,"react":136}],143:[function(require,module,exports){
+},{"./app.jsx":137,"react":136}],144:[function(require,module,exports){
 /** @jsx React.DOM */var React = require('react');
 
 var StatusWindow = React.createClass({displayName: 'StatusWindow',
@@ -17607,7 +17655,7 @@ var StatusWindow = React.createClass({displayName: 'StatusWindow',
 
 module.exports = StatusWindow;
 
-},{"react":136}],144:[function(require,module,exports){
+},{"react":136}],145:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -17643,4 +17691,4 @@ module.exports = StatusWindow;
 }());
 
 
-},{"./item.jsx":140,"react":136}]},{},[142])
+},{"./item.jsx":140,"react":136}]},{},[143])

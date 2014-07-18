@@ -6,33 +6,54 @@
 	var CommandMenu = require('./commandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
+		Game = require('./js/player'),
 		Scene = require('./js/scene');
+
+
+	var scene = new Scene('../src/game/intro.json');
+	var game = new Game(scene);
+
+
+	window.addEventListener('app:command', function(e) {
+		console.log(e);
+	});
+
 
 	var App = React.createClass({
 		getInitialState: function() {
 			return {
-				//XXX not too sure about this callback
-				scene: new Scene('../src/game/intro.json', this.setState.bind(this))
+				text: '',
+				objects: [],
+				commands: []
 			};
 		},
 
-		//FIXME this whole part makes no sense at all
-		onCommand: function(command) {
-			var exec = this.state.scene.executeCommand(command, this.setState.bind(this));
-			this.setState({scene: new Scene('../src/game/' + exec.leadsTo + '.json', this.setState.bind(this))})
+		componentWillMount: function() {
+			var self = this;
+
+			window.addEventListener('scene:loaded', function() {
+				console.log(game.scene.text);
+				self.setState({
+					text: game.scene.text,
+					objects: game.scene.available_objects,
+					commands: game.scene.commands
+				})
+			});
 		},
 
 		render: function() {
 			return (
 				/* jshint ignore:start */
 				<div className="app">
-					<TextWindow text={this.state.scene.text} objects={this.state.scene.objects} />
-					<CommandMenu onCommand={this.onCommand} commands={this.state.scene.commands} />
+					<TextWindow text={this.state.text} objects={this.state.objects} />
+					<CommandMenu commands={this.state.commands} />
 				</div>
 				/* jshint ignore:end */
 			);
 		}
 	});
+
+
 
 	module.exports = App;
 

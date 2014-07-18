@@ -7,7 +7,7 @@
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.onCommandClick(this.props.name);
+			window.dispatchEvent(new CustomEvent('app:command', {detail: this.props.name}));
 		},
 
 		render: function() {

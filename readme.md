@@ -6,4 +6,4 @@ queercore-inspired interactive fiction. depends heavily on facebook react.
 
 # Development
 * `npm install`
-* `gulp react:watch`
+* `gulp develop`

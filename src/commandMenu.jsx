@@ -7,17 +7,13 @@
 
 	var CommandMenu = React.createClass({
 
-		onCommandClick: function(command)  {
-			this.props.onCommand(command);
-		},
-
 		render: function() {
 			var commands = [], self = this;
 
 			if (this.props.commands.length) {
 				commands = this.props.commands.map(function (command) {
 					return (
-						<li><Command onCommandClick={self.onCommandClick} name={command} /></li>
+						<li><Command name={command} /></li>
 					)
 				});
 			}
