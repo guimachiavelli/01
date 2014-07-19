@@ -6,18 +6,18 @@
 		this.available_objects = {};
 		this.commands = {};
 		this.info = {};
-		this.text = 'test';
+		this.text = [];
 		this.url = url;
 		this.pubsub = pubsub;
 
-		if (url) {
-			this.fetch(url);
-		}
-
-		this.pubsub.subscribe('app:command', this.executeCommand.bind(this));
+		this.fetch();
 	};
 
 	Scene.prototype.fetch = function() {
+		if (!this.url) {
+			throw new Error('no url to request');
+		}
+
 		var request;
 		request = new XMLHttpRequest();
 		request.open('GET', this.url, true);
@@ -34,10 +34,10 @@
 		data = JSON.parse(request.responseText);
 
 		this.info = data.info;
-		this.commands = data.setup.commands;
-		this.available_objects = data.setup.available_objects;
-		this.text = data.setup.output;
-		this.exec_commands = data.commands;
+		this.commandList = data.setup.commands;
+		this.availableObjects = data.setup.items;
+		this.currentText = data.setup.output;
+		this.commands = data.commands;
 
 		this.pubsub.publish('scene:loaded');
 	};
@@ -51,21 +51,6 @@
 		this.fetch();
 	};
 
-	Scene.prototype.executeCommand = function(e, args) {
-		var command = args.detail;
-		var exec = this.getCommand(command);
-
-		if (exec.changeScene === true) {
-			this.changeScene('../src/game/' + exec.leadsTo + '.json');
-		}
-	};
-
-	Scene.prototype.getCommand = function(command) {
-		if (!this.exec_commands[command]) {
-			throw new Error('command does not exist');
-		}
-		return this.exec_commands[command];
-	}
-
 	module.exports = Scene;
+
 }());

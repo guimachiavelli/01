@@ -5,9 +5,14 @@
 
 	var Item = React.createClass({
 
+		onClick: function(e) {
+			e.preventDefault();
+			console.log(this);
+		},
+
 		render: function() {
 			return (
-				<button className="Item">{this.props.name}</button>
+				<button onClick={this.onClick} className="Item">{this.props.name}</button>
 			);
 		}
 

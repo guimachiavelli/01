@@ -17404,18 +17404,16 @@ module.exports = require('./lib/React');
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
 		PubSub = require('./js/pubsub'),
-		Game = require('./js/game'),
-		Scene = require('./js/scene');
+		Game = require('./js/game');
 
 	var pubsub = new PubSub();
-	var scene = new Scene('../src/game/intro.json', pubsub);
-	var game = new Game(scene, pubsub);
+	var game = new Game(pubsub);
 
 
 	var App = React.createClass({displayName: 'App',
 		getInitialState: function() {
 			return {
-				text: '',
+				text: [],
 				objects: [],
 				commands: []
 			};
@@ -17424,17 +17422,12 @@ module.exports = require('./lib/React');
 		componentWillMount: function() {
 			var self = this;
 
-			pubsub.subscribe('scene:loaded', function() {
+			pubsub.subscribe('game:update', function() {
 				self.setState({
-					objects: game.scene.available_objects,
-					commands: game.scene.commands
-				})
-			});
-
-			pubsub.subscribe('text:update', function() {
-				self.setState({
-					text: game.text
-				})
+					text: game.text,
+					objects: game.items,
+					commands: game.commands
+				});
 			});
 
 		},
@@ -17459,7 +17452,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":139,"./js/game":141,"./js/pubsub":142,"./js/scene":143,"./statusWindow.jsx":145,"./textWindow.jsx":146,"react":136}],138:[function(require,module,exports){
+},{"./commandMenu.jsx":139,"./js/game":141,"./js/pubsub":142,"./statusWindow.jsx":145,"./textWindow.jsx":146,"react":136}],138:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -17469,7 +17462,7 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('app:command', {detail: this.props.name});
+			this.props.pubsub.publish('app:command', this.props.name);
 		},
 
 		render: function() {
@@ -17527,9 +17520,14 @@ module.exports = require('./lib/React');
 
 	var Item = React.createClass({displayName: 'Item',
 
+		onClick: function(e) {
+			e.preventDefault();
+			console.log(this);
+		},
+
 		render: function() {
 			return (
-				React.DOM.button( {className:"Item"}, this.props.name)
+				React.DOM.button( {onClick:this.onClick, className:"Item"}, this.props.name)
 			);
 		}
 
@@ -17542,28 +17540,71 @@ module.exports = require('./lib/React');
 },{"react":136}],141:[function(require,module,exports){
 (function() {
 	'use strict';
+	var Scene = require('./scene');
 
-	var Game = function(scene, pubsub) {
-		this.scene = scene;
+
+	var Game = function(pubsub) {
+		this.scene = new Scene('../src/game/intro.json', pubsub);
 		this.pubsub = pubsub;
 		this.text = [];
+		this.items = [];
+		this.commands = [];
 
-		this.pubsub.subscribe('scene:loaded', this.updateText.bind(this))
+		this.pubsub.subscribe('scene:loaded', this.update.bind(this))
+		this.pubsub.subscribe('app:command', this.executeCommand.bind(this));
+
 	};
 
 	Game.prototype.updateScene = function() {
 		this.scene.fetch();
 	};
 
-	Game.prototype.updateText =  function(e) {
-		this.text.push(this.scene.text);
-		this.pubsub.publish('text:update')
+	Game.prototype.updateText =  function() {
+		this.text.push(this.scene.currentText);
 	};
+
+	Game.prototype.updateItems =  function() {
+		this.items = this.scene.availableObjects;
+	};
+
+	Game.prototype.updateCommands =  function() {
+		this.commands = this.scene.commandList;
+	};
+
+
+	Game.prototype.update = function(e) {
+		this.updateText();
+		this.updateItems();
+		this.updateCommands();
+		this.pubsub.publish('game:update');
+	};
+
+	Game.prototype.executeCommand = function(e, command) {
+		var exec = this.getCommand(command);
+
+		if (exec.output) {
+			this.scene.currentText = exec.output;
+			this.update();
+		}
+
+		if (exec.changeScene === true) {
+			this.scene.changeScene('../src/game/' + exec.leadsTo + '.json');
+		}
+	};
+
+	Game.prototype.getCommand = function(command) {
+		if (!this.scene.commands[command]) {
+			throw new Error('command does not exist:' + command);
+		}
+		return this.scene.commands[command];
+	};
+
+
 
 	module.exports = Game;
 }());
 
-},{}],142:[function(require,module,exports){
+},{"./scene":143}],142:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -17642,18 +17683,18 @@ module.exports = require('./lib/React');
 		this.available_objects = {};
 		this.commands = {};
 		this.info = {};
-		this.text = 'test';
+		this.text = [];
 		this.url = url;
 		this.pubsub = pubsub;
 
-		if (url) {
-			this.fetch(url);
-		}
-
-		this.pubsub.subscribe('app:command', this.executeCommand.bind(this));
+		this.fetch();
 	};
 
 	Scene.prototype.fetch = function() {
+		if (!this.url) {
+			throw new Error('no url to request');
+		}
+
 		var request;
 		request = new XMLHttpRequest();
 		request.open('GET', this.url, true);
@@ -17670,10 +17711,10 @@ module.exports = require('./lib/React');
 		data = JSON.parse(request.responseText);
 
 		this.info = data.info;
-		this.commands = data.setup.commands;
-		this.available_objects = data.setup.available_objects;
-		this.text = data.setup.output;
-		this.exec_commands = data.commands;
+		this.commandList = data.setup.commands;
+		this.availableObjects = data.setup.items;
+		this.currentText = data.setup.output;
+		this.commands = data.commands;
 
 		this.pubsub.publish('scene:loaded');
 	};
@@ -17687,23 +17728,8 @@ module.exports = require('./lib/React');
 		this.fetch();
 	};
 
-	Scene.prototype.executeCommand = function(e, args) {
-		var command = args.detail;
-		var exec = this.getCommand(command);
-
-		if (exec.changeScene === true) {
-			this.changeScene('../src/game/' + exec.leadsTo + '.json');
-		}
-	};
-
-	Scene.prototype.getCommand = function(command) {
-		if (!this.exec_commands[command]) {
-			throw new Error('command does not exist');
-		}
-		return this.exec_commands[command];
-	}
-
 	module.exports = Scene;
+
 }());
 
 },{}],144:[function(require,module,exports){

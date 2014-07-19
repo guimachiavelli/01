@@ -18,7 +18,8 @@
 	"commands": {
 		"go back": {
 			"changeScene" : true,
-			"leadsTo": "intro"
+			"leadsTo": "intro",
+			"output": "you go back"
 		}
 	},
 

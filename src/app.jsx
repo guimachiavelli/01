@@ -7,18 +7,16 @@
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
 		PubSub = require('./js/pubsub'),
-		Game = require('./js/game'),
-		Scene = require('./js/scene');
+		Game = require('./js/game');
 
 	var pubsub = new PubSub();
-	var scene = new Scene('../src/game/intro.json', pubsub);
-	var game = new Game(scene, pubsub);
+	var game = new Game(pubsub);
 
 
 	var App = React.createClass({
 		getInitialState: function() {
 			return {
-				text: '',
+				text: [],
 				objects: [],
 				commands: []
 			};
@@ -27,17 +25,12 @@
 		componentWillMount: function() {
 			var self = this;
 
-			pubsub.subscribe('scene:loaded', function() {
+			pubsub.subscribe('game:update', function() {
 				self.setState({
-					objects: game.scene.available_objects,
-					commands: game.scene.commands
-				})
-			});
-
-			pubsub.subscribe('text:update', function() {
-				self.setState({
-					text: game.text
-				})
+					text: game.text,
+					objects: game.items,
+					commands: game.commands
+				});
 			});
 
 		},
