@@ -11,9 +11,9 @@
 			var commands = [], self = this;
 
 			if (this.props.commands.length) {
-				commands = this.props.commands.map(function (command) {
+				commands = this.props.commands.map(function (command, i) {
 					return (
-						<li><Command pubsub={self.props.pubsub} name={command} /></li>
+						<li key={i}><Command pubsub={self.props.pubsub} name={command} /></li>
 					)
 				});
 			}

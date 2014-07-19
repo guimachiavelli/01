@@ -12,16 +12,16 @@
 			if (!objects) return '';
 
 			return (
-				<p>You see: <Item name={objects[0]} /></p>
+				<p key="1">You see: <Item name={objects[0]} /></p>
 			);
 		},
 
 		printText: function(textArray) {
 			if (textArray.length < 1) return;
 
-			return textArray.map(function(text){
+			return textArray.map(function(text, i){
 				return (
-					<p>{text}</p>
+					<p key={i}>{text}</p>
 				);
 			})
 

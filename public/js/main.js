@@ -17491,9 +17491,9 @@ module.exports = require('./lib/React');
 			var commands = [], self = this;
 
 			if (this.props.commands.length) {
-				commands = this.props.commands.map(function (command) {
+				commands = this.props.commands.map(function (command, i) {
 					return (
-						React.DOM.li(null, Command( {pubsub:self.props.pubsub, name:command} ))
+						React.DOM.li( {key:i}, Command( {pubsub:self.props.pubsub, name:command} ))
 					)
 				});
 			}
@@ -17772,16 +17772,16 @@ module.exports = StatusWindow;
 			if (!objects) return '';
 
 			return (
-				React.DOM.p(null, "You see: ", Item( {name:objects[0]} ))
+				React.DOM.p( {key:"1"}, "You see: ", Item( {name:objects[0]} ))
 			);
 		},
 
 		printText: function(textArray) {
 			if (textArray.length < 1) return;
 
-			return textArray.map(function(text){
+			return textArray.map(function(text, i){
 				return (
-					React.DOM.p(null, text)
+					React.DOM.p( {key:i}, text)
 				);
 			})
 
