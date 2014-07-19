@@ -24,3 +24,16 @@ button:hover, a:hover {
 li {
 	list-style: none;
 }
+
+.itemList li {
+	display: inline;
+}
+
+.itemList li:after {
+	content: ', ';
+}
+
+.itemList li:last-child:after {
+	content: '';
+}
+

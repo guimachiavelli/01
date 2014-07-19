@@ -17,7 +17,7 @@
 		getInitialState: function() {
 			return {
 				text: [],
-				objects: [],
+				items: [],
 				commands: []
 			};
 		},
@@ -28,7 +28,7 @@
 			pubsub.subscribe('game:update', function() {
 				self.setState({
 					text: game.text,
-					objects: game.items,
+					items: game.items,
 					commands: game.commands
 				});
 			});
@@ -39,7 +39,7 @@
 			return (
 				/* jshint ignore:start */
 				<div className="app">
-					<TextWindow text={this.state.text} objects={this.state.objects} />
+					<TextWindow text={this.state.text} items={this.state.items} />
 					<CommandMenu pubsub={pubsub} commands={this.state.commands} />
 				</div>
 				/* jshint ignore:end */
