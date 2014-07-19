@@ -1,13 +1,15 @@
 {
   "name": "bavarian-daddy",
   "version": "0.0.1",
-  "private" : true,
+  "private": true,
   "devDependencies": {
     "browserify": "^4.2.0",
     "browserify-shim": "^3.6.0",
     "gulp": "^3.8.6",
     "gulp-concat": "^2.3.3",
+    "gulp-plumber": "^0.6.3",
     "gulp-rename": "^1.2.0",
+    "gutil": "^1.2.0",
     "reactify": "^0.13.1",
     "vinyl-source-stream": "^0.1.1"
   },
