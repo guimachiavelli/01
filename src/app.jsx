@@ -4,6 +4,7 @@
 	var React = require('react');
 
 	var CommandMenu = require('./commandMenu.jsx'),
+		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
 		PubSub = require('./js/pubsub'),
@@ -18,7 +19,8 @@
 			return {
 				text: [],
 				items: [],
-				commands: []
+				commands: [],
+				itemCommands: []
 			};
 		},
 
@@ -29,7 +31,8 @@
 				self.setState({
 					text: game.text,
 					items: game.items,
-					commands: game.commands
+					commands: game.commands,
+					itemCommands: game.itemCommands
 				});
 			});
 
@@ -39,8 +42,9 @@
 			return (
 				/* jshint ignore:start */
 				<div className="app">
-					<TextWindow text={this.state.text} items={this.state.items} />
+					<TextWindow pubsub={pubsub} text={this.state.text} items={this.state.items} />
 					<CommandMenu pubsub={pubsub} commands={this.state.commands} />
+					<ItemCommandMenu pubsub={pubsub} commands={this.state.itemCommands} />
 				</div>
 				/* jshint ignore:end */
 			);

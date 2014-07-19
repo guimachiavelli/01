@@ -18620,6 +18620,7 @@ module.exports = require('./lib/React');
 	var React = require('react');
 
 	var CommandMenu = require('./commandMenu.jsx'),
+		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
 		PubSub = require('./js/pubsub'),
@@ -18634,7 +18635,8 @@ module.exports = require('./lib/React');
 			return {
 				text: [],
 				items: [],
-				commands: []
+				commands: [],
+				itemCommands: []
 			};
 		},
 
@@ -18645,7 +18647,8 @@ module.exports = require('./lib/React');
 				self.setState({
 					text: game.text,
 					items: game.items,
-					commands: game.commands
+					commands: game.commands,
+					itemCommands: game.itemCommands
 				});
 			});
 
@@ -18655,8 +18658,9 @@ module.exports = require('./lib/React');
 			return (
 				/* jshint ignore:start */
 				React.DOM.div({className: "app"}, 
-					TextWindow({text: this.state.text, items: this.state.items}), 
-					CommandMenu({pubsub: pubsub, commands: this.state.commands})
+					TextWindow({pubsub: pubsub, text: this.state.text, items: this.state.items}), 
+					CommandMenu({pubsub: pubsub, commands: this.state.commands}), 
+					ItemCommandMenu({pubsub: pubsub, commands: this.state.itemCommands})
 				)
 				/* jshint ignore:end */
 			);
@@ -18671,7 +18675,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":148,"./js/game":151,"./js/pubsub":152,"./statusWindow.jsx":155,"./textWindow.jsx":156,"react":145}],147:[function(require,module,exports){
+},{"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./js/game":153,"./js/pubsub":154,"./statusWindow.jsx":157,"./textWindow.jsx":158,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18681,7 +18685,7 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('app:command', this.props.name);
+			this.props.pubsub.publish('game:scene:command', this.props.name);
 		},
 
 		render: function() {
@@ -18709,14 +18713,13 @@ module.exports = require('./lib/React');
 		render: function() {
 			var commands = [], self = this;
 
-			if (this.props.commands.length) {
-				commands = this.props.commands.map(function (command, i) {
-					return (
-						React.DOM.li({key: i}, Command({pubsub: self.props.pubsub, name: command}))
-					)
-				});
-			}
+			commands = this.props.commands.map(function (command, i) {
+				return (
+					React.DOM.li({key: i}, Command({pubsub: self.props.pubsub, name: command, type: self.props.type}))
+				)
+			});
 
+			if (commands.length < 1) return null;
 
 			return (
 				React.DOM.ul({className: "commandMenu"}, 
@@ -18740,7 +18743,7 @@ module.exports = require('./lib/React');
 
 		onClick: function(e) {
 			e.preventDefault();
-			console.log(this);
+			this.props.pubsub.publish('item:clicked', this.props.name);
 		},
 
 		render: function() {
@@ -18761,13 +18764,82 @@ module.exports = require('./lib/React');
 
 	var React = require('react');
 
+	var ItemCommand = React.createClass({displayName: 'ItemCommand',
+		onClick: function(e) {
+			e.preventDefault();
+
+			console.log('item command click');
+
+			//this.props.pubsub.publish('game:item:command', this.props.name);
+		},
+
+		render: function() {
+			return (
+				React.DOM.button({onClick: this.onClick, className: "itemCommand"}, this.props.name)
+			);
+		}
+
+	});
+
+	module.exports = ItemCommand;
+
+}());
+
+
+},{"react":145}],151:[function(require,module,exports){
+/** @jsx React.DOM */(function() {
+	'use strict';
+
+	var React = require('react');
+
+	var ItemCommand = require('./itemCommand.jsx');
+
+	var ItemCommandMenu = React.createClass({displayName: 'ItemCommandMenu',
+
+		render: function() {
+			var commands = [], self = this;
+
+			commands = this.props.commands.map(function (command, i) {
+				return (
+					React.DOM.li({key: i}, 
+						ItemCommand({
+							pubsub: self.props.pubsub, 
+							name: command, 
+							type: self.props.type})
+					)
+				)
+			});
+
+			if (commands.length < 1) return null;
+
+			return (
+				React.DOM.ul({className: "itemCommandMenu"}, 
+					commands
+				)
+			)
+		}
+	});
+
+	module.exports = ItemCommandMenu;
+
+}());
+
+
+},{"./itemCommand.jsx":150,"react":145}],152:[function(require,module,exports){
+/** @jsx React.DOM */(function() {
+	'use strict';
+
+	var React = require('react');
+
 	var Item = require('./item.jsx');
 
 	var ItemList = React.createClass({displayName: 'ItemList',
 		printItems: function(itemsArray) {
+			var self = this;
+
 			return itemsArray.map(function(item, i){
 				return (
-					React.DOM.li({key: i}, Item({name: item}))
+					React.DOM.li({key: i}, Item({pubsub: self.props.pubsub, name: item}))
 				);
 			})
 		},
@@ -18791,11 +18863,10 @@ module.exports = require('./lib/React');
 
 
 
-},{"./item.jsx":149,"react":145}],151:[function(require,module,exports){
+},{"./item.jsx":149,"react":145}],153:[function(require,module,exports){
 (function() {
 	'use strict';
 	var Scene = require('./scene');
-
 
 	var Game = function(pubsub) {
 		this.scene = new Scene('../src/game/intro.json', pubsub);
@@ -18803,9 +18874,11 @@ module.exports = require('./lib/React');
 		this.text = [];
 		this.items = [];
 		this.commands = [];
+		this.itemCommands = [];
 
-		this.pubsub.subscribe('scene:loaded', this.update.bind(this))
-		this.pubsub.subscribe('app:command', this.executeCommand.bind(this));
+		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
+		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
+		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
 
 	};
 
@@ -18826,7 +18899,7 @@ module.exports = require('./lib/React');
 	};
 
 
-	Game.prototype.update = function(e) {
+	Game.prototype.update = function() {
 		this.updateText();
 		this.updateItems();
 		this.updateCommands();
@@ -18853,12 +18926,32 @@ module.exports = require('./lib/React');
 		return this.scene.commands[command];
 	};
 
+	Game.prototype.onItemClick = function(e, item) {
+		var itemCommands = this.scene.items[item].actions;
+		this.itemCommands = this.getItemCommandList(itemCommands);
+		this.update();
+	};
+
+	Game.prototype.getItemCommandList = function(commandsObject) {
+		var command, commandArray = [];
+		for (command in commandsObject) {
+			if (commandsObject.hasOwnProperty(command)) {
+				commandArray.push(command);
+			}
+		}
+
+		commandArray.push('exit');
+
+		return commandArray;
+
+	};
+
 
 
 	module.exports = Game;
 }());
 
-},{"./scene":153}],152:[function(require,module,exports){
+},{"./scene":155}],154:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -18928,18 +19021,19 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],153:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 (function() {
 	'use strict';
 
 	// gets scene via ajax
 	var Scene = function(url, pubsub) {
-		this.available_objects = {};
+		this.availableObjects = {};
 		this.commands = {};
 		this.info = {};
 		this.text = [];
 		this.url = url;
 		this.pubsub = pubsub;
+		this.items = {};
 
 		this.fetch();
 	};
@@ -18969,6 +19063,7 @@ module.exports = require('./lib/React');
 		this.availableObjects = data.setup.items;
 		this.currentText = data.setup.output;
 		this.commands = data.commands;
+		this.items = data.items;
 
 		this.pubsub.publish('scene:loaded');
 	};
@@ -18986,7 +19081,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],154:[function(require,module,exports){
+},{}],156:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./app.jsx');
@@ -18996,7 +19091,7 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./app.jsx":146,"react":145}],155:[function(require,module,exports){
+},{"./app.jsx":146,"react":145}],157:[function(require,module,exports){
 /** @jsx React.DOM */var React = require('react');
 
 var StatusWindow = React.createClass({displayName: 'StatusWindow',
@@ -19011,7 +19106,7 @@ var StatusWindow = React.createClass({displayName: 'StatusWindow',
 
 module.exports = StatusWindow;
 
-},{"react":145}],156:[function(require,module,exports){
+},{"react":145}],158:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -19040,7 +19135,7 @@ module.exports = StatusWindow;
 			return (
 				React.DOM.div({className: "textWindow"}, 
 					text, 
-					ItemList({items: this.props.items})
+					ItemList({pubsub: this.props.pubsub, items: this.props.items})
 				)
 			);
 		}
@@ -19050,4 +19145,4 @@ module.exports = StatusWindow;
 }());
 
 
-},{"./itemList.jsx":150,"react":145}]},{},[154])
+},{"./itemList.jsx":152,"react":145}]},{},[156])

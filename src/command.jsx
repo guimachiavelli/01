@@ -7,7 +7,7 @@
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('app:command', this.props.name);
+			this.props.pubsub.publish('game:scene:command', this.props.name);
 		},
 
 		render: function() {

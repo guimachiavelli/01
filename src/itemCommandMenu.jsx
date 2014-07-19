@@ -3,29 +3,35 @@
 
 	var React = require('react');
 
-	var Command = require('./command.jsx');
+	var ItemCommand = require('./itemCommand.jsx');
 
-	var CommandMenu = React.createClass({
+	var ItemCommandMenu = React.createClass({
 
 		render: function() {
 			var commands = [], self = this;
 
 			commands = this.props.commands.map(function (command, i) {
 				return (
-					<li key={i}><Command pubsub={self.props.pubsub} name={command} type={self.props.type} /></li>
+					<li key={i}>
+						<ItemCommand
+							pubsub={self.props.pubsub}
+							name={command}
+							type={self.props.type} />
+					</li>
 				)
 			});
 
 			if (commands.length < 1) return null;
 
 			return (
-				<ul className="commandMenu">
+				<ul className="itemCommandMenu">
 					{commands}
 				</ul>
 			)
 		}
 	});
 
-	module.exports = CommandMenu;
+	module.exports = ItemCommandMenu;
 
 }());
+

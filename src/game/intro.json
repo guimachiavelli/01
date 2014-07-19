@@ -39,7 +39,7 @@
 		}
 	},
 
-	"objects" : {
+	"items" : {
 
 		"cum-stained paper" : {
 			"takeable" : true,

@@ -3,12 +3,13 @@
 
 	// gets scene via ajax
 	var Scene = function(url, pubsub) {
-		this.available_objects = {};
+		this.availableObjects = {};
 		this.commands = {};
 		this.info = {};
 		this.text = [];
 		this.url = url;
 		this.pubsub = pubsub;
+		this.items = {};
 
 		this.fetch();
 	};
@@ -38,6 +39,7 @@
 		this.availableObjects = data.setup.items;
 		this.currentText = data.setup.output;
 		this.commands = data.commands;
+		this.items = data.items;
 
 		this.pubsub.publish('scene:loaded');
 	};

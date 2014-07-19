@@ -21,6 +21,13 @@ button:hover, a:hover {
 	color: #000bff;
 }
 
+button:focus, a:focus {
+	background: red;
+	color: #fff;
+	-webkit-appearance: none;
+	outline: 0;
+}
+
 li {
 	list-style: none;
 }

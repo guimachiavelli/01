@@ -7,9 +7,11 @@
 
 	var ItemList = React.createClass({
 		printItems: function(itemsArray) {
+			var self = this;
+
 			return itemsArray.map(function(item, i){
 				return (
-					<li key={i}><Item name={item} /></li>
+					<li key={i}><Item pubsub={self.props.pubsub} name={item} /></li>
 				);
 			})
 		},

@@ -26,7 +26,7 @@
 			return (
 				<div className="textWindow">
 					{text}
-					<ItemList items={this.props.items} />
+					<ItemList pubsub={this.props.pubsub} items={this.props.items} />
 				</div>
 			);
 		}

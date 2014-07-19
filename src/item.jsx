@@ -7,7 +7,7 @@
 
 		onClick: function(e) {
 			e.preventDefault();
-			console.log(this);
+			this.props.pubsub.publish('item:clicked', this.props.name);
 		},
 
 		render: function() {
