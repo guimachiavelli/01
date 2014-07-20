@@ -37,7 +37,7 @@
 		this.info = data.info;
 		this.commandList = data.setup.commands;
 		this.availableObjects = data.setup.items;
-		this.currentText = data.setup.output;
+		this.description = data.setup.output;
 		this.commands = data.commands;
 		this.items = data.items;
 

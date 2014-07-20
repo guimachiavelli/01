@@ -1,17 +1,20 @@
 (function() {
 	'use strict';
-	var Scene = require('./scene');
+	var Scene = require('./scene'),
+		Player = require('./player');
 
 	var Game = function(pubsub) {
 		this.scene = new Scene('../src/game/intro.json', pubsub);
+		this.player = new Player();
 		this.pubsub = pubsub;
 		this.text = [];
 		this.items = [];
 		this.commands = [];
 		this.itemCommands = [];
+		this.currentScene = 'intro';
 		this.activeItem = null;
 
-		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
+		this.pubsub.subscribe('scene:loaded', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
 		this.pubsub.subscribe('game:item:command', this.executeItemCommand.bind(this));
 		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
@@ -19,12 +22,27 @@
 	};
 
 	Game.prototype.updateScene = function() {
-		this.scene.fetch();
+		this.text.push(this.getSceneDescription());
+
+		this.currentScene = this.scene.info.title;
+		this.player.addScene(this.currentScene);
+
+		this.updateItems();
+		this.updateCommands();
+		this.pubsub.publish('game:update');
+
 	};
 
 	Game.prototype.updateText =  function() {
 		this.text.push(this.scene.currentText);
 		this.scene.currentText = '';
+	};
+
+	Game.prototype.getSceneDescription = function() {
+		if (!this.player.hasVisited(this.scene.info.title)) {
+			return this.scene.description.initial;
+		}
+		return this.scene.description.default;
 	};
 
 	Game.prototype.updateItems =  function() {
@@ -52,6 +70,9 @@
 
 		if (exec.changeScene === true) {
 			this.scene.changeScene('../src/game/' + exec.leadsTo + '.json');
+
+			this.activeItem = null;
+			this.itemCommands = [];
 		}
 	};
 
@@ -77,8 +98,6 @@
 		if (exec.reveal) {
 			this.items.push(exec.reveal);
 		}
-
-		console.log(this.items);
 
 		this.update();
 	};

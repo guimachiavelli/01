@@ -13,7 +13,6 @@
 	var pubsub = new PubSub();
 	var game = new Game(pubsub);
 
-
 	var App = React.createClass({
 		getInitialState: function() {
 			return {

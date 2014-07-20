@@ -1,18 +1,21 @@
 {
 	"info": {
-		"title" : "Bavarian Daddy"
+		"title" : "Apartment Room"
 	},
 
 	"setup" : {
+
 		"commands" : [
-			"go",
+			"go to next room",
 			"talk",
 			"suck",
 			"fuck"
 		],
 
-		"output" : "you just arrived from your last public bathroom incursion. ♥bathroom_fairy68♥ finally gave the tip you were looking for. a list of websites and places where you will be able to meet bavarian daddy and get to the bottom of the issue. at last. \n you spent the 5 last years trying to track the organisation, and now you can feel that it's just around the corner.",
-
+		"output" : {
+			"initial" : "you just arrived from your last public bathroom incursion. ♥bathroom_fairy68♥ finally gave the tip you were looking for. a list of websites and places where you will be able to meet bavarian daddy and get to the bottom of the issue. at last. \n you spent the 5 last years trying to track the organisation, and now you can feel that it's just around the corner.",
+			"default" : "it's your room. it smells like barbra streisand's armpit"
+		},
 		"items": [
 			"cum-stained paper",
 			"vibrator"
@@ -20,7 +23,7 @@
 	},
 
 	"commands": {
-		"go": {
+		"go to next room": {
 			"changeScene" : true,
 			"leadsTo": "scene1",
 			"output" : "you leave your room"
@@ -73,12 +76,15 @@
 		},
 
 		"vibrator" : {
+			"charges" : 5,
+
 			"actions" : {
 				"examine" : {
 					"output" : "a thoroughly used AssBender 2000"
 				},
 				"use": {
-					"output" : "**dwoiiinnnnnnnngggggggig**"
+					"output" : "**dwoiiinnnnnnnngggggggig**",
+					"charges": 1
 				},
 				"leave it alone" : {
 					"output" : "you turn your attention to something else.",

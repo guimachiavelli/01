@@ -1,6 +1,6 @@
 {
 	"info": {
-		"title" : "Bavarian Daddy - scene 1"
+		"title" : "Limbo"
 	},
 
 	"setup" : {
@@ -8,7 +8,10 @@
 			"go back"
 		],
 
-		"output" : "new scene",
+		"output" : {
+			"initial" : "you arrive at nothingness",
+			"default" : "you come back to nothingness"
+		},
 
 		"items": [
 			"used dildo"
