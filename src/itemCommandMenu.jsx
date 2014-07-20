@@ -11,6 +11,7 @@
 			var commands = [], self = this;
 
 			commands = this.props.commands.map(function (command, i) {
+				//FIXME: key should be a string
 				return (
 					<li key={i}>
 						<ItemCommand

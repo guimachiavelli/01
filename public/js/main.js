@@ -18778,7 +18778,7 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item });
+			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item});
 		},
 
 		render: function() {
@@ -18808,6 +18808,7 @@ module.exports = require('./lib/React');
 			var commands = [], self = this;
 
 			commands = this.props.commands.map(function (command, i) {
+				//FIXME: key should be a string
 				return (
 					React.DOM.li({key: i}, 
 						ItemCommand({
@@ -18898,6 +18899,7 @@ module.exports = require('./lib/React');
 
 	Game.prototype.updateText =  function() {
 		this.text.push(this.scene.currentText);
+		this.scene.currentText = '';
 	};
 
 	Game.prototype.updateItems =  function() {
@@ -18907,7 +18909,6 @@ module.exports = require('./lib/React');
 	Game.prototype.updateCommands =  function() {
 		this.commands = this.scene.commandList;
 	};
-
 
 	Game.prototype.update = function() {
 		this.updateText();
@@ -18931,7 +18932,7 @@ module.exports = require('./lib/React');
 
 	Game.prototype.executeItemCommand = function(e, command) {
 		if (!this.scene.items[command.item]) {
-			throw new Error('item does not exist')
+			throw new Error('item does not exist');
 		}
 
 		if (!this.scene.items[command.item].actions[command.name]) {
@@ -18939,7 +18940,6 @@ module.exports = require('./lib/React');
 		}
 
 		var exec = this.scene.items[command.item].actions[command.name];
-
 
 		this.scene.currentText = exec.output;
 
@@ -18949,7 +18949,6 @@ module.exports = require('./lib/React');
 		}
 
 		this.update();
-
 	};
 
 	Game.prototype.getCommand = function(command) {

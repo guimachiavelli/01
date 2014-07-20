@@ -24,6 +24,7 @@
 
 	Game.prototype.updateText =  function() {
 		this.text.push(this.scene.currentText);
+		this.scene.currentText = '';
 	};
 
 	Game.prototype.updateItems =  function() {
@@ -33,7 +34,6 @@
 	Game.prototype.updateCommands =  function() {
 		this.commands = this.scene.commandList;
 	};
-
 
 	Game.prototype.update = function() {
 		this.updateText();
@@ -57,7 +57,7 @@
 
 	Game.prototype.executeItemCommand = function(e, command) {
 		if (!this.scene.items[command.item]) {
-			throw new Error('item does not exist')
+			throw new Error('item does not exist');
 		}
 
 		if (!this.scene.items[command.item].actions[command.name]) {
@@ -65,7 +65,6 @@
 		}
 
 		var exec = this.scene.items[command.item].actions[command.name];
-
 
 		this.scene.currentText = exec.output;
 
@@ -75,7 +74,6 @@
 		}
 
 		this.update();
-
 	};
 
 	Game.prototype.getCommand = function(command) {

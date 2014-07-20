@@ -7,7 +7,7 @@
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item });
+			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item});
 		},
 
 		render: function() {

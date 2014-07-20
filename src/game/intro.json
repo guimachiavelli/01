@@ -51,7 +51,8 @@
 
 				"lick" : {
 					"output" : "it tastes amazing. part of the paper was erased in the process, though",
-					"reveal" : "licked cum-stained paper"
+					"reveal" : "licked cum-stained paper",
+					"destroy" : true
 				},
 
 				"leave it alone" : {
