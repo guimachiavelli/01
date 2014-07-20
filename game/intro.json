@@ -1,0 +1,99 @@
+{
+	"info": {
+		"title" : "Apartment Room"
+	},
+
+	"setup" : {
+
+		"commands" : [
+			"go to next room",
+			"talk",
+			"suck",
+			"fuck"
+		],
+
+		"output" : {
+			"initial" : "you just arrived from your last public bathroom incursion. ♥bathroom_fairy68♥ finally gave the tip you were looking for. a list of websites and places where you will be able to meet bavarian daddy and get to the bottom of the issue. at last. \n you spent the 5 last years trying to track the organisation, and now you can feel that it's just around the corner.",
+			"default" : "it's your room. it smells like barbra streisand's armpit"
+		},
+		"items": [
+			"cum-stained paper",
+			"vibrator"
+		]
+	},
+
+	"commands": {
+		"go to next room": {
+			"changeScene" : true,
+			"leadsTo": "scene1",
+			"output" : "you leave your room"
+		},
+		"talk": {
+			"output" : "you talk to yourself for hours"
+		},
+		"suck" : {
+			"output" : "you try to suck yourself, but you're not flexible enough",
+			"effect" : {
+				"status" : "backpain"
+			}
+		},
+		"fuck" : {
+			"output" : "there's nothing to fuck, try the next room"
+		}
+	},
+
+	"items" : {
+
+		"cum-stained paper" : {
+			"takeable" : true,
+
+			"actions" : {
+				"examine" : {
+					"output" : "you read the paper. it says: gayromeo/user/1245463, grinding the raspberry"
+				},
+
+				"lick" : {
+					"output" : "it tastes amazing. part of the paper was erased in the process, though",
+					"reveal" : "licked cum-stained paper",
+					"destroy" : true
+				},
+
+				"leave it alone" : {
+					"output" : "you turn your attention to something else.",
+					"exit" : true
+				}
+			}
+		},
+
+		"licked cum-stained paper" : {
+			"takeable" : true,
+
+			"actions" : {
+				"examine" : {
+					"output" : "you read the paper. it says: grinding the raspberry. there's something else written there, but it is too blurry for you to understand"
+				}
+			}
+		},
+
+		"vibrator" : {
+			"charges" : 5,
+
+			"actions" : {
+				"examine" : {
+					"output" : "a thoroughly used AssBender 2000"
+				},
+				"use": {
+					"output" : "**dwoiiinnnnnnnngggggggig**",
+					"charges": 1
+				},
+				"leave it alone" : {
+					"output" : "you turn your attention to something else.",
+					"exit" : true
+				}
+			}
+		}
+
+
+	}
+
+}

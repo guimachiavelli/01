@@ -1,0 +1,46 @@
+.textWindow {
+	height: 500px;
+	width: 300px;
+	border: 1px solid #000bff;
+	padding: 1em;
+	float: left;
+	margin-right: 1em;
+	overflow: auto;
+}
+
+button, a {
+	border: 0;
+	background: #000bff;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button:hover, a:hover {
+	background: transparent;
+	color: #000bff;
+}
+
+button:focus, a:focus {
+	background: red;
+	color: #fff;
+	-webkit-appearance: none;
+	outline: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.itemList li {
+	display: inline;
+}
+
+.itemList li:after {
+	content: ', ';
+}
+
+.itemList li:last-child:after {
+	content: '';
+}
+

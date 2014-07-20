@@ -1,0 +1,48 @@
+{
+	"info": {
+		"title" : "Limbo"
+	},
+
+	"setup" : {
+		"commands" : [
+			"go back"
+		],
+
+		"output" : {
+			"initial" : "you arrive at nothingness",
+			"default" : "you come back to nothingness"
+		},
+
+		"items": [
+			"used dildo"
+		]
+	},
+
+	"commands": {
+		"go back": {
+			"changeScene" : true,
+			"leadsTo": "intro",
+			"output": "you go back"
+		}
+	},
+
+	"objects" : {
+
+		"cum-stained paper" : {
+			"takeable" : true,
+
+			"actions" : {
+				"examine" : {
+					"output" : "you read the paper. it says…"
+				},
+
+				"lick" : {
+					"output" : "it tastes amazing. part of the paper was erased in the process, though",
+					"reveal" : "cum-licked stained paper"
+				}
+			}
+		}
+
+	}
+
+}
