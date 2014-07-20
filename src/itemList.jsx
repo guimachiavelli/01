@@ -9,9 +9,9 @@
 		printItems: function(itemsArray) {
 			var self = this;
 
-			return itemsArray.map(function(item, i){
+			return itemsArray.map(function(item){
 				return (
-					<li key={i}><Item pubsub={self.props.pubsub} name={item} /></li>
+					<li key={item}><Item pubsub={self.props.pubsub} name={item} /></li>
 				);
 			})
 		},

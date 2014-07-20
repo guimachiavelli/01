@@ -18846,9 +18846,9 @@ module.exports = require('./lib/React');
 		printItems: function(itemsArray) {
 			var self = this;
 
-			return itemsArray.map(function(item, i){
+			return itemsArray.map(function(item){
 				return (
-					React.DOM.li({key: i}, Item({pubsub: self.props.pubsub, name: item}))
+					React.DOM.li({key: item}, Item({pubsub: self.props.pubsub, name: item}))
 				);
 			})
 		},
@@ -18931,10 +18931,6 @@ module.exports = require('./lib/React');
 	};
 
 	Game.prototype.executeItemCommand = function(e, command) {
-		if (!this.scene.items[command.item]) {
-			throw new Error('item does not exist');
-		}
-
 		if (!this.scene.items[command.item].actions[command.name]) {
 			throw new Error('item does not have that action');
 		}
@@ -18943,10 +18939,21 @@ module.exports = require('./lib/React');
 
 		this.scene.currentText = exec.output;
 
-		if (exec.exit === true) {
+		if (exec.exit === true || exec.destroy === true) {
 			this.activeItem = null;
 			this.itemCommands = [];
 		}
+
+		if (exec.destroy === true) {
+			var itemPosition = this.items.indexOf(command.item);
+			this.items.splice(itemPosition, 1);
+		}
+
+		if (exec.reveal) {
+			this.items.push(exec.reveal);
+		}
+
+		console.log(this.items);
 
 		this.update();
 	};
@@ -18960,7 +18967,7 @@ module.exports = require('./lib/React');
 
 	Game.prototype.onItemClick = function(e, item) {
 		if (!this.scene.items[item]) {
-			throw new Error('item does not exist')
+			throw new Error('item does not exist');
 		}
 
 		var itemCommands = this.scene.items[item].actions;
