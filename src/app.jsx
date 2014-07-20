@@ -20,7 +20,8 @@
 				text: [],
 				items: [],
 				commands: [],
-				itemCommands: []
+				itemCommands: [],
+				activeItem: null
 			};
 		},
 
@@ -32,7 +33,8 @@
 					text: game.text,
 					items: game.items,
 					commands: game.commands,
-					itemCommands: game.itemCommands
+					itemCommands: game.itemCommands,
+					activeItem: game.activeItem
 				});
 			});
 
@@ -42,9 +44,17 @@
 			return (
 				/* jshint ignore:start */
 				<div className="app">
-					<TextWindow pubsub={pubsub} text={this.state.text} items={this.state.items} />
-					<CommandMenu pubsub={pubsub} commands={this.state.commands} />
-					<ItemCommandMenu pubsub={pubsub} commands={this.state.itemCommands} />
+					<TextWindow
+						pubsub={pubsub}
+						text={this.state.text}
+						items={this.state.items} />
+					<CommandMenu
+						pubsub={pubsub}
+						commands={this.state.commands} />
+					<ItemCommandMenu
+						pubsub={pubsub}
+						commands={this.state.itemCommands}
+						item={this.state.activeItem} />
 				</div>
 				/* jshint ignore:end */
 			);

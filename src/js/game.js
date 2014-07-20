@@ -9,9 +9,11 @@
 		this.items = [];
 		this.commands = [];
 		this.itemCommands = [];
+		this.activeItem = null;
 
 		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
+		this.pubsub.subscribe('game:item:command', this.executeItemCommand.bind(this));
 		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
 
 	};
@@ -53,6 +55,29 @@
 		}
 	};
 
+	Game.prototype.executeItemCommand = function(e, command) {
+		if (!this.scene.items[command.item]) {
+			throw new Error('item does not exist')
+		}
+
+		if (!this.scene.items[command.item].actions[command.name]) {
+			throw new Error('item does not have that action');
+		}
+
+		var exec = this.scene.items[command.item].actions[command.name];
+
+
+		this.scene.currentText = exec.output;
+
+		if (exec.exit === true) {
+			this.activeItem = null;
+			this.itemCommands = [];
+		}
+
+		this.update();
+
+	};
+
 	Game.prototype.getCommand = function(command) {
 		if (!this.scene.commands[command]) {
 			throw new Error('command does not exist:' + command);
@@ -61,8 +86,13 @@
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
+		if (!this.scene.items[item]) {
+			throw new Error('item does not exist')
+		}
+
 		var itemCommands = this.scene.items[item].actions;
 		this.itemCommands = this.getItemCommandList(itemCommands);
+		this.activeItem = item;
 		this.update();
 	};
 
@@ -74,10 +104,7 @@
 			}
 		}
 
-		commandArray.push('exit');
-
 		return commandArray;
-
 	};
 
 

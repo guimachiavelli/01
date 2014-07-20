@@ -15,7 +15,7 @@
 
 		"items": [
 			"cum-stained paper",
-			"napkin"
+			"vibrator"
 		]
 	},
 
@@ -52,6 +52,11 @@
 				"lick" : {
 					"output" : "it tastes amazing. part of the paper was erased in the process, though",
 					"reveal" : "licked cum-stained paper"
+				},
+
+				"leave it alone" : {
+					"output" : "you turn your attention to something else.",
+					"exit" : true
 				}
 			}
 		},
@@ -64,7 +69,23 @@
 					"output" : "you read the paper. it says…"
 				}
 			}
+		},
+
+		"vibrator" : {
+			"actions" : {
+				"examine" : {
+					"output" : "a thoroughly used AssBender 2000"
+				},
+				"use": {
+					"output" : "**dwoiiinnnnnnnngggggggig**"
+				},
+				"leave it alone" : {
+					"output" : "you turn your attention to something else.",
+					"exit" : true
+				}
+			}
 		}
+
 
 	}
 

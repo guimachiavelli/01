@@ -18636,7 +18636,8 @@ module.exports = require('./lib/React');
 				text: [],
 				items: [],
 				commands: [],
-				itemCommands: []
+				itemCommands: [],
+				activeItem: null
 			};
 		},
 
@@ -18648,7 +18649,8 @@ module.exports = require('./lib/React');
 					text: game.text,
 					items: game.items,
 					commands: game.commands,
-					itemCommands: game.itemCommands
+					itemCommands: game.itemCommands,
+					activeItem: game.activeItem
 				});
 			});
 
@@ -18658,9 +18660,17 @@ module.exports = require('./lib/React');
 			return (
 				/* jshint ignore:start */
 				React.DOM.div({className: "app"}, 
-					TextWindow({pubsub: pubsub, text: this.state.text, items: this.state.items}), 
-					CommandMenu({pubsub: pubsub, commands: this.state.commands}), 
-					ItemCommandMenu({pubsub: pubsub, commands: this.state.itemCommands})
+					TextWindow({
+						pubsub: pubsub, 
+						text: this.state.text, 
+						items: this.state.items}), 
+					CommandMenu({
+						pubsub: pubsub, 
+						commands: this.state.commands}), 
+					ItemCommandMenu({
+						pubsub: pubsub, 
+						commands: this.state.itemCommands, 
+						item: this.state.activeItem})
 				)
 				/* jshint ignore:end */
 			);
@@ -18768,9 +18778,7 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			console.log('item command click');
-
-			//this.props.pubsub.publish('game:item:command', this.props.name);
+			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item });
 		},
 
 		render: function() {
@@ -18805,7 +18813,7 @@ module.exports = require('./lib/React');
 						ItemCommand({
 							pubsub: self.props.pubsub, 
 							name: command, 
-							type: self.props.type})
+							item: self.props.item})
 					)
 				)
 			});
@@ -18875,9 +18883,11 @@ module.exports = require('./lib/React');
 		this.items = [];
 		this.commands = [];
 		this.itemCommands = [];
+		this.activeItem = null;
 
 		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
+		this.pubsub.subscribe('game:item:command', this.executeItemCommand.bind(this));
 		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
 
 	};
@@ -18919,6 +18929,29 @@ module.exports = require('./lib/React');
 		}
 	};
 
+	Game.prototype.executeItemCommand = function(e, command) {
+		if (!this.scene.items[command.item]) {
+			throw new Error('item does not exist')
+		}
+
+		if (!this.scene.items[command.item].actions[command.name]) {
+			throw new Error('item does not have that action');
+		}
+
+		var exec = this.scene.items[command.item].actions[command.name];
+
+
+		this.scene.currentText = exec.output;
+
+		if (exec.exit === true) {
+			this.activeItem = null;
+			this.itemCommands = [];
+		}
+
+		this.update();
+
+	};
+
 	Game.prototype.getCommand = function(command) {
 		if (!this.scene.commands[command]) {
 			throw new Error('command does not exist:' + command);
@@ -18927,8 +18960,13 @@ module.exports = require('./lib/React');
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
+		if (!this.scene.items[item]) {
+			throw new Error('item does not exist')
+		}
+
 		var itemCommands = this.scene.items[item].actions;
 		this.itemCommands = this.getItemCommandList(itemCommands);
+		this.activeItem = item;
 		this.update();
 	};
 
@@ -18940,10 +18978,7 @@ module.exports = require('./lib/React');
 			}
 		}
 
-		commandArray.push('exit');
-
 		return commandArray;
-
 	};
 
 

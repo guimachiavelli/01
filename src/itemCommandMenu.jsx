@@ -16,7 +16,7 @@
 						<ItemCommand
 							pubsub={self.props.pubsub}
 							name={command}
-							type={self.props.type} />
+							item={self.props.item} />
 					</li>
 				)
 			});
