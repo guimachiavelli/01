@@ -18878,7 +18878,7 @@ module.exports = require('./lib/React');
 		Player = require('./player');
 
 	var Game = function(pubsub) {
-		this.scene = new Scene('../src/game/intro.json', pubsub);
+		this.scene = new Scene('./game/intro.json', pubsub);
 		this.player = new Player();
 		this.pubsub = pubsub;
 		this.text = [];
@@ -18943,7 +18943,7 @@ module.exports = require('./lib/React');
 		}
 
 		if (exec.changeScene === true) {
-			this.scene.changeScene('../src/game/' + exec.leadsTo + '.json');
+			this.scene.changeScene('./game/' + exec.leadsTo + '.json');
 
 			this.activeItem = null;
 			this.itemCommands = [];
