@@ -26,19 +26,18 @@
 		}
 	},
 
-	"objects" : {
+	"items" : {
 
-		"cum-stained paper" : {
+		"used dildo" : {
 			"takeable" : true,
 
 			"actions" : {
 				"examine" : {
-					"output" : "you read the paper. it says…"
+					"output" : "the used dildo of nothingness"
 				},
 
 				"lick" : {
-					"output" : "it tastes amazing. part of the paper was erased in the process, though",
-					"reveal" : "cum-licked stained paper"
+					"output" : "it has a very sour taste"
 				}
 			}
 		}

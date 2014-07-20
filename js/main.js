@@ -19223,7 +19223,8 @@ module.exports = StatusWindow;
 			return (
 				React.DOM.div({className: "textWindow"}, 
 					text, 
-					ItemList({pubsub: this.props.pubsub, items: this.props.items})
+					React.DOM.br(null), 
+					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
 				)
 			);
 		}
