@@ -1,9 +1,8 @@
 var gulp = require('gulp'),
-	concat = require('gulp-concat'),
-	rename = require('gulp-rename'),
 	source = require('vinyl-source-stream'),
 	gutil = require('gutil'),
 	plumber = require('gulp-plumber'),
+	gh_pages = require('gulp-gh-pages'),
 	browserify = require('browserify');
 
 gulp.task('default', function() {
@@ -24,4 +23,9 @@ gulp.task('react', function() {
 
 gulp.task('develop', function() {
 	gulp.watch(['src/*.jsx', 'src/js/*.js'], ['react']);
+});
+
+
+gulp.task('deploy', function(){
+	gulp.src('./public/**/*').pipe(gh_pages());
 });
