@@ -18684,7 +18684,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./js/game":153,"./js/pubsub":155,"./statusWindow.jsx":158,"./textWindow.jsx":159,"react":145}],147:[function(require,module,exports){
+},{"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./js/game":153,"./js/pubsub":156,"./statusWindow.jsx":159,"./textWindow.jsx":160,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18874,13 +18874,16 @@ module.exports = require('./lib/React');
 },{"./item.jsx":149,"react":145}],153:[function(require,module,exports){
 (function() {
 	'use strict';
+
 	var Scene = require('./scene'),
+		Library = require('./library'),
 		Player = require('./player');
 
 	var Game = function(pubsub) {
+		this.pubsub = pubsub;
 		this.scene = new Scene('./game/intro.json', pubsub);
 		this.player = new Player();
-		this.pubsub = pubsub;
+		this.library = new Library('./game/items.json', pubsub);
 		this.text = [];
 		this.items = [];
 		this.commands = [];
@@ -18892,7 +18895,6 @@ module.exports = require('./lib/React');
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
 		this.pubsub.subscribe('game:item:command', this.executeItemCommand.bind(this));
 		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
-
 	};
 
 	Game.prototype.updateScene = function() {
@@ -18904,10 +18906,9 @@ module.exports = require('./lib/React');
 		this.updateItems();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
-
 	};
 
-	Game.prototype.updateText =  function() {
+	Game.prototype.updateText = function() {
 		this.text.push(this.scene.currentText);
 		this.scene.currentText = '';
 	};
@@ -18951,11 +18952,11 @@ module.exports = require('./lib/React');
 	};
 
 	Game.prototype.executeItemCommand = function(e, command) {
-		if (!this.scene.items[command.item].actions[command.name]) {
-			throw new Error('item does not have that action');
-		}
+		var exec = this.getItemCommand(command);
 
-		var exec = this.scene.items[command.item].actions[command.name];
+		if (exec === false) {
+			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
+		}
 
 		this.scene.currentText = exec.output;
 
@@ -18984,17 +18985,45 @@ module.exports = require('./lib/React');
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
-		if (!this.scene.items[item]) {
-			throw new Error('item does not exist');
+		var itemCommands = this.getItemCommands(item);
+
+		if (itemCommands === false) {
+			throw new Error('item does not exist: ' + item);
 		}
 
-		var itemCommands = this.scene.items[item].actions;
-		this.itemCommands = this.getItemCommandList(itemCommands);
+		this.itemCommands = this.makeItemCommandList(itemCommands);
 		this.activeItem = item;
 		this.update();
 	};
 
-	Game.prototype.getItemCommandList = function(commandsObject) {
+	Game.prototype.getItemCommands = function(item) {
+		if (this.scene.items[item]) {
+			return this.scene.items[item].actions;
+		}
+
+		if (this.library.items[item]) {
+			return this.library.items[item].actions;
+		}
+
+		return false;
+	};
+
+	Game.prototype.getItemCommand = function(command) {
+		if (this.scene.items[command.item] && this.scene.items[command.item].actions[command.name]) {
+			return this.scene.items[command.item].actions[command.name];
+		}
+
+		if (this.library.items[command.item] && this.library.items[command.item].actions[command.name]) {
+			return this.library.items[command.item].actions[command.name];
+		}
+
+		return false;
+	};
+
+
+
+
+	Game.prototype.makeItemCommandList = function(commandsObject) {
 		var command, commandArray = [];
 		for (command in commandsObject) {
 			if (commandsObject.hasOwnProperty(command)) {
@@ -19007,10 +19036,48 @@ module.exports = require('./lib/React');
 
 
 
+
 	module.exports = Game;
+
 }());
 
-},{"./player":154,"./scene":156}],154:[function(require,module,exports){
+},{"./library":154,"./player":155,"./scene":157}],154:[function(require,module,exports){
+(function() {
+	'use strict';
+
+	var Items = function(url, pubsub) {
+		this.url = url;
+		this.pubsub = pubsub;
+		this.fetch();
+		this.items = {};
+	};
+
+	Items.prototype.fetch = function() {
+		if (!this.url) {
+			throw new Error('no url to request');
+		}
+
+		var request;
+		request = new XMLHttpRequest();
+		request.open('GET', this.url, true);
+		request.onload = this.loadAjax.bind(this, request);
+		request.send();
+	};
+
+	Items.prototype.loadAjax = function(request) {
+		if (request.status < 200 && request.status > 400) return;
+
+		var data = JSON.parse(request.responseText);
+
+		this.items = data.items;
+
+	};
+
+	module.exports = Items;
+
+}())
+
+},{}],155:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19039,7 +19106,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],155:[function(require,module,exports){
+},{}],156:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19109,7 +19176,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],156:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19169,7 +19236,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],157:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./app.jsx');
@@ -19179,7 +19246,7 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./app.jsx":146,"react":145}],158:[function(require,module,exports){
+},{"./app.jsx":146,"react":145}],159:[function(require,module,exports){
 /** @jsx React.DOM */var React = require('react');
 
 var StatusWindow = React.createClass({displayName: 'StatusWindow',
@@ -19194,7 +19261,7 @@ var StatusWindow = React.createClass({displayName: 'StatusWindow',
 
 module.exports = StatusWindow;
 
-},{"react":145}],159:[function(require,module,exports){
+},{"react":145}],160:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -19234,4 +19301,4 @@ module.exports = StatusWindow;
 }());
 
 
-},{"./itemList.jsx":152,"react":145}]},{},[157])
+},{"./itemList.jsx":152,"react":145}]},{},[158])

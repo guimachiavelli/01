@@ -1,0 +1,25 @@
+{
+	"items" : {
+
+		"flag" : {
+			"takeable" : true,
+
+			"actions" : {
+				"examine" : {
+					"output" : "bloody nationalists! flags are counterrevolutionary!"
+				},
+
+				"burn" : {
+					"output" : "JOIN THE HOMOSSEXUAL INTIFADA!",
+					"destroy" : true
+				},
+
+				"leave it alone" : {
+					"output" : "you turn your attention to something else.",
+					"exit" : true
+				}
+			}
+		}
+
+	}
+}
