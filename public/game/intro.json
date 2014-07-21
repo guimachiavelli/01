@@ -23,7 +23,7 @@
 	},
 
 	"commands": {
-		"go to next room": {
+		"go to the next room": {
 			"changeScene" : true,
 			"leadsTo": "scene1",
 			"output" : "you leave your room"
