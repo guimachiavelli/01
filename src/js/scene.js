@@ -6,10 +6,11 @@
 		this.availableObjects = {};
 		this.commands = {};
 		this.info = {};
+		this.description = {};
 		this.text = [];
 		this.url = url;
 		this.pubsub = pubsub;
-		this.items = {};
+		this.items = [];
 
 		this.fetch();
 	};

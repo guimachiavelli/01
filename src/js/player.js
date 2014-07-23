@@ -4,7 +4,7 @@
 	var Player = function() {
 		this.inventory = [];
 		this.visitedScenes = [];
-		this.usedItems = [];
+		this.itemDumpster = [];
 	};
 
 	Player.prototype.addScene = function(scene) {

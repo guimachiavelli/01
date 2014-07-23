@@ -1,13 +1,11 @@
 (function() {
 	'use strict';
 
-	var Scene = require('./scene'),
-		Library = require('./library'),
+	var Library = require('./library'),
 		Player = require('./player');
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
-		this.scene = new Scene('./game/intro.json', pubsub);
 		this.player = new Player();
 		this.library = new Library('./game/items.json', pubsub);
 		this.text = [];
@@ -17,7 +15,7 @@
 		this.currentScene = 'intro';
 		this.activeItem = null;
 
-		this.pubsub.subscribe('scene:loaded', this.updateScene.bind(this));
+		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
 		this.pubsub.subscribe('game:item:command', this.executeItemCommand.bind(this));
 		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
@@ -26,7 +24,7 @@
 	Game.prototype.updateScene = function() {
 		this.text.push(this.getSceneDescription());
 
-		this.currentScene = this.scene.info.title;
+		this.currentScene = this.library.scene.info.title;
 		this.player.addScene(this.currentScene);
 
 		this.updateItems();
@@ -35,23 +33,23 @@
 	};
 
 	Game.prototype.updateText = function() {
-		this.text.push(this.scene.currentText);
-		this.scene.currentText = '';
+		this.text.push(this.library.scene.currentText);
+		this.library.scene.currentText = '';
 	};
 
 	Game.prototype.getSceneDescription = function() {
-		if (!this.player.hasVisited(this.scene.info.title)) {
-			return this.scene.description.initial;
+		if (!this.player.hasVisited(this.library.scene.info.title)) {
+			return this.library.scene.description.initial;
 		}
-		return this.scene.description.default;
+		return this.library.scene.description.default;
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = this.scene.availableObjects;
+		this.items = this.getItems(this.library.scene.availableObjects);
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.scene.commandList;
+		this.commands = this.library.scene.commandList;
 	};
 
 	Game.prototype.update = function() {
@@ -65,12 +63,12 @@
 		var exec = this.getCommand(command);
 
 		if (exec.output) {
-			this.scene.currentText = exec.output;
+			this.library.scene.currentText = exec.output;
 			this.update();
 		}
 
 		if (exec.changeScene === true) {
-			this.scene.changeScene('./game/' + exec.leadsTo + '.json');
+			this.library.scene.changeScene('./game/' + exec.leadsTo + '.json');
 
 			this.activeItem = null;
 			this.itemCommands = [];
@@ -84,7 +82,7 @@
 			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
 		}
 
-		this.scene.currentText = exec.output;
+		this.library.scene.currentText = exec.output;
 
 		if (exec.exit === true || exec.destroy === true) {
 			this.activeItem = null;
@@ -94,6 +92,7 @@
 		if (exec.destroy === true) {
 			var itemPosition = this.items.indexOf(command.item);
 			this.items.splice(itemPosition, 1);
+			this.player.itemDumpster.push(command.item);
 		}
 
 		if (exec.reveal) {
@@ -104,10 +103,10 @@
 	};
 
 	Game.prototype.getCommand = function(command) {
-		if (!this.scene.commands[command]) {
+		if (!this.library.scene.commands[command]) {
 			throw new Error('command does not exist:' + command);
 		}
-		return this.scene.commands[command];
+		return this.library.scene.commands[command];
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
@@ -123,8 +122,8 @@
 	};
 
 	Game.prototype.getItemCommands = function(item) {
-		if (this.scene.items[item]) {
-			return this.scene.items[item].actions;
+		if (this.library.scene.items[item]) {
+			return this.library.scene.items[item].actions;
 		}
 
 		if (this.library.items[item]) {
@@ -135,8 +134,10 @@
 	};
 
 	Game.prototype.getItemCommand = function(command) {
-		if (this.scene.items[command.item] && this.scene.items[command.item].actions[command.name]) {
-			return this.scene.items[command.item].actions[command.name];
+		if (this.library.scene.items[command.item] &&
+			this.library.scene.items[command.item].actions[command.name]
+		) {
+			return this.library.scene.items[command.item].actions[command.name];
 		}
 
 		if (this.library.items[command.item] && this.library.items[command.item].actions[command.name]) {
@@ -145,8 +146,6 @@
 
 		return false;
 	};
-
-
 
 
 	Game.prototype.makeItemCommandList = function(commandsObject) {
@@ -160,8 +159,18 @@
 		return commandArray;
 	};
 
+	Game.prototype.getItems = function(items) {
+		var i = 0, len = items.length, availableItems =[];
+		while (i < len) {
+			if (this.player.itemDumpster.indexOf(items[i]) === -1) {
+				availableItems.push(items[i]);
+			}
 
+			i += 1;
+		}
 
+		return availableItems;
+	};
 
 	module.exports = Game;
 
