@@ -22,7 +22,7 @@ gulp.task('react', function() {
 });
 
 gulp.task('develop', function() {
-	gulp.watch(['src/*.jsx', 'src/js/*.js'], ['react']);
+	gulp.watch(['src/components/*.jsx', 'src/js/*.js'], ['react']);
 });
 
 

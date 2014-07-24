@@ -1,6 +1,6 @@
 window.React = require('react');
 
-var App = require('./app.jsx');
+var App = require('./components/app.jsx');
 
 var Main = React.renderComponent(
 	<App />,

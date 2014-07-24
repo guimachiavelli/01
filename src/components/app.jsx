@@ -7,8 +7,8 @@
 		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
-		PubSub = require('./js/pubsub'),
-		Game = require('./js/game');
+		PubSub = require('../js/pubsub'),
+		Game = require('../js/game');
 
 	var pubsub = new PubSub();
 	var game = new Game(pubsub);

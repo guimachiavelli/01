@@ -18623,8 +18623,8 @@ module.exports = require('./lib/React');
 		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
-		PubSub = require('./js/pubsub'),
-		Game = require('./js/game');
+		PubSub = require('../js/pubsub'),
+		Game = require('../js/game');
 
 	var pubsub = new PubSub();
 	var game = new Game(pubsub);
@@ -18684,7 +18684,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./js/game":153,"./js/pubsub":156,"./statusWindow.jsx":159,"./textWindow.jsx":160,"react":145}],147:[function(require,module,exports){
+},{"../js/game":155,"../js/pubsub":158,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18872,6 +18872,61 @@ module.exports = require('./lib/React');
 
 
 },{"./item.jsx":149,"react":145}],153:[function(require,module,exports){
+/** @jsx React.DOM */var React = require('react');
+
+var StatusWindow = React.createClass({displayName: 'StatusWindow',
+	render: function() {
+		return (
+			React.DOM.div({className: "statusWindow"}, 
+				"this should contain the player status"
+			)
+		)
+	}
+});
+
+module.exports = StatusWindow;
+
+},{"react":145}],154:[function(require,module,exports){
+/** @jsx React.DOM */(function() {
+	'use strict';
+
+	var React = require('react');
+
+	var ItemList = require('./itemList.jsx');
+
+	var TextWindow = React.createClass({displayName: 'TextWindow',
+
+		printText: function(textArray) {
+			return textArray.map(function(text, i){
+				return (
+					React.DOM.p({key: i}, text)
+				);
+			})
+		},
+
+		componentDidUpdate: function() {
+			var el = this.getDOMNode();
+			el.scrollTop = el.scrollHeight;
+		},
+
+		render: function() {
+			var text = this.printText(this.props.text);
+
+			return (
+				React.DOM.div({className: "textWindow"}, 
+					text, 
+					React.DOM.br(null), 
+					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
+				)
+			);
+		}
+	});
+
+	module.exports = TextWindow;
+}());
+
+
+},{"./itemList.jsx":152,"react":145}],155:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19050,7 +19105,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{"./library":154,"./player":155}],154:[function(require,module,exports){
+},{"./library":156,"./player":157}],156:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19096,7 +19151,7 @@ module.exports = require('./lib/React');
 
 }())
 
-},{"./scene":157}],155:[function(require,module,exports){
+},{"./scene":159}],157:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19125,7 +19180,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],156:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19195,7 +19250,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],157:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19256,69 +19311,14 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],158:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
-var App = require('./app.jsx');
+var App = require('./components/app.jsx');
 
 var Main = React.renderComponent(
 	App(null),
 	document.getElementById('content')
 );
 
-},{"./app.jsx":146,"react":145}],159:[function(require,module,exports){
-/** @jsx React.DOM */var React = require('react');
-
-var StatusWindow = React.createClass({displayName: 'StatusWindow',
-	render: function() {
-		return (
-			React.DOM.div({className: "statusWindow"}, 
-				"this should contain the player status"
-			)
-		)
-	}
-});
-
-module.exports = StatusWindow;
-
-},{"react":145}],160:[function(require,module,exports){
-/** @jsx React.DOM */(function() {
-	'use strict';
-
-	var React = require('react');
-
-	var ItemList = require('./itemList.jsx');
-
-	var TextWindow = React.createClass({displayName: 'TextWindow',
-
-		printText: function(textArray) {
-			return textArray.map(function(text, i){
-				return (
-					React.DOM.p({key: i}, text)
-				);
-			})
-		},
-
-		componentDidUpdate: function() {
-			var el = this.getDOMNode();
-			el.scrollTop = el.scrollHeight;
-		},
-
-		render: function() {
-			var text = this.printText(this.props.text);
-
-			return (
-				React.DOM.div({className: "textWindow"}, 
-					text, 
-					React.DOM.br(null), 
-					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
-				)
-			);
-		}
-	});
-
-	module.exports = TextWindow;
-}());
-
-
-},{"./itemList.jsx":152,"react":145}]},{},[158])
+},{"./components/app.jsx":146,"react":145}]},{},[160])
