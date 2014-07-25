@@ -3,7 +3,7 @@
 
 	// gets scene via ajax
 	var Scene = function(url, pubsub) {
-		this.availableObjects = {};
+		this.availableItems = {};
 		this.commands = {};
 		this.info = {};
 		this.description = {};
@@ -37,7 +37,7 @@
 
 		this.info = data.info;
 		this.commandList = data.setup.commands;
-		this.availableObjects = data.setup.items;
+		this.availableItems = data.setup.items;
 		this.description = data.setup.output;
 		this.commands = data.commands;
 		this.items = data.items;

@@ -18684,7 +18684,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"../js/game":155,"../js/pubsub":158,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
+},{"../js/game":155,"../js/pubsub":159,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18931,7 +18931,10 @@ module.exports = StatusWindow;
 	'use strict';
 
 	var Library = require('./library'),
-		Player = require('./player');
+		Player = require('./player'),
+		Items = require('./items');
+
+	Items = new Items();
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
@@ -18974,7 +18977,7 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = this.getItems(this.library.scene.availableObjects);
+		this.items = Items.getItems(this.library.scene.availableItems, this.player.itemDumpster);
 	};
 
 	Game.prototype.updateCommands =  function() {
@@ -19004,8 +19007,28 @@ module.exports = StatusWindow;
 		}
 	};
 
+
+	Game.prototype.getCommand = function(command) {
+		if (!this.library.scene.commands[command]) {
+			throw new Error('command does not exist:' + command);
+		}
+		return this.library.scene.commands[command];
+	};
+
+	Game.prototype.onItemClick = function(e, item) {
+		var itemCommands = Items.getItemCommands(item, this.library.scene.items, this.library.items);
+
+		if (itemCommands === false) {
+			throw new Error('item does not exist: ' + item);
+		}
+
+		this.itemCommands = Items.makeItemCommandList(itemCommands);
+		this.activeItem = item;
+		this.update();
+	};
+
 	Game.prototype.executeItemCommand = function(e, command) {
-		var exec = this.getItemCommand(command);
+		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
 
 		if (exec === false) {
 			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
@@ -19031,81 +19054,87 @@ module.exports = StatusWindow;
 		this.update();
 	};
 
-	Game.prototype.getCommand = function(command) {
-		if (!this.library.scene.commands[command]) {
-			throw new Error('command does not exist:' + command);
-		}
-		return this.library.scene.commands[command];
+
+
+	module.exports = Game;
+
+}());
+
+},{"./items":156,"./library":157,"./player":158}],156:[function(require,module,exports){
+(function() {
+	'use strict';
+
+	var Items = function() {
+
 	};
 
-	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = this.getItemCommands(item);
+	Items.prototype.getItems = function(items, itemDumpster) {
+		var i, len, availableItems;
 
-		if (itemCommands === false) {
-			throw new Error('item does not exist: ' + item);
-		}
+		i = 0;
+		len = items.length;
+		availableItems =[];
 
-		this.itemCommands = this.makeItemCommandList(itemCommands);
-		this.activeItem = item;
-		this.update();
-	};
-
-	Game.prototype.getItemCommands = function(item) {
-		if (this.library.scene.items[item]) {
-			return this.library.scene.items[item].actions;
-		}
-
-		if (this.library.items[item]) {
-			return this.library.items[item].actions;
-		}
-
-		return false;
-	};
-
-	Game.prototype.getItemCommand = function(command) {
-		if (this.library.scene.items[command.item] &&
-			this.library.scene.items[command.item].actions[command.name]
-		) {
-			return this.library.scene.items[command.item].actions[command.name];
-		}
-
-		if (this.library.items[command.item] && this.library.items[command.item].actions[command.name]) {
-			return this.library.items[command.item].actions[command.name];
-		}
-
-		return false;
-	};
-
-
-	Game.prototype.makeItemCommandList = function(commandsObject) {
-		var command, commandArray = [];
-		for (command in commandsObject) {
-			if (commandsObject.hasOwnProperty(command)) {
-				commandArray.push(command);
-			}
-		}
-
-		return commandArray;
-	};
-
-	Game.prototype.getItems = function(items) {
-		var i = 0, len = items.length, availableItems =[];
 		while (i < len) {
-			if (this.player.itemDumpster.indexOf(items[i]) === -1) {
+			if (itemDumpster.indexOf(items[i]) === -1) {
 				availableItems.push(items[i]);
 			}
-
 			i += 1;
 		}
 
 		return availableItems;
 	};
 
-	module.exports = Game;
+
+	Items.prototype.getItemCommand = function(command, sceneItems, libraryItems) {
+		if (sceneItems[command.item] &&
+			sceneItems[command.item].actions[command.name]
+		) {
+			return sceneItems[command.item].actions[command.name];
+		}
+
+		if (libraryItems[command.item] &&
+			libraryItems[command.item].actions[command.name]
+		) {
+			return libraryItems[command.item].actions[command.name];
+		}
+
+		return false;
+	};
+
+
+	Items.prototype.makeItemCommandList = function(commandsObject) {
+		var command, commandArray = [];
+
+		for (command in commandsObject) {
+			if (!commandsObject.hasOwnProperty(command)) {
+				continue;
+			}
+			commandArray.push(command);
+		}
+
+		return commandArray;
+	};
+
+	Items.prototype.getItemCommands = function(item, sceneItems, libraryItems) {
+		if (sceneItems[item]) {
+			return sceneItems[item].actions;
+		}
+
+		if (libraryItems[item]) {
+			return libraryItems[item].actions;
+		}
+
+		return false;
+	};
+
+
+	module.exports = Items;
+
 
 }());
 
-},{"./library":156,"./player":157}],156:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19146,12 +19175,11 @@ module.exports = StatusWindow;
 		this.items = data.items;
 	};
 
-
 	module.exports = Library;
 
 }())
 
-},{"./scene":159}],157:[function(require,module,exports){
+},{"./scene":160}],158:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19180,7 +19208,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],158:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19250,13 +19278,13 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],159:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 (function() {
 	'use strict';
 
 	// gets scene via ajax
 	var Scene = function(url, pubsub) {
-		this.availableObjects = {};
+		this.availableItems = {};
 		this.commands = {};
 		this.info = {};
 		this.description = {};
@@ -19290,7 +19318,7 @@ module.exports = StatusWindow;
 
 		this.info = data.info;
 		this.commandList = data.setup.commands;
-		this.availableObjects = data.setup.items;
+		this.availableItems = data.setup.items;
 		this.description = data.setup.output;
 		this.commands = data.commands;
 		this.items = data.items;
@@ -19311,7 +19339,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],160:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./components/app.jsx');
@@ -19321,4 +19349,4 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./components/app.jsx":146,"react":145}]},{},[160])
+},{"./components/app.jsx":146,"react":145}]},{},[161])

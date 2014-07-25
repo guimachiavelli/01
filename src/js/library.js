@@ -38,7 +38,6 @@
 		this.items = data.items;
 	};
 
-
 	module.exports = Library;
 
 }())

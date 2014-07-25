@@ -2,7 +2,10 @@
 	'use strict';
 
 	var Library = require('./library'),
-		Player = require('./player');
+		Player = require('./player'),
+		Items = require('./items');
+
+	Items = new Items();
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
@@ -45,7 +48,7 @@
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = this.getItems(this.library.scene.availableObjects);
+		this.items = Items.getItems(this.library.scene.availableItems, this.player.itemDumpster);
 	};
 
 	Game.prototype.updateCommands =  function() {
@@ -75,8 +78,28 @@
 		}
 	};
 
+
+	Game.prototype.getCommand = function(command) {
+		if (!this.library.scene.commands[command]) {
+			throw new Error('command does not exist:' + command);
+		}
+		return this.library.scene.commands[command];
+	};
+
+	Game.prototype.onItemClick = function(e, item) {
+		var itemCommands = Items.getItemCommands(item, this.library.scene.items, this.library.items);
+
+		if (itemCommands === false) {
+			throw new Error('item does not exist: ' + item);
+		}
+
+		this.itemCommands = Items.makeItemCommandList(itemCommands);
+		this.activeItem = item;
+		this.update();
+	};
+
 	Game.prototype.executeItemCommand = function(e, command) {
-		var exec = this.getItemCommand(command);
+		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
 
 		if (exec === false) {
 			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
@@ -102,75 +125,7 @@
 		this.update();
 	};
 
-	Game.prototype.getCommand = function(command) {
-		if (!this.library.scene.commands[command]) {
-			throw new Error('command does not exist:' + command);
-		}
-		return this.library.scene.commands[command];
-	};
 
-	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = this.getItemCommands(item);
-
-		if (itemCommands === false) {
-			throw new Error('item does not exist: ' + item);
-		}
-
-		this.itemCommands = this.makeItemCommandList(itemCommands);
-		this.activeItem = item;
-		this.update();
-	};
-
-	Game.prototype.getItemCommands = function(item) {
-		if (this.library.scene.items[item]) {
-			return this.library.scene.items[item].actions;
-		}
-
-		if (this.library.items[item]) {
-			return this.library.items[item].actions;
-		}
-
-		return false;
-	};
-
-	Game.prototype.getItemCommand = function(command) {
-		if (this.library.scene.items[command.item] &&
-			this.library.scene.items[command.item].actions[command.name]
-		) {
-			return this.library.scene.items[command.item].actions[command.name];
-		}
-
-		if (this.library.items[command.item] && this.library.items[command.item].actions[command.name]) {
-			return this.library.items[command.item].actions[command.name];
-		}
-
-		return false;
-	};
-
-
-	Game.prototype.makeItemCommandList = function(commandsObject) {
-		var command, commandArray = [];
-		for (command in commandsObject) {
-			if (commandsObject.hasOwnProperty(command)) {
-				commandArray.push(command);
-			}
-		}
-
-		return commandArray;
-	};
-
-	Game.prototype.getItems = function(items) {
-		var i = 0, len = items.length, availableItems =[];
-		while (i < len) {
-			if (this.player.itemDumpster.indexOf(items[i]) === -1) {
-				availableItems.push(items[i]);
-			}
-
-			i += 1;
-		}
-
-		return availableItems;
-	};
 
 	module.exports = Game;
 
