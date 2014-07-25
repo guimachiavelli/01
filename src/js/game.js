@@ -35,8 +35,8 @@
 		this.pubsub.publish('game:update');
 	};
 
-	Game.prototype.updateText = function() {
-		this.text.push(this.library.scene.currentText);
+	Game.prototype.updateText = function(text) {
+		this.text.push(text);
 		this.library.scene.currentText = '';
 	};
 
@@ -56,7 +56,7 @@
 	};
 
 	Game.prototype.update = function() {
-		this.updateText();
+		this.updateText(this.library.scene.currentText);
 		this.updateItems();
 		this.updateCommands();
 		this.pubsub.publish('game:update');

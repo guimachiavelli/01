@@ -65,6 +65,18 @@
 		return false;
 	};
 
+	Items.prototype.destroyItem = function(item, currentItems, dumpster) {
+		var itemPosition = currentItems.indexOf(item);
+		currentItems.splice(itemPosition, 1);
+		dumpster.push(item);
+
+		return dumpster;
+	};
+
+	Items.prototype.revealItem = function(revealedItem, items) {
+		return items.push(revealedItem);
+	};
+
 
 	module.exports = Items;
 
