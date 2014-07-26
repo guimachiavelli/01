@@ -4,7 +4,7 @@
 	},
 
 	"setup" : {
-		"commands" : [
+		"commandList" : [
 			"go back"
 		],
 

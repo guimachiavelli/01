@@ -18623,8 +18623,8 @@ module.exports = require('./lib/React');
 		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
-		PubSub = require('./js/pubsub'),
-		Game = require('./js/game');
+		PubSub = require('../js/pubsub'),
+		Game = require('../js/game');
 
 	var pubsub = new PubSub();
 	var game = new Game(pubsub);
@@ -18684,7 +18684,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./js/game":153,"./js/pubsub":156,"./statusWindow.jsx":159,"./textWindow.jsx":160,"react":145}],147:[function(require,module,exports){
+},{"../js/game":155,"../js/pubsub":159,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18872,16 +18872,72 @@ module.exports = require('./lib/React');
 
 
 },{"./item.jsx":149,"react":145}],153:[function(require,module,exports){
+/** @jsx React.DOM */var React = require('react');
+
+var StatusWindow = React.createClass({displayName: 'StatusWindow',
+	render: function() {
+		return (
+			React.DOM.div({className: "statusWindow"}, 
+				"this should contain the player status"
+			)
+		)
+	}
+});
+
+module.exports = StatusWindow;
+
+},{"react":145}],154:[function(require,module,exports){
+/** @jsx React.DOM */(function() {
+	'use strict';
+
+	var React = require('react');
+
+	var ItemList = require('./itemList.jsx');
+
+	var TextWindow = React.createClass({displayName: 'TextWindow',
+
+		printText: function(textArray) {
+			return textArray.map(function(text, i){
+				return (
+					React.DOM.p({key: i}, text)
+				);
+			})
+		},
+
+		componentDidUpdate: function() {
+			var el = this.getDOMNode();
+			el.scrollTop = el.scrollHeight;
+		},
+
+		render: function() {
+			var text = this.printText(this.props.text);
+
+			return (
+				React.DOM.div({className: "textWindow"}, 
+					text, 
+					React.DOM.br(null), 
+					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
+				)
+			);
+		}
+	});
+
+	module.exports = TextWindow;
+}());
+
+
+},{"./itemList.jsx":152,"react":145}],155:[function(require,module,exports){
 (function() {
 	'use strict';
 
-	var Scene = require('./scene'),
-		Library = require('./library'),
-		Player = require('./player');
+	var Library = require('./library'),
+		Player = require('./player'),
+		Items = require('./items');
+
+	Items = new Items();
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
-		this.scene = new Scene('./game/intro.json', pubsub);
 		this.player = new Player();
 		this.library = new Library('./game/items.json', pubsub);
 		this.text = [];
@@ -18891,7 +18947,7 @@ module.exports = require('./lib/React');
 		this.currentScene = 'intro';
 		this.activeItem = null;
 
-		this.pubsub.subscribe('scene:loaded', this.updateScene.bind(this));
+		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
 		this.pubsub.subscribe('game:item:command', this.executeItemCommand.bind(this));
 		this.pubsub.subscribe('item:clicked', this.onItemClick.bind(this));
@@ -18900,7 +18956,7 @@ module.exports = require('./lib/React');
 	Game.prototype.updateScene = function() {
 		this.text.push(this.getSceneDescription());
 
-		this.currentScene = this.scene.info.title;
+		this.currentScene = this.library.scene.info.title;
 		this.player.addScene(this.currentScene);
 
 		this.updateItems();
@@ -18908,28 +18964,30 @@ module.exports = require('./lib/React');
 		this.pubsub.publish('game:update');
 	};
 
-	Game.prototype.updateText = function() {
-		this.text.push(this.scene.currentText);
-		this.scene.currentText = '';
+	Game.prototype.updateText = function(text) {
+		this.text.push(text);
+		this.library.scene.currentText = '';
 	};
 
 	Game.prototype.getSceneDescription = function() {
-		if (!this.player.hasVisited(this.scene.info.title)) {
-			return this.scene.description.initial;
+		if (!this.player.hasVisited(this.library.scene.info.title)) {
+			return this.library.scene.setup.output.initial;
 		}
-		return this.scene.description.default;
+		return this.library.scene.setup.output.default;
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = this.scene.availableObjects;
+		this.items = Items.getItems(this.library.scene.setup.items,
+									this.player.itemDumpster,
+									this.player.revealedItems[this.currentScene]);
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.scene.commandList;
+		this.commands = this.library.scene.setup.commandList;
 	};
 
 	Game.prototype.update = function() {
-		this.updateText();
+		this.updateText(this.library.scene.currentText);
 		this.updateItems();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
@@ -18939,26 +18997,46 @@ module.exports = require('./lib/React');
 		var exec = this.getCommand(command);
 
 		if (exec.output) {
-			this.scene.currentText = exec.output;
+			this.library.scene.currentText = exec.output;
 			this.update();
 		}
 
 		if (exec.changeScene === true) {
-			this.scene.changeScene('./game/' + exec.leadsTo + '.json');
+			this.library.changeScene(exec.leadsTo);
 
 			this.activeItem = null;
 			this.itemCommands = [];
 		}
 	};
 
+
+	Game.prototype.getCommand = function(command) {
+		if (!this.library.scene.commands[command]) {
+			throw new Error('command does not exist:' + command);
+		}
+		return this.library.scene.commands[command];
+	};
+
+	Game.prototype.onItemClick = function(e, item) {
+		var itemCommands = Items.getItemCommands(item, this.library.scene.items, this.library.items);
+
+		if (itemCommands === false) {
+			throw new Error('item does not exist: ' + item);
+		}
+
+		this.itemCommands = Items.makeItemCommandList(itemCommands);
+		this.activeItem = item;
+		this.update();
+	};
+
 	Game.prototype.executeItemCommand = function(e, command) {
-		var exec = this.getItemCommand(command);
+		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
 
 		if (exec === false) {
 			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
 		}
 
-		this.scene.currentText = exec.output;
+		this.library.scene.currentText = exec.output;
 
 		if (exec.exit === true || exec.destroy === true) {
 			this.activeItem = null;
@@ -18968,72 +19046,15 @@ module.exports = require('./lib/React');
 		if (exec.destroy === true) {
 			var itemPosition = this.items.indexOf(command.item);
 			this.items.splice(itemPosition, 1);
+			this.player.itemDumpster.push(command.item);
 		}
 
 		if (exec.reveal) {
-			this.items.push(exec.reveal);
+			this.player.addRevealedItem(this.currentScene, exec.reveal);
 		}
 
 		this.update();
 	};
-
-	Game.prototype.getCommand = function(command) {
-		if (!this.scene.commands[command]) {
-			throw new Error('command does not exist:' + command);
-		}
-		return this.scene.commands[command];
-	};
-
-	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = this.getItemCommands(item);
-
-		if (itemCommands === false) {
-			throw new Error('item does not exist: ' + item);
-		}
-
-		this.itemCommands = this.makeItemCommandList(itemCommands);
-		this.activeItem = item;
-		this.update();
-	};
-
-	Game.prototype.getItemCommands = function(item) {
-		if (this.scene.items[item]) {
-			return this.scene.items[item].actions;
-		}
-
-		if (this.library.items[item]) {
-			return this.library.items[item].actions;
-		}
-
-		return false;
-	};
-
-	Game.prototype.getItemCommand = function(command) {
-		if (this.scene.items[command.item] && this.scene.items[command.item].actions[command.name]) {
-			return this.scene.items[command.item].actions[command.name];
-		}
-
-		if (this.library.items[command.item] && this.library.items[command.item].actions[command.name]) {
-			return this.library.items[command.item].actions[command.name];
-		}
-
-		return false;
-	};
-
-
-
-
-	Game.prototype.makeItemCommandList = function(commandsObject) {
-		var command, commandArray = [];
-		for (command in commandsObject) {
-			if (commandsObject.hasOwnProperty(command)) {
-				commandArray.push(command);
-			}
-		}
-
-		return commandArray;
-	};
-
 
 
 
@@ -19041,50 +19062,157 @@ module.exports = require('./lib/React');
 
 }());
 
-},{"./library":154,"./player":155,"./scene":157}],154:[function(require,module,exports){
+},{"./items":156,"./library":157,"./player":158}],156:[function(require,module,exports){
 (function() {
 	'use strict';
 
-	var Items = function(url, pubsub) {
-		this.url = url;
-		this.pubsub = pubsub;
-		this.fetch();
-		this.items = {};
+	var Items = function() {
+
 	};
 
-	Items.prototype.fetch = function() {
-		if (!this.url) {
+	Items.prototype.getItems = function(items, itemDumpster, revealedItems) {
+		var i, len, availableItems;
+
+		i = 0;
+		len = items.length;
+		availableItems = [];
+
+		while (i < len) {
+			if (itemDumpster.indexOf(items[i]) === -1) {
+				availableItems.push(items[i]);
+			}
+			i += 1;
+		}
+
+		if (revealedItems && revealedItems.length > 0) {
+			return availableItems.concat(revealedItems);
+		}
+
+		return availableItems;
+	};
+
+
+	Items.prototype.getItemCommand = function(command, sceneItems, libraryItems) {
+		if (sceneItems[command.item] &&
+			sceneItems[command.item].actions[command.name]
+		) {
+			return sceneItems[command.item].actions[command.name];
+		}
+
+		if (libraryItems[command.item] &&
+			libraryItems[command.item].actions[command.name]
+		) {
+			return libraryItems[command.item].actions[command.name];
+		}
+
+		return false;
+	};
+
+
+	Items.prototype.makeItemCommandList = function(commandsObject) {
+		var command, commandArray = [];
+
+		for (command in commandsObject) {
+			if (!commandsObject.hasOwnProperty(command)) {
+				continue;
+			}
+			commandArray.push(command);
+		}
+
+		return commandArray;
+	};
+
+	Items.prototype.getItemCommands = function(item, sceneItems, libraryItems) {
+		if (sceneItems[item]) {
+			return sceneItems[item].actions;
+		}
+
+		if (libraryItems[item]) {
+			return libraryItems[item].actions;
+		}
+
+		return false;
+	};
+
+	Items.prototype.destroyItem = function(item, currentItems, dumpster) {
+		var itemPosition = currentItems.indexOf(item);
+		currentItems.splice(itemPosition, 1);
+		dumpster.push(item);
+
+		return dumpster;
+	};
+
+	Items.prototype.revealItem = function(revealedItem, items) {
+		return items.push(revealedItem);
+	};
+
+
+	module.exports = Items;
+
+
+}());
+
+},{}],157:[function(require,module,exports){
+(function() {
+	'use strict';
+
+	var Library = function(url, pubsub) {
+		this.pubsub = pubsub;
+
+		this.items = null;
+		this.scene = null;
+
+		this.fetch('./game/items.json', 'items');
+		this.fetch('./game/intro.json', 'scene');
+
+		this.pubsub.subscribe('library:loaded', this.update.bind(this));
+	};
+
+	Library.prototype.update = function() {
+		if (this.scene && this.items){
+			this.pubsub.publish('library:update');
+		}
+	};
+
+	Library.prototype.fetch = function(url, type) {
+		if (!url) {
 			throw new Error('no url to request');
 		}
 
 		var request;
 		request = new XMLHttpRequest();
-		request.open('GET', this.url, true);
-		request.onload = this.loadAjax.bind(this, request);
+		request.open('GET', url, true);
+		request.onload = this.load.bind(this, request, type);
 		request.send();
 	};
 
-	Items.prototype.loadAjax = function(request) {
+	Library.prototype.load = function(request, type) {
 		if (request.status < 200 && request.status > 400) return;
 
 		var data = JSON.parse(request.responseText);
 
-		this.items = data.items;
+		this[type] = data;
 
+		this.pubsub.publish('library:loaded');
 	};
 
-	module.exports = Items;
+	Library.prototype.changeScene = function(scene) {
+		this.fetch('./game/' + scene + '.json', 'scene');
+	};
 
-}())
+	module.exports = Library;
 
-},{}],155:[function(require,module,exports){
+}());
+
+},{}],158:[function(require,module,exports){
 (function() {
 	'use strict';
 
 	var Player = function() {
 		this.inventory = [];
 		this.visitedScenes = [];
-		this.usedItems = [];
+		this.itemDumpster = [];
+		this.revealedItems = {};
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -19102,11 +19230,19 @@ module.exports = require('./lib/React');
 		return true;
 	};
 
+	Player.prototype.addRevealedItem = function(scene, item) {
+		if (typeof this.revealedItems[scene] !== Array) {
+			this.revealedItems[scene] = [];
+		}
+		this.revealedItems[scene].push(item);
+	};
+
+
 	module.exports = Player;
 
 }());
 
-},{}],156:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19176,129 +19312,14 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],157:[function(require,module,exports){
-(function() {
-	'use strict';
-
-	// gets scene via ajax
-	var Scene = function(url, pubsub) {
-		this.availableObjects = {};
-		this.commands = {};
-		this.info = {};
-		this.text = [];
-		this.url = url;
-		this.pubsub = pubsub;
-		this.items = {};
-
-		this.fetch();
-	};
-
-	Scene.prototype.fetch = function() {
-		if (!this.url) {
-			throw new Error('no url to request');
-		}
-
-		var request;
-		request = new XMLHttpRequest();
-		request.open('GET', this.url, true);
-		request.onload = this.loadAjax.bind(this, request);
-		request.onerror = this.ajaxError.bind(this);
-		request.send();
-	};
-
-
-	Scene.prototype.loadAjax = function(request) {
-		if (request.status < 200 && request.status > 400) return;
-		var data;
-
-		data = JSON.parse(request.responseText);
-
-		this.info = data.info;
-		this.commandList = data.setup.commands;
-		this.availableObjects = data.setup.items;
-		this.description = data.setup.output;
-		this.commands = data.commands;
-		this.items = data.items;
-
-		this.pubsub.publish('scene:loaded');
-	};
-
-	Scene.prototype.ajaxError = function(e) {
-		console.log(e);
-	};
-
-	Scene.prototype.changeScene = function(url) {
-		this.url = url;
-		this.fetch();
-	};
-
-	module.exports = Scene;
-
-}());
-
-},{}],158:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
-var App = require('./app.jsx');
+var App = require('./components/app.jsx');
 
 var Main = React.renderComponent(
 	App(null),
 	document.getElementById('content')
 );
 
-},{"./app.jsx":146,"react":145}],159:[function(require,module,exports){
-/** @jsx React.DOM */var React = require('react');
-
-var StatusWindow = React.createClass({displayName: 'StatusWindow',
-	render: function() {
-		return (
-			React.DOM.div({className: "statusWindow"}, 
-				"this should contain the player status"
-			)
-		)
-	}
-});
-
-module.exports = StatusWindow;
-
-},{"react":145}],160:[function(require,module,exports){
-/** @jsx React.DOM */(function() {
-	'use strict';
-
-	var React = require('react');
-
-	var ItemList = require('./itemList.jsx');
-
-	var TextWindow = React.createClass({displayName: 'TextWindow',
-
-		printText: function(textArray) {
-			return textArray.map(function(text, i){
-				return (
-					React.DOM.p({key: i}, text)
-				);
-			})
-		},
-
-		componentDidUpdate: function() {
-			var el = this.getDOMNode();
-			el.scrollTop = el.scrollHeight;
-		},
-
-		render: function() {
-			var text = this.printText(this.props.text);
-
-			return (
-				React.DOM.div({className: "textWindow"}, 
-					text, 
-					React.DOM.br(null), 
-					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
-				)
-			);
-		}
-	});
-
-	module.exports = TextWindow;
-}());
-
-
-},{"./itemList.jsx":152,"react":145}]},{},[158])
+},{"./components/app.jsx":146,"react":145}]},{},[160])

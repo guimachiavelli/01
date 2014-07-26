@@ -1,25 +1,21 @@
 {
-	"items" : {
+	"flag" : {
+		"takeable" : true,
 
-		"flag" : {
-			"takeable" : true,
+		"actions" : {
+			"examine" : {
+				"output" : "bloody nationalists! flags are counterrevolutionary!"
+			},
 
-			"actions" : {
-				"examine" : {
-					"output" : "bloody nationalists! flags are counterrevolutionary!"
-				},
+			"burn" : {
+				"output" : "you burn the flag while shouting \"JOIN THE HOMOSSEXUAL INTIFADA!\"",
+				"destroy" : true
+			},
 
-				"burn" : {
-					"output" : "you burn the flag while shouting \"JOIN THE HOMOSSEXUAL INTIFADA!\"",
-					"destroy" : true
-				},
-
-				"leave it alone" : {
-					"output" : "you turn your attention to something else.",
-					"exit" : true
-				}
+			"leave it alone" : {
+				"output" : "you turn your attention to something else.",
+				"exit" : true
 			}
 		}
-
 	}
 }
