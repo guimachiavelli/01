@@ -18977,7 +18977,9 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = Items.getItems(this.library.scene.setup.items, this.player.itemDumpster);
+		this.items = Items.getItems(this.library.scene.setup.items,
+									this.player.itemDumpster,
+									this.player.revealedItems[this.currentScene]);
 	};
 
 	Game.prototype.updateCommands =  function() {
@@ -19048,7 +19050,7 @@ module.exports = StatusWindow;
 		}
 
 		if (exec.reveal) {
-			this.items.push(exec.reveal);
+			this.player.addRevealedItem(this.currentScene, exec.reveal);
 		}
 
 		this.update();
@@ -19068,18 +19070,22 @@ module.exports = StatusWindow;
 
 	};
 
-	Items.prototype.getItems = function(items, itemDumpster) {
+	Items.prototype.getItems = function(items, itemDumpster, revealedItems) {
 		var i, len, availableItems;
 
 		i = 0;
 		len = items.length;
-		availableItems =[];
+		availableItems = [];
 
 		while (i < len) {
 			if (itemDumpster.indexOf(items[i]) === -1) {
 				availableItems.push(items[i]);
 			}
 			i += 1;
+		}
+
+		if (revealedItems && revealedItems.length > 0) {
+			return availableItems.concat(revealedItems);
 		}
 
 		return availableItems;
@@ -19138,33 +19144,6 @@ module.exports = StatusWindow;
 
 	Items.prototype.revealItem = function(revealedItem, items) {
 		return items.push(revealedItem);
-	};
-
-	Items.prototype.executeItemCommand = function(e, command) {
-		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
-
-		if (exec === false) {
-			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
-		}
-
-		this.library.scene.currentText = exec.output;
-
-		if (exec.exit === true || exec.destroy === true) {
-			this.activeItem = null;
-			this.itemCommands = [];
-		}
-
-		if (exec.destroy === true) {
-			var itemPosition = this.items.indexOf(command.item);
-			this.items.splice(itemPosition, 1);
-			this.player.itemDumpster.push(command.item);
-		}
-
-		if (exec.reveal) {
-			this.items.push(exec.reveal);
-		}
-
-		this.update();
 	};
 
 
@@ -19233,6 +19212,7 @@ module.exports = StatusWindow;
 		this.inventory = [];
 		this.visitedScenes = [];
 		this.itemDumpster = [];
+		this.revealedItems = {};
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -19249,6 +19229,14 @@ module.exports = StatusWindow;
 
 		return true;
 	};
+
+	Player.prototype.addRevealedItem = function(scene, item) {
+		if (typeof this.revealedItems[scene] !== Array) {
+			this.revealedItems[scene] = [];
+		}
+		this.revealedItems[scene].push(item);
+	};
+
 
 	module.exports = Player;
 

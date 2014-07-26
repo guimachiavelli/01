@@ -42,17 +42,19 @@
 
 	Game.prototype.getSceneDescription = function() {
 		if (!this.player.hasVisited(this.library.scene.info.title)) {
-			return this.library.scene.description.initial;
+			return this.library.scene.setup.output.initial;
 		}
-		return this.library.scene.description.default;
+		return this.library.scene.setup.output.default;
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = Items.getItems(this.library.scene.availableItems, this.player.itemDumpster);
+		this.items = Items.getItems(this.library.scene.setup.items,
+									this.player.itemDumpster,
+									this.player.revealedItems[this.currentScene]);
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.library.scene.commandList;
+		this.commands = this.library.scene.setup.commandList;
 	};
 
 	Game.prototype.update = function() {
@@ -71,7 +73,7 @@
 		}
 
 		if (exec.changeScene === true) {
-			this.library.scene.changeScene('./game/' + exec.leadsTo + '.json');
+			this.library.changeScene(exec.leadsTo);
 
 			this.activeItem = null;
 			this.itemCommands = [];
@@ -119,7 +121,7 @@
 		}
 
 		if (exec.reveal) {
-			this.items.push(exec.reveal);
+			this.player.addRevealedItem(this.currentScene, exec.reveal);
 		}
 
 		this.update();

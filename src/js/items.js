@@ -5,18 +5,22 @@
 
 	};
 
-	Items.prototype.getItems = function(items, itemDumpster) {
+	Items.prototype.getItems = function(items, itemDumpster, revealedItems) {
 		var i, len, availableItems;
 
 		i = 0;
 		len = items.length;
-		availableItems =[];
+		availableItems = [];
 
 		while (i < len) {
 			if (itemDumpster.indexOf(items[i]) === -1) {
 				availableItems.push(items[i]);
 			}
 			i += 1;
+		}
+
+		if (revealedItems && revealedItems.length > 0) {
+			return availableItems.concat(revealedItems);
 		}
 
 		return availableItems;

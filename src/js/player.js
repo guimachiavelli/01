@@ -5,6 +5,7 @@
 		this.inventory = [];
 		this.visitedScenes = [];
 		this.itemDumpster = [];
+		this.revealedItems = {};
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -21,6 +22,14 @@
 
 		return true;
 	};
+
+	Player.prototype.addRevealedItem = function(scene, item) {
+		if (typeof this.revealedItems[scene] !== Array) {
+			this.revealedItems[scene] = [];
+		}
+		this.revealedItems[scene].push(item);
+	};
+
 
 	module.exports = Player;
 
