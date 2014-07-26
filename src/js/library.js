@@ -1,43 +1,50 @@
 (function() {
 	'use strict';
 
-
-	var Scene = require('./scene');
-
 	var Library = function(url, pubsub) {
-		this.url = url;
 		this.pubsub = pubsub;
-		this.fetch();
-		this.items = {};
-		this.scene = new Scene('./game/intro.json', pubsub);
 
-		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
+		this.items = null;
+		this.scene = null;
+
+		this.fetch('./game/items.json', 'items');
+		this.fetch('./game/intro.json', 'scene');
+
+		this.pubsub.subscribe('library:loaded', this.update.bind(this));
 	};
 
 	Library.prototype.update = function() {
-		this.pubsub.publish('library:update');
+		if (this.scene && this.items){
+			this.pubsub.publish('library:update');
+		}
 	};
 
-	Library.prototype.fetch = function() {
-		if (!this.url) {
+	Library.prototype.fetch = function(url, type) {
+		if (!url) {
 			throw new Error('no url to request');
 		}
 
 		var request;
 		request = new XMLHttpRequest();
-		request.open('GET', this.url, true);
-		request.onload = this.loadAjax.bind(this, request);
+		request.open('GET', url, true);
+		request.onload = this.load.bind(this, request, type);
 		request.send();
 	};
 
-	Library.prototype.loadAjax = function(request) {
+	Library.prototype.load = function(request, type) {
 		if (request.status < 200 && request.status > 400) return;
 
 		var data = JSON.parse(request.responseText);
 
-		this.items = data.items;
+		this[type] = data;
+
+		this.pubsub.publish('library:loaded');
+	};
+
+	Library.prototype.changeScene = function(scene) {
+		this.fetch('./game/' + scene + '.json', 'scene');
 	};
 
 	module.exports = Library;
 
-}())
+}());

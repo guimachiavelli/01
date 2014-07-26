@@ -5,7 +5,7 @@
 
 	"setup" : {
 
-		"commands" : [
+		"commandList" : [
 			"go to the next room",
 			"talk",
 			"suck",

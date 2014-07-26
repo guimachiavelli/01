@@ -18971,17 +18971,17 @@ module.exports = StatusWindow;
 
 	Game.prototype.getSceneDescription = function() {
 		if (!this.player.hasVisited(this.library.scene.info.title)) {
-			return this.library.scene.description.initial;
+			return this.library.scene.setup.output.initial;
 		}
-		return this.library.scene.description.default;
+		return this.library.scene.setup.output.default;
 	};
 
 	Game.prototype.updateItems =  function() {
-		this.items = Items.getItems(this.library.scene.availableItems, this.player.itemDumpster);
+		this.items = Items.getItems(this.library.scene.setup.items, this.player.itemDumpster);
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.library.scene.commandList;
+		this.commands = this.library.scene.setup.commandList;
 	};
 
 	Game.prototype.update = function() {
@@ -19000,7 +19000,7 @@ module.exports = StatusWindow;
 		}
 
 		if (exec.changeScene === true) {
-			this.library.scene.changeScene('./game/' + exec.leadsTo + '.json');
+			this.library.changeScene(exec.leadsTo);
 
 			this.activeItem = null;
 			this.itemCommands = [];
@@ -19140,6 +19140,33 @@ module.exports = StatusWindow;
 		return items.push(revealedItem);
 	};
 
+	Items.prototype.executeItemCommand = function(e, command) {
+		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
+
+		if (exec === false) {
+			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
+		}
+
+		this.library.scene.currentText = exec.output;
+
+		if (exec.exit === true || exec.destroy === true) {
+			this.activeItem = null;
+			this.itemCommands = [];
+		}
+
+		if (exec.destroy === true) {
+			var itemPosition = this.items.indexOf(command.item);
+			this.items.splice(itemPosition, 1);
+			this.player.itemDumpster.push(command.item);
+		}
+
+		if (exec.reveal) {
+			this.items.push(exec.reveal);
+		}
+
+		this.update();
+	};
+
 
 	module.exports = Items;
 
@@ -19150,48 +19177,55 @@ module.exports = StatusWindow;
 (function() {
 	'use strict';
 
-
-	var Scene = require('./scene');
-
 	var Library = function(url, pubsub) {
-		this.url = url;
 		this.pubsub = pubsub;
-		this.fetch();
-		this.items = {};
-		this.scene = new Scene('./game/intro.json', pubsub);
 
-		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
+		this.items = null;
+		this.scene = null;
+
+		this.fetch('./game/items.json', 'items');
+		this.fetch('./game/intro.json', 'scene');
+
+		this.pubsub.subscribe('library:loaded', this.update.bind(this));
 	};
 
 	Library.prototype.update = function() {
-		this.pubsub.publish('library:update');
+		if (this.scene && this.items){
+			this.pubsub.publish('library:update');
+		}
 	};
 
-	Library.prototype.fetch = function() {
-		if (!this.url) {
+	Library.prototype.fetch = function(url, type) {
+		if (!url) {
 			throw new Error('no url to request');
 		}
 
 		var request;
 		request = new XMLHttpRequest();
-		request.open('GET', this.url, true);
-		request.onload = this.loadAjax.bind(this, request);
+		request.open('GET', url, true);
+		request.onload = this.load.bind(this, request, type);
 		request.send();
 	};
 
-	Library.prototype.loadAjax = function(request) {
+	Library.prototype.load = function(request, type) {
 		if (request.status < 200 && request.status > 400) return;
 
 		var data = JSON.parse(request.responseText);
 
-		this.items = data.items;
+		this[type] = data;
+
+		this.pubsub.publish('library:loaded');
+	};
+
+	Library.prototype.changeScene = function(scene) {
+		this.fetch('./game/' + scene + '.json', 'scene');
 	};
 
 	module.exports = Library;
 
-}())
+}());
 
-},{"./scene":160}],158:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19291,67 +19325,6 @@ module.exports = StatusWindow;
 }());
 
 },{}],160:[function(require,module,exports){
-(function() {
-	'use strict';
-
-	// gets scene via ajax
-	var Scene = function(url, pubsub) {
-		this.availableItems = {};
-		this.commands = {};
-		this.info = {};
-		this.description = {};
-		this.text = [];
-		this.url = url;
-		this.pubsub = pubsub;
-		this.items = [];
-
-		this.fetch();
-	};
-
-	Scene.prototype.fetch = function() {
-		if (!this.url) {
-			throw new Error('no url to request');
-		}
-
-		var request;
-		request = new XMLHttpRequest();
-		request.open('GET', this.url, true);
-		request.onload = this.loadAjax.bind(this, request);
-		request.onerror = this.ajaxError.bind(this);
-		request.send();
-	};
-
-
-	Scene.prototype.loadAjax = function(request) {
-		if (request.status < 200 && request.status > 400) return;
-		var data;
-
-		data = JSON.parse(request.responseText);
-
-		this.info = data.info;
-		this.commandList = data.setup.commands;
-		this.availableItems = data.setup.items;
-		this.description = data.setup.output;
-		this.commands = data.commands;
-		this.items = data.items;
-
-		this.pubsub.publish('scene:loaded');
-	};
-
-	Scene.prototype.ajaxError = function(e) {
-		console.log(e);
-	};
-
-	Scene.prototype.changeScene = function(url) {
-		this.url = url;
-		this.fetch();
-	};
-
-	module.exports = Scene;
-
-}());
-
-},{}],161:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./components/app.jsx');
@@ -19361,4 +19334,4 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./components/app.jsx":146,"react":145}]},{},[161])
+},{"./components/app.jsx":146,"react":145}]},{},[160])
