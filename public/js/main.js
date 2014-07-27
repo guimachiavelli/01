@@ -18684,7 +18684,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"../js/game":155,"../js/pubsub":159,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
+},{"../js/game":156,"../js/pubsub":160,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18930,11 +18930,31 @@ module.exports = StatusWindow;
 (function() {
 	'use strict';
 
+	var Commands = function() {
+
+	};
+
+	Commands.prototype.getCommands = function(commandList, revealedCommands) {
+		if (revealedCommands && revealedCommands.length > 0) {
+			return commandList.concat(revealedCommands);
+		}
+		return commandList;
+	};
+
+	module.exports = Commands;
+}());
+
+},{}],156:[function(require,module,exports){
+(function() {
+	'use strict';
+
 	var Library = require('./library'),
 		Player = require('./player'),
+		Commands = require('./commands'),
 		Items = require('./items');
 
 	Items = new Items();
+	Commands = new Commands();
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
@@ -18983,7 +19003,8 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.library.scene.setup.commandList;
+		this.commands = Commands.getCommands(this.library.scene.setup.commandList,
+											 this.player.revealedCommands[this.currentScene]);
 	};
 
 	Game.prototype.update = function() {
@@ -19053,6 +19074,10 @@ module.exports = StatusWindow;
 			this.player.addRevealedItem(this.currentScene, exec.reveal);
 		}
 
+		if (exec.open) {
+			this.player.addSceneCommand(this.currentScene, exec.open);
+		}
+
 		this.update();
 	};
 
@@ -19062,7 +19087,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{"./items":156,"./library":157,"./player":158}],156:[function(require,module,exports){
+},{"./commands":155,"./items":157,"./library":158,"./player":159}],157:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19152,7 +19177,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],157:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19204,7 +19229,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],158:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19213,6 +19238,7 @@ module.exports = StatusWindow;
 		this.visitedScenes = [];
 		this.itemDumpster = [];
 		this.revealedItems = {};
+		this.revealedCommands = [];
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -19237,12 +19263,20 @@ module.exports = StatusWindow;
 		this.revealedItems[scene].push(item);
 	};
 
+	Player.prototype.addSceneCommand = function(scene, command) {
+		if (typeof this.revealedCommands[scene] !== Array) {
+			this.revealedCommands[scene] = [];
+		}
+		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
+		console.log(this.revealedCommands);
+	};
+
 
 	module.exports = Player;
 
 }());
 
-},{}],159:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19312,7 +19346,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],160:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./components/app.jsx');
@@ -19322,4 +19356,4 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./components/app.jsx":146,"react":145}]},{},[160])
+},{"./components/app.jsx":146,"react":145}]},{},[161])

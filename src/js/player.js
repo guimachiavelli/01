@@ -6,6 +6,7 @@
 		this.visitedScenes = [];
 		this.itemDumpster = [];
 		this.revealedItems = {};
+		this.revealedCommands = [];
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -28,6 +29,14 @@
 			this.revealedItems[scene] = [];
 		}
 		this.revealedItems[scene].push(item);
+	};
+
+	Player.prototype.addSceneCommand = function(scene, command) {
+		if (typeof this.revealedCommands[scene] !== Array) {
+			this.revealedCommands[scene] = [];
+		}
+		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
+		console.log(this.revealedCommands);
 	};
 
 

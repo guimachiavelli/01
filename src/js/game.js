@@ -3,9 +3,11 @@
 
 	var Library = require('./library'),
 		Player = require('./player'),
+		Commands = require('./commands'),
 		Items = require('./items');
 
 	Items = new Items();
+	Commands = new Commands();
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
@@ -54,7 +56,8 @@
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.library.scene.setup.commandList;
+		this.commands = Commands.getCommands(this.library.scene.setup.commandList,
+											 this.player.revealedCommands[this.currentScene]);
 	};
 
 	Game.prototype.update = function() {
@@ -122,6 +125,10 @@
 
 		if (exec.reveal) {
 			this.player.addRevealedItem(this.currentScene, exec.reveal);
+		}
+
+		if (exec.open) {
+			this.player.addSceneCommand(this.currentScene, exec.open);
 		}
 
 		this.update();

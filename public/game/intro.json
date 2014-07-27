@@ -40,6 +40,12 @@
 		},
 		"fuck" : {
 			"output" : "there's nothing to fuck, try the next room"
+		},
+		"browse gayromeo/user/124": {
+			"output" : "you open your laptop and go to the profile the fairy gave you"
+		},
+		"go to the raspberry" : {
+			"output" : "you go the raspberry, a bar"
 		}
 	},
 
@@ -50,7 +56,11 @@
 
 			"actions" : {
 				"examine" : {
-					"output" : "you read the paper. it says: gayromeo/user/1245463, grinding the raspberry"
+					"output" : "you read the paper. it says: gayromeo/user/1245463, grinding the raspberry",
+					"open" : [
+						"browse gayromeo/user/124",
+						"go to the raspberry"
+					]
 				},
 
 				"lick" : {
