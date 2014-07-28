@@ -72,6 +72,12 @@
 				"leave it alone" : {
 					"output" : "you turn your attention to something else.",
 					"exit" : true
+				},
+
+				"take it" : {
+					"output" : "you take the paper and put it in your pocket",
+					"take" : "cum-stained paper",
+					"destroy" : true
 				}
 			}
 		},

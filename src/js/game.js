@@ -11,7 +11,7 @@
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
-		this.player = new Player();
+		this.player = new Player(pubsub);
 		this.library = new Library('./game/items.json', pubsub);
 		this.text = [];
 		this.items = [];
@@ -19,6 +19,7 @@
 		this.itemCommands = [];
 		this.currentScene = 'intro';
 		this.activeItem = null;
+		this.inventory = [];
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
@@ -49,6 +50,10 @@
 		return this.library.scene.setup.output.default;
 	};
 
+	Game.prototype.updateInventory =  function() {
+		this.inventory = this.player.inventory;
+	};
+
 	Game.prototype.updateItems =  function() {
 		this.items = Items.getItems(this.library.scene.setup.items,
 									this.player.itemDumpster,
@@ -63,6 +68,7 @@
 	Game.prototype.update = function() {
 		this.updateText(this.library.scene.currentText);
 		this.updateItems();
+		this.updateInventory();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
 	};
@@ -112,6 +118,18 @@
 
 		this.library.scene.currentText = exec.output;
 
+		if (exec.reveal) {
+			this.player.addRevealedItem(this.currentScene, exec.reveal);
+		}
+
+		if (exec.open) {
+			this.player.addSceneCommand(this.currentScene, exec.open);
+		}
+
+		if (exec.take) {
+			this.player.addInventoryItem(exec.take);
+		}
+
 		if (exec.exit === true || exec.destroy === true) {
 			this.activeItem = null;
 			this.itemCommands = [];
@@ -123,13 +141,6 @@
 			this.player.itemDumpster.push(command.item);
 		}
 
-		if (exec.reveal) {
-			this.player.addRevealedItem(this.currentScene, exec.reveal);
-		}
-
-		if (exec.open) {
-			this.player.addSceneCommand(this.currentScene, exec.open);
-		}
 
 		this.update();
 	};

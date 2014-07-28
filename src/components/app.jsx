@@ -7,6 +7,7 @@
 		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
+		ItemList = require('./itemList.jsx'),
 		PubSub = require('../js/pubsub'),
 		Game = require('../js/game');
 
@@ -20,20 +21,21 @@
 				items: [],
 				commands: [],
 				itemCommands: [],
+				inventory: [],
 				activeItem: null
 			};
 		},
 
 		componentWillMount: function() {
 			var self = this;
-
 			pubsub.subscribe('game:update', function() {
 				self.setState({
 					text: game.text,
 					items: game.items,
 					commands: game.commands,
 					itemCommands: game.itemCommands,
-					activeItem: game.activeItem
+					activeItem: game.activeItem,
+					inventory: game.inventory
 				});
 			});
 
@@ -54,6 +56,12 @@
 						pubsub={pubsub}
 						commands={this.state.itemCommands}
 						item={this.state.activeItem} />
+					inventory
+					<ItemList
+						pubsub={pubsub}
+						items={this.state.inventory} />
+
+
 				</div>
 				/* jshint ignore:end */
 			);

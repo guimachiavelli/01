@@ -18623,6 +18623,7 @@ module.exports = require('./lib/React');
 		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
+		ItemList = require('./itemList.jsx'),
 		PubSub = require('../js/pubsub'),
 		Game = require('../js/game');
 
@@ -18636,20 +18637,21 @@ module.exports = require('./lib/React');
 				items: [],
 				commands: [],
 				itemCommands: [],
+				inventory: [],
 				activeItem: null
 			};
 		},
 
 		componentWillMount: function() {
 			var self = this;
-
 			pubsub.subscribe('game:update', function() {
 				self.setState({
 					text: game.text,
 					items: game.items,
 					commands: game.commands,
 					itemCommands: game.itemCommands,
-					activeItem: game.activeItem
+					activeItem: game.activeItem,
+					inventory: game.inventory
 				});
 			});
 
@@ -18669,7 +18671,13 @@ module.exports = require('./lib/React');
 					ItemCommandMenu({
 						pubsub: pubsub, 
 						commands: this.state.itemCommands, 
-						item: this.state.activeItem})
+						item: this.state.activeItem}), 
+					"inventory", 
+					ItemList({
+						pubsub: pubsub, 
+						items: this.state.inventory})
+
+
 				)
 				/* jshint ignore:end */
 			);
@@ -18684,7 +18692,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"../js/game":156,"../js/pubsub":160,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
+},{"../js/game":156,"../js/pubsub":160,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./itemList.jsx":152,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18958,7 +18966,7 @@ module.exports = StatusWindow;
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
-		this.player = new Player();
+		this.player = new Player(pubsub);
 		this.library = new Library('./game/items.json', pubsub);
 		this.text = [];
 		this.items = [];
@@ -18966,6 +18974,7 @@ module.exports = StatusWindow;
 		this.itemCommands = [];
 		this.currentScene = 'intro';
 		this.activeItem = null;
+		this.inventory = [];
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
@@ -18996,6 +19005,10 @@ module.exports = StatusWindow;
 		return this.library.scene.setup.output.default;
 	};
 
+	Game.prototype.updateInventory =  function() {
+		this.inventory = this.player.inventory;
+	};
+
 	Game.prototype.updateItems =  function() {
 		this.items = Items.getItems(this.library.scene.setup.items,
 									this.player.itemDumpster,
@@ -19010,6 +19023,7 @@ module.exports = StatusWindow;
 	Game.prototype.update = function() {
 		this.updateText(this.library.scene.currentText);
 		this.updateItems();
+		this.updateInventory();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
 	};
@@ -19059,6 +19073,18 @@ module.exports = StatusWindow;
 
 		this.library.scene.currentText = exec.output;
 
+		if (exec.reveal) {
+			this.player.addRevealedItem(this.currentScene, exec.reveal);
+		}
+
+		if (exec.open) {
+			this.player.addSceneCommand(this.currentScene, exec.open);
+		}
+
+		if (exec.take) {
+			this.player.addInventoryItem(exec.take);
+		}
+
 		if (exec.exit === true || exec.destroy === true) {
 			this.activeItem = null;
 			this.itemCommands = [];
@@ -19070,13 +19096,6 @@ module.exports = StatusWindow;
 			this.player.itemDumpster.push(command.item);
 		}
 
-		if (exec.reveal) {
-			this.player.addRevealedItem(this.currentScene, exec.reveal);
-		}
-
-		if (exec.open) {
-			this.player.addSceneCommand(this.currentScene, exec.open);
-		}
 
 		this.update();
 	};
@@ -19233,7 +19252,8 @@ module.exports = StatusWindow;
 (function() {
 	'use strict';
 
-	var Player = function() {
+	var Player = function(pubsub) {
+		this.pubsub = pubsub;
 		this.inventory = [];
 		this.visitedScenes = [];
 		this.itemDumpster = [];
@@ -19263,14 +19283,17 @@ module.exports = StatusWindow;
 		this.revealedItems[scene].push(item);
 	};
 
+	Player.prototype.addInventoryItem = function(item) {
+		this.inventory.push(item);
+	};
+
+
 	Player.prototype.addSceneCommand = function(scene, command) {
 		if (typeof this.revealedCommands[scene] !== Array) {
 			this.revealedCommands[scene] = [];
 		}
 		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
-		console.log(this.revealedCommands);
 	};
-
 
 	module.exports = Player;
 

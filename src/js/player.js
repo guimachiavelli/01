@@ -1,7 +1,8 @@
 (function() {
 	'use strict';
 
-	var Player = function() {
+	var Player = function(pubsub) {
+		this.pubsub = pubsub;
 		this.inventory = [];
 		this.visitedScenes = [];
 		this.itemDumpster = [];
@@ -31,14 +32,17 @@
 		this.revealedItems[scene].push(item);
 	};
 
+	Player.prototype.addInventoryItem = function(item) {
+		this.inventory.push(item);
+	};
+
+
 	Player.prototype.addSceneCommand = function(scene, command) {
 		if (typeof this.revealedCommands[scene] !== Array) {
 			this.revealedCommands[scene] = [];
 		}
 		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
-		console.log(this.revealedCommands);
 	};
-
 
 	module.exports = Player;
 
