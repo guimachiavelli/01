@@ -84,7 +84,7 @@
 		if (exec.changeScene === true) {
 			this.library.changeScene(exec.leadsTo);
 
-			this.activeItem = null;
+			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
 	};
@@ -117,9 +117,6 @@
 
 		this.library.scene.currentText = exec.output;
 
-		if (exec.reveal) {
-			this.player.addRevealedItem(this.currentScene, exec.reveal, command.context);
-		}
 
 		if (exec.open) {
 			this.player.addSceneCommand(this.currentScene, exec.open);
@@ -135,14 +132,25 @@
 		}
 
 		if (exec.destroy === true) {
-			var itemPosition = this.items.indexOf(command.item);
-			this.items.splice(itemPosition, 1);
-			this.player.itemList.destroyed.push(command.item);
+			this.destroyItem(command);
 		}
 
+		if (exec.reveal) {
+			this.player.addRevealedItem(this.currentScene, exec.reveal, command.context);
+		}
 
 		this.update();
 	};
+
+	Game.prototype.destroyItem = function(command) {
+		var itemPosition = this.items.indexOf(command.item);
+		if (command.context === 'scene') {
+			this.items.splice(itemPosition, 1);
+		} else if (command.context === 'inventory') {
+			this.player.itemList.inventory.splice(itemPosition, 1);
+		}
+		this.player.itemList.destroyed.push(command.item);
+	}
 
 
 

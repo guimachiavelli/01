@@ -28,7 +28,6 @@
 	};
 
 	Player.prototype.addRevealedItem = function(scene, item, context) {
-		console.log(context);
 		if (context === 'inventory') {
 			this.addInventoryItem(item);
 			return;
