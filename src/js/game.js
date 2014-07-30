@@ -18,7 +18,7 @@
 		this.commands = [];
 		this.itemCommands = [];
 		this.currentScene = 'intro';
-		this.activeItem = null;
+		this.activeItem = {name: null, type: null};
 		this.inventory = [];
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
@@ -51,13 +51,13 @@
 	};
 
 	Game.prototype.updateInventory =  function() {
-		this.inventory = this.player.inventory;
+		this.inventory = this.player.itemList.inventory;
 	};
 
 	Game.prototype.updateItems =  function() {
 		this.items = Items.getItems(this.library.scene.setup.items,
-									this.player.itemDumpster,
-									this.player.revealedItems[this.currentScene]);
+									this.player.itemList.destroyed,
+									this.player.itemList.revealed[this.currentScene]);
 	};
 
 	Game.prototype.updateCommands =  function() {
@@ -89,7 +89,6 @@
 		}
 	};
 
-
 	Game.prototype.getCommand = function(command) {
 		if (!this.library.scene.commands[command]) {
 			throw new Error('command does not exist:' + command);
@@ -98,7 +97,7 @@
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = Items.getItemCommands(item, this.library.scene.items, this.library.items);
+		var itemCommands = Items.getItemCommands(item.name, this.library.scene.items, this.library.items);
 
 		if (itemCommands === false) {
 			throw new Error('item does not exist: ' + item);
@@ -119,7 +118,7 @@
 		this.library.scene.currentText = exec.output;
 
 		if (exec.reveal) {
-			this.player.addRevealedItem(this.currentScene, exec.reveal);
+			this.player.addRevealedItem(this.currentScene, exec.reveal, command.context);
 		}
 
 		if (exec.open) {
@@ -131,14 +130,14 @@
 		}
 
 		if (exec.exit === true || exec.destroy === true) {
-			this.activeItem = null;
+			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
 
 		if (exec.destroy === true) {
 			var itemPosition = this.items.indexOf(command.item);
 			this.items.splice(itemPosition, 1);
-			this.player.itemDumpster.push(command.item);
+			this.player.itemList.destroyed.push(command.item);
 		}
 
 

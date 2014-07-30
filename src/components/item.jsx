@@ -7,7 +7,10 @@
 
 		onClick: function(e) {
 			e.preventDefault();
-			this.props.pubsub.publish('item:clicked', this.props.name);
+			this.props.pubsub.publish('item:clicked', {
+				name: this.props.name,
+				type: this.props.type
+			});
 		},
 
 		render: function() {

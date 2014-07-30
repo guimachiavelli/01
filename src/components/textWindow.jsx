@@ -27,7 +27,10 @@
 				<div className="textWindow">
 					{text}
 					<br />
-					You see: <ItemList pubsub={this.props.pubsub} items={this.props.items} />
+					You see: <ItemList
+								pubsub={this.props.pubsub}
+								items={this.props.items}
+								type="scene"/>
 				</div>
 			);
 		}

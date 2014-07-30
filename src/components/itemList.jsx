@@ -11,7 +11,12 @@
 
 			return itemsArray.map(function(item){
 				return (
-					<li key={item}><Item pubsub={self.props.pubsub} name={item} /></li>
+					<li key={item}>
+						<Item
+							pubsub={self.props.pubsub}
+							name={item}
+							type={self.props.type} />
+					</li>
 				);
 			})
 		},

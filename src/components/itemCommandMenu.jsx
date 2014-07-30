@@ -17,7 +17,8 @@
 						<ItemCommand
 							pubsub={self.props.pubsub}
 							name={command}
-							item={self.props.item} />
+							item={self.props.item}
+							context={self.props.context} />
 					</li>
 				)
 			});

@@ -22,7 +22,7 @@
 				commands: [],
 				itemCommands: [],
 				inventory: [],
-				activeItem: null
+				activeItem: {name: null, type: null}
 			};
 		},
 
@@ -55,11 +55,13 @@
 					<ItemCommandMenu
 						pubsub={pubsub}
 						commands={this.state.itemCommands}
-						item={this.state.activeItem} />
-					inventory
+						item={this.state.activeItem.name}
+						context={this.state.activeItem.type} />
+					inventory <br />
 					<ItemList
 						pubsub={pubsub}
-						items={this.state.inventory} />
+						items={this.state.inventory}
+						type="inventory" />
 
 
 				</div>

@@ -3,11 +3,13 @@
 
 	var Player = function(pubsub) {
 		this.pubsub = pubsub;
-		this.inventory = [];
 		this.visitedScenes = [];
-		this.itemDumpster = [];
-		this.revealedItems = {};
 		this.revealedCommands = [];
+		this.itemList = {
+			'destroyed' : [],
+			'inventory' : [],
+			'revealed' : []
+		};
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -25,15 +27,21 @@
 		return true;
 	};
 
-	Player.prototype.addRevealedItem = function(scene, item) {
-		if (typeof this.revealedItems[scene] !== Array) {
-			this.revealedItems[scene] = [];
+	Player.prototype.addRevealedItem = function(scene, item, context) {
+		console.log(context);
+		if (context === 'inventory') {
+			this.addInventoryItem(item);
+			return;
 		}
-		this.revealedItems[scene].push(item);
+
+		if (typeof this.itemList.revealed[scene] !== Array) {
+			this.itemList.revealed[scene] = [];
+		}
+		this.itemList.revealed[scene].push(item);
 	};
 
 	Player.prototype.addInventoryItem = function(item) {
-		this.inventory.push(item);
+		this.itemList.inventory.push(item);
 	};
 
 

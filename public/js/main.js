@@ -18638,7 +18638,7 @@ module.exports = require('./lib/React');
 				commands: [],
 				itemCommands: [],
 				inventory: [],
-				activeItem: null
+				activeItem: {name: null, type: null}
 			};
 		},
 
@@ -18671,11 +18671,13 @@ module.exports = require('./lib/React');
 					ItemCommandMenu({
 						pubsub: pubsub, 
 						commands: this.state.itemCommands, 
-						item: this.state.activeItem}), 
-					"inventory", 
+						item: this.state.activeItem.name, 
+						context: this.state.activeItem.type}), 
+					"inventory ", React.DOM.br(null), 
 					ItemList({
 						pubsub: pubsub, 
-						items: this.state.inventory})
+						items: this.state.inventory, 
+						type: "inventory"})
 
 
 				)
@@ -18707,7 +18709,7 @@ module.exports = require('./lib/React');
 
 		render: function() {
 			return (
-				React.DOM.button({onClick: this.onClick, className: "Item"}, this.props.name)
+				React.DOM.button({onClick: this.onClick, className: "Command"}, this.props.name)
 			);
 		}
 
@@ -18760,7 +18762,10 @@ module.exports = require('./lib/React');
 
 		onClick: function(e) {
 			e.preventDefault();
-			this.props.pubsub.publish('item:clicked', this.props.name);
+			this.props.pubsub.publish('item:clicked', {
+				name: this.props.name,
+				type: this.props.type
+			});
 		},
 
 		render: function() {
@@ -18785,7 +18790,11 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item});
+			this.props.pubsub.publish('game:item:command', {
+				name: this.props.name,
+				item: this.props.item,
+				context: this.props.context
+			});
 		},
 
 		render: function() {
@@ -18821,7 +18830,8 @@ module.exports = require('./lib/React');
 						ItemCommand({
 							pubsub: self.props.pubsub, 
 							name: command, 
-							item: self.props.item})
+							item: self.props.item, 
+							context: self.props.context})
 					)
 				)
 			});
@@ -18855,7 +18865,12 @@ module.exports = require('./lib/React');
 
 			return itemsArray.map(function(item){
 				return (
-					React.DOM.li({key: item}, Item({pubsub: self.props.pubsub, name: item}))
+					React.DOM.li({key: item}, 
+						Item({
+							pubsub: self.props.pubsub, 
+							name: item, 
+							type: self.props.type})
+					)
 				);
 			})
 		},
@@ -18924,7 +18939,10 @@ module.exports = StatusWindow;
 				React.DOM.div({className: "textWindow"}, 
 					text, 
 					React.DOM.br(null), 
-					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
+					"You see: ", ItemList({
+								pubsub: this.props.pubsub, 
+								items: this.props.items, 
+								type: "scene"})
 				)
 			);
 		}
@@ -18973,7 +18991,7 @@ module.exports = StatusWindow;
 		this.commands = [];
 		this.itemCommands = [];
 		this.currentScene = 'intro';
-		this.activeItem = null;
+		this.activeItem = {name: null, type: null};
 		this.inventory = [];
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
@@ -19006,13 +19024,13 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.updateInventory =  function() {
-		this.inventory = this.player.inventory;
+		this.inventory = this.player.itemList.inventory;
 	};
 
 	Game.prototype.updateItems =  function() {
 		this.items = Items.getItems(this.library.scene.setup.items,
-									this.player.itemDumpster,
-									this.player.revealedItems[this.currentScene]);
+									this.player.itemList.destroyed,
+									this.player.itemList.revealed[this.currentScene]);
 	};
 
 	Game.prototype.updateCommands =  function() {
@@ -19044,7 +19062,6 @@ module.exports = StatusWindow;
 		}
 	};
 
-
 	Game.prototype.getCommand = function(command) {
 		if (!this.library.scene.commands[command]) {
 			throw new Error('command does not exist:' + command);
@@ -19053,7 +19070,7 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = Items.getItemCommands(item, this.library.scene.items, this.library.items);
+		var itemCommands = Items.getItemCommands(item.name, this.library.scene.items, this.library.items);
 
 		if (itemCommands === false) {
 			throw new Error('item does not exist: ' + item);
@@ -19074,7 +19091,7 @@ module.exports = StatusWindow;
 		this.library.scene.currentText = exec.output;
 
 		if (exec.reveal) {
-			this.player.addRevealedItem(this.currentScene, exec.reveal);
+			this.player.addRevealedItem(this.currentScene, exec.reveal, command.context);
 		}
 
 		if (exec.open) {
@@ -19086,14 +19103,14 @@ module.exports = StatusWindow;
 		}
 
 		if (exec.exit === true || exec.destroy === true) {
-			this.activeItem = null;
+			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
 
 		if (exec.destroy === true) {
 			var itemPosition = this.items.indexOf(command.item);
 			this.items.splice(itemPosition, 1);
-			this.player.itemDumpster.push(command.item);
+			this.player.itemList.destroyed.push(command.item);
 		}
 
 
@@ -19254,11 +19271,13 @@ module.exports = StatusWindow;
 
 	var Player = function(pubsub) {
 		this.pubsub = pubsub;
-		this.inventory = [];
 		this.visitedScenes = [];
-		this.itemDumpster = [];
-		this.revealedItems = {};
 		this.revealedCommands = [];
+		this.itemList = {
+			'destroyed' : [],
+			'inventory' : [],
+			'revealed' : []
+		};
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -19276,15 +19295,21 @@ module.exports = StatusWindow;
 		return true;
 	};
 
-	Player.prototype.addRevealedItem = function(scene, item) {
-		if (typeof this.revealedItems[scene] !== Array) {
-			this.revealedItems[scene] = [];
+	Player.prototype.addRevealedItem = function(scene, item, context) {
+		console.log(context);
+		if (context === 'inventory') {
+			this.addInventoryItem(item);
+			return;
 		}
-		this.revealedItems[scene].push(item);
+
+		if (typeof this.itemList.revealed[scene] !== Array) {
+			this.itemList.revealed[scene] = [];
+		}
+		this.itemList.revealed[scene].push(item);
 	};
 
 	Player.prototype.addInventoryItem = function(item) {
-		this.inventory.push(item);
+		this.itemList.inventory.push(item);
 	};
 
 

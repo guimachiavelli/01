@@ -12,7 +12,7 @@
 
 		render: function() {
 			return (
-				<button onClick={this.onClick} className="Item">{this.props.name}</button>
+				<button onClick={this.onClick} className="Command">{this.props.name}</button>
 			);
 		}
 
