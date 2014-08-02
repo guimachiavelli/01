@@ -17,5 +17,47 @@
 				"exit" : true
 			}
 		}
+	},
+
+	"cum-stained paper" : {
+		"takeable" : true,
+
+		"actions" : {
+			"examine" : {
+				"output" : "you read the paper. it says: gayromeo/user/1245463, grinding the raspberry",
+				"open" : [
+					"browse gayromeo/user/124",
+					"go to the raspberry"
+				]
+			},
+
+			"lick" : {
+				"output" : "it tastes amazing. part of the paper was erased in the process, though",
+				"reveal" : "licked cum-stained paper",
+				"destroy" : true
+			},
+
+			"leave it alone" : {
+				"output" : "you turn your attention to something else.",
+				"exit" : true
+			},
+
+			"take it" : {
+				"output" : "you take the paper and put it in your pocket",
+				"take" : "cum-stained paper",
+				"destroy" : true
+			}
+		}
+	},
+
+	"licked cum-stained paper" : {
+		"takeable" : true,
+
+		"actions" : {
+			"examine" : {
+				"output" : "you read the paper. it says: grinding the raspberry. there's something else written there, but it is too blurry for you to understand"
+			}
+		}
 	}
+
 }

@@ -1,0 +1,42 @@
+{
+	"info": {
+		"title" : "The Raspberry - Bathroom"
+	},
+
+	"setup" : {
+
+		"commandList" : [
+			"knock on the door",
+			"go to the other stall"
+		],
+
+		"output" : {
+			"initial" : "avoiding all the guys lying on the ground, you arrive at the bathroom stall you were looking for. the door is locked. neighbout to it there's an empty stall.",
+			"default" : "you're in front of the bathroom stall again. the door is still locked"
+		},
+		"items": [
+
+		]
+	},
+
+	"commands": {
+		"knock on the door": {
+			"output" : "you knock, but no one replies",
+			"reveal" : "bang on the door",
+			"destroy": true
+		},
+		"bang on the door": {
+			"output" : "you bang as hard as you can on the door. something moves inside, still no reply"
+		},
+		"go to the other stall" : {
+			"output": "you go to the other stall. there's a gloryhole on one of the walls.",
+			"reveal" : "knock three times on the gloryhole wall"
+		}
+	},
+
+	"items" : {
+
+	}
+
+}
+

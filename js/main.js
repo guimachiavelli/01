@@ -18623,6 +18623,7 @@ module.exports = require('./lib/React');
 		ItemCommandMenu = require('./itemCommandMenu.jsx'),
 		TextWindow = require('./textWindow.jsx'),
 		StatusWindow = require('./statusWindow.jsx'),
+		ItemList = require('./itemList.jsx'),
 		PubSub = require('../js/pubsub'),
 		Game = require('../js/game');
 
@@ -18636,20 +18637,21 @@ module.exports = require('./lib/React');
 				items: [],
 				commands: [],
 				itemCommands: [],
-				activeItem: null
+				inventory: [],
+				activeItem: {name: null, type: null}
 			};
 		},
 
 		componentWillMount: function() {
 			var self = this;
-
 			pubsub.subscribe('game:update', function() {
 				self.setState({
 					text: game.text,
 					items: game.items,
 					commands: game.commands,
 					itemCommands: game.itemCommands,
-					activeItem: game.activeItem
+					activeItem: game.activeItem,
+					inventory: game.inventory
 				});
 			});
 
@@ -18659,6 +18661,10 @@ module.exports = require('./lib/React');
 			return (
 				/* jshint ignore:start */
 				React.DOM.div({className: "app"}, 
+					ItemList({
+						pubsub: pubsub, 
+						items: this.state.inventory, 
+						type: "inventory"}), 
 					TextWindow({
 						pubsub: pubsub, 
 						text: this.state.text, 
@@ -18669,7 +18675,10 @@ module.exports = require('./lib/React');
 					ItemCommandMenu({
 						pubsub: pubsub, 
 						commands: this.state.itemCommands, 
-						item: this.state.activeItem})
+						item: this.state.activeItem.name, 
+						context: this.state.activeItem.type})
+
+
 				)
 				/* jshint ignore:end */
 			);
@@ -18684,7 +18693,7 @@ module.exports = require('./lib/React');
 
 
 
-},{"../js/game":155,"../js/pubsub":159,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
+},{"../js/game":156,"../js/pubsub":160,"./commandMenu.jsx":148,"./itemCommandMenu.jsx":151,"./itemList.jsx":152,"./statusWindow.jsx":153,"./textWindow.jsx":154,"react":145}],147:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18699,7 +18708,7 @@ module.exports = require('./lib/React');
 
 		render: function() {
 			return (
-				React.DOM.button({onClick: this.onClick, className: "Item"}, this.props.name)
+				React.DOM.button({onClick: this.onClick, className: "Command"}, this.props.name)
 			);
 		}
 
@@ -18752,7 +18761,10 @@ module.exports = require('./lib/React');
 
 		onClick: function(e) {
 			e.preventDefault();
-			this.props.pubsub.publish('item:clicked', this.props.name);
+			this.props.pubsub.publish('item:clicked', {
+				name: this.props.name,
+				type: this.props.type
+			});
 		},
 
 		render: function() {
@@ -18777,7 +18789,11 @@ module.exports = require('./lib/React');
 		onClick: function(e) {
 			e.preventDefault();
 
-			this.props.pubsub.publish('game:item:command', {name: this.props.name, item: this.props.item});
+			this.props.pubsub.publish('game:item:command', {
+				name: this.props.name,
+				item: this.props.item,
+				context: this.props.context
+			});
 		},
 
 		render: function() {
@@ -18813,7 +18829,8 @@ module.exports = require('./lib/React');
 						ItemCommand({
 							pubsub: self.props.pubsub, 
 							name: command, 
-							item: self.props.item})
+							item: self.props.item, 
+							context: self.props.context})
 					)
 				)
 			});
@@ -18847,7 +18864,12 @@ module.exports = require('./lib/React');
 
 			return itemsArray.map(function(item){
 				return (
-					React.DOM.li({key: item}, Item({pubsub: self.props.pubsub, name: item}))
+					React.DOM.li({key: item}, 
+						Item({
+							pubsub: self.props.pubsub, 
+							name: item, 
+							type: self.props.type})
+					)
 				);
 			})
 		},
@@ -18856,10 +18878,15 @@ module.exports = require('./lib/React');
 
 		render: function() {
 			var items = this.printItems(this.props.items);
+			var classes = 'itemList ' + this.props.type;
+			var titleClasses = 'itemList-title ' + this.props.type;
 
 			return (
-				React.DOM.ul({className: "itemList"}, 
-					items
+				React.DOM.span(null, 
+					React.DOM.h2({className: titleClasses}, this.props.type), 
+					React.DOM.ul({className: classes}, 
+						items
+					)
 				)
 			)
 		}
@@ -18916,7 +18943,10 @@ module.exports = StatusWindow;
 				React.DOM.div({className: "textWindow"}, 
 					text, 
 					React.DOM.br(null), 
-					"You see: ", ItemList({pubsub: this.props.pubsub, items: this.props.items})
+					"You see: ", ItemList({
+								pubsub: this.props.pubsub, 
+								items: this.props.items, 
+								type: "scene"})
 				)
 			);
 		}
@@ -18930,22 +18960,43 @@ module.exports = StatusWindow;
 (function() {
 	'use strict';
 
+	var Commands = function() {
+
+	};
+
+	Commands.prototype.getCommands = function(commandList, revealedCommands) {
+		if (revealedCommands && revealedCommands.length > 0) {
+			return commandList.concat(revealedCommands);
+		}
+		return commandList;
+	};
+
+	module.exports = Commands;
+}());
+
+},{}],156:[function(require,module,exports){
+(function() {
+	'use strict';
+
 	var Library = require('./library'),
 		Player = require('./player'),
+		Commands = require('./commands'),
 		Items = require('./items');
 
 	Items = new Items();
+	Commands = new Commands();
 
 	var Game = function(pubsub) {
 		this.pubsub = pubsub;
-		this.player = new Player();
+		this.player = new Player(pubsub);
 		this.library = new Library('./game/items.json', pubsub);
 		this.text = [];
 		this.items = [];
 		this.commands = [];
 		this.itemCommands = [];
 		this.currentScene = 'intro';
-		this.activeItem = null;
+		this.activeItem = {name: null, type: null};
+		this.inventory = [];
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
@@ -18976,19 +19027,25 @@ module.exports = StatusWindow;
 		return this.library.scene.setup.output.default;
 	};
 
+	Game.prototype.updateInventory =  function() {
+		this.inventory = this.player.itemList.inventory;
+	};
+
 	Game.prototype.updateItems =  function() {
 		this.items = Items.getItems(this.library.scene.setup.items,
-									this.player.itemDumpster,
-									this.player.revealedItems[this.currentScene]);
+									this.player.itemList.destroyed,
+									this.player.itemList.revealed[this.currentScene]);
 	};
 
 	Game.prototype.updateCommands =  function() {
-		this.commands = this.library.scene.setup.commandList;
+		this.commands = Commands.getCommands(this.library.scene.setup.commandList,
+											 this.player.revealedCommands[this.currentScene]);
 	};
 
 	Game.prototype.update = function() {
 		this.updateText(this.library.scene.currentText);
 		this.updateItems();
+		this.updateInventory();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
 	};
@@ -19004,11 +19061,10 @@ module.exports = StatusWindow;
 		if (exec.changeScene === true) {
 			this.library.changeScene(exec.leadsTo);
 
-			this.activeItem = null;
+			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
 	};
-
 
 	Game.prototype.getCommand = function(command) {
 		if (!this.library.scene.commands[command]) {
@@ -19018,7 +19074,7 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = Items.getItemCommands(item, this.library.scene.items, this.library.items);
+		var itemCommands = Items.getItemCommands(item.name, this.library.scene.items, this.library.items);
 
 		if (itemCommands === false) {
 			throw new Error('item does not exist: ' + item);
@@ -19038,23 +19094,40 @@ module.exports = StatusWindow;
 
 		this.library.scene.currentText = exec.output;
 
+
+		if (exec.open) {
+			this.player.addSceneCommand(this.currentScene, exec.open);
+		}
+
+		if (exec.take) {
+			this.player.addInventoryItem(exec.take);
+		}
+
 		if (exec.exit === true || exec.destroy === true) {
-			this.activeItem = null;
+			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
 
 		if (exec.destroy === true) {
-			var itemPosition = this.items.indexOf(command.item);
-			this.items.splice(itemPosition, 1);
-			this.player.itemDumpster.push(command.item);
+			this.destroyItem(command);
 		}
 
 		if (exec.reveal) {
-			this.player.addRevealedItem(this.currentScene, exec.reveal);
+			this.player.addRevealedItem(this.currentScene, exec.reveal, command.context);
 		}
 
 		this.update();
 	};
+
+	Game.prototype.destroyItem = function(command) {
+		var itemPosition = this.items.indexOf(command.item);
+		if (command.context === 'scene') {
+			this.items.splice(itemPosition, 1);
+		} else if (command.context === 'inventory') {
+			this.player.itemList.inventory.splice(itemPosition, 1);
+		}
+		this.player.itemList.destroyed.push(command.item);
+	}
 
 
 
@@ -19062,7 +19135,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{"./items":156,"./library":157,"./player":158}],156:[function(require,module,exports){
+},{"./commands":155,"./items":157,"./library":158,"./player":159}],157:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19152,7 +19225,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],157:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19204,15 +19277,19 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],158:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 (function() {
 	'use strict';
 
-	var Player = function() {
-		this.inventory = [];
+	var Player = function(pubsub) {
+		this.pubsub = pubsub;
 		this.visitedScenes = [];
-		this.itemDumpster = [];
-		this.revealedItems = {};
+		this.revealedCommands = [];
+		this.itemList = {
+			'destroyed' : [],
+			'inventory' : [],
+			'revealed' : []
+		};
 	};
 
 	Player.prototype.addScene = function(scene) {
@@ -19230,19 +19307,35 @@ module.exports = StatusWindow;
 		return true;
 	};
 
-	Player.prototype.addRevealedItem = function(scene, item) {
-		if (typeof this.revealedItems[scene] !== Array) {
-			this.revealedItems[scene] = [];
+	Player.prototype.addRevealedItem = function(scene, item, context) {
+		if (context === 'inventory') {
+			this.addInventoryItem(item);
+			return;
 		}
-		this.revealedItems[scene].push(item);
+
+		if (typeof this.itemList.revealed[scene] !== Array) {
+			this.itemList.revealed[scene] = [];
+		}
+		this.itemList.revealed[scene].push(item);
 	};
 
+	Player.prototype.addInventoryItem = function(item) {
+		this.itemList.inventory.push(item);
+	};
+
+
+	Player.prototype.addSceneCommand = function(scene, command) {
+		if (typeof this.revealedCommands[scene] !== Array) {
+			this.revealedCommands[scene] = [];
+		}
+		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
+	};
 
 	module.exports = Player;
 
 }());
 
-},{}],159:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19312,7 +19405,7 @@ module.exports = StatusWindow;
 
 }());
 
-},{}],160:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var App = require('./components/app.jsx');
@@ -19322,4 +19415,4 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./components/app.jsx":146,"react":145}]},{},[160])
+},{"./components/app.jsx":146,"react":145}]},{},[161])

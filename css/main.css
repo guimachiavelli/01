@@ -1,11 +1,12 @@
 .textWindow {
-	height: 500px;
+	height: 300px;
 	width: 300px;
 	border: 1px solid #000bff;
 	padding: 1em;
 	float: left;
 	margin-right: 1em;
 	overflow: auto;
+	position: relative;
 }
 
 button, a {
@@ -14,6 +15,7 @@ button, a {
 	color: #fff;
 	text-decoration: none;
 	cursor: pointer;
+	text-align: left;
 }
 
 button:hover, a:hover {
@@ -45,4 +47,21 @@ li {
 .itemList li:last-child:after {
 	content: '';
 }
+
+.itemList.inventory {
+	float: left;
+	width: 150px;
+	min-height: 1px;
+	border: solid 1px #000bff;
+	margin-right: 1em;
+}
+
+.itemList.inventory:empty {
+	border: 0;
+}
+
+.itemList-title.scene {
+	display: none;
+}
+
 
