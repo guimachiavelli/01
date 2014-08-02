@@ -25,11 +25,16 @@
 
 		render: function() {
 			var items = this.printItems(this.props.items);
+			var classes = 'itemList ' + this.props.type;
+			var titleClasses = 'itemList-title ' + this.props.type;
 
 			return (
-				<ul className="itemList">
-					{items}
-				</ul>
+				<span>
+					<h2 className={titleClasses}>{this.props.type}</h2>
+					<ul className={classes}>
+						{items}
+					</ul>
+				</span>
 			)
 		}
 	});

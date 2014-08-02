@@ -45,6 +45,10 @@
 			return (
 				/* jshint ignore:start */
 				<div className="app">
+					<ItemList
+						pubsub={pubsub}
+						items={this.state.inventory}
+						type="inventory" />
 					<TextWindow
 						pubsub={pubsub}
 						text={this.state.text}
@@ -57,11 +61,6 @@
 						commands={this.state.itemCommands}
 						item={this.state.activeItem.name}
 						context={this.state.activeItem.type} />
-					inventory <br />
-					<ItemList
-						pubsub={pubsub}
-						items={this.state.inventory}
-						type="inventory" />
 
 
 				</div>

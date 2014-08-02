@@ -18661,6 +18661,10 @@ module.exports = require('./lib/React');
 			return (
 				/* jshint ignore:start */
 				React.DOM.div({className: "app"}, 
+					ItemList({
+						pubsub: pubsub, 
+						items: this.state.inventory, 
+						type: "inventory"}), 
 					TextWindow({
 						pubsub: pubsub, 
 						text: this.state.text, 
@@ -18672,12 +18676,7 @@ module.exports = require('./lib/React');
 						pubsub: pubsub, 
 						commands: this.state.itemCommands, 
 						item: this.state.activeItem.name, 
-						context: this.state.activeItem.type}), 
-					"inventory ", React.DOM.br(null), 
-					ItemList({
-						pubsub: pubsub, 
-						items: this.state.inventory, 
-						type: "inventory"})
+						context: this.state.activeItem.type})
 
 
 				)
@@ -18879,10 +18878,15 @@ module.exports = require('./lib/React');
 
 		render: function() {
 			var items = this.printItems(this.props.items);
+			var classes = 'itemList ' + this.props.type;
+			var titleClasses = 'itemList-title ' + this.props.type;
 
 			return (
-				React.DOM.ul({className: "itemList"}, 
-					items
+				React.DOM.span(null, 
+					React.DOM.h2({className: titleClasses}, this.props.type), 
+					React.DOM.ul({className: classes}, 
+						items
+					)
 				)
 			)
 		}
