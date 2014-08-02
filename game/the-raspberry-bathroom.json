@@ -7,11 +7,11 @@
 
 		"commandList" : [
 			"knock on the door",
-			"go to the other stall"
+			"go to adjacent stall"
 		],
 
 		"output" : {
-			"initial" : "avoiding all the guys lying on the ground, you arrive at the bathroom stall you were looking for. the door is locked. neighbout to it there's an empty stall.",
+			"initial" : "avoiding all the guys lying on the ground, you arrive at the bathroom stall you were looking for. the door is locked. neighbouring it there's an empty stall.",
 			"default" : "you're in front of the bathroom stall again. the door is still locked"
 		},
 		"items": [
@@ -28,8 +28,8 @@
 		"bang on the door": {
 			"output" : "you bang as hard as you can on the door. something moves inside, still no reply"
 		},
-		"go to the other stall" : {
-			"output": "you go to the other stall. there's a gloryhole on one of the walls.",
+		"go to adjacent stall" : {
+			"output": "you go to the other stall. there's a gloryhole on one of the walls. you know what to do.",
 			"reveal" : "knock three times on the gloryhole wall"
 		}
 	},

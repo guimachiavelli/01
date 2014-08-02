@@ -39,7 +39,7 @@
 				"read" : {
 					"output" : "you read the paper. there is a sequence of gay romeo links and a sketch of of the rooms inside the raspberry",
 					"open" : [
-						"browse gayromeo",
+						"browse gay romeo",
 						"go to the raspberry"
 					]
 				},
