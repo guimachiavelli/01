@@ -6,67 +6,46 @@
 	"setup" : {
 
 		"commandList" : [
-			"go to the next room",
-			"talk",
-			"suck",
-			"fuck"
 		],
 
 		"output" : {
-			"initial" : "you just arrived from your last public bathroom incursion. ♥bathroom_fairy68♥ finally gave the tip you were looking for. a list of websites and places where you will be able to meet bavarian daddy and get to the bottom of the issue. at last. \n you spent the 5 last years trying to track the organisation, and now you can feel that it's just around the corner.",
+			"initial" : "you are in your room",
 			"default" : "it's your room. it smells like barbra streisand's armpit"
 		},
 		"items": [
-			"cum-stained paper",
-			"vibrator",
-			"flag"
+			"paper"
 		]
 	},
 
 	"commands": {
-		"go to the next room": {
+		"browse gay romeo" : {
 			"changeScene" : true,
-			"leadsTo": "scene1",
-			"output" : "you leave your room"
-		},
-		"talk": {
-			"output" : "you talk to yourself for hours"
-		},
-		"suck" : {
-			"output" : "you try to suck yourself, but you're not flexible enough",
-			"effect" : {
-				"status" : "backpain"
-			}
-		},
-		"fuck" : {
-			"output" : "there's nothing to fuck, try the next room"
-		},
-		"browse gayromeo/user/124": {
-			"output" : "you open your laptop and go to the profile the fairy gave you"
+			"leadsTo" : "gay-romeo",
+			"output" : "you start browsing gay romeo, following the set of links in the paper"
 		},
 		"go to the raspberry" : {
-			"output" : "you go the raspberry, a bar"
+			"changeScene" : true,
+			"leadsTo" : "the-raspberry",
+			"output" : "you make your way to the stalinist bdsm club, the raspberry"
 		}
 	},
 
 	"items" : {
 
-		"cum-stained paper" : {
+		"paper" : {
 			"takeable" : true,
 
 			"actions" : {
-				"examine" : {
-					"output" : "you read the paper. it says: gayromeo/user/1245463, grinding the raspberry",
+				"read" : {
+					"output" : "you read the paper. there is a sequence of gay romeo links and a sketch of of the rooms inside the raspberry",
 					"open" : [
-						"browse gayromeo/user/124",
+						"browse gayromeo",
 						"go to the raspberry"
 					]
 				},
 
-				"lick" : {
-					"output" : "it tastes amazing. part of the paper was erased in the process, though",
-					"reveal" : "licked cum-stained paper",
-					"destroy" : true
+				"examine" : {
+					"output" : "it's a piece of paper. there's something scribbled on it and a crude map"
 				},
 
 				"leave it alone" : {
@@ -76,40 +55,11 @@
 
 				"take it" : {
 					"output" : "you take the paper and put it in your pocket",
-					"take" : "cum-stained paper",
+					"take" : "paper",
 					"destroy" : true
 				}
 			}
-		},
-
-		"licked cum-stained paper" : {
-			"takeable" : true,
-
-			"actions" : {
-				"examine" : {
-					"output" : "you read the paper. it says: grinding the raspberry. there's something else written there, but it is too blurry for you to understand"
-				}
-			}
-		},
-
-		"vibrator" : {
-			"charges" : 5,
-
-			"actions" : {
-				"examine" : {
-					"output" : "a thoroughly used AssBender 2000"
-				},
-				"use": {
-					"output" : "**dwoiiinnnnnnnngggggggig**",
-					"charges": 1
-				},
-				"leave it alone" : {
-					"output" : "you turn your attention to something else.",
-					"exit" : true
-				}
-			}
 		}
-
 
 	}
 

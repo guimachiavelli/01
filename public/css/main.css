@@ -56,6 +56,10 @@ li {
 	margin-right: 1em;
 }
 
+.itemList.inventory:empty {
+	border: 0;
+}
+
 .itemList-title.scene {
 	display: none;
 }
