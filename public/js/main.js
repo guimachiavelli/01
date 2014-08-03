@@ -18931,6 +18931,20 @@ module.exports = StatusWindow;
 			})
 		},
 
+		printItems: function(itemsArray, pubsub) {
+			console.log(itemsArray);
+			if (!itemsArray || itemsArray.length < 1) { return; }
+			return (
+				React.DOM.div(null, 
+					React.DOM.br(null), 
+					"You see: ", ItemList({
+								pubsub: pubsub, 
+								items: itemsArray, 
+								type: "scene"})
+				)
+			);
+		},
+
 		componentDidUpdate: function() {
 			var el = this.getDOMNode();
 			el.scrollTop = el.scrollHeight;
@@ -18938,23 +18952,19 @@ module.exports = StatusWindow;
 
 		render: function() {
 			var text = this.printText(this.props.text);
+			var items = this.printItems(this.props.items, this.props.pubsub);
 
 			return (
 				React.DOM.div({className: "textWindow"}, 
 					text, 
-					React.DOM.br(null), 
-					"You see: ", ItemList({
-								pubsub: this.props.pubsub, 
-								items: this.props.items, 
-								type: "scene"})
+					items
 				)
-			);
+				);
 		}
 	});
 
 	module.exports = TextWindow;
 }());
-
 
 },{"./itemList.jsx":152,"react":145}],155:[function(require,module,exports){
 (function() {

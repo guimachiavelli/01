@@ -14,9 +14,7 @@
 			"initial" : "avoiding all the guys lying on the ground, you arrive at the bathroom stall you were looking for. the door is locked. neighbouring it there's an empty stall.",
 			"default" : "you're in front of the bathroom stall again. the door is still locked"
 		},
-		"items": [
-
-		]
+		"items": []
 	},
 
 	"commands": {
@@ -32,12 +30,14 @@
 			"output": "you go to the other stall. there's a gloryhole on one of the walls. you know what to do.",
 			"reveal" : "knock three times on the gloryhole wall",
 			"destroy" : true
+		},
+		"knock three times on the gloryhole wall" : {
+			"output" : "what you expected comes of the wall. time to get busy",
+			"reveal" : ["slap it", "indignantly ask \"what is the meaning of this?\""],
+			"destroy" : true
 		}
 	},
 
-	"items" : {
-
-	}
+	"items" : {}
 
 }
-

@@ -15,6 +15,20 @@
 			})
 		},
 
+		printItems: function(itemsArray, pubsub) {
+			console.log(itemsArray);
+			if (!itemsArray || itemsArray.length < 1) { return; }
+			return (
+				<div>
+					<br />
+					You see: <ItemList
+								pubsub={pubsub}
+								items={itemsArray}
+								type="scene"/>
+				</div>
+			);
+		},
+
 		componentDidUpdate: function() {
 			var el = this.getDOMNode();
 			el.scrollTop = el.scrollHeight;
@@ -22,20 +36,16 @@
 
 		render: function() {
 			var text = this.printText(this.props.text);
+			var items = this.printItems(this.props.items, this.props.pubsub);
 
 			return (
 				<div className="textWindow">
 					{text}
-					<br />
-					You see: <ItemList
-								pubsub={this.props.pubsub}
-								items={this.props.items}
-								type="scene"/>
+					{items}
 				</div>
-			);
+				);
 		}
 	});
 
 	module.exports = TextWindow;
 }());
-
