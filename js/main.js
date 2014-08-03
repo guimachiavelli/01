@@ -18733,7 +18733,7 @@ module.exports = require('./lib/React');
 
 			commands = this.props.commands.map(function (command, i) {
 				return (
-					React.DOM.li({key: i}, Command({pubsub: self.props.pubsub, name: command, type: self.props.type}))
+					React.DOM.li({key: command}, Command({pubsub: self.props.pubsub, name: command, type: self.props.type}))
 				)
 			});
 
@@ -18931,6 +18931,20 @@ module.exports = StatusWindow;
 			})
 		},
 
+		printItems: function(itemsArray, pubsub) {
+			console.log(itemsArray);
+			if (!itemsArray || itemsArray.length < 1) { return; }
+			return (
+				React.DOM.div(null, 
+					React.DOM.br(null), 
+					"You see: ", ItemList({
+								pubsub: pubsub, 
+								items: itemsArray, 
+								type: "scene"})
+				)
+			);
+		},
+
 		componentDidUpdate: function() {
 			var el = this.getDOMNode();
 			el.scrollTop = el.scrollHeight;
@@ -18938,23 +18952,19 @@ module.exports = StatusWindow;
 
 		render: function() {
 			var text = this.printText(this.props.text);
+			var items = this.printItems(this.props.items, this.props.pubsub);
 
 			return (
 				React.DOM.div({className: "textWindow"}, 
 					text, 
-					React.DOM.br(null), 
-					"You see: ", ItemList({
-								pubsub: this.props.pubsub, 
-								items: this.props.items, 
-								type: "scene"})
+					items
 				)
-			);
+				);
 		}
 	});
 
 	module.exports = TextWindow;
 }());
-
 
 },{"./itemList.jsx":152,"react":145}],155:[function(require,module,exports){
 (function() {
@@ -18964,14 +18974,20 @@ module.exports = StatusWindow;
 
 	};
 
-	Commands.prototype.getCommands = function(commandList, revealedCommands) {
+	Commands.prototype.getCommands = function(commandList, revealedCommands, deletedCommands) {
+		deletedCommands = deletedCommands ? deletedCommands : [];
+
 		if (revealedCommands && revealedCommands.length > 0) {
-			return commandList.concat(revealedCommands);
+			commandList = commandList.concat(revealedCommands);
 		}
-		return commandList;
+
+		return commandList.filter(function(item) {
+									return deletedCommands.indexOf(item) === -1;
+								 });
 	};
 
 	module.exports = Commands;
+
 }());
 
 },{}],156:[function(require,module,exports){
@@ -19039,7 +19055,8 @@ module.exports = StatusWindow;
 
 	Game.prototype.updateCommands =  function() {
 		this.commands = Commands.getCommands(this.library.scene.setup.commandList,
-											 this.player.revealedCommands[this.currentScene]);
+											 this.player.revealedCommands[this.currentScene],
+											 this.player.deletedCommands[this.currentScene]);
 	};
 
 	Game.prototype.update = function() {
@@ -19053,9 +19070,8 @@ module.exports = StatusWindow;
 	Game.prototype.executeCommand = function(e, command) {
 		var exec = this.getCommand(command);
 
-		if (exec.output) {
-			this.library.scene.currentText = exec.output;
-			this.update();
+		if (exec.reveal) {
+			this.player.addSceneCommand(this.currentScene, exec.reveal);
 		}
 
 		if (exec.changeScene === true) {
@@ -19064,6 +19080,16 @@ module.exports = StatusWindow;
 			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
+
+		if (exec.destroy === true) {
+			this.player.deleteSceneCommand([this.currentScene], command);
+		}
+
+		if (exec.output) {
+			this.library.scene.currentText = exec.output;
+			this.update();
+		}
+
 	};
 
 	Game.prototype.getCommand = function(command) {
@@ -19074,7 +19100,10 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = Items.getItemCommands(item.name, this.library.scene.items, this.library.items);
+		var itemCommands = Items.getItemCommands(
+			item.name,
+			this.library.scene.items,
+			this.library.items);
 
 		if (itemCommands === false) {
 			throw new Error('item does not exist: ' + item);
@@ -19089,11 +19118,12 @@ module.exports = StatusWindow;
 		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
 
 		if (exec === false) {
-			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
+			throw new Error(
+				'item: ' + command.item + ' does not have that action: ' + command.name
+			);
 		}
 
 		this.library.scene.currentText = exec.output;
-
 
 		if (exec.open) {
 			this.player.addSceneCommand(this.currentScene, exec.open);
@@ -19127,9 +19157,11 @@ module.exports = StatusWindow;
 			this.player.itemList.inventory.splice(itemPosition, 1);
 		}
 		this.player.itemList.destroyed.push(command.item);
-	}
+	};
 
-
+	Game.prototype.deleteCommand = function(command) {
+		this.player.deleteCommands[this.currentScene].push(command);
+	};
 
 	module.exports = Game;
 
@@ -19284,7 +19316,8 @@ module.exports = StatusWindow;
 	var Player = function(pubsub) {
 		this.pubsub = pubsub;
 		this.visitedScenes = [];
-		this.revealedCommands = [];
+		this.revealedCommands = {};
+		this.deletedCommands = {};
 		this.itemList = {
 			'destroyed' : [],
 			'inventory' : [],
@@ -19325,11 +19358,20 @@ module.exports = StatusWindow;
 
 
 	Player.prototype.addSceneCommand = function(scene, command) {
-		if (typeof this.revealedCommands[scene] !== Array) {
+		if (this.revealedCommands[scene] instanceof Array === false) {
 			this.revealedCommands[scene] = [];
 		}
 		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
 	};
+
+	Player.prototype.deleteSceneCommand = function(scene, command) {
+		if (this.deletedCommands[scene] instanceof Array === false) {
+			this.deletedCommands[scene] = [];
+		}
+		this.deletedCommands[scene] = this.deletedCommands[scene].concat(command);
+	};
+
+
 
 	module.exports = Player;
 
