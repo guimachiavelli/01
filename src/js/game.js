@@ -107,7 +107,10 @@
 	};
 
 	Game.prototype.onItemClick = function(e, item) {
-		var itemCommands = Items.getItemCommands(item.name, this.library.scene.items, this.library.items);
+		var itemCommands = Items.getItemCommands(
+			item.name,
+			this.library.scene.items,
+			this.library.items);
 
 		if (itemCommands === false) {
 			throw new Error('item does not exist: ' + item);
@@ -122,7 +125,9 @@
 		var exec = Items.getItemCommand(command, this.library.scene.items, this.library.items);
 
 		if (exec === false) {
-			throw new Error('item: ' + command.item + ' does not have that action: ' + command.name);
+			throw new Error(
+				'item: ' + command.item + ' does not have that action: ' + command.name
+			);
 		}
 
 		this.library.scene.currentText = exec.output;
@@ -162,10 +167,8 @@
 	};
 
 	Game.prototype.deleteCommand = function(command) {
-		this.player.deleteCommands[this.currentScene].push(command)
+		this.player.deleteCommands[this.currentScene].push(command);
 	};
-
-
 
 	module.exports = Game;
 

@@ -30,7 +30,8 @@
 		},
 		"go to adjacent stall" : {
 			"output": "you go to the other stall. there's a gloryhole on one of the walls. you know what to do.",
-			"reveal" : "knock three times on the gloryhole wall"
+			"reveal" : "knock three times on the gloryhole wall",
+			"destroy" : true
 		}
 	},
 

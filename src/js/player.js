@@ -46,14 +46,14 @@
 
 
 	Player.prototype.addSceneCommand = function(scene, command) {
-		if (typeof this.revealedCommands[scene] !== Array) {
+		if (this.revealedCommands[scene] instanceof Array === false) {
 			this.revealedCommands[scene] = [];
 		}
 		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
 	};
 
 	Player.prototype.deleteSceneCommand = function(scene, command) {
-		if (typeof this.deletedCommands[scene] !== Array) {
+		if (this.deletedCommands[scene] instanceof Array === false) {
 			this.deletedCommands[scene] = [];
 		}
 		this.deletedCommands[scene] = this.deletedCommands[scene].concat(command);
