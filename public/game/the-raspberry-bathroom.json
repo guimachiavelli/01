@@ -33,9 +33,17 @@
 		},
 		"knock three times on the gloryhole wall" : {
 			"output" : "what you expected comes of the wall. time to get busy",
-			"reveal" : ["slap it", "indignantly ask \"what is the meaning of this?\""],
+			"reveal" : ["slap it", "indignantly ask: what is the meaning of this?"],
+			"image" : "thatsapenis.gif",
 			"destroy" : true
+		},
+		"slap it" : {
+			"output" : "**boing**"
+		},
+		"indignantly ask: what is the meaning of this?" : {
+			"output" : "no reply"
 		}
+
 	},
 
 	"items" : {}
