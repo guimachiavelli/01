@@ -4,7 +4,8 @@
 	var Player = function(pubsub) {
 		this.pubsub = pubsub;
 		this.visitedScenes = [];
-		this.revealedCommands = [];
+		this.revealedCommands = {};
+		this.deletedCommands = {};
 		this.itemList = {
 			'destroyed' : [],
 			'inventory' : [],
@@ -50,6 +51,15 @@
 		}
 		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
 	};
+
+	Player.prototype.deleteSceneCommand = function(scene, command) {
+		if (typeof this.deletedCommands[scene] !== Array) {
+			this.deletedCommands[scene] = [];
+		}
+		this.deletedCommands[scene] = this.deletedCommands[scene].concat(command);
+	};
+
+
 
 	module.exports = Player;
 

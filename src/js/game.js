@@ -62,7 +62,8 @@
 
 	Game.prototype.updateCommands =  function() {
 		this.commands = Commands.getCommands(this.library.scene.setup.commandList,
-											 this.player.revealedCommands[this.currentScene]);
+											 this.player.revealedCommands[this.currentScene],
+											 this.player.deletedCommands[this.currentScene]);
 	};
 
 	Game.prototype.update = function() {
@@ -76,9 +77,8 @@
 	Game.prototype.executeCommand = function(e, command) {
 		var exec = this.getCommand(command);
 
-		if (exec.output) {
-			this.library.scene.currentText = exec.output;
-			this.update();
+		if (exec.reveal) {
+			this.player.addSceneCommand(this.currentScene, exec.reveal);
 		}
 
 		if (exec.changeScene === true) {
@@ -87,6 +87,16 @@
 			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
+
+		if (exec.destroy === true) {
+			this.player.deleteSceneCommand([this.currentScene], command);
+		}
+
+		if (exec.output) {
+			this.library.scene.currentText = exec.output;
+			this.update();
+		}
+
 	};
 
 	Game.prototype.getCommand = function(command) {
@@ -116,7 +126,6 @@
 		}
 
 		this.library.scene.currentText = exec.output;
-
 
 		if (exec.open) {
 			this.player.addSceneCommand(this.currentScene, exec.open);
@@ -150,7 +159,11 @@
 			this.player.itemList.inventory.splice(itemPosition, 1);
 		}
 		this.player.itemList.destroyed.push(command.item);
-	}
+	};
+
+	Game.prototype.deleteCommand = function(command) {
+		this.player.deleteCommands[this.currentScene].push(command)
+	};
 
 
 

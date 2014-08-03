@@ -12,7 +12,7 @@
 
 			commands = this.props.commands.map(function (command, i) {
 				return (
-					<li key={i}><Command pubsub={self.props.pubsub} name={command} type={self.props.type} /></li>
+					<li key={command}><Command pubsub={self.props.pubsub} name={command} type={self.props.type} /></li>
 				)
 			});
 

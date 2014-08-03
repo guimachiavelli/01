@@ -18733,7 +18733,7 @@ module.exports = require('./lib/React');
 
 			commands = this.props.commands.map(function (command, i) {
 				return (
-					React.DOM.li({key: i}, Command({pubsub: self.props.pubsub, name: command, type: self.props.type}))
+					React.DOM.li({key: command}, Command({pubsub: self.props.pubsub, name: command, type: self.props.type}))
 				)
 			});
 
@@ -18964,14 +18964,20 @@ module.exports = StatusWindow;
 
 	};
 
-	Commands.prototype.getCommands = function(commandList, revealedCommands) {
+	Commands.prototype.getCommands = function(commandList, revealedCommands, deletedCommands) {
+		deletedCommands = deletedCommands ? deletedCommands : [];
+
 		if (revealedCommands && revealedCommands.length > 0) {
-			return commandList.concat(revealedCommands);
+			commandList = commandList.concat(revealedCommands);
 		}
-		return commandList;
+
+		return commandList.filter(function(item) {
+									return deletedCommands.indexOf(item) === -1;
+								 });
 	};
 
 	module.exports = Commands;
+
 }());
 
 },{}],156:[function(require,module,exports){
@@ -19039,7 +19045,8 @@ module.exports = StatusWindow;
 
 	Game.prototype.updateCommands =  function() {
 		this.commands = Commands.getCommands(this.library.scene.setup.commandList,
-											 this.player.revealedCommands[this.currentScene]);
+											 this.player.revealedCommands[this.currentScene],
+											 this.player.deletedCommands[this.currentScene]);
 	};
 
 	Game.prototype.update = function() {
@@ -19053,9 +19060,8 @@ module.exports = StatusWindow;
 	Game.prototype.executeCommand = function(e, command) {
 		var exec = this.getCommand(command);
 
-		if (exec.output) {
-			this.library.scene.currentText = exec.output;
-			this.update();
+		if (exec.reveal) {
+			this.player.addSceneCommand(this.currentScene, exec.reveal);
 		}
 
 		if (exec.changeScene === true) {
@@ -19064,6 +19070,16 @@ module.exports = StatusWindow;
 			this.activeItem = {name: null, context: null};
 			this.itemCommands = [];
 		}
+
+		if (exec.destroy === true) {
+			this.player.deleteSceneCommand([this.currentScene], command);
+		}
+
+		if (exec.output) {
+			this.library.scene.currentText = exec.output;
+			this.update();
+		}
+
 	};
 
 	Game.prototype.getCommand = function(command) {
@@ -19093,7 +19109,6 @@ module.exports = StatusWindow;
 		}
 
 		this.library.scene.currentText = exec.output;
-
 
 		if (exec.open) {
 			this.player.addSceneCommand(this.currentScene, exec.open);
@@ -19127,7 +19142,11 @@ module.exports = StatusWindow;
 			this.player.itemList.inventory.splice(itemPosition, 1);
 		}
 		this.player.itemList.destroyed.push(command.item);
-	}
+	};
+
+	Game.prototype.deleteCommand = function(command) {
+		this.player.deleteCommands[this.currentScene].push(command)
+	};
 
 
 
@@ -19284,7 +19303,8 @@ module.exports = StatusWindow;
 	var Player = function(pubsub) {
 		this.pubsub = pubsub;
 		this.visitedScenes = [];
-		this.revealedCommands = [];
+		this.revealedCommands = {};
+		this.deletedCommands = {};
 		this.itemList = {
 			'destroyed' : [],
 			'inventory' : [],
@@ -19330,6 +19350,15 @@ module.exports = StatusWindow;
 		}
 		this.revealedCommands[scene] = this.revealedCommands[scene].concat(command);
 	};
+
+	Player.prototype.deleteSceneCommand = function(scene, command) {
+		if (typeof this.deletedCommands[scene] !== Array) {
+			this.deletedCommands[scene] = [];
+		}
+		this.deletedCommands[scene] = this.deletedCommands[scene].concat(command);
+	};
+
+
 
 	module.exports = Player;
 
@@ -19415,4 +19444,4 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./components/app.jsx":146,"react":145}]},{},[161])
+},{"./components/app.jsx":146,"react":145}]},{},[161]))

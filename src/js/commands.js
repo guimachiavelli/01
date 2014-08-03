@@ -5,12 +5,18 @@
 
 	};
 
-	Commands.prototype.getCommands = function(commandList, revealedCommands) {
+	Commands.prototype.getCommands = function(commandList, revealedCommands, deletedCommands) {
+		deletedCommands = deletedCommands ? deletedCommands : [];
+
 		if (revealedCommands && revealedCommands.length > 0) {
-			return commandList.concat(revealedCommands);
+			commandList = commandList.concat(revealedCommands);
 		}
-		return commandList;
+
+		return commandList.filter(function(item) {
+									return deletedCommands.indexOf(item) === -1;
+								 });
 	};
 
 	module.exports = Commands;
+
 }());
