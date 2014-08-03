@@ -33,8 +33,6 @@
 	"items" : {
 
 		"paper" : {
-			"takeable" : true,
-
 			"actions" : {
 				"read" : {
 					"output" : "you read the paper. there is a sequence of gay romeo links and a sketch of of the rooms inside the raspberry",
@@ -51,12 +49,6 @@
 				"leave it alone" : {
 					"output" : "you turn your attention to something else.",
 					"exit" : true
-				},
-
-				"take it" : {
-					"output" : "you take the paper and put it in your pocket",
-					"take" : "paper",
-					"destroy" : true
 				}
 			}
 		}
