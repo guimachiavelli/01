@@ -6,8 +6,9 @@
 	"setup" : {
 
 		"commandList" : [
-			"talk to bathroom_fairy",
-			"talk to christeene"
+			"greet bathroom_fairy",
+			"try to talk with christeene",
+			"stop browsing"
 		],
 
 		"output" : {
@@ -20,12 +21,38 @@
 	},
 
 	"commands": {
-		"talk to bathroom_fairy": {
+		"greet bathroom_fairy": {
 			"output" : "he has read your message, but doesn't reply."
 		},
-		"talk to christeene" : {
-			"output" : "the moment you greet christeene, your screen fills up with shit porn",
-			"image" : "shitporn.jpg"
+		"try to talk with christeene" : {
+			"output" : "the moment you greet christeene, your screen fills up with shit porn. she replies: 'what's up, sugar cunt'?",
+			"image" : "shitporn.jpg",
+			"destroy" : true,
+			"reveal" : ["ask christeene about bavarian daddy", "ask christeene about buttplugs", "turn on camera"]
+		},
+		"stop browsing" : {
+			"changeScene" : true,
+			"leadsTo" : "intro",
+			"output" : "you get tired of staring at lusty guys."
+		},
+		"ask christeene about bavarian daddy" : {
+			"output" : "she says: ever see me turn a dick down? well that's a first then! damn right motherfucker!",
+			"destroy" : true,
+			"reveal" : "ask christeene about bavarian daddy again"
+		},
+		"ask christeene about bavarian daddy again" : {
+			"output" : "here we go…we're going downton, ya'll. we're going downtown!",
+			"image" : "downtown.gif",
+			"destroy" : true
+		},
+		"turn on camera" : {
+			"output" : "christeene greets you, all wrapped in brown silk",
+			"image" : "christeene-silk.gif"
+		},
+		"ask christeene about buttplugs" : {
+			"output" : "there's no reply for a while. christeene asks whether you like it black, blue or purple",
+			"destroy" : true,
+			"reveal" : ["'I like blue buttplugs'", "I like black buttplugs", "I like them purple"]
 		}
 	},
 
@@ -34,4 +61,3 @@
 	}
 
 }
-

@@ -16,7 +16,6 @@
 		},
 
 		printItems: function(itemsArray, pubsub) {
-			console.log(itemsArray);
 			if (!itemsArray || itemsArray.length < 1) { return; }
 			return (
 				<div>
