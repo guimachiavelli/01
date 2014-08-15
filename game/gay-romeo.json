@@ -52,7 +52,21 @@
 		"ask christeene about buttplugs" : {
 			"output" : "there's no reply for a while. christeene asks whether you like it black, blue or purple",
 			"destroy" : true,
-			"reveal" : ["'I like blue buttplugs'", "I like black buttplugs", "I like them purple"]
+			"reveal" : ["'Flesh dildos that squirt bubblegum cum'",
+						"'black and big, like the dreams crushed by capitalism'",
+						"'I like them purple'"
+						]
+		},
+		"'Flesh dildos that squirt bubblegum cum'" : {
+			"output" : "'i got this dick that will not stop spitting this warm milk! hot and juicy! i melt in your mouth not in your hands like that candy! woo! People 'earn their living'! And yet again we ask ourselves: 'What life do we earn when we earn our living?' are you looking for relief from this, my dirty shame?",
+			"destroy" : "true",
+			"reveal" : "'damn right, motherfucker!'"
+		},
+		"'damn right, motherfucker!'" : {
+			"output" : "come to me and drop your pants. Maybe after the gym tonight? near the #7 train station. as objects of property, things alienate and even reify human activities and living men, and as such men need steady release and it will be the task and the meaning of the political Revolution to destroy these shells, to release their contents, and to rebuild new superstructures from the bottom up. you will be a slut to verbally command as reified mend enjoy intense head. any man. in public. now",
+			"changeScene": true,
+			"leadsTo" : "train-7-station"
+
 		}
 	},
 
