@@ -1,12 +1,29 @@
+html, body, #content, .app {
+	height: 100%;
+	margin: 0 1em;
+	padding: 0;
+}
+
+body {
+	font-family: Inconsolata, monospace;
+	-webkit-font-smoothing: none;
+	font-size: 16px;
+}
+
 .textWindow {
-	height: 300px;
-	width: 300px;
+	height: 80%;
+	width: 35%;
 	border: 1px solid #000bff;
 	padding: 1em;
 	float: left;
 	margin-right: 1em;
 	overflow: auto;
 	position: relative;
+}
+
+.textWindow span {
+	display: block;
+	margin-bottom: 1em;
 }
 
 button, a {
@@ -32,6 +49,10 @@ button:focus, a:focus {
 
 li {
 	list-style: none;
+}
+
+.itemList {
+	/*position: fixed;*/
 }
 
 .itemList, .itemList li {
