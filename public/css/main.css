@@ -1,24 +1,73 @@
+@font-face {
+    font-family: 'zxxnoise';
+    src: url('fonts/zxx_noise-webfont.eot');
+    src: url('fonts/zxx_noise-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/zxx_noise-webfont.woff') format('woff'),
+         url('fonts/zxx_noise-webfont.ttf') format('truetype'),
+         url('fonts/zxx_noise-webfont.svg#zxxnoise') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zxxcamo';
+    src: url('fonts/zxx_camo-webfont.eot');
+    src: url('zxx_camo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('zxx_camo-webfont.woff') format('woff'),
+         url('zxx_camo-webfont.ttf') format('truetype'),
+         url('zxx_camo-webfont.svg#zxxcamo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'zxxsans';
+    src: url('fonts/zxx_sans-webfont.eot');
+    src: url('fonts/zxx_sans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/zxx_sans-webfont.woff') format('woff'),
+         url('fonts/zxx_sans-webfont.ttf') format('truetype'),
+         url('fonts/zxx_sans-webfont.svg#zxxsans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'zxxxed';
+    src: url('fonts/zxx_xed-webfont.eot');
+    src: url('fonts/zxx_xed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/zxx_xed-webfont.woff') format('woff'),
+         url('fonts/zxx_xed-webfont.ttf') format('truetype'),
+         url('fonts/zxx_xed-webfont.svg#zxxxed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body, #content, .app {
-	height: 100%;
 	margin: 0 1em;
 	padding: 0;
 }
 
 body {
-	font-family: Inconsolata, monospace;
-	-webkit-font-smoothing: none;
-	font-size: 16px;
+	font-family: zxxsans, monospace;
+	font-size: 23px;
+}
+
+.app:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 .textWindow {
 	height: 80%;
-	width: 35%;
-	border: 1px solid #000bff;
-	padding: 1em;
+	width: 65%;
+	margin-right: 16px;
 	float: left;
-	margin-right: 1em;
-	overflow: auto;
 	position: relative;
+	margin-bottom: 1em;
 }
 
 .textWindow span {
@@ -28,16 +77,18 @@ body {
 
 button, a {
 	border: 0;
-	background: #000bff;
-	color: #fff;
 	text-decoration: none;
 	cursor: pointer;
 	text-align: left;
+	background: transparent;
+	font-family: zxxsans, monospace;
+	font-size: 23px;
+
 }
 
 button:hover, a:hover {
-	background: transparent;
-	color: #000bff;
+	color: red;
+
 }
 
 button:focus, a:focus {
@@ -71,10 +122,10 @@ li {
 
 .itemList.inventory {
 	float: left;
-	width: 150px;
 	min-height: 1px;
 	border: solid 1px #000bff;
 	margin-right: 1em;
+	display: none;
 }
 
 .itemList.inventory:empty {
@@ -85,4 +136,9 @@ li {
 	display: none;
 }
 
+.menus {
+	position: fixed;
+	width: 30%;
+	right: 5%;
+}
 

@@ -45,22 +45,20 @@
 			return (
 				/* jshint ignore:start */
 				<div className="app">
-					<ItemList
-						pubsub={pubsub}
-						items={this.state.inventory}
-						type="inventory" />
 					<TextWindow
 						pubsub={pubsub}
 						text={this.state.text}
 						items={this.state.items} />
-					<CommandMenu
-						pubsub={pubsub}
-						commands={this.state.commands} />
-					<ItemCommandMenu
-						pubsub={pubsub}
-						commands={this.state.itemCommands}
-						item={this.state.activeItem.name}
-						context={this.state.activeItem.type} />
+					<div className="menus">
+						<CommandMenu
+							pubsub={pubsub}
+							commands={this.state.commands} />
+						<ItemCommandMenu
+							pubsub={pubsub}
+							commands={this.state.itemCommands}
+							item={this.state.activeItem.name}
+							context={this.state.activeItem.type} />
+					</div>
 
 
 				</div>

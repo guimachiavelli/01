@@ -29,12 +29,9 @@
 			var titleClasses = 'itemList-title ' + this.props.type;
 
 			return (
-				<span>
-					<h2 className={titleClasses}>{this.props.type}</h2>
 					<ul className={classes}>
 						{items}
 					</ul>
-				</span>
 			)
 		}
 	});

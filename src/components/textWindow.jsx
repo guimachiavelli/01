@@ -19,8 +19,7 @@
 			if (!itemsArray || itemsArray.length < 1) { return; }
 			return (
 				<div>
-					<br />
-					You see: <ItemList
+					<b>You see:</b><ItemList
 								pubsub={pubsub}
 								items={itemsArray}
 								type="scene"/>
@@ -30,7 +29,7 @@
 
 		componentDidUpdate: function() {
 			var el = this.getDOMNode();
-			el.scrollTop = el.scrollHeight;
+			window.scroll(0,el.scrollHeight)
 		},
 
 		render: function() {
