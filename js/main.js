@@ -18661,22 +18661,20 @@ module.exports = require('./lib/React');
 			return (
 				/* jshint ignore:start */
 				React.DOM.div({className: "app"}, 
-					ItemList({
-						pubsub: pubsub, 
-						items: this.state.inventory, 
-						type: "inventory"}), 
 					TextWindow({
 						pubsub: pubsub, 
 						text: this.state.text, 
 						items: this.state.items}), 
-					CommandMenu({
-						pubsub: pubsub, 
-						commands: this.state.commands}), 
-					ItemCommandMenu({
-						pubsub: pubsub, 
-						commands: this.state.itemCommands, 
-						item: this.state.activeItem.name, 
-						context: this.state.activeItem.type})
+					React.DOM.div({className: "menus"}, 
+						CommandMenu({
+							pubsub: pubsub, 
+							commands: this.state.commands}), 
+						ItemCommandMenu({
+							pubsub: pubsub, 
+							commands: this.state.itemCommands, 
+							item: this.state.activeItem.name, 
+							context: this.state.activeItem.type})
+					)
 
 
 				)
@@ -18882,12 +18880,9 @@ module.exports = require('./lib/React');
 			var titleClasses = 'itemList-title ' + this.props.type;
 
 			return (
-				React.DOM.span(null, 
-					React.DOM.h2({className: titleClasses}, this.props.type), 
 					React.DOM.ul({className: classes}, 
 						items
 					)
-				)
 			)
 		}
 	});
@@ -18935,8 +18930,7 @@ module.exports = StatusWindow;
 			if (!itemsArray || itemsArray.length < 1) { return; }
 			return (
 				React.DOM.div(null, 
-					React.DOM.br(null), 
-					"You see: ", ItemList({
+					React.DOM.b(null, "You see:"), ItemList({
 								pubsub: pubsub, 
 								items: itemsArray, 
 								type: "scene"})
@@ -18946,7 +18940,7 @@ module.exports = StatusWindow;
 
 		componentDidUpdate: function() {
 			var el = this.getDOMNode();
-			el.scrollTop = el.scrollHeight;
+			window.scroll(0,el.scrollHeight)
 		},
 
 		render: function() {

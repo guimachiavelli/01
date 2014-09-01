@@ -11,7 +11,7 @@
 		"output" : {
 			"initial" : [
 				"In the 20th Century, war has murdered more than all previous deaths; taxes and inflation have stolen more than all wealth previously produced; and the political lies, propaganda, and above all, “Education” have twisted more minds than all the superstition prior. the solution of that evil can be brought about only through a grand strategy and a cataclysmic point of historical singularity: Homossexual Revolution.",
-				"you open the door to your apartment. Are they watching you? Do they like what they see? Do they see that your 17cm cock is erect again showing off its thick mushroom head? You have a wet sloppy unsafe bj load on your hands, figuratively and literally. The Information is there, on the paper bathroom fairy gave to you after you serviced her.",
+				"you open the door to your apartment. Are they watching you? Do they like what they see? Do they see that your 17cm cock is erect again showing off its thick mushroom head? You have a wet sloppy unsafe bj load on your hands. You have the paper bathroom fairy gave to you after you serviced her.",
 				"you stand on the brink of Revolution."
 			],
 			"default" : "it's your room. it smells like barbra streisand's armpit"
@@ -22,12 +22,12 @@
 	},
 
 	"commands": {
-		"browse gay romeo" : {
+		"browse gay sex site" : {
 			"changeScene" : true,
 			"leadsTo" : "gay-romeo",
-			"output" : "you start browsing gay romeo, following the set of links in the paper"
+			"output" : "You kick back with some hot porn on one tab, the gay dating site on another – need is, after all, determined biologically and physiologically, whereas desire, meeting a guy who unzips and let's you work his cock and balls till he explodes down your throat as much as he can, is at the same time both individual and social; in other words it is excluded – or recognised – by society."
 		},
-		"go to the raspberry" : {
+		"go to the suburbs" : {
 			"changeScene" : true,
 			"leadsTo" : "the-raspberry",
 			"output" : "you make your way to the stalinist bdsm club, the raspberry"
@@ -39,10 +39,14 @@
 		"paper" : {
 			"actions" : {
 				"read" : {
-					"output" : "you read the paper. there is a sequence of gay romeo links and a sketch of of the rooms inside the raspberry",
+					"output" : [
+						"How is the ordinary man to know that the most violent element in society is ignorance? Rather than to go to the bottom of any given idea, to examine into its origin and meaning, most people will either condemn it altogether, or rely on some superficial or prejudicial definition of non-essentials. They do not know what it is to be an Excellent cock-sucker with Super DEEP-THROAT SKILLS and an INSATIABLE APPETITE FOR DICK.",
+						"you remember your meeting with the bathroom fairy. You Stripped him down Played with his head and body Verbally abused him, Lightly tied his hands behind his back. And blew him until he shot a HOT, warm, and CLEAN massive load. after that, he gave you the paper, containing indications to find those outside the statist pockets or sub- societies, the New Homossexual Libertarians.",
+						"there is a link, together with username and password, for a gay sex site and one address in the suburbs"
+					],
 					"open" : [
-						"browse gay romeo",
-						"go to the raspberry"
+						"browse gay sex site",
+						"go to the suburbs"
 					]
 				},
 
