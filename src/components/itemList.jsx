@@ -18,10 +18,8 @@
 							type={self.props.type} />
 					</li>
 				);
-			})
+			});
 		},
-
-
 
 		render: function() {
 			var items = this.printItems(this.props.items);
@@ -32,7 +30,7 @@
 					<ul className={classes}>
 						{items}
 					</ul>
-			)
+			);
 		}
 	});
 

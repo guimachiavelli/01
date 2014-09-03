@@ -18869,10 +18869,8 @@ module.exports = require('./lib/React');
 							type: self.props.type})
 					)
 				);
-			})
+			});
 		},
-
-
 
 		render: function() {
 			var items = this.printItems(this.props.items);
@@ -18883,7 +18881,7 @@ module.exports = require('./lib/React');
 					React.DOM.ul({className: classes}, 
 						items
 					)
-			)
+			);
 		}
 	});
 
@@ -18915,27 +18913,69 @@ module.exports = StatusWindow;
 	var React = require('react');
 
 	var ItemList = require('./itemList.jsx');
+	var Item = require('./item.jsx');
 
 	var TextWindow = React.createClass({displayName: 'TextWindow',
 
-		printText: function(textArray) {
-			return textArray.map(function(text, i){
-				return (
-					React.DOM.p({key: i}, text)
-				);
-			})
+		parseTextItems: function(text) {
+			if (text === undefined) {
+				return;
+			}
+
+			var matches, textArray = [], self = this;
+			matches = text.match(/\[\[.+?\]\]/gi);
+
+			if (matches === null) {
+				return text;
+			}
+
+			text = text.split(/(\ |\.)/g).map(function(match){
+				if (matches.indexOf(match) > -1) {
+					return (Item({type: "item", pubsub: self.props.pubsub, name:  match.replace('[[','').replace(']]','') }));
+				} else {
+					return match;
+				}
+			});
+
+			text.reduce(function(prev, cur, index, original) {
+				if (index + 1 === original.length) {
+					textArray.push(prev);
+				}
+
+				if (typeof prev === 'string' && typeof cur === 'string') {
+					return prev + cur;
+				}
+
+				if (typeof prev === 'string' && typeof cur !== 'string') {
+					textArray.push(prev);
+					textArray.push(cur);
+					return '';
+				}
+
+			});
+
+			return textArray;
+
 		},
 
-		printItems: function(itemsArray, pubsub) {
-			if (!itemsArray || itemsArray.length < 1) { return; }
-			return (
-				React.DOM.div(null, 
-					React.DOM.b(null, "You see:"), ItemList({
-								pubsub: pubsub, 
-								items: itemsArray, 
-								type: "scene"})
-				)
-			);
+		printText: function(textArray) {
+			var self = this;
+			return textArray.map(function(text, i){
+				text = self.parseTextItems(text);
+
+				if (typeof text === 'string') {
+					return React.DOM.p(null, text);
+				}
+
+				if (!text) {
+					return null;
+				}
+
+				//FIXME: find a better way to output this and avoid everything
+				// being wrapped in <span>s
+				return (React.DOM.p(null,  text.map(function(t) { return t; })) )
+
+			});
 		},
 
 		componentDidUpdate: function() {
@@ -18945,12 +18985,10 @@ module.exports = StatusWindow;
 
 		render: function() {
 			var text = this.printText(this.props.text);
-			var items = this.printItems(this.props.items, this.props.pubsub);
 
 			return (
 				React.DOM.div({className: "textWindow"}, 
-					text, 
-					items
+					text
 				)
 				);
 		}
@@ -18959,7 +18997,7 @@ module.exports = StatusWindow;
 	module.exports = TextWindow;
 }());
 
-},{"./itemList.jsx":152,"react":145}],155:[function(require,module,exports){
+},{"./item.jsx":149,"./itemList.jsx":152,"react":145}],155:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -19014,7 +19052,8 @@ module.exports = StatusWindow;
 	};
 
 	Game.prototype.updateScene = function() {
-		this.text.push(this.getSceneDescription());
+
+		this.text = this.text.concat(this.getSceneDescription());
 
 		this.currentScene = this.library.scene.info.title;
 		this.player.addScene(this.currentScene);

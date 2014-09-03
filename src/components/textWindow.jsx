@@ -4,27 +4,69 @@
 	var React = require('react');
 
 	var ItemList = require('./itemList.jsx');
+	var Item = require('./item.jsx');
 
 	var TextWindow = React.createClass({
 
-		printText: function(textArray) {
-			return textArray.map(function(text, i){
-				return (
-					<p key={i}>{text}</p>
-				);
-			})
+		parseTextItems: function(text) {
+			if (text === undefined) {
+				return;
+			}
+
+			var matches, textArray = [], self = this;
+			matches = text.match(/\[\[.+?\]\]/gi);
+
+			if (matches === null) {
+				return text;
+			}
+
+			text = text.split(/(\ |\.)/g).map(function(match){
+				if (matches.indexOf(match) > -1) {
+					return (<Item type="item" pubsub={self.props.pubsub} name={ match.replace('[[','').replace(']]','') } />);
+				} else {
+					return match;
+				}
+			});
+
+			text.reduce(function(prev, cur, index, original) {
+				if (index + 1 === original.length) {
+					textArray.push(prev);
+				}
+
+				if (typeof prev === 'string' && typeof cur === 'string') {
+					return prev + cur;
+				}
+
+				if (typeof prev === 'string' && typeof cur !== 'string') {
+					textArray.push(prev);
+					textArray.push(cur);
+					return '';
+				}
+
+			});
+
+			return textArray;
+
 		},
 
-		printItems: function(itemsArray, pubsub) {
-			if (!itemsArray || itemsArray.length < 1) { return; }
-			return (
-				<div>
-					<b>You see:</b><ItemList
-								pubsub={pubsub}
-								items={itemsArray}
-								type="scene"/>
-				</div>
-			);
+		printText: function(textArray) {
+			var self = this;
+			return textArray.map(function(text, i){
+				text = self.parseTextItems(text);
+
+				if (typeof text === 'string') {
+					return <p>{text}</p>;
+				}
+
+				if (!text) {
+					return null;
+				}
+
+				//FIXME: find a better way to output this and avoid everything
+				// being wrapped in <span>s
+				return (<p>{ text.map(function(t) { return t; })}</p> )
+
+			});
 		},
 
 		componentDidUpdate: function() {
@@ -34,12 +76,10 @@
 
 		render: function() {
 			var text = this.printText(this.props.text);
-			var items = this.printItems(this.props.items, this.props.pubsub);
 
 			return (
 				<div className="textWindow">
 					{text}
-					{items}
 				</div>
 				);
 		}

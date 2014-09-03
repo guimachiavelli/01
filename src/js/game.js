@@ -28,7 +28,8 @@
 	};
 
 	Game.prototype.updateScene = function() {
-		this.text.push(this.getSceneDescription());
+
+		this.text = this.text.concat(this.getSceneDescription());
 
 		this.currentScene = this.library.scene.info.title;
 		this.player.addScene(this.currentScene);
