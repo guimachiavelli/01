@@ -18918,10 +18918,6 @@ module.exports = StatusWindow;
 	var TextWindow = React.createClass({displayName: 'TextWindow',
 
 		parseTextItems: function(text) {
-			if (text === undefined) {
-				return;
-			}
-
 			var matches, textArray = [], self = this;
 			matches = text.match(/\[\[.+?\]\]/gi);
 
@@ -18960,27 +18956,33 @@ module.exports = StatusWindow;
 
 		printText: function(textArray) {
 			var self = this;
+			if (typeof textArray === 'string') {
+				return React.DOM.p(null, textArray);
+			}
+
 			return textArray.map(function(text, i){
+
+				if (!text) {
+					return null;
+				}
+
 				text = self.parseTextItems(text);
 
 				if (typeof text === 'string') {
 					return React.DOM.p(null, text);
 				}
 
-				if (!text) {
-					return null;
-				}
 
 				//FIXME: find a better way to output this and avoid everything
 				// being wrapped in <span>s
-				return (React.DOM.p(null,  text.map(function(t) { return t; })) )
+				return (React.DOM.p(null,  text.map(function(t) { return t; })));
 
 			});
 		},
 
 		componentDidUpdate: function() {
 			var el = this.getDOMNode();
-			window.scroll(0,el.scrollHeight)
+			window.scroll(0, document.body.clientHeight);
 		},
 
 		render: function() {
@@ -19044,6 +19046,7 @@ module.exports = StatusWindow;
 		this.currentScene = 'intro';
 		this.activeItem = {name: null, type: null};
 		this.inventory = [];
+		this.continuous = false;
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
@@ -19053,19 +19056,30 @@ module.exports = StatusWindow;
 
 	Game.prototype.updateScene = function() {
 
-		this.text = this.text.concat(this.getSceneDescription());
+		var description = this.getSceneDescription();
 
 		this.currentScene = this.library.scene.info.title;
 		this.player.addScene(this.currentScene);
 
+		this.updateText(description);
 		this.updateItems();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
 	};
 
 	Game.prototype.updateText = function(text) {
-		this.text.push(text);
-		this.library.scene.currentText = '';
+		if (!text || text.length < 1) {
+			return;
+		}
+
+		this.library.scene.currentText = [];
+
+		if (this.continuous) {
+			this.text = this.text.concat(text);
+			return;
+		}
+
+		this.text = text;
 	};
 
 	Game.prototype.getSceneDescription = function() {

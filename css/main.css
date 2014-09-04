@@ -15,8 +15,8 @@ body {
 }
 
 .textWindow {
-	height: 80%;
 	width: 55%;
+	width: 400px;
 	float: left;
 }
 
