@@ -12,7 +12,7 @@
 		],
 
 		"output" : {
-			"initial" : "the first link takes you to an empty profile. weirdly enough, you can use it as if it were yours. there are two online contacts, christeene and your old friend bathroom_fairy",
+			"initial" : ["the first link takes you to an empty profile. weirdly enough, you can use it as if it were yours. there are two online contacts, christeene and your old friend bathroom_fairy"],
 			"default" : "christeene and the fairy are still online"
 		},
 		"items": [

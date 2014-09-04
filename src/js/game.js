@@ -20,6 +20,7 @@
 		this.currentScene = 'intro';
 		this.activeItem = {name: null, type: null};
 		this.inventory = [];
+		this.continuous = false;
 
 		this.pubsub.subscribe('library:update', this.updateScene.bind(this));
 		this.pubsub.subscribe('game:scene:command', this.executeCommand.bind(this));
@@ -29,19 +30,30 @@
 
 	Game.prototype.updateScene = function() {
 
-		this.text = this.text.concat(this.getSceneDescription());
+		var description = this.getSceneDescription();
 
 		this.currentScene = this.library.scene.info.title;
 		this.player.addScene(this.currentScene);
 
+		this.updateText(description);
 		this.updateItems();
 		this.updateCommands();
 		this.pubsub.publish('game:update');
 	};
 
 	Game.prototype.updateText = function(text) {
-		this.text.push(text);
-		this.library.scene.currentText = '';
+		if (!text || text.length < 1) {
+			return;
+		}
+
+		this.library.scene.currentText = [];
+
+		if (this.continuous) {
+			this.text = this.text.concat(text);
+			return;
+		}
+
+		this.text = text;
 	};
 
 	Game.prototype.getSceneDescription = function() {
