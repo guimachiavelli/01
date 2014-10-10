@@ -3,9 +3,6 @@
 
 	var React = require('react');
 
-	var ItemList = require('./itemList.jsx');
-	var Item = require('./item.jsx');
-
 	var TextWindow = React.createClass({
 
 		parseTextItems: function(text) {
@@ -16,7 +13,7 @@
 				return text;
 			}
 
-			text = text.split(/(\ |\.)/g).map(function(match){
+			text = text.match(/(?:[^\s\[\[]+|\[\[[^\]\]]*\])+/gi).map(function(match){
 				if (matches.indexOf(match) > -1) {
 					return (<Item type="item" pubsub={self.props.pubsub} name={ match.replace('[[','').replace(']]','') } />);
 				} else {
@@ -30,11 +27,11 @@
 				}
 
 				if (typeof prev === 'string' && typeof cur === 'string') {
-					return prev + cur;
+					return prev + ' ' + cur;
 				}
 
 				if (typeof prev === 'string' && typeof cur !== 'string') {
-					textArray.push(prev);
+					textArray.push(prev + ' ');
 					textArray.push(cur);
 					return '';
 				}
@@ -72,8 +69,7 @@
 		},
 
 		componentDidUpdate: function() {
-			var el = this.getDOMNode();
-			window.scroll(0, document.body.clientHeight);
+
 		},
 
 		render: function() {
@@ -81,7 +77,7 @@
 
 			return (
 				<div className="textWindow">
-					{text}
+					{this.props.text}
 				</div>
 				);
 		}

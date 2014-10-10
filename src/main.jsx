@@ -1,8 +1,8 @@
 window.React = require('react');
 
-var App = require('./components/app.jsx');
+var Story = require('./components/story.jsx');
 
 var Main = React.renderComponent(
-	<App />,
+	<Story />,
 	document.getElementById('content')
 );
