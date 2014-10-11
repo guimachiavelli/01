@@ -3,6 +3,8 @@
 
 	var React = require('react');
 
+	var Beacon = require('./beacon.jsx');
+
 	var TextWindow = React.createClass({
 
 		parseTextItems: function(text) {
@@ -15,7 +17,7 @@
 
 			text = text.match(/(?:[^\s\[\[]+|\[\[[^\]\]]*\])+/gi).map(function(match){
 				if (matches.indexOf(match) > -1) {
-					return (<Item type="item" pubsub={self.props.pubsub} name={ match.replace('[[','').replace(']]','') } />);
+					return (<Beacon pubsub={self.props.pubsub} name={ match.replace('[[','').replace(']]','') } />);
 				} else {
 					return match;
 				}
@@ -77,7 +79,7 @@
 
 			return (
 				<div className="textWindow">
-					{this.props.text}
+					{text}
 				</div>
 				);
 		}

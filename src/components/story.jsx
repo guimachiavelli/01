@@ -19,17 +19,31 @@
 	Story = React.createClass({
 		getInitialState: function() {
 			return {
+				title: '',
 				text: [],
-				commands: [],
-				activeBeacon: 'test'
+				actions: [],
+				activeBeacon: ''
 			};
 		},
 
 		componentWillMount: function() {
 			var self = this;
-			pubsub.subscribe('game:update', function(e, text) {
+			pubsub.subscribe('game:update:text', function(e, text) {
 				self.setState({
 					text: text
+				});
+			});
+
+			pubsub.subscribe('game:update:scene', function(e, title) {
+				self.setState({
+					title: title
+				});
+			});
+
+
+			pubsub.subscribe('game:update:actions', function(e, actions) {
+				self.setState({
+					actions: actions,
 				});
 			});
 
@@ -39,13 +53,15 @@
 			return (
 				/* jshint ignore:start */
 				<div className="app">
+					<h1>Bavarian Daddy</h1>
+					<h2>{this.state.title}</h2>
 					<TextWindow
 						pubsub={pubsub}
 						text={this.state.text}
 					/>
 					<CommandTree
 						pubsub={pubsub}
-						beacon={this.state.activeBeacon}
+						actions={this.state.actions}
 					/>
 				</div>
 				/* jshint ignore:end */

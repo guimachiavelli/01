@@ -4,14 +4,19 @@
 	var React = require('react');
 
 	var Beacon = React.createClass({
+
+		onClick: function() {
+			this.props.pubsub.publish('beacon:click', this.props.name);
+		},
+
 		render: function() {
 			return (
-				<button className="command-tree" beaconName={this.props.name}>
+				<button onClick={this.onClick} className="beacon">
 					{this.props.name}
 				</button>
 			);
 		}
 	});
 
-	module.exports = CommandTree;
+	module.exports = Beacon;
 }());

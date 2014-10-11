@@ -18619,13 +18619,56 @@ module.exports = require('./lib/React');
 
 	var React = require('react');
 
-	var CommandTree = React.createClass({displayName: 'CommandTree',
+	var Beacon = React.createClass({displayName: 'Beacon',
+
+		onClick: function() {
+			this.props.pubsub.publish('beacon:click', this.props.name);
+		},
+
 		render: function() {
 			return (
-				React.DOM.nav({className: "command-tree"}, 
-					this.props.beacon
+				React.DOM.button({onClick: this.onClick, className: "beacon"}, 
+					this.props.name
 				)
+			);
+		}
+	});
+
+	module.exports = Beacon;
+}());
+
+},{"react":145}],147:[function(require,module,exports){
+/** @jsx React.DOM */(function() {
+	'use strict';
+
+	var React = require('react');
+
+	var Beacon = require('./beacon.jsx');
+
+	var CommandTree = React.createClass({displayName: 'CommandTree',
+		printActions: function() {
+			if (this.props.actions.length < 1) return '';
+
+			var self = this;
+
+			return this.props.actions.map(function(action) {
+				var actionName = Object.keys(action)[0];
+				return (
+					Beacon({pubsub: self.props.pubsub, name: actionName}, 
+						"actionName"
+					)
 				);
+			});
+		},
+
+		render: function() {
+			var actions = this.printActions();
+			console.log(actions);
+			return (
+				React.DOM.nav({className: "command-tree"}, 
+					actions
+				)
+			);
 		}
 	});
 
@@ -18633,7 +18676,7 @@ module.exports = require('./lib/React');
 }());
 
 
-},{"react":145}],147:[function(require,module,exports){
+},{"./beacon.jsx":146,"react":145}],148:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
@@ -18655,17 +18698,31 @@ module.exports = require('./lib/React');
 	Story = React.createClass({displayName: 'Story',
 		getInitialState: function() {
 			return {
+				title: '',
 				text: [],
-				commands: [],
-				activeBeacon: 'test'
+				actions: [],
+				activeBeacon: ''
 			};
 		},
 
 		componentWillMount: function() {
 			var self = this;
-			pubsub.subscribe('game:update', function(e, text) {
+			pubsub.subscribe('game:update:text', function(e, text) {
 				self.setState({
 					text: text
+				});
+			});
+
+			pubsub.subscribe('game:update:scene', function(e, title) {
+				self.setState({
+					title: title
+				});
+			});
+
+
+			pubsub.subscribe('game:update:actions', function(e, actions) {
+				self.setState({
+					actions: actions,
 				});
 			});
 
@@ -18675,13 +18732,15 @@ module.exports = require('./lib/React');
 			return (
 				/* jshint ignore:start */
 				React.DOM.div({className: "app"}, 
+					React.DOM.h1(null, "Bavarian Daddy"), 
+					React.DOM.h2(null, this.state.title), 
 					TextWindow({
 						pubsub: pubsub, 
 						text: this.state.text}
 					), 
 					CommandTree({
 						pubsub: pubsub, 
-						beacon: this.state.activeBeacon}
+						actions: this.state.actions}
 					)
 				)
 				/* jshint ignore:end */
@@ -18693,11 +18752,13 @@ module.exports = require('./lib/React');
 
 }());
 
-},{"../js/game":149,"../js/pubsub":151,"./commandTree.jsx":146,"./textWindow.jsx":148,"react":145}],148:[function(require,module,exports){
+},{"../js/game":150,"../js/pubsub":152,"./commandTree.jsx":147,"./textWindow.jsx":149,"react":145}],149:[function(require,module,exports){
 /** @jsx React.DOM */(function() {
 	'use strict';
 
 	var React = require('react');
+
+	var Beacon = require('./beacon.jsx');
 
 	var TextWindow = React.createClass({displayName: 'TextWindow',
 
@@ -18711,7 +18772,7 @@ module.exports = require('./lib/React');
 
 			text = text.match(/(?:[^\s\[\[]+|\[\[[^\]\]]*\])+/gi).map(function(match){
 				if (matches.indexOf(match) > -1) {
-					return (Item({type: "item", pubsub: self.props.pubsub, name:  match.replace('[[','').replace(']]','') }));
+					return (Beacon({pubsub: self.props.pubsub, name:  match.replace('[[','').replace(']]','') }));
 				} else {
 					return match;
 				}
@@ -18773,7 +18834,7 @@ module.exports = require('./lib/React');
 
 			return (
 				React.DOM.div({className: "textWindow"}, 
-					this.props.text
+					text
 				)
 				);
 		}
@@ -18782,7 +18843,7 @@ module.exports = require('./lib/React');
 	module.exports = TextWindow;
 }());
 
-},{"react":145}],149:[function(require,module,exports){
+},{"./beacon.jsx":146,"react":145}],150:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -18794,22 +18855,47 @@ module.exports = require('./lib/React');
 		this.pubsub = pubsub;
 		this.loader = new Loader('./game/', pubsub);
 
-		this.pubsub.subscribe('scene:loaded', this.update.bind(this));
+		this.pubsub.subscribe('scene:loaded', this.updateScene.bind(this));
+		this.pubsub.subscribe('beacon:click', this.onBeaconClick.bind(this));
 	};
 
-	Game.prototype.update = function(e, scene) {
-		this.pubsub.publish('game:update', scene.setup.output.initial);
+	Game.prototype.updateScene = function(e, scene) {
+		this.scene = scene;
+		this.pubsub.publish('game:update:title', this.scene.info.title);
+		this.updateText(scene.description);
+	};
+
+	Game.prototype.updateText = function(text) {
+		this.pubsub.publish('game:update:text', text);
+	};
+
+	Game.prototype.updateActions = function(actions) {
+		this.pubsub.publish('game:update:actions', actions);
 	};
 
 	Game.prototype.loadIntro = function() {
 		this.loader.fetch('intro');
 	};
 
+	Game.prototype.onBeaconClick = function(e, beacon) {
+		var beaconContent;
+
+		beaconContent = this.scene.beacons[beacon];
+
+		if (beaconContent.actions) {
+			console.log('open command menu');
+			this.updateActions(beaconContent.actions);
+			return;
+		}
+
+
+	};
+
 	module.exports = Game;
 
 }());
 
-},{"./loader":150}],150:[function(require,module,exports){
+},{"./loader":151}],151:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -18844,7 +18930,7 @@ module.exports = require('./lib/React');
 }());
 
 
-},{}],151:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 (function() {
 	'use strict';
 
@@ -18914,7 +19000,7 @@ module.exports = require('./lib/React');
 
 }());
 
-},{}],152:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
 /** @jsx React.DOM */window.React = require('react');
 
 var Story = require('./components/story.jsx');
@@ -18924,4 +19010,4 @@ var Main = React.renderComponent(
 	document.getElementById('content')
 );
 
-},{"./components/story.jsx":147,"react":145}]},{},[152])
+},{"./components/story.jsx":148,"react":145}]},{},[153])
