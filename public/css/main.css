@@ -1,9 +1,4 @@
 body {
-	
-	padding: 0;
-}
-
-body {
 	font-size: 20px;
 	line-height: 1.4;
 }
@@ -12,9 +7,9 @@ body {
 	width: 400px;
 }
 
-.menus {
+.command-tree {
 	position: fixed;
-	width: 30%;
-	right: 5%;
+	right: 0;
+	top: 0;
 }
 

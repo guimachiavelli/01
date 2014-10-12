@@ -15,7 +15,7 @@
 
 	Game.prototype.updateScene = function(e, scene) {
 		this.scene = scene;
-		this.pubsub.publish('game:update:title', this.scene.info.title);
+		this.pubsub.publish('game:update:scene', this.scene.info.title);
 		this.updateText(scene.description);
 	};
 
@@ -37,11 +37,17 @@
 		beaconContent = this.scene.beacons[beacon];
 
 		if (beaconContent.actions) {
-			console.log('open command menu');
 			this.updateActions(beaconContent.actions);
 			return;
 		}
 
+		if (beaconContent.leadsTo) {
+			this.loader.fetch(beaconContent.leadsTo);
+			return;
+		}
+
+		this.updateText(beaconContent.output);
+		this.updateActions([]);
 
 	};
 

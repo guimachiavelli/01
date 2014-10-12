@@ -1,39 +1,20 @@
 {
 	"info": {
-		"title" : "Gay Romeo"
+		"title" : "XXX.NASTYHEREWEGO.COM"
 	},
 
-	"setup" : {
+	"description" :  [
+		"the first link takes you to an empty profile. weirdly enough, you can use it as if it were yours. there are two online contacts, [[christeene]] and your old friend bathroom_fairy"
+	],
 
-		"commandList" : [
-			"greet bathroom_fairy",
-			"try to talk with christeene",
-			"stop browsing"
-		],
-
-		"output" : {
-			"initial" : ["the first link takes you to an empty profile. weirdly enough, you can use it as if it were yours. there are two online contacts, christeene and your old friend bathroom_fairy"],
-			"default" : "christeene and the fairy are still online"
-		},
-		"items": [
-
-		]
-	},
-
-	"commands": {
+	"beacons": {
 		"greet bathroom_fairy": {
 			"output" : "he has read your message, but doesn't reply."
 		},
-		"try to talk with christeene" : {
+		"christeene" : {
 			"output" : "the moment you greet christeene, your screen fills up with shit porn. she replies: 'what's up, sugar cunt'?",
 			"image" : "shitporn.jpg",
-			"destroy" : true,
 			"reveal" : ["ask christeene about bavarian daddy", "ask christeene about buttplugs", "turn on camera"]
-		},
-		"stop browsing" : {
-			"changeScene" : true,
-			"leadsTo" : "intro",
-			"output" : "you get tired of staring at lusty guys."
 		},
 		"ask christeene about bavarian daddy" : {
 			"output" : "she says: ever see me turn a dick down? well that's a first then! damn right motherfucker!",
@@ -68,10 +49,6 @@
 			"leadsTo" : "train-7-station"
 
 		}
-	},
-
-	"items" : {
-
 	}
 
 }

@@ -29,22 +29,16 @@
 		componentWillMount: function() {
 			var self = this;
 			pubsub.subscribe('game:update:text', function(e, text) {
-				self.setState({
-					text: text
-				});
+				self.setState({ text: text });
 			});
 
 			pubsub.subscribe('game:update:scene', function(e, title) {
-				self.setState({
-					title: title
-				});
+				self.setState({ title: title });
 			});
 
 
 			pubsub.subscribe('game:update:actions', function(e, actions) {
-				self.setState({
-					actions: actions,
-				});
+				self.setState({ actions: actions });
 			});
 
 		},

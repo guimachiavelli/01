@@ -18652,10 +18652,9 @@ module.exports = require('./lib/React');
 			var self = this;
 
 			return this.props.actions.map(function(action) {
-				var actionName = Object.keys(action)[0];
 				return (
-					Beacon({pubsub: self.props.pubsub, name: actionName}, 
-						"actionName"
+					Beacon({key: action, pubsub: self.props.pubsub, name: action}, 
+						action
 					)
 				);
 			});
@@ -18663,7 +18662,6 @@ module.exports = require('./lib/React');
 
 		render: function() {
 			var actions = this.printActions();
-			console.log(actions);
 			return (
 				React.DOM.nav({className: "command-tree"}, 
 					actions
@@ -18708,22 +18706,16 @@ module.exports = require('./lib/React');
 		componentWillMount: function() {
 			var self = this;
 			pubsub.subscribe('game:update:text', function(e, text) {
-				self.setState({
-					text: text
-				});
+				self.setState({ text: text });
 			});
 
 			pubsub.subscribe('game:update:scene', function(e, title) {
-				self.setState({
-					title: title
-				});
+				self.setState({ title: title });
 			});
 
 
 			pubsub.subscribe('game:update:actions', function(e, actions) {
-				self.setState({
-					actions: actions,
-				});
+				self.setState({ actions: actions });
 			});
 
 		},
@@ -18772,7 +18764,12 @@ module.exports = require('./lib/React');
 
 			text = text.match(/(?:[^\s\[\[]+|\[\[[^\]\]]*\])+/gi).map(function(match){
 				if (matches.indexOf(match) > -1) {
-					return (Beacon({pubsub: self.props.pubsub, name:  match.replace('[[','').replace(']]','') }));
+					return (
+						Beacon({
+							pubsub: self.props.pubsub, 
+							name:  match.replace('[[','').replace(']]',''), 
+							key:  match.replace('[[','').replace(']]','') }
+						));
 				} else {
 					return match;
 				}
@@ -18861,7 +18858,7 @@ module.exports = require('./lib/React');
 
 	Game.prototype.updateScene = function(e, scene) {
 		this.scene = scene;
-		this.pubsub.publish('game:update:title', this.scene.info.title);
+		this.pubsub.publish('game:update:scene', this.scene.info.title);
 		this.updateText(scene.description);
 	};
 
@@ -18883,11 +18880,17 @@ module.exports = require('./lib/React');
 		beaconContent = this.scene.beacons[beacon];
 
 		if (beaconContent.actions) {
-			console.log('open command menu');
 			this.updateActions(beaconContent.actions);
 			return;
 		}
 
+		if (beaconContent.leadsTo) {
+			this.loader.fetch(beaconContent.leadsTo);
+			return;
+		}
+
+		this.updateText(beaconContent.output);
+		this.updateActions([]);
 
 	};
 

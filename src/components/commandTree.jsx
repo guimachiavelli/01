@@ -12,10 +12,9 @@
 			var self = this;
 
 			return this.props.actions.map(function(action) {
-				var actionName = Object.keys(action)[0];
 				return (
-					<Beacon pubsub={self.props.pubsub} name={actionName}>
-						actionName
+					<Beacon key={action} pubsub={self.props.pubsub} name={action}>
+						{action}
 					</Beacon>
 				);
 			});
@@ -23,7 +22,6 @@
 
 		render: function() {
 			var actions = this.printActions();
-			console.log(actions);
 			return (
 				<nav className="command-tree">
 					{actions}

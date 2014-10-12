@@ -17,7 +17,12 @@
 
 			text = text.match(/(?:[^\s\[\[]+|\[\[[^\]\]]*\])+/gi).map(function(match){
 				if (matches.indexOf(match) > -1) {
-					return (<Beacon pubsub={self.props.pubsub} name={ match.replace('[[','').replace(']]','') } />);
+					return (
+						<Beacon
+							pubsub={self.props.pubsub}
+							name={ match.replace('[[','').replace(']]','') }
+							key={ match.replace('[[','').replace(']]','') }
+						/>);
 				} else {
 					return match;
 				}
