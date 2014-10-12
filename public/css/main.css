@@ -6,10 +6,3 @@ body {
 .textWindow {
 	width: 400px;
 }
-
-.command-tree {
-	position: fixed;
-	right: 0;
-	top: 0;
-}
-

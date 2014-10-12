@@ -18686,7 +18686,6 @@ module.exports = require('./lib/React');
 
 	var pubsub, Story, game;
 
-
 	pubsub = new PubSub();
 
 	game = new Game(pubsub);
@@ -18729,10 +18728,6 @@ module.exports = require('./lib/React');
 					TextWindow({
 						pubsub: pubsub, 
 						text: this.state.text}
-					), 
-					CommandTree({
-						pubsub: pubsub, 
-						actions: this.state.actions}
 					)
 				)
 				/* jshint ignore:end */
@@ -18755,7 +18750,7 @@ module.exports = require('./lib/React');
 	var TextWindow = React.createClass({displayName: 'TextWindow',
 
 		parseTextItems: function(text) {
-			var matches, textArray = [], self = this;
+			var matches, beaconName, textArray = [], self = this;
 			matches = text.match(/\[\[.+?\]\]/gi);
 
 			if (matches === null) {
@@ -18764,11 +18759,12 @@ module.exports = require('./lib/React');
 
 			text = text.match(/(?:[^\s\[\[]+|\[\[[^\]\]]*\])+/gi).map(function(match){
 				if (matches.indexOf(match) > -1) {
+					beaconName =  match.replace('[[','').replace(']]','');
 					return (
 						Beacon({
-							pubsub: self.props.pubsub, 
-							name:  match.replace('[[','').replace(']]',''), 
-							key:  match.replace('[[','').replace(']]','') }
+							pubsub:  self.props.pubsub, 
+							name: beaconName, 
+							key:  'key-' + beaconName}
 						));
 				} else {
 					return match;
@@ -18797,12 +18793,13 @@ module.exports = require('./lib/React');
 		},
 
 		printText: function(textArray) {
-			var self = this;
+			var key, self = this;
 			if (typeof textArray === 'string') {
 				return React.DOM.p(null, textArray);
 			}
 
 			return textArray.map(function(text, i){
+				key = Math.floor(Math.random() * 1000);
 
 				if (!text) {
 					return null;
@@ -18811,13 +18808,18 @@ module.exports = require('./lib/React');
 				text = self.parseTextItems(text);
 
 				if (typeof text === 'string') {
-					return React.DOM.p(null, text);
+					return React.DOM.p({key: key}, text);
 				}
-
 
 				//FIXME: find a better way to output this and avoid everything
 				// being wrapped in <span>s
-				return (React.DOM.p(null,  text.map(function(t) { return t; })));
+				return (React.DOM.p({key: key},  text.map(function(t) {
+					key = Math.floor(Math.random() * 1000);
+					if (typeof t === 'string') {
+						return React.DOM.span({key: key}, t);
+					}
+					return t;
+				})));
 
 			});
 		},

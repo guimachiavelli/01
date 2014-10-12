@@ -9,7 +9,6 @@
 
 	var pubsub, Story, game;
 
-
 	pubsub = new PubSub();
 
 	game = new Game(pubsub);
@@ -52,10 +51,6 @@
 					<TextWindow
 						pubsub={pubsub}
 						text={this.state.text}
-					/>
-					<CommandTree
-						pubsub={pubsub}
-						actions={this.state.actions}
 					/>
 				</div>
 				/* jshint ignore:end */
