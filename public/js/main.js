@@ -18773,7 +18773,21 @@ module.exports = require('./lib/React');
 
 			text.reduce(function(prev, cur, index, original) {
 				if (index + 1 === original.length) {
-					textArray.push(prev);
+
+					if (typeof prev === 'string' && typeof cur === 'string') {
+						textArray.push(prev + ' ' + cur);
+					}
+
+					if (typeof prev === 'string' && typeof cur !== 'string') {
+						textArray.push(prev + ' ');
+						textArray.push(cur);
+					}
+
+					if (typeof prev !== 'string' && typeof cur === 'string') {
+						textArray.push(prev);
+						textArray.push(' ' + cur);
+					}
+
 				}
 
 				if (typeof prev === 'string' && typeof cur === 'string') {
