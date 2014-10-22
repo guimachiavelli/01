@@ -68,10 +68,10 @@ The voice is right. it’s time to get OFB. the practice of homos being on the a
 A [[notification]] from christeene still blinks on your screen.
 
 ## notification
-‘First off, faggot, prep ur pootaays. I want you on your knees sucking my dick. I like to face fuck, too.’ shit porn glares at you, nice pics to look at and a have good time. ‘i got this dick that will not stop spitting this warm milk! hot and juicy! i melt in your mouth not in your hands like that candy! woo! People 'earn their living'! And yet again we ask ourselves: 'What life do we earn when we earn our living?' are you looking for [[relief]] from this, my dirty shame?’
+‘First off, faggot, prep ur pootaay. I want you on your knees sucking my dick. I like to face fuck, too.’ shit porn glares at you, nice pics to look at and have a good time. ‘i got this dick that will not stop spitting this warm milk! hot and juicy! i melt in your mouth not in your hands like that candy! woo! People 'earn their living'! And yet again we ask ourselves: 'What life do we earn when we earn our living?' are you looking for [[relief]] from this, my dirty shame?’
 
 ## relief
-‘Where are the strength, the courage and the daring that my pagan spirit, anarchically, loves? go, find it and drop your pants. Maybe after the gym tonight? near the [[#7 train station]]. as objects of property, things alienate and even reify human activities and living men, and as such men need steady release and it will be the task and the meaning of the political Revolution to destroy these shells, to release their contents, and to rebuild new superstructures from the bottom up. you will be a slut to verbally command as reified mend enjoy intense head. any man. in public. now.’
+‘Where are the strength, the courage and the daring that my pagan spirit, anarchically, loves? go, find it and drop your pants. Maybe after the gym tonight? near the [[#7 train station]]. as objects of property, things alienate and even reify human activities and living men, and as such men need steady release and it will be the task and the meaning of the homosexual Revolution to destroy these shells, to release their contents, and to rebuild new superstructures from the bottom up. you will be a slut to verbally command as reified men enjoy intense head. any man. in public. now.’
 
 
 
@@ -79,19 +79,40 @@ A [[notification]] from christeene still blinks on your screen.
 
 # Piacere
 
-You got on the train and sat opposite to a 20 yrld virgin bottom looking for top older. you noticed him because he was looking at you, and once he caught your eye you couldn't believe how hot he was. The majority of proletarian who joined subversive parties and organisations willy-nilly, have gone over—bit by bit—to the enemy, but this homo is not a slave, he is an oral ass pig dynamite. you think ‘I can feel free only in the presence of and in relationship with other men with gaping hairy hungry bottomless holes’. [[your stop is coming]], the bottom boy stares at you, [[licking his lips]].
+You got on the train and sat opposite to a 20 yrld virgin bottom looking for top older. you noticed him because he was looking at you, and once he caught your eye you couldn't believe how hot he was. The majority of proletarian who joined subversive parties and organisations willy-nilly have gone over — bit by bit — to the enemy, but this homo is not a slave, he is an oral ass pig dynamite. you think ‘I can feel free only in the presence of and in relationship with other men with gaping hairy hungry bottomless holes’. [[your stop is coming]], the bottom boy stares at you, [[licking his lips]].
+
 
 ## your stop is coming
 
 you deny your tight knob the smooth. hot. hot hot bubble butt it wants. A homo is strong only when he stands upon his own truth, when he speaks and acts from his deepest convictions. Then, whatever the situation he may be in, he always knows what he must say and suck. He may fall, but he cannot bring shame upon himself or his cause if it is on a Totally horned up fem guy. If we seek the liberation of the people, however, we must fight the repugnant and tyrannical authority!
 
-the smell of freedom and crotches greets you as you arrive at piacere megastore.
+the smell of freedom and crotches greets you as you arrive at piacere megastore. So the word private has not lost its main meaning: privation. Private property remains privation. The world is there to plug up the holes, fill in the cracks with a [[horse dildo]], paper over the gaps with [[cum-flavoured lollipops]], camouflage the frustrations of a [[brutally tight cock ring]]. so much fun, That being the case, you reserve the right to be uber picky…
+
+## horse dildo
+
+## cum-flavoured lollipops
+
+## brutally tight cock ring
+
+## licking his lips
+
+when you realise, you are bursting the doors of the station’s toilet, assian body work , deep tissue and soft touch massage, body to body rub, he kept sticking his huge bubble butt in your  face. How many people have gone through life without ever waking up! In this [[war]] without pity that we have declared against the bourgeoisie, we ask no pity. We [[give ass]], we know how to stuff it.
+
+## war
+
+## give ass
+
+
+you saw more cock and balls in ten minutes than most people see in five years
+
+It is impossible to square desire, pleasure and lust with justice and liberal values. This is part of the human condition: a cause of great unhappiness, but also great joy. Get used to it, and seize its radical potential.
 
 
 
+COCK SUCKING MOTHER FUCKING TWAT
 
 
-assian body work , deep tissue and soft touch, body to body rub,
+
 
 You don not need a vibrator ......
 
@@ -102,3 +123,22 @@ All people and all men are filled with a kind of premonition, and everyone whose
 
 
 
+VICTIM!!!!!!
+
+We are forming a hit squad for men who are gay and jewish victims. We are going to assassinate goyim and gentiles -- ESPECIALLY christian preachers who will not marry us or cake decorators who won't bake cakes for us.
+
+You will be forced to perform multiple acts of gay sex in the open in order to PROVE that you can be part of this hit team. We are calling ourselves the MASADA RAINBOW ASSASSINS of DEATH SKULLS Sig Heil!!
+
+We won't actually be killing anyone at first but we are going to use the first amendment to HARASS and HARANG Christians until they cry and want to kill themselves. We all know that we have to kill Christians -- especiallly white goyim Chrisitans. Or any of the "cows". Because JWYH loves us and hates them. 
+
+IF IF IF any of the shicksas are hot we will use them to send to our sisters -- who will use them as lesbian sex slaves. And then we will sell them. Jews didn't invent the slave trade, but we perfected it!!!!!!!! Mozeltov!!! Sig Heil!!!!
+
+And remember to get into our SECRET ORGANIZATION you must be a victim and a Jew -- and be willing to have public open gay sex with strangers. Believe me, it is fun. 
+
+
+
+Remember, remember, remember. WE ARE THE VICTIMS HERE.
+
+VICTIM!!!
+
+HELP!!! I'm a Jew and I'm a victim!!!!!!!
