@@ -78,25 +78,38 @@ A [[notification]] from christeene still blinks on your screen.
 ---------------------------------------
 
 # Piacere
-
 You got on the train and sat opposite to a 20 yrld virgin bottom looking for top older. you noticed him because he was looking at you, and once he caught your eye you couldn't believe how hot he was. The majority of proletarian who joined subversive parties and organisations willy-nilly have gone over — bit by bit — to the enemy, but this homo is not a slave, he is an oral ass pig dynamite. you think ‘I can feel free only in the presence of and in relationship with other men with gaping hairy hungry bottomless holes’. [[your stop is coming]], the bottom boy stares at you, [[licking his lips]].
 
 
 ## your stop is coming
-
 you deny your tight knob the smooth. hot. hot hot bubble butt it wants. A homo is strong only when he stands upon his own truth, when he speaks and acts from his deepest convictions. Then, whatever the situation he may be in, he always knows what he must say and suck. He may fall, but he cannot bring shame upon himself or his cause if it is on a Totally horned up fem guy. If we seek the liberation of the people, however, we must fight the repugnant and tyrannical authority!
 
-the smell of freedom and crotches greets you as you arrive at piacere megastore. So the word private has not lost its main meaning: privation. Private property remains privation. The world is there to plug up the holes, fill in the cracks with a [[horse dildo]], paper over the gaps with [[cum-flavoured lollipops]], camouflage the frustrations of a [[brutally tight cock ring]]. so much fun, That being the case, you reserve the right to be uber picky…
+the smell of freedom and crotches greets you as you arrive at piacere megastore. the word private has not lost its main meaning: privation. Private property remains privation. Private property is theft. Private property is despotism. The world is there to plug up the holes, fill in the cracks with a [[horse dildo]], paper over the gaps with [[cum lollipops]], camouflage the frustrations of a [[brutally tight cock ring]]. so much fun, That being the case, you reserve the right to be uber picky…
 
 ## horse dildo
 
-## cum-flavoured lollipops
+## cum lollipops
+taste like havin [[the guy with solid good looks]] licking them in front of you bust in your face, groaning with the hot cum spewed out of his prick spraying your eager mouth. he signals to the toilet. you could take that, try the [[brutally tight cock ring]] or contemplate the [[horse dildo]] again.
+
+## a guy with solid good looks
+A hot stud is only ours when we have it…Therefore all the physical and intellectual senses have been replaced by the simple estrangement of all these senses – the sense of having a big cock in your ass. you go into the toilet, walk in, some guys on knees, porn on their cellphones. The guy you entered with, drops trou, lies back, wanna get sucked, deep-throated, & swallowed. 
+
+Revolution requires extensive and widespread ass destruction, a fecund and renovating destruction, since in this way and only this way are new worlds born. you gobble everything up with every hole. a [[used lollipop paper]] falls to the ground, curls upwards, shifts sideways toward the glass wall of the toilet, and stuck to it. you feel [[goosebumps]].
+
+## used lollipop paper
+it seems to faintly glow blue. your eyes feel like you have been staring at the sun for too long. your head aches terribly as an available WELL-BUILT, INKED DUDE Rims your hole and fucks your hole. you see solidified sun energy on the ground and blue moving vapours and bright, yellow-white streaks and dots of light. The world in which we live is a prison, the sections of which are called Work, Money, Commodity, and the yard time of which is granted as summer vacation. We were born and have always lived inside this prison universe. you see that Now more than ever, it is time for defiance. The Homosexual Revolution will arrange its revolutionary organisation from the bottom up and from the periphery to the centre, in and out like a good fuck, in keeping with the principle of liberty. 
+
+as you reach an earth-shaking climax and someone’s spent prick slurps out of your hot fuckhole, you [[pass out]].
+
+## goosebumps
+The idea that the skin, especially the skin of the buttocks, becomes ‘warm’ or ‘is burning’ is frequently encountered among masochists. The desire to be rubbed with a hard brush or to be beaten until one's skin "bursts" is nothing other than the wish to bring about the release of a tension through bursting. Pain is by no means the goal of the impulse; it is merely an unpleasant experience in achieving release from the unmistakably real tension. And what tension! Day after day, their foreheads recede, their mouths become more sinister. Day after day, the stigmata of putrefaction are noticed under their yellowing skin. And you laugh, you laugh! for you are a survivor of Sodom! all around you, blue vapours and bright, yellow-white streaks and dots of light move, visions of beefy ass cheeks spread apart for your easy access. a burst of energy comes out of your prick and [[everything goes black]].
+
 
 ## brutally tight cock ring
 
 ## licking his lips
 
-when you realise, you are bursting the doors of the station’s toilet, assian body work , deep tissue and soft touch massage, body to body rub, he kept sticking his huge bubble butt in your  face. How many people have gone through life without ever waking up! In this [[war]] without pity that we have declared against the bourgeoisie, we ask no pity. We [[give ass]], we know how to stuff it.
+when you realise, you are bursting the doors of the station’s toilet, assian body work , deep tissue and soft touch massage, body to body rub, he kept sticking his huge bubble butt in your  face. How many people have gone through life without ever waking up! In this [[war]] without pity that we have declared against the bourgeoisie, we ask no pity. We [[give ass]], we know how to stuff it. 
 
 ## war
 
@@ -142,3 +155,7 @@ Remember, remember, remember. WE ARE THE VICTIMS HERE.
 VICTIM!!!
 
 HELP!!! I'm a Jew and I'm a victim!!!!!!!
+
+Get naked, relax & moan with great hands!
+
+Yesterday’s love, tomorrow’s more fine? All tonight’s sadness in your design. What does this mean, my green valentine? Regret, O regret, my green valentine.
