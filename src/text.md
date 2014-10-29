@@ -87,6 +87,19 @@ you deny your tight knob the smooth. hot. hot hot bubble butt it wants. A homo i
 the smell of freedom and crotches greets you as you arrive at piacere megastore. the word private has not lost its main meaning: privation. Private property remains privation. Private property is theft. Private property is despotism. The world is there to plug up the holes, fill in the cracks with a [[horse dildo]], paper over the gaps with [[cum lollipops]], camouflage the frustrations of a [[brutally tight cock ring]]. so much fun, That being the case, you reserve the right to be uber picky…
 
 ## horse dildo
+Yes, you know, we are all [[against axioms]], guarantees, certainties, but you love everything about cock looking at cock stroking cock licking cock sucking cock getting fucked by cock and watching guys jerk off their cocks. without one ready nearby, you open yourself up to toys, veggies, whatever fits. Start small and [[stretch]] your HAIRY ass to the limit!
+
+## against axioms
+
+
+
+## stretch
+you decide to buy it, You are not afraid to be a flaming queer: this is the truth. The homo proletariat liberty is only a theoretical freedom. lacking any means for its possible realisation. and consequently it is only a fictitious liberty. an utter falsehood. The truth is that the whole life of the cocksucker is simply a continuous and dismaying succession of terms of serfdom, with no holy divine hot spunk shooting on their bodies and faces. As a promoter of individual liberty, human well-being and social harmony, which alone constitute real order, government stands condemned by all the great hung studs of the world. the handsome [[clerk]] offers you a hand in trying it. blinded with lust, you could just try it yourself in the [[toilets]].
+
+## clerk
+
+## toilets
+
 
 ## cum lollipops
 taste like havin [[the guy with solid good looks]] licking them in front of you bust in your face, groaning with the hot cum spewed out of his prick spraying your eager mouth. he signals to the toilet. you could take that, try the [[brutally tight cock ring]] or contemplate the [[horse dildo]] again.
@@ -132,7 +145,7 @@ You don not need a vibrator ......
 In a word, we reject all legislation, all authority, and all privileged, licensed, official, and legal influence, even though arising from universal suffrage, convinced that it can turn only to the advantage of a dominant minority of exploiters against the interest of the immense majority in subjection to them. This is the sense in which we are really Homosexuals.
 
 
-All people and all men are filled with a kind of premonition, and everyone whose vital organs are not paralyzed faces with shuddering expectation the approaching monstrous cock which will utter the redeeming word of come.
+All people and all men are filled with a kind of premonition, and everyone whose vital organs are not paralysed faces with shuddering expectation the approaching monstrous cock which will utter the redeeming word of come.
 
 
 
@@ -159,3 +172,7 @@ HELP!!! I'm a Jew and I'm a victim!!!!!!!
 Get naked, relax & moan with great hands!
 
 Yesterday’s love, tomorrow’s more fine? All tonight’s sadness in your design. What does this mean, my green valentine? Regret, O regret, my green valentine.
+
+Guys I love love love ass . I can spend hours licking rimming nibbling biting and adoring your smooth cleaned out hairless ass. Seriously hours.
+
+ Work it over and then fist me...leave my hole wide open and dripping with lube! If you have a toy collection a HUGE +. I don't have anything but my ass to bring...so you must provide the lube, objects and host. Would love pictures of my ass stuffed full of whatever you can cram in! 
