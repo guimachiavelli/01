@@ -90,16 +90,22 @@ the smell of freedom and crotches greets you as you arrive at piacere megastore.
 Yes, you know, we are all [[against axioms]], guarantees, certainties, but you love everything about cock looking at cock stroking cock licking cock sucking cock getting fucked by cock and watching guys jerk off their cocks. without one ready nearby, you open yourself up to toys, veggies, whatever fits. Start small and [[stretch]] your HAIRY ass to the limit!
 
 ## against axioms
-
-
+The State and the political and economic institutions it supports can exist only by fashioning the individual to their particular purpose; training him to respect 'law and order’; teaching him obedience, submission and unquestioning faith in the wisdom and justice of government. we must now seek our enemy, fight our own war, and for our own ideas and for all the quick doggy style bangs we want to have! let us [[stretch]] our holes WIDE OPEN, my incestuous brothers!
 
 ## stretch
-you decide to buy it, You are not afraid to be a flaming queer: this is the truth. The homo proletariat liberty is only a theoretical freedom. lacking any means for its possible realisation. and consequently it is only a fictitious liberty. an utter falsehood. The truth is that the whole life of the cocksucker is simply a continuous and dismaying succession of terms of serfdom, with no holy divine hot spunk shooting on their bodies and faces. As a promoter of individual liberty, human well-being and social harmony, which alone constitute real order, government stands condemned by all the great hung studs of the world. the handsome [[clerk]] offers you a hand in trying it. blinded with lust, you could just try it yourself in the [[toilets]].
+you decide to buy it, You are not afraid to be a flaming queer: this is the truth. The homo proletariat liberty is only a theoretical freedom. lacking any means for its possible realisation. and consequently it is only a fictitious liberty. an utter falsehood. The truth is that the whole life of the cocksucker is simply a continuous and dismaying succession of terms of serfdom, with no holy divine hot spunk shooting on their bodies and faces. As a promoter of individual liberty, human well-being and social harmony, which alone constitute real order, government stands condemned by all the great hung studs of the world. the handsome [[clerk]] offers you a hand in trying it. blind with lust, you could just try it yourself in the [[toilets]].
 
 ## clerk
+‘I have a nice bubble butt and want it to get DESTROYED, because Only from the ruins of everything the rebel has destroyed can the creative genius be born’. you look into each other’s eyes. The fire of lust flashed in your pupils like volcanic cum lava. you pull your pants down and he shoves it in your man-cave and pumps away, the "genius of man," which is but another name for personality and individuality, bores its way through all the caverns of dogma, through the thick walls of tradition and custom, defying all taboos, setting authority at naught, overflowing everything with rivers of joy sperm freedom dreams of liberty. [[blue lights]] seem to shine around you whilst your ass is ravaged in the middle of the store.
+
+## blue lights
+in your ecstasy, you [[pass out]], but not before a voice booms from the dildo: ‘you have to free  yourself from your soul, the sole obstacle now between you and the cocksuckers revolution, since only after this liberation will we be able to freely plunge into the frightening whirlpools of the sea to join our mermen who live in the abyss of of a new social order based on the released energies of the individual and the free association of liberated individuals, and who alone can give us the joyous intoxication of freedom from every shackle is eternal!’
+
 
 ## toilets
+you enter the toilets for some HEAVY ASSPLAY session and see pussi-boys all around, suck cock, lick balls, nip and edging, some chanting ‘all men welcome to stop by and bust one last nut before in my butt the weekend wraps up.’ you shove the dildo in your butt and start worshipping every cock you can see.
 
+Revolution requires extensive and widespread ass destruction, a fecund and renovating destruction, since in this way and only this way are new worlds born. you gobble everything up with every hole. you feel [[goosebumps]].
 
 ## cum lollipops
 taste like havin [[the guy with solid good looks]] licking them in front of you bust in your face, groaning with the hot cum spewed out of his prick spraying your eager mouth. he signals to the toilet. you could take that, try the [[brutally tight cock ring]] or contemplate the [[horse dildo]] again.
@@ -119,9 +125,16 @@ The idea that the skin, especially the skin of the buttocks, becomes ‘warm’ 
 
 
 ## brutally tight cock ring
+it’s a dark and leathery ring. you touch and think ‘Let's get together for some action that equals satisfaction’. Now, it is a truth that history has made the queer the main instrument of the next social change, and that those fighting for the establishment of a society where all human beings are free and endowed with all the means to exercise their freedom, must rely mainly on the homos, trannies and dykes. you take off you trousers and strap the ring on. you feel strangely [[energised]].
+
+## energised
+you start seeing in your mind’s eye Pink black flags in the wind stained with cum and sun, pink flags in the sun, howling of queer freedom for all. That sort of liberty is not a gift: it is the natural right of man, of every human being. you sing a four beat rhythm [[hymn]], possessed by the energy of your raging wood. everyone watching you show off and jack off, [[mouths open]].
+
+## mouths open
+A man's cock is a perfect throat lozenge, how good two lips and a hot throat can feel on your cock.
+
 
 ## licking his lips
-
 when you realise, you are bursting the doors of the station’s toilet, assian body work , deep tissue and soft touch massage, body to body rub, he kept sticking his huge bubble butt in your  face. How many people have gone through life without ever waking up! In this [[war]] without pity that we have declared against the bourgeoisie, we ask no pity. We [[give ass]], we know how to stuff it. 
 
 ## war
@@ -176,3 +189,5 @@ Yesterday’s love, tomorrow’s more fine? All tonight’s sadness in your desi
 Guys I love love love ass . I can spend hours licking rimming nibbling biting and adoring your smooth cleaned out hairless ass. Seriously hours.
 
  Work it over and then fist me...leave my hole wide open and dripping with lube! If you have a toy collection a HUGE +. I don't have anything but my ass to bring...so you must provide the lube, objects and host. Would love pictures of my ass stuffed full of whatever you can cram in! 
+
+Blindfolded jock throat on my knees taking anon piss and cum loads down my throat now. Looks unimportant! Just want you to have a full bladder and balls that need emptying. You walk into my dimly lit apartment, unzip, fill my throat with everything from your tap, then bolt. 
