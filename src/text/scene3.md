@@ -1,4 +1,6 @@
 # Piacere
+
+## description
 You got on the train and sat opposite to a 20 yrld virgin bottom looking for top older. you noticed him because he was looking at you, and once he caught your eye you couldn't believe how hot he was. The majority of proletarian who joined subversive parties and organisations willy-nilly have gone over — bit by bit — to the enemy, but this homo is not a slave, he is an oral ass pig dynamite. you think ‘I can feel free only in the presence of and in relationship with other men with gaping hairy hungry bottomless holes’. [[your stop is coming]], the bottom boy stares at you, [[licking his lips]].
 
 

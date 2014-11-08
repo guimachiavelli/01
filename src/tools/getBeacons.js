@@ -1,38 +1,38 @@
 (function(){
-	
-	'use strict';
 
-	var fs = require('fs');
+    'use strict';
 
-	function getFile(filepath) {
-		if (!fs.existsSync(filepath)) {
-			process.exit(1);
-			return;
-		}
-		return fs.readFileSync(filepath, {encoding: 'UTF-8'});
-	}
-	
-	function main(filepath) {
-		var text, beacons;
+    var fs = require('fs');
 
-		text = getFile(filepath);
+    function getFile(filepath) {
+        if (!fs.existsSync(filepath)) {
+            process.exit(1);
+            return;
+        }
+        return fs.readFileSync(filepath, {encoding: 'UTF-8'});
+    }
 
-		beacons = text.match(/\[\[.+?\]\]/gi);
+    function main(filepath) {
+        var text, beacons;
 
-		beacons.unshift('total number of beacons: ' + beacons.length);
-		
-		beacons = beacons.filter(function(el, index){
-			return beacons.indexOf(el) === index;
-		})
+        text = getFile(filepath);
 
-		beacons.unshift('unique beacons: ' + beacons.length);
-		
+        beacons = text.match(/\[\[.+?\]\]/gi);
 
-		beacons = beacons.join('\n');
+        beacons.unshift('total number of beacons: ' + beacons.length);
 
-		fs.writeFileSync('test.txt', beacons);
-		
-	}
+        beacons = beacons.filter(function(el, index){
+            return beacons.indexOf(el) === index;
+        })
+
+        beacons.unshift('unique beacons: ' + beacons.length);
+
+
+        beacons = beacons.join('\n');
+
+        fs.writeFileSync('test.txt', beacons);
+
+    }
 
     function usage(code) {
         console.log('usage: node tools/getBeacons.js <md filepath>');
@@ -51,6 +51,6 @@
     }
 
 
-	main();
+    main();
 
 }());
