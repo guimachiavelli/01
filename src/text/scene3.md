@@ -24,6 +24,10 @@ you decide to buy it, You are not afraid to be a flaming queer: this is the trut
 ## blue lights
 in your ecstasy, you [[pass out]], but not before a voice booms from the dildo: ‘you have to free  yourself from your soul, the sole obstacle now between you and the cocksuckers revolution, since only after this liberation will we be able to freely plunge into the frightening whirlpools of the sea to join our mermen who live in the abyss of of a new social order based on the released energies of the individual and the free association of liberated individuals, and who alone can give us the joyous intoxication of freedom from every shackle is eternal!’
 
+## pass out
+### leads to
+unknown
+
 ## toilets
 you enter the toilets for some HEAVY ASSPLAY session and see pussi-boys all around, suck cock, lick balls, nip and edging, some chanting ‘all men welcome to stop by and bust one last nut before in my butt the weekend wraps up.’ you shove the dildo in your butt and start worshipping every cock you can see.
 

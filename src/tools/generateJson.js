@@ -3,32 +3,42 @@
     'use strict';
 
     var fs = require('fs'),
-        marked = require('marked');
+        marked = require('marked'),
+        string = require('string');
 
     function parseMD(text) {
-        var title, beacons, currentBeacon;
+        var title, beacons, currentBeacon, action;
 
         text = marked.lexer(text);
 
         beacons = {};
 
-        text.forEach(function(token){
-            if (token.type === 'heading' && token.depth === 1) {
+        text.forEach(function(token, index){
+            if (token.depth === 1) {
                 title = token.text;
                 return;
             }
 
-            if (token.type === 'heading' && !beacons[token.text]) {
+            if (token.depth === 2) {
                 currentBeacon = token.text;
                 if (!beacons[currentBeacon]) {
-                    beacons[currentBeacon] = [];
+                    beacons[currentBeacon] = {
+                        text: []
+                    };
                 }
                 return;
             }
 
+            if (token.depth === 3) {
+                action = token.text;
+                action = string(action).camelize().s;
+                beacons[currentBeacon][action] = text[index + 1].text;
+            }
 
+            if (token.type === 'paragraph' && !text[index - 1].depth) {
+                beacons[currentBeacon].text.push(token.text);
+            }
 
-            beacons[currentBeacon].push(token.text);
         });
 
         return {
@@ -44,13 +54,13 @@
 
         files = fs.readdirSync(dirpath);
 
-        files.forEach(function(file){
+        files.forEach(function(file, index){
             file = dirpath + '/' + file;
             file = fs.readFileSync(file, {encoding: 'utf8'});
             file = parseMD(file);
-            file = JSON.stringify(, null, 4);
+            file = JSON.stringify(file, null, 4);
 
-            fs.writeFileSync('./test.json', file);
+            fs.writeFileSync('../public/data/scene' + (index + 1) + '.json', file);
 
         });
 
