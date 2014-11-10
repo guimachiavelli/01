@@ -3,7 +3,7 @@
 ## description
 You kick back with some hot porn on one tab, the gay sex site on another – need is, after all, determined biologically and physiologically, whereas desire, meeting a guy who unzips and let's you work his cock and balls till he explodes down your throat as much as he can, is at the same time both individual and social; in other words it is excluded – or recognised – by society.
 
-the first link takes you to an empty profile and a few c0ck worshippers on the contacts list. two are online, [[christeene]] and [[$$$sexy stalin boy$$]].
+the first link takes you to an empty profile and a few c0ck worshippers on the contacts list. two are online, [[christeene]] and [[$$sexy stalin boy$$]].
 
 ## christeene
 the moment you greet christeene, your screen fills up with shit porn. she replies: ‘what’s up, [[sugar cunt]]’? 

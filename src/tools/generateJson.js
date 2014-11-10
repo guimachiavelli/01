@@ -35,7 +35,7 @@
                 beacons[currentBeacon][action] = text[index + 1].text;
             }
 
-            if (token.type === 'paragraph' && !text[index - 1].depth) {
+            if (token.type === 'paragraph' && !text[index - 1].depth < 2) {
                 beacons[currentBeacon].text.push(token.text);
             }
 
