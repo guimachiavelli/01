@@ -12,21 +12,15 @@
     "gulp-rename": "^1.2.0",
     "gutil": "^1.2.0",
     "marked": "^0.3.2",
-    "reactify": "^0.13.1",
     "string": "^2.2.0",
     "vinyl-source-stream": "^0.1.1"
   },
-  "scripts": {},
-  "author": "",
+  "author": "gui machiavelli",
   "license": "MIT",
   "dependencies": {
-    "envify": "^1.2.1",
-    "react": "^0.11.0"
+    "envify": "^1.2.1"
   },
   "browserify": {
-    "debug": true,
-    "transform": [
-      "reactify"
-    ]
+    "debug": true
   }
 }

@@ -3,7 +3,7 @@
 ## description
 You kick back with some hot porn on one tab, the gay sex site on another – need is, after all, determined biologically and physiologically, whereas desire, meeting a guy who unzips and let's you work his cock and balls till he explodes down your throat as much as he can, is at the same time both individual and social; in other words it is excluded – or recognised – by society.
 
-the first link takes you to an empty profile and a few c0ck worshippers on the contacts list. two are online, [[christeene]] and [[$$$sexy stalin boy$$]].
+the first link takes you to an empty profile and a few c0ck worshippers on the contacts list. two are online, [[christeene]] and [[$$sexy stalin boy$$]].
 
 ## christeene
 the moment you greet christeene, your screen fills up with shit porn. she replies: ‘what’s up, [[sugar cunt]]’? 
@@ -47,3 +47,7 @@ A [[notification]] from christeene still blinks on your screen.
 
 ## relief
 ‘Where are the strength, the courage and the daring that my pagan spirit, anarchically, loves? go, find it and drop your pants. Maybe after the gym tonight? near the [[#7 train station]]. as objects of property, things alienate and even reify human activities and living men, and as such men need steady release and it will be the task and the meaning of the homosexual Revolution to destroy these shells, to release their contents, and to rebuild new superstructures from the bottom up. you will be a slut to verbally command as reified men enjoy intense head. any man. in public. now.’
+
+## piacere
+### leads to
+piacere

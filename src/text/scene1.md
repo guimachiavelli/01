@@ -1,7 +1,7 @@
 # Apartment Room
 
 ## description
-In the 20th Century, war has murdered more than all previous deaths; taxes and inflation have stolen more than all wealth previously produced; and the political lies, propaganda, and above all, “Education” have twisted more minds than all the superstition prior. the solution of that evil can be brought about only through a grand strategy and a cataclysmic point of historical singularity: [[Homossexual Revolution]].
+In the 20th Century, war has murdered more than all previous deaths; taxes and inflation have stolen more than all wealth previously produced; and the political lies, propaganda, and above all, “Education” have twisted more minds than all the superstition prior. the solution of that evil can be brought about only through a grand strategy and a cataclysmic point of historical singularity: [[Homosexual Revolution]].
 
 You open the door to your apartment. Are they watching you? Do they like what they see? Do they see that your 17cm cock is erect again showing off its thick mushroom head? You have a wet sloppy unsafe bj load on your hands. You have the [[paper]] Bathroom Fairy gave to you after you serviced her.
 
