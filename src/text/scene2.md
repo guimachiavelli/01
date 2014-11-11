@@ -3,7 +3,7 @@
 ## description
 You kick back with some hot porn on one tab, the gay sex site on another – need is, after all, determined biologically and physiologically, whereas desire, meeting a guy who unzips and let's you work his cock and balls till he explodes down your throat as much as he can, is at the same time both individual and social; in other words it is excluded – or recognised – by society.
 
-the first link takes you to an empty profile and a few c0ck worshippers on the contacts list. two are online, [[christeene]] and [[$$sexy stalin boy$$]].
+the first link takes you to an empty profile and a few c0ck worshippers on the contacts list. two are online, [[christeene]] and [[♥♥sexy stalin boy♥♥]].
 
 ## christeene
 the moment you greet christeene, your screen fills up with shit porn. she replies: ‘what’s up, [[sugar cunt]]’? 
@@ -31,7 +31,7 @@ you clean yourself up. time to go to [[piacere]].
 ## date
 ‘The less the natural development of man is influenced by ecclesiastical or political guardianship, the more efficient and harmonious will human personality become, the more will it become the measure of the intellectual culture of the society in which it has grown. near the [[#7 train station]]. Look for tops, bottoms vers. suck a nice big cock. Deepthroat. NSA. You’ll find the heroic warrior, filled with a dream of freedom and cum’.
 
-## $$$sexy stalin boy$$
+## ♥♥sexy stalin boy♥♥
 ‘Where is the man, where is the man that I seek? Where is the valiant and reckless rebel with a [[MONSTER Hung Black Dick]], where the heroic warrior, filled with a dream of freedom or greatness like the Argonauts, who playfully faces the titanic battle against the universe, for the conquest of a higher, more beautiful life? In today’s bourgeois, industrial society, there are only the base and cowardly…’. [[silence]] is your reply. you could try and [[send him face and body pictures and stats]]. there’s a [[notification]] from christeene.
 
 ## silence
