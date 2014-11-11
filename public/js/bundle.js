@@ -69,15 +69,17 @@
         body.innerHTML = '';
 
         if (scene.beacons[beacon].leadsTo) {
-            load('scene2');
+            load(scene.beacons[beacon].leadsTo);
             return;
         }
 
-        text = scene.beacons[beacon].text;
+
+        text = scene.beacons[beacon].text.slice(0);
         text = createParagraphs(text);
         text.forEach(function(t){
             body.appendChild(t);
         });
+
 
         addBeaconEvents();
 
@@ -113,7 +115,7 @@
 
     function load(scene) {
         var request;
-        scene = scene || 'scene1';
+        scene = scene || 'intro';
         request = new XMLHttpRequest();
         request.open('GET', './data/' + scene + '.json', true);
         request.onload = insertContent;

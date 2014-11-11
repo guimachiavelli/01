@@ -34,7 +34,7 @@ you enter the toilets for some HEAVY ASSPLAY session and see pussi-boys all arou
 Revolution requires extensive and widespread ass destruction, a fecund and renovating destruction, since in this way and only this way are new worlds born. you gobble everything up with every hole. you feel [[goosebumps]].
 
 ## cum lollipops
-taste like havin [[the guy with solid good looks]] licking them in front of you bust in your face, groaning with the hot cum spewed out of his prick spraying your eager mouth. he signals to the toilet. you could take that, try the [[brutally tight cock ring]] or contemplate the [[horse dildo]] again.
+taste like havin [[a guy with solid good looks]] licking them in front of you bust in your face, groaning with the hot cum spewed out of his prick spraying your eager mouth. he signals to the toilet. you could take that, try the [[brutally tight cock ring]] or contemplate the [[horse dildo]] again.
 
 ## a guy with solid good looks
 A hot stud is only ours when we have it…Therefore all the physical and intellectual senses have been replaced by the simple estrangement of all these senses – the sense of having a big cock in your ass. you go into the toilet, walk in, some guys on knees, porn on their cellphones. The guy you entered with, drops trou, lies back, wanna get sucked, deep-throated, & swallowed. 

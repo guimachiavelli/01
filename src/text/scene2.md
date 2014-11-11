@@ -47,3 +47,7 @@ A [[notification]] from christeene still blinks on your screen.
 
 ## relief
 ‘Where are the strength, the courage and the daring that my pagan spirit, anarchically, loves? go, find it and drop your pants. Maybe after the gym tonight? near the [[#7 train station]]. as objects of property, things alienate and even reify human activities and living men, and as such men need steady release and it will be the task and the meaning of the homosexual Revolution to destroy these shells, to release their contents, and to rebuild new superstructures from the bottom up. you will be a slut to verbally command as reified men enjoy intense head. any man. in public. now.’
+
+## piacere
+### leads to
+piacere

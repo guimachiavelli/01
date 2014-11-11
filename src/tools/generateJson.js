@@ -6,6 +6,14 @@
         marked = require('marked'),
         string = require('string');
 
+    function makeSlug(title) {
+        return string(title)
+                .toLowerCase()
+                .stripPunctuation()
+                .dasherize()
+                .s;
+    }
+
     function parseMD(text) {
         var title, beacons, currentBeacon, action;
 
@@ -32,10 +40,14 @@
             if (token.depth === 3) {
                 action = token.text;
                 action = string(action).camelize().s;
-                beacons[currentBeacon][action] = text[index + 1].text;
+                if (action === 'leadsTo') {
+                    beacons[currentBeacon][action] = makeSlug(text[index + 1].text);
+                } else {
+                    beacons[currentBeacon][action] = text[index + 1].text;
+                }
             }
 
-            if (token.type === 'paragraph' && !text[index - 1].depth < 2) {
+            if (token.type === 'paragraph') {
                 beacons[currentBeacon].text.push(token.text);
             }
 
@@ -43,6 +55,7 @@
 
         return {
             title: title,
+            slug: makeSlug(title),
             beacons: beacons
         };
 
@@ -50,7 +63,7 @@
 
 
     function main(dirpath) {
-        var files;
+        var files, filename;
 
         files = fs.readdirSync(dirpath);
 
@@ -58,9 +71,10 @@
             file = dirpath + '/' + file;
             file = fs.readFileSync(file, {encoding: 'utf8'});
             file = parseMD(file);
+            filename = file.slug;
             file = JSON.stringify(file, null, 4);
 
-            fs.writeFileSync('../public/data/scene' + (index + 1) + '.json', file);
+            fs.writeFileSync('../public/data/' + filename + '.json', file);
 
         });
 

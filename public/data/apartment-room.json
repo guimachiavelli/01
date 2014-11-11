@@ -1,5 +1,6 @@
 {
     "title": "Apartment Room",
+    "slug": "apartment-room",
     "beacons": {
         "description": {
             "text": [
@@ -11,7 +12,8 @@
         "Homosexual Revolution": {
             "text": [
                 "The world of heterosexual is a sick and boring life. Most ancient roots of a sentimentalism that has already ended, why do you persist in your moldy ideas? Don’t you hear the thundering life that pursues and teaches? NO GODS, NO MASTERS, NO PERIPHERIES!",
-                "You are on your apartment, Thinking about shooting a load. Descreet/relaxed atmosphere, a sensual setting,,,, no roses anywhere anymore. You look at the [[paper]] Bathroom Fairy gave to you after you made her nut n she left with a smile on her face and green in her pockets.."
+                "You are on your apartment, Thinking about shooting a load. Descreet/relaxed atmosphere, a sensual setting,,,, no roses anywhere anymore. You look at the [[paper]] Bathroom Fairy gave to you after you made her nut n she left with a smile on her face and green in her pockets..",
+                "rev1.jpg"
             ],
             "image": "rev1.jpg"
         },
@@ -26,13 +28,13 @@
             "text": [
                 "XXX.NASTYHEREWEGO.COM"
             ],
-            "leadsTo": "XXX.NASTYHEREWEGO.COM"
+            "leadsTo": "xxxnastyherewegocom"
         },
         "The raspberry": {
             "text": [
                 "The raspberry"
             ],
-            "leadsTo": "The raspberry"
+            "leadsTo": "the-raspberry"
         }
     }
 }
