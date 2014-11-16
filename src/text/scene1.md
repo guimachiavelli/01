@@ -26,6 +26,6 @@ there is a link, together with username and password, for a [[gay sex site]] and
 ### leads to
 XXX.NASTYHEREWEGO.COM
 
-## The raspberry
+## The Raspberry
 ### leads to
-The raspberry
+The Raspberry
