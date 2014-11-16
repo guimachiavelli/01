@@ -7,9 +7,35 @@ It’s been a while since you last came here. but this time you seek Destruction
 You need to get in touch with Bavarian Daddy. Your destiny is to arrive at that state of ideal perfection where nations no longer have any need to be under the tutelage of a government or any other nation. It is anarchy, the highest expression of order, the chasing of the insurrection which must open the way to revolutionary achievements and your arse and everyone’s arses. your destiny might pass by getting full-filled by many manly connections with [[PASSION and INTENSITY]].
 
 ## PASSION and INTENSITY
-‘All societies tremble when the scornful aristocracy of Vagabonds, Unique ones, Unapproachable ones, rulers over the ideal, and Conquerors of Nothing advance without inhibitions. So, come on, Iconoclasts, forward, fuck me hard and deep!’ all your holes are filled with one or + penises, 
+‘All societies tremble when the scornful aristocracy of Vagabonds, Unique ones, Unapproachable ones, rulers over the ideal, and Conquerors of Nothing advance without inhibitions. So, come on, Iconoclasts, forward, fuck me hard and deep!’ all your holes are filled with one or [[+ penises]].
 
+## + penises
+you [[gag]], [[asking for more]], sure that the more dick you are stuffed with, the closer you will be to embody the atoms in the incessant human struggle towards the light that shines in the darkness--the Ideal of economic, political, sexy SEXUAL and spiritual liberation of mankind!
 
+## gag
+your power cuddler powers wanes as you vomit on one of the guys that are fucking you. he does not complain for you love each other but don't label anything and share many intimate good times together as best buds you simply share a bond together and love together. you start [[asking for more]].
+
+## asking for more
+overtime a cock enters you, you start hearing part of a speech: “In a word, we reject all legislation, all authority, and all privileged, licensed, official, and legal influence, even though arising from universal suffrage, convinced that it can turn only to the advantage of a dominant minority of exploiters against the interest of the immense majority in [[subjection]] to them. This is the sense in which we are really Homosexuals.”
+
+## subjection
+you feel tempted to ask to be [[dominated]]. then again, the Homo Revolution does not dominate nor subjugate. it can only free, it believes Mankind must become conscious of their strength and capabilities, they must be [[free to commence]] a new life, a better and nobler life.
+
+## dominated
+you have no place among the hOmos revolution. the end.
+
+## free to commence
+why are all the money bags and their hirelings so unanimous in condemning the Homo Revolutionaries? Homo rev means OPPOSITION to violence, by whomever committed, even if it be by the government. it is all about fantastic cock sucking / ass [[worshipping]] / SWEET [[SPERM AND PISS]]. 
+
+## worshipping
+worshipping is valid for elevating the divine cocks and asses to their rightful places. continue to [[final crazy fucking]] that takes user to orgone land.
+
+## SPERM AND PISS
+[[defeat]] or continue to [[final crazy fucking]] that takes user to orgone land.
+
+## final crazy fucking
+### leads to
+orgone land
 
 ## huge perv
 his arse maybe clean, sweaty or dirty, you don't mind, you just Love to drown your face in cockasstitspitsnips especially of big blokes, not pseudo-intellectuals of tubercular liberal conservatism, like the chronic democratic syphilitics, and even the eunuchs of socialism and the anemics of communism, who all should turn to themselves and to depp hard rimming rather than to their gods or idols: discover what is hidden within them, bring it to the light jerkin’ it hard! you yell ‘my prick, me stud, reveal your [[big nakd bod]], big thick cock and ass-stretcher a+’
@@ -23,10 +49,18 @@ getting up, you decide you should enlighten these hot arsed men ‘You're not yo
 You're the all-singing, all-dancing crap of the world.
 
 ## something written on your sore ass
-you could [[go to the toilet]] or [[ask for the bartender’s help]].
+you could [[go to the toilet]] or [[ask for the bartender’s help]] to read it.
+
+## something on your sore ass
+you could [[go to the toilet]] or [[ask for the bartender’s help]] to read it.
 
 ## go to the toilet
 Aspiring shepherds like to wallow in the stench of the flock, you prefer to be a lone homo wolf and the stench of sweaty buttocks. there are three guys having sex and you wonder if you are ready for [[another round]] or if you should focus on the mirror and [[read]] whatever is written there.
+
+## another round
+you chip in and one of them quickly offers you some poppers. the bottom wants to be penetrated by three men for a horny session, which would be wow!, perhaps with some chill/long sucking/rimming afterwards. 
+
+Horny as fuck and armed with a thick hairy cock, make that body, ripped and open, empty and fragmented, become whole and figure as the unity between discourse and the flesh. ploughing that ass really hard, the room seems to get darker and a blue tint emanates from your cock. you continue pushing your hard meat in conjunction with the other two mascs, but the smell of sex and sweat makes you dizzy until [[everything goes dark]].
 
 ## read
 it reads: ‘The protocols of representation condemn certain body parts and certain bodily acts and functions to the other side, the backside or behind of discourse, which is why the anus becomes a site of panic and must be heavily policed. So if you want me what you waiting for, find the [[rabbit hole]], poppers+++, get rid of your roses and stick it in’.
@@ -89,11 +123,17 @@ you slowly twist your cock and balls until you can put it in your own hole. the 
 you can still try and take part in the [[threesome]], enter one of the [[stalls]] or check out the [[bare pipe]].
 
 ## bare pipe
+“Yesterday’s love, tomorrow’s more fine? All tonight’s sadness in your design. What does this mean, my green valentine? Regret, O regret, my green valentine”, you think, whilst the edges of the pipe cut your penis’ skin. you’re not sure whether to [[keep going]] or just try the [[stalls]] or the [[threesome]] at this point
+
+## keep going
+you wreak havoc and cum for one last time in your life. your member is destroyed gag the fag style. you thought you could take it as rough and messy as any want to give it, but you were wrong. disoriented and lost, you decide to leave the bar and go raise your personal stock price and not fall into loserdom. You want to move to a “safe zone” (a ghetto inside the walls of Straight City), where a new gay Zion will be built, secure within the confines of heteronorms, hetero values and insofar as was possible, heterosex (crowned ideally with bouncing lesbo-gay progeny).
 
 ## ask for the bartender’s help
+‘jock throat on my knees taking anon piss and cum loads down my throat now. Looks unimportant! Just want you to have a full bladder and balls that need emptying. You read what’s on my ass and I’ll be feeling so generous’. you jump over the counter and get down on all fours waiting for the bartender to work his magic. he sticks something up your ass, but it is too late when you realise it isn’t his cock. with that thing inside you see large, scarcely mobile, packets of energy vesicles glimmering with an intense blue. Gradually, the blue glimmer surrounded your body and objects in the room like a hazy, slow-moving, [[grey-blue luminous vapour]].
 
-
-Anyone who concentrates on sociology can’t be anything but a scientist of collectivity who forgets the individual in order to seek Humanity and raise the Imperial Throne at whose feet the I must renounce itself and kneel down with deep emotion.
+## grey-blue luminous vapour
+### leads to
+orgone land
 
 
 
