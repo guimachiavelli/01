@@ -58,9 +58,7 @@
             ]
         },
         "final crazy fucking": {
-            "text": [
-                "orgone land"
-            ],
+            "text": [],
             "leadsTo": "orgone-land"
         },
         "huge perv": {
@@ -75,8 +73,7 @@
         },
         "everyone applauding": {
             "text": [
-                "getting up, you decide you should enlighten these hot arsed men ‘You're not your job. You're not how much money you have in the bank. You're not the car you drive. You're not the contents of your wallet. You're not your fucking khakis. You're the all-singing, all-dancing crap of the world.’ they ignore you and disperse. you still have [[something written on your sore ass]].",
-                "You're the all-singing, all-dancing crap of the world."
+                "getting up, you decide you should enlighten these hot arsed men ‘You're not your job. You're not how much money you have in the bank. You're not the car you drive. You're not the contents of your wallet. You're not your fucking khakis. You're the all-singing, all-dancing crap of the world.’ they ignore you and disperse. you still have [[something written on your sore ass]]."
             ],
             "slogan": "You're the all-singing, all-dancing crap of the world."
         },
@@ -122,10 +119,8 @@
             ]
         },
         "everything goes dark": {
-            "text": [
-                "unknown"
-            ],
-            "leadsTo": "unknown"
+            "text": [],
+            "leadsTo": "orgone-land"
         },
         "stalls": {
             "text": [
@@ -141,8 +136,7 @@
         "Melt In My Hands": {
             "text": [
                 "the chants for the holy cock that echo in your mind fade. you melt into nothingness and your revolutionary lust disappears.",
-                "you have accustomed yourself to blood and violence. you scarcely smell the odor of the massacres, and every day something new and more incredible awaits you, giving away freedom for spectres that are in easy reach, spectres that come out from the studios of power., the spectres of god and the holy ghost.",
-                "melt"
+                "you have accustomed yourself to blood and violence. you scarcely smell the odor of the massacres, and every day something new and more incredible awaits you, giving away freedom for spectres that are in easy reach, spectres that come out from the studios of power., the spectres of god and the holy ghost."
             ],
             "ending": "melt"
         },
@@ -167,16 +161,12 @@
             ]
         },
         "takes you away": {
-            "text": [
-                "safe from death"
-            ],
+            "text": [],
             "leadsTo": "safe-from-death"
         },
         "agree": {
             "text": [
-                "he continues until your revolutionary member is destroyed. you discover yourself becoming one of the demagogic shepherds of the hybrid bourgeois and proletarian flocks, become fetid, filthy, slimy pools. you have found your place within the triumphant mediocrity that dominates and commands.",
-                "slimy pools",
-                "slimy-pools.gif"
+                "he continues until your revolutionary member is destroyed. you discover yourself becoming one of the demagogic shepherds of the hybrid bourgeois and proletarian flocks, become fetid, filthy, slimy pools. you have found your place within the triumphant mediocrity that dominates and commands."
             ],
             "ending": "slimy pools",
             "image": "slimy-pools.gif"
@@ -203,9 +193,7 @@
             ]
         },
         "grey-blue luminous vapour": {
-            "text": [
-                "orgone land"
-            ],
+            "text": [],
             "leadsTo": "orgone-land"
         }
     }

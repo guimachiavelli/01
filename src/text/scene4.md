@@ -76,7 +76,7 @@ Horny as fuck and armed with a thick hairy cock, make that body, ripped and open
 
 ## everything goes dark
 ### leads to
-unknown
+orgone land
 
 ## stalls
 it’s as if a voice is saying “Come find me for some good understall play.“ In our time when the great dusk of bourgeois straight society seems to have become an eternal dusk making the entire world a dull grey nightmare of survival, it is also a call for homo revolution based on great steamy studs, passions and ideas. the dreams and desires of a mighty and strong-willed “I” seems more necessary than ever if we are to move beyond this pathetic swamp of mediocrity. do you [[tap your right foot]] or sit down and [[play with yourself]]?

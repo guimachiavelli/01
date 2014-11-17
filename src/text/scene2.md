@@ -32,7 +32,7 @@ you clean yourself up. time to go to [[piacere]].
 ‘The less the natural development of man is influenced by ecclesiastical or political guardianship, the more efficient and harmonious will human personality become, the more will it become the measure of the intellectual culture of the society in which it has grown. near the [[#7 train station]]. Look for tops, bottoms vers. suck a nice big cock. Deepthroat. NSA. You’ll find the heroic warrior, filled with a dream of freedom and cum’.
 
 ## ♥♥sexy stalin boy♥♥
-‘Where is the man, where is the man that I seek? Where is the valiant and reckless rebel with a [[MONSTER Hung Black Dick]], where the heroic warrior, filled with a dream of freedom or greatness like the Argonauts, who playfully faces the titanic battle against the universe, for the conquest of a higher, more beautiful life? In today’s bourgeois, industrial society, there are only the base and cowardly…’. [[silence]] is your reply. you could try and [[send him face and body pictures and stats]]. there’s a [[notification]] from christeene.
+‘Where is the man, where is the man that I seek? Where is the valiant and reckless rebel with a MONSTER Hung Black Dick, where the heroic warrior, filled with a dream of freedom or greatness like the Argonauts, who playfully faces the titanic battle against the universe, for the conquest of a higher, more beautiful life? In today’s bourgeois, industrial society, there are only the base and cowardly…’. [[silence]] is your reply. you could try and send him face and body pictures and stats. there’s a [[notification]] from christeene.
 
 ## silence
 Better not to have a name or a face or a [[voice]] than to be a mere reflection of social conventions. But in this primitive and desolate silence, you seemed to hear a voice telling: “To start I'd like to watch you get blown to completion - cum eating is a huge turn-on. Either swallow from the hose or lick it up after is hot.”
@@ -47,6 +47,10 @@ A [[notification]] from christeene still blinks on your screen.
 
 ## relief
 ‘Where are the strength, the courage and the daring that my pagan spirit, anarchically, loves? go, find it and drop your pants. Maybe after the gym tonight? near the [[#7 train station]]. as objects of property, things alienate and even reify human activities and living men, and as such men need steady release and it will be the task and the meaning of the homosexual Revolution to destroy these shells, to release their contents, and to rebuild new superstructures from the bottom up. you will be a slut to verbally command as reified men enjoy intense head. any man. in public. now.’
+
+## #7 train station
+### leads to
+piacere
 
 ## piacere
 ### leads to

@@ -24,9 +24,7 @@ you decide to buy it, You are not afraid to be a flaming queer: this is the trut
 ## blue lights
 in your ecstasy, you [[pass out]], but not before a voice booms from the dildo: ‘you have to free  yourself from your soul, the sole obstacle now between you and the cocksuckers revolution, since only after this liberation will we be able to freely plunge into the frightening whirlpools of the sea to join our mermen who live in the abyss of of a new social order based on the released energies of the individual and the free association of liberated individuals, and who alone can give us the joyous intoxication of freedom from every shackle is eternal!’
 
-## pass out
-### leads to
-unknown
+
 
 ## toilets
 you enter the toilets for some HEAVY ASSPLAY session and see pussi-boys all around, suck cock, lick balls, nip and edging, some chanting ‘all men welcome to stop by and bust one last nut before in my butt the weekend wraps up.’ you shove the dildo in your butt and start worshipping every cock you can see.
@@ -149,3 +147,21 @@ All people and all men are filled with a kind of premonition, and everyone whose
 
 ## approaching monstrous cock
 you saw more cock and balls in ten minutes than most people see in five years. the ground trembles and from your cumfilled fever you see a huge dick. on it you see written: He who refuses to submit is at once labelled "queer," "different," and decried as a disturbing element in the comfortable stagnancy of modern life. you join the cock on a warm embrace, a embrace of the cock and juice that flows from it, the pearly goodness from nut sacks. a voice gently whispers on your ear “COCK SUCKING FATHER FUCKING TWAT” before [[you fly away]], propelled by wings of blue cum.
+
+
+
+## pass out
+### leads to
+orgone land
+
+## blue phosphorescent cum swallows you
+### leads to
+orgone land
+
+## you fly away
+### leads to
+orgone land
+
+## all goes black
+### leads to
+orgone land

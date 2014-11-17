@@ -9,9 +9,7 @@
             ]
         },
         "start the story": {
-            "text": [
-                "apartment room"
-            ],
+            "text": [],
             "leadsTo": "apartment-room"
         },
         "about the project": {
