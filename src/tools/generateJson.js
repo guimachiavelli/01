@@ -48,6 +48,9 @@
             }
 
             if (token.type === 'paragraph') {
+                if (text[index -1].depth && text[index - 1].depth > 2) {
+                    return;
+                }
                 beacons[currentBeacon].text.push(token.text);
             }
 
