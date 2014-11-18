@@ -168,6 +168,10 @@
         "all goes black": {
             "text": [],
             "leadsTo": "orgone-land"
+        },
+        "everything goes black": {
+            "text": [],
+            "leadsTo": "orgone-land"
         }
     }
 }

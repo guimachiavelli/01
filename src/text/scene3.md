@@ -165,3 +165,7 @@ orgone land
 ## all goes black
 ### leads to
 orgone land
+
+## everything goes black
+### leads to
+orgone land

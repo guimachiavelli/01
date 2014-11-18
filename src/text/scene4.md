@@ -33,9 +33,6 @@ worshipping is valid for elevating the divine cocks and asses to their rightful 
 ## SPERM AND PISS
 [[defeat]] or continue to [[final crazy fucking]] that takes user to orgone land.
 
-## final crazy fucking
-### leads to
-orgone land
 
 ## huge perv
 his arse maybe clean, sweaty or dirty, you don't mind, you just Love to drown your face in cockasstitspitsnips especially of big blokes, not pseudo-intellectuals of tubercular liberal conservatism, like the chronic democratic syphilitics, and even the eunuchs of socialism and the anemics of communism, who all should turn to themselves and to depp hard rimming rather than to their gods or idols: discover what is hidden within them, bring it to the light jerkin’ it hard! you yell ‘my prick, me stud, reveal your [[big nakd bod]], big thick cock and ass-stretcher a+’
@@ -74,9 +71,7 @@ you chip in and one of them quickly offers you some poppers. the bottom wants to
 ## go for it
 Horny as fuck and armed with a thick hairy cock, make that body, ripped and open, empty and fragmented, become whole and figure as the unity between discourse and the flesh. ploughing that ass really hard, the room seems to get darker and a blue tint emanates from your cock. you continue pushing your hard meat in conjunction with the other two mascs, but the smell of sex and sweat makes you dizzy until [[everything goes dark]].
 
-## everything goes dark
-### leads to
-orgone land
+
 
 ## stalls
 it’s as if a voice is saying “Come find me for some good understall play.“ In our time when the great dusk of bourgeois straight society seems to have become an eternal dusk making the entire world a dull grey nightmare of survival, it is also a call for homo revolution based on great steamy studs, passions and ideas. the dreams and desires of a mighty and strong-willed “I” seems more necessary than ever if we are to move beyond this pathetic swamp of mediocrity. do you [[tap your right foot]] or sit down and [[play with yourself]]?
@@ -106,9 +101,7 @@ he grabs it harder, just pain, perhaps a few bruises soon, he yells: ‘Life is 
 ## not
 you think you’re going to faint when someone enters the stall and approach their lips to gather the perverse flower of love from your painful cock. the guy from the next stall looses his grip and your new lover [[takes you away]]. you feel helpless and both relaxed and in profound pain. you hope you can get it up after this. 
 
-## takes you away
-### leads to
-safe from death
+
 
 ## agree
 he continues until your revolutionary member is destroyed. you discover yourself becoming one of the demagogic shepherds of the hybrid bourgeois and proletarian flocks, become fetid, filthy, slimy pools. you have found your place within the triumphant mediocrity that dominates and commands.
@@ -131,10 +124,21 @@ you wreak havoc and cum for one last time in your life. your member is destroyed
 ## ask for the bartender’s help
 ‘jock throat on my knees taking anon piss and cum loads down my throat now. Looks unimportant! Just want you to have a full bladder and balls that need emptying. You read what’s on my ass and I’ll be feeling so generous’. you jump over the counter and get down on all fours waiting for the bartender to work his magic. he sticks something up your ass, but it is too late when you realise it isn’t his cock. with that thing inside you see large, scarcely mobile, packets of energy vesicles glimmering with an intense blue. Gradually, the blue glimmer surrounded your body and objects in the room like a hazy, slow-moving, [[grey-blue luminous vapour]].
 
+## defeat
+you have no place in homo universe. the end.
+
 ## grey-blue luminous vapour
 ### leads to
 orgone land
 
+## takes you away
+### leads to
+orgone land
 
+## everything goes dark
+### leads to
+orgone land
 
-
+## final crazy fucking
+### leads to
+orgone land
