@@ -4,15 +4,40 @@
 you are on a magical vortex of highly unfolded knowledge and cosmic imagination beyond one’s normal waking understanding. when you come to it, the room is dazzlingly bright and you can see nothing except for porn. someone unzips and strips you. you Feel a hot hungry wet mouth on your cock and balls. Once you are hard and horny, you feel like you are being taken upstairs, someone is hard and naked on the Room. bright. porn. you Have a session with him. Once he comes, [[you lie back]], balls drained.
 
 ## lie back
-a presence arrives, it’s the 
+you are a convinced advocate of economic, sexual and social equality because you know that, without it, liberty, justice, human dignity, nipplay, cock, ass, pits, stinky arseholes and the well-being of individuals will never amount to more than a pack of lies. you realise you are [[not alone]].
 
-you are a convinced advocate of economic, sexual and social equality because you know that, without it, liberty, justice, human dignity, nipplay, cock, ass, pits, stinky arseholes and the well-being of individuals will never amount to more than a pack of lies.
+## not alone
+guys who have stamina and know how to make their presence felt –deep is good! – surround you. one of them says: “Alas! Up to now, consciousness itself has been an atavistic and fearsome phantom. And it will only cease to be so when a human being has learned how to make it the image and mirror of his own unique will. Here we sit, waiting for you!” you have so many questions, you can barely contain yourself. you could ask [[where am I and who are you]], [[who’s got a hard cock to ride me]] or sing [[the hymn of the Homo Revolutionnaire]].
 
+## who’s got a hard cock to ride me
 
+## the hymn of the Homo Revolutionnaire
 
-Balls == life == cosmic orgone energy == orgonomic functional law of nature == law of gravitation
+## where am I and who are you
+“we are beautiful spiritual disciples of the cock. Balls == life == cosmic orgone energy == orgonomic functional law of nature == law of gravitation, [[do you follow]] or [[are you lost]]?”
 
-loss of full orgonotic contact with one's life.
+## do you follow
+it all makes sense now, the loss of full [[orgonotic contact]] with one's life has taken away intelligence, life, all its determining qualities, active relations or forces, motion itself, without which matter would not even have weight, leaving nothing but impenetrability and absolute immobility in space.
+
+## orgonotic contact
+another of the guys looking to ride or suck (or preferably both) til you shoot a hot creamy load of spunk for me to savour..and more.. says: “the shamanic ass kundalini path brings the tribal goal into view. we must prepare to fuck in the bed/sofa/carpet others have arranged, make our own HOMO REVOLUTION mY FRIEND!” you reply [[yes! homo POWER S.T.A.R.S. on the street!]] or [[what shall I do]]?
+
+## yes! homo POWER S.T.A.R.S. on the street!
+none
+
+## what shall I do
+“are you willing to to serve me as my truly submissive slave? Let me know which areas of servitude appeal to you - humiliation, punishment, etc. that way you will become the first  heroic and revolutionary regenerator of a great Homo nation.” do you want to [[serve this uncut rigid pole]] that you crave tonguing..foreskin nibbling and pissslit probing to orgasm or [[is the revolution not worth submission]]?
+
+## serve this uncut rigid pole
+“there is no point, then. what you give the world is only gray and hideous things, reflecting a dull and hideous existence, too weak to live, too cowardly to die. begone, and come back only when freedom is all you care about.”
+
+## is the revolution not worth submission
+none
+
+## are you lost
+
+well represents the kind of 
+
 
 It is so very significant for the understanding of the emotional 
 plague that the searching for truth becomes the more artificial and futile the closer what it seeks is to the genital emotions of mankind.
@@ -25,9 +50,9 @@ every arsehole is a wormhole teeming with orgone energy
 To eat from the tree of knowledge meant to he expelled from paradise by fire and sword. It is a snake, a symbol of the phallus as well as of primal biological motion, that persuades Steve to seduce Adam. 
 
 
-the shamanic ass kundalini path brings the tribal goal into view
 
-beautiful spiritual disciplines of the cock
+
+
 
 
 simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my sister site;
