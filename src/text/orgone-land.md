@@ -3,15 +3,17 @@
 ## description
 you are on a magical vortex of highly unfolded knowledge and cosmic imagination beyond one’s normal waking understanding. when you come to it, the room is dazzlingly bright and you can see nothing except for porn. someone unzips and strips you. you Feel a hot hungry wet mouth on your cock and balls. Once you are hard and horny, you feel like you are being taken upstairs, someone is hard and naked on the Room. bright. porn. you Have a session with him. Once he comes, [[you lie back]], balls drained.
 
-## lie back
+## you lie back
 you are a convinced advocate of economic, sexual and social equality because you know that, without it, liberty, justice, human dignity, nipplay, cock, ass, pits, stinky arseholes and the well-being of individuals will never amount to more than a pack of lies. you realise you are [[not alone]].
 
 ## not alone
 guys who have stamina and know how to make their presence felt –deep is good! – surround you. one of them says: “Alas! Up to now, consciousness itself has been an atavistic and fearsome phantom. And it will only cease to be so when a human being has learned how to make it the image and mirror of his own unique will. Here we sit, waiting for you!” you have so many questions, you can barely contain yourself. you could ask [[where am I and who are you]], [[who’s got a hard cock to ride me]] or sing [[the hymn of the Homo Revolutionnaire]].
 
 ## who’s got a hard cock to ride me
+none
 
 ## the hymn of the Homo Revolutionnaire
+none
 
 ## where am I and who are you
 “we are beautiful spiritual disciples of the cock. Balls == life == cosmic orgone energy == orgonomic functional law of nature == law of gravitation, [[do you follow]] or [[are you lost]]?”
@@ -35,17 +37,48 @@ none
 none
 
 ## are you lost
+“It is so very significant for the understanding of the emotional plague that the searching for truth becomes the more artificial and futile the closer what it seeks is to the genital emotions of mankind.In this manner, man ‘lost his paradise’ (orgastic root in nature) and fell prey to ‘sin’ (sexual inactivity and shame). we are here to [[fix that]].”
 
-well represents the kind of 
+## fix that
+“but how?”, you ask, being just a simple good body, bubble butt, tight hole, XX uc looking for a suck and fuck action and COMPLETE FREE HOMOSEXUAL LIBERATION. “every arsehole is a wormhole teeming with orgone energy. we are looking for someone who is going to going fuck us and get fucked by us hard for hours til we can't walk, we must jump straight into the extremes. the fuck buildup will create an ergonomic bomb that will move every human being from 3rd dimensional conciousness to the 4th or perhaps even the 5th dimension. are you our [[fellow of a million shags]]?”
+
+## fellow of a million shags
+you feel the voracious hunger for dick and freedom, but there’s still doubt in your head. [[this is the moment]] you’ve been waiting for. do you wish to join the brotherhood or [[leave this place]] and  become a Carcass rotting in resignation, worm-eaten mummies of a decadent society, deceiving yourself and live a nice cozy gaystraight life? 
+
+## this is the moment
+“very well. make me cum in three moves and you’re in”. you focus on his big guns, beard, good looking, XX uncut cock. [[lick]], [[rim]] or [[fist]]?
+
+## lick
+he seems unmoved, like a good fuck veteran would. [[go deeper]],  [[use your hands]] or [[suck]]?
+
+## go deeper
+none
+
+## use your hands
+none
+
+## suck
+none
+
+## rim
+none
+
+## fist
+you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueero-anarchism is living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
+
+## pump it more
+none
+
+## talk about emma goldman
+none
+
+## jerk him off
+none
 
 
-It is so very significant for the understanding of the emotional 
-plague that the searching for truth becomes the more artificial and futile the closer what it seeks is to the genital emotions of mankind.
+the only thing left for us to do is to act against the real enemy: our way of life, our values, our habits, our culture, our indifference.
 
-In this manner, man “lost his paradise” (orgastic root in 
-nature) and fell prey to “sin” (sexual inactivity)
 
-every arsehole is a wormhole teeming with orgone energy
 
 To eat from the tree of knowledge meant to he expelled from paradise by fire and sword. It is a snake, a symbol of the phallus as well as of primal biological motion, that persuades Steve to seduce Adam. 
 
@@ -59,4 +92,4 @@ simply imagine the skies clear, blowing air out of your mouth with gold energy w
 
 Orgone does more than just change the weather, it actually changes the dimensions vibrationally so that negative events like acts of terror, do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy states.
 
- moving from 3rd dimensional conciousness to the 4th or perhaps even the 5th dimension. Chemtrails seem to just dissapear rather than be nuetralized in a more alchemical sense;
+ Chemtrails seem to just dissapear rather than be nuetralized in a more alchemical sense;
