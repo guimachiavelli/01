@@ -1,9 +1,12 @@
 # Intro
 
 ## description
-This is Bavarian Daddy, an interactive story about a young man trying to join an anarcha-queer revolutionary organisation that seeks Homosexual Revolution through the use of the power of Orgone.
+This is an interactive story about a young man trying to join an anarcha-queer revolutionary organisation that seeks Homosexual Revolution through the use of the power of Orgone.
 
 You can [[start the story]], read more [[about the project]] or watch some [[gay porn]].
+
+### image
+01.gif 
 
 ## start the story
 ### leads to
