@@ -63,7 +63,7 @@
     }
 
     function update(beacon) {
-        var body, text;
+        var body, text, image;
 
         body = document.getElementById('scene-body');
         body.innerHTML = '';
@@ -71,6 +71,15 @@
         if (scene.beacons[beacon].leadsTo) {
             load(scene.beacons[beacon].leadsTo);
             return;
+        }
+
+        image = document.getElementById('illustration');
+        image.src = '';
+        image.setAttribute('class', 'illustration hidden');
+
+        if (scene.beacons[beacon].image) {
+            image.src = 'imgs/' + scene.beacons[beacon].image;
+            image.setAttribute('class', 'illustration');
         }
 
 
@@ -86,17 +95,26 @@
     }
 
     function enterScene(content) {
-        var heading, body, text;
+        var heading, body, text, image;
 
         heading = document.getElementById('scene-title');
         heading.innerHTML = content.title;
 
         body = document.getElementById('scene-body');
+
         text = content.beacons.description.text;
         text = createParagraphs(text);
         text.forEach(function(t){
             body.appendChild(t);
         });
+
+        image = document.getElementById('illustration');
+        image.setAttribute('class', 'illustration hidden');
+
+        if (content.beacons.description.image) {
+            image.src = 'imgs/' + content.beacons.description.image;
+            image.setAttribute('class', 'illustration');
+        }
 
         addBeaconEvents();
     }
@@ -123,7 +141,7 @@
     }
 
     function setup() {
-        var heading, body;
+        var heading, body, image;
         heading = document.createElement('h1');
         heading.setAttribute('id', 'scene-title');
         contentEl.appendChild(heading);
@@ -132,6 +150,11 @@
         body.setAttribute('id', 'scene-body');
         body.setAttribute('class', 'text-window');
         contentEl.appendChild(body);
+
+        image = document.createElement('img');
+        image.setAttribute('id', 'illustration');
+        image.setAttribute('class', 'illustration hidden');
+        contentEl.appendChild(image);
     }
 
 

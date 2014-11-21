@@ -6,3 +6,12 @@ body {
 .text-window {
 	width: 400px;
 }
+
+.hidden {
+    display: none;
+}
+
+.illustration {
+    position: absolute;
+    z-index: -1;
+}
