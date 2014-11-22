@@ -3,99 +3,144 @@
 
     'use strict';
 
-    var contentEl, scene;
+
+    var beacons = {
+
+        update: null,
+
+        init: function(updateFunc) {
+            beacons.update = updateFunc;
+        },
 
 
-    function onBeaconClick() {
-        var beacon = this.id.split('-')[1];
-        update(beacon);
-    }
+        onBeaconClick: function() {
+            var beacon = this.id.split('-')[1];
+            beacons.update(beacon);
+        },
 
-    function addBeaconEvents() {
-        var beaconEl, i, len;
+        addEvents: function() {
+            var beaconEl, i, len;
 
-        beaconEl = document.querySelectorAll('.beacon');
+            beaconEl = document.querySelectorAll('.beacon');
 
-        for(i = 0, len = beaconEl.length; i < len; i += 1) {
-            beaconEl[i].addEventListener('click', onBeaconClick);
-        }
+            for(i = 0, len = beaconEl.length; i < len; i += 1) {
+                beaconEl[i].addEventListener('click', beacons.onBeaconClick);
+            }
+        },
 
-    }
+        create: function(text) {
+            var beaconButtons, button, buttonName;
 
-    function createBeacon(text) {
-        var beacons, button, buttonName;
+            beaconButtons = text.match(/\[\[.+?\]\]/gi);
 
-        beacons = text.match(/\[\[.+?\]\]/gi);
+            if (!beaconButtons) {
+                return text;
+            }
 
-        if (!beacons) {
+            beaconButtons.forEach(function(beaconButton){
+                button = document.createElement('button');
+
+                buttonName = beaconButton.replace('[[', '').replace(']]', '');
+
+                button = [
+                    '<button class="beacon" id="beacon-' + buttonName + '">',
+                        buttonName,
+                    '</button>'
+                ].join('');
+
+                text = text.replace(beaconButton, button);
+            });
+
             return text;
         }
 
-        beacons.forEach(function(beacon, index){
-            button = document.createElement('button');
 
-            buttonName = beacon.replace('[[', '').replace(']]', '');
+    };
 
-            button = [
-                '<button class="beacon" id="beacon-' + buttonName + '">',
-                    buttonName,
-                '</button>'
-            ].join('');
 
-            text = text.replace(beacon, button);
-        });
+    module.exports = beacons;
 
-        return text;
+}());
 
-    }
+},{}],2:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var beacons = require('./beacons');
 
     function createParagraphs(text) {
-        var len, i, newText, result;
+        var len, i, result;
 
         for (i = 0, len = text.length; i < len; i += 1) {
-            result = document.createElement('p');
-            newText = createBeacon(text[i]);
-            result.innerHTML = newText;
+            result = '<p>' + beacons.create(text[i]) + '</p>';
             text[i] = result;
         }
 
-        return text;
+        return text.join('\n');
     }
 
-    function update(beacon) {
-        var body, text, image;
+    module.exports = {
+        createParagraphs: createParagraphs
+    };
 
-        body = document.getElementById('scene-body');
-        body.innerHTML = '';
 
-        if (scene.beacons[beacon].leadsTo) {
-            load(scene.beacons[beacon].leadsTo);
-            return;
-        }
+}());
 
-        image = document.getElementById('illustration');
-        image.src = '';
+},{"./beacons":1}],3:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var scene = require('./scene');
+
+    var contentEl;
+
+
+
+    function setup() {
+        var heading, body, image, quote;
+
+        heading = document.createElement('h1');
+        heading.setAttribute('id', 'scene-title');
+        contentEl.appendChild(heading);
+
+        quote = document.createElement('blockquote');
+        quote.setAttribute('id', 'slogan');
+        quote.setAttribute('class', 'slogan');
+        contentEl.appendChild(quote);
+
+        body = document.createElement('div');
+        body.setAttribute('id', 'scene-body');
+        body.setAttribute('class', 'text-window');
+        contentEl.appendChild(body);
+
+        image = document.createElement('img');
+        image.setAttribute('id', 'illustration');
         image.setAttribute('class', 'illustration hidden');
-
-        if (scene.beacons[beacon].image) {
-            image.src = 'imgs/' + scene.beacons[beacon].image;
-            image.setAttribute('class', 'illustration');
-        }
-
-
-        text = scene.beacons[beacon].text.slice(0);
-        text = createParagraphs(text);
-        text.forEach(function(t){
-            body.appendChild(t);
-        });
-
-
-        addBeaconEvents();
+        contentEl.appendChild(image);
 
     }
+
+    contentEl = document.getElementById('content');
+
+    setup();
+    scene.init();
+
+}());
+
+},{"./scene":4}],4:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var beacons = require('./beacons'),
+        story = require('./content');
+
+    var scene;
 
     function enterScene(content) {
-        var heading, body, text, image;
+        var heading, body, text, image, quote;
 
         heading = document.getElementById('scene-title');
         heading.innerHTML = content.title;
@@ -103,21 +148,26 @@
         body = document.getElementById('scene-body');
 
         text = content.beacons.description.text;
-        text = createParagraphs(text);
-        text.forEach(function(t){
-            body.appendChild(t);
-        });
+        text = story.createParagraphs(text);
+        body.innerHTML = text;
 
         image = document.getElementById('illustration');
         image.setAttribute('class', 'illustration hidden');
+
+        quote = document.getElementById('slogan');
 
         if (content.beacons.description.image) {
             image.src = 'imgs/' + content.beacons.description.image;
             image.setAttribute('class', 'illustration');
         }
 
-        addBeaconEvents();
+        if (content.beacons.description.slogan) {
+            quote.innerHTML = content.beacons.description.slogan;
+        }
+
+        beacons.addEvents();
     }
+
 
     function insertContent() {
         if (this.status < 200 && this.status > 400) {
@@ -131,6 +181,7 @@
         enterScene(content);
     }
 
+
     function load(scene) {
         var request;
         scene = scene || 'intro';
@@ -140,31 +191,57 @@
         request.send();
     }
 
-    function setup() {
-        var heading, body, image;
-        heading = document.createElement('h1');
-        heading.setAttribute('id', 'scene-title');
-        contentEl.appendChild(heading);
 
-        body = document.createElement('div');
-        body.setAttribute('id', 'scene-body');
-        body.setAttribute('class', 'text-window');
-        contentEl.appendChild(body);
+    function update(beaconName) {
+        var content, body, text, image, quote;
 
-        image = document.createElement('img');
-        image.setAttribute('id', 'illustration');
+        content = scene.beacons[beaconName];
+
+        body = document.getElementById('scene-body');
+        quote = document.getElementById('slogan');
+
+        body.innerHTML = '';
+        quote.innerHTML = '';
+
+        if (content.leadsTo) {
+            load(content.leadsTo);
+            return;
+        }
+
+        if (content.slogan) {
+            quote.innerHTML = content.slogan;
+        }
+
+        image = document.getElementById('illustration');
+        image.src = '';
         image.setAttribute('class', 'illustration hidden');
-        contentEl.appendChild(image);
+
+        if (content.image) {
+            image.src = 'imgs/' + scene.beacons[beacon].image;
+            image.setAttribute('class', 'illustration');
+        }
+
+        text = content.text.slice(0);
+        text = story.createParagraphs(text);
+
+        body.innerHTML = text;
+
+        beacons.addEvents();
+
+    }
+
+    function init() {
+        beacons.init(update);
+        load();
     }
 
 
-    contentEl = document.getElementById('content');
-
-    setup();
-    load();
-
-
+    module.exports = {
+        init: init,
+        load: load,
+        update: update
+    };
 
 }());
 
-},{}]},{},[1])
+},{"./beacons":1,"./content":2}]},{},[3])

@@ -12,8 +12,9 @@ The world of heterosexual is a sick and boring life. Most ancient roots of a sen
 
 You are on your apartment, Thinking about shooting a load. Descreet/relaxed atmosphere, a sensual setting,,,, no roses anywhere anymore. You look at the [[paper]] Bathroom Fairy gave to you after you made her nut n she left with a smile on her face and green in her pockets..
 
-### image
-rev1.gif
+### slogan
+homo revolution!!!
+
 
 ## paper
 How is the ordinary man to know that the most violent element in society is ignorance? Rather than to go to the bottom of any given idea, to examine into its origin and meaning, most people will either condemn it altogether, or rely on some superficial or prejudicial definition of non-essentials. They do not know what it is to be an Excellent cock-sucker with Super DEEP-THROAT SKILLS and an INSATIABLE APPETITE FOR DICK.
