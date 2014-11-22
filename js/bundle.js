@@ -63,15 +63,23 @@
     }
 
     function update(beacon) {
-        var body, text, image;
+        var body, text, image, quote;
 
         body = document.getElementById('scene-body');
+        quote = document.getElementById('slogan');
+
         body.innerHTML = '';
+        quote.innerHTML = '';
 
         if (scene.beacons[beacon].leadsTo) {
             load(scene.beacons[beacon].leadsTo);
             return;
         }
+
+        if (scene.beacons[beacon].slogan) {
+            quote.innerHTML = scene.beacons[beacon].slogan;
+        }
+
 
         image = document.getElementById('illustration');
         image.src = '';
@@ -81,6 +89,8 @@
             image.src = 'imgs/' + scene.beacons[beacon].image;
             image.setAttribute('class', 'illustration');
         }
+
+
 
 
         text = scene.beacons[beacon].text.slice(0);
@@ -95,7 +105,7 @@
     }
 
     function enterScene(content) {
-        var heading, body, text, image;
+        var heading, body, text, image, quote;
 
         heading = document.getElementById('scene-title');
         heading.innerHTML = content.title;
@@ -111,9 +121,15 @@
         image = document.getElementById('illustration');
         image.setAttribute('class', 'illustration hidden');
 
+        quote = document.getElementById('slogan');
+
         if (content.beacons.description.image) {
             image.src = 'imgs/' + content.beacons.description.image;
             image.setAttribute('class', 'illustration');
+        }
+
+        if (content.beacons.description.slogan) {
+            quote.innerHTML = content.beacons.description.slogan;
         }
 
         addBeaconEvents();
@@ -141,10 +157,18 @@
     }
 
     function setup() {
-        var heading, body, image;
+        var heading, body, image, quote;
+
         heading = document.createElement('h1');
         heading.setAttribute('id', 'scene-title');
         contentEl.appendChild(heading);
+
+        quote = document.createElement('blockquote');
+        quote.setAttribute('id', 'slogan');
+        quote.setAttribute('class', 'slogan');
+        contentEl.appendChild(quote);
+
+
 
         body = document.createElement('div');
         body.setAttribute('id', 'scene-body');
@@ -155,6 +179,7 @@
         image.setAttribute('id', 'illustration');
         image.setAttribute('class', 'illustration hidden');
         contentEl.appendChild(image);
+
     }
 
 

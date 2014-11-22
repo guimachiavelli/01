@@ -21,3 +21,34 @@ body {
     max-width: 100%;
     margin: 0;
 }
+
+
+.slogan {
+    font-size: 100px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    word-break: break-all;
+    position: absolute;
+    z-index: -1;
+
+    -webkit-animation: play .2s infinite;
+}
+
+@-webkit-keyframes play {
+    0%, 100% {
+        
+        color: deeppink;
+    }
+
+
+    50% {
+        
+        color: black;
+    }
+
+
+
+
+}
