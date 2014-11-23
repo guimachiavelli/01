@@ -4,35 +4,19 @@
 
     var scene = require('./scene');
 
-    var contentEl;
-
-
-
     function setup() {
-        var heading, body, image, quote;
+        var el, structure;
+        el = document.getElementById('content');
 
-        heading = document.createElement('h1');
-        heading.setAttribute('id', 'scene-title');
-        contentEl.appendChild(heading);
+        structure = [
+            '<h1 id="scene-title" class="scene-title"></h1>',
+            '<blockquote id="slogan" class="slogan"></blockquote>',
+            '<div id="scene-body" class="text-window"></div>',
+            '<img src="" id="illustration" class="illustration hidden">'
+        ].join('\n');
 
-        quote = document.createElement('blockquote');
-        quote.setAttribute('id', 'slogan');
-        quote.setAttribute('class', 'slogan');
-        contentEl.appendChild(quote);
-
-        body = document.createElement('div');
-        body.setAttribute('id', 'scene-body');
-        body.setAttribute('class', 'text-window');
-        contentEl.appendChild(body);
-
-        image = document.createElement('img');
-        image.setAttribute('id', 'illustration');
-        image.setAttribute('class', 'illustration hidden');
-        contentEl.appendChild(image);
-
+        el.innerHTML = structure;
     }
-
-    contentEl = document.getElementById('content');
 
     setup();
     scene.init();
