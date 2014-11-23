@@ -1,10 +1,9 @@
 {
-  "name": "bavarian-daddy",
+  "name": "E01",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "browserify": "^4.2.0",
-    "browserify-shim": "^3.6.0",
     "gulp": "^3.8.7",
     "gulp-concat": "^2.3.3",
     "gulp-gh-pages": "^0.3.3",
@@ -16,10 +15,7 @@
     "vinyl-source-stream": "^0.1.1"
   },
   "author": "gui machiavelli",
-  "license": "MIT",
-  "dependencies": {
-    "envify": "^1.2.1"
-  },
+  "license": "CC-BY-NC-SA-4.0",
   "browserify": {
     "debug": true
   }

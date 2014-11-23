@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     browserify = require('browserify');
 
 gulp.task('default', function() {
-    console.log('default task');
+    console.log('tasks available: develop, deploy');
 });
 
 
