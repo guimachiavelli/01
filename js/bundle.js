@@ -3,125 +3,136 @@
 
     'use strict';
 
-    var contentEl, scene;
+
+    var beacons = {
+
+        update: null,
+
+        init: function(updateFunc) {
+            beacons.update = updateFunc;
+        },
 
 
-    function onBeaconClick() {
-        var beacon = this.id.split('-')[1];
-        update(beacon);
-    }
+        onBeaconClick: function() {
+            var beacon = this.id.split('-')[1];
+            beacons.update(beacon);
+        },
 
-    function addBeaconEvents() {
-        var beaconEl, i, len;
+        addEvents: function() {
+            var beaconEl, i, len;
 
-        beaconEl = document.querySelectorAll('.beacon');
+            beaconEl = document.querySelectorAll('.beacon');
 
-        for(i = 0, len = beaconEl.length; i < len; i += 1) {
-            beaconEl[i].addEventListener('click', onBeaconClick);
-        }
+            for(i = 0, len = beaconEl.length; i < len; i += 1) {
+                beaconEl[i].addEventListener('click', beacons.onBeaconClick);
+            }
+        },
 
-    }
+        create: function(text) {
+            var beaconButtons, button, buttonName;
 
-    function createBeacon(text) {
-        var beacons, button, buttonName;
+            beaconButtons = text.match(/\[\[.+?\]\]/gi);
 
-        beacons = text.match(/\[\[.+?\]\]/gi);
+            if (!beaconButtons) {
+                return text;
+            }
 
-        if (!beacons) {
+            beaconButtons.forEach(function(beaconButton){
+                button = document.createElement('button');
+
+                buttonName = beaconButton.replace('[[', '').replace(']]', '');
+
+                button = [
+                    '<button class="beacon" id="beacon-' + buttonName + '">',
+                        buttonName,
+                    '</button>'
+                ].join('');
+
+                text = text.replace(beaconButton, button);
+            });
+
             return text;
         }
 
-        beacons.forEach(function(beacon, index){
-            button = document.createElement('button');
 
-            buttonName = beacon.replace('[[', '').replace(']]', '');
+    };
 
-            button = [
-                '<button class="beacon" id="beacon-' + buttonName + '">',
-                    buttonName,
-                '</button>'
-            ].join('');
 
-            text = text.replace(beacon, button);
-        });
+    module.exports = beacons;
 
-        return text;
+}());
 
-    }
+},{}],2:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var beacons = require('./beacons');
 
     function createParagraphs(text) {
-        var len, i, newText, result;
+        var len, i, result;
 
         for (i = 0, len = text.length; i < len; i += 1) {
-            result = document.createElement('p');
-            newText = createBeacon(text[i]);
-            result.innerHTML = newText;
+            result = '<p>' + beacons.create(text[i]) + '</p>';
             text[i] = result;
         }
 
-        return text;
+        return text.join('\n');
     }
 
-    function update(beacon) {
-        var body, text, image, quote;
-
-        body = document.getElementById('scene-body');
-        quote = document.getElementById('slogan');
-
-        body.innerHTML = '';
-        quote.innerHTML = '';
-
-        if (scene.beacons[beacon].leadsTo) {
-            load(scene.beacons[beacon].leadsTo);
-            return;
-        }
-
-        if (scene.beacons[beacon].slogan) {
-            quote.innerHTML = scene.beacons[beacon].slogan;
-        }
+    module.exports = {
+        createParagraphs: createParagraphs
+    };
 
 
-        image = document.getElementById('illustration');
-        image.src = '';
-        image.setAttribute('class', 'illustration hidden');
+}());
 
-        if (scene.beacons[beacon].image) {
-            image.src = 'imgs/' + scene.beacons[beacon].image;
-            image.setAttribute('class', 'illustration');
-        }
+},{"./beacons":1}],3:[function(require,module,exports){
+(function(){
 
+    'use strict';
 
+    var scene = require('./scene');
 
+    function setup() {
+        var el, structure;
+        el = document.getElementById('content');
 
-        text = scene.beacons[beacon].text.slice(0);
-        text = createParagraphs(text);
-        text.forEach(function(t){
-            body.appendChild(t);
-        });
+        structure = [
+            '<h1 id="scene-title" class="scene-title"></h1>',
+            '<blockquote id="slogan" class="slogan"></blockquote>',
+            '<div id="scene-body" class="text-window"></div>',
+            '<img src="" id="illustration" class="illustration hidden">'
+        ].join('\n');
 
-
-        addBeaconEvents();
-
+        el.innerHTML = structure;
     }
+
+    setup();
+    scene.init();
+
+}());
+
+},{"./scene":4}],4:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var beacons = require('./beacons'),
+        story = require('./content');
+
+    var scene, heading, body, text, image, quote;
 
     function enterScene(content) {
-        var heading, body, text, image, quote;
+        var text;
 
-        heading = document.getElementById('scene-title');
         heading.innerHTML = content.title;
 
-        body = document.getElementById('scene-body');
-
         text = content.beacons.description.text;
-        text = createParagraphs(text);
-        text.forEach(function(t){
-            body.appendChild(t);
-        });
+        text = story.createParagraphs(text);
+        body.innerHTML = text;
 
-        image = document.getElementById('illustration');
         image.setAttribute('class', 'illustration hidden');
-
-        quote = document.getElementById('slogan');
 
         if (content.beacons.description.image) {
             image.src = 'imgs/' + content.beacons.description.image;
@@ -132,7 +143,7 @@
             quote.innerHTML = content.beacons.description.slogan;
         }
 
-        addBeaconEvents();
+        beacons.addEvents();
     }
 
     function insertContent() {
@@ -147,6 +158,7 @@
         enterScene(content);
     }
 
+
     function load(scene) {
         var request;
         scene = scene || 'intro';
@@ -156,40 +168,58 @@
         request.send();
     }
 
-    function setup() {
-        var heading, body, image, quote;
 
-        heading = document.createElement('h1');
-        heading.setAttribute('id', 'scene-title');
-        contentEl.appendChild(heading);
+    function update(beaconName) {
+        var content, text;
 
-        quote = document.createElement('blockquote');
-        quote.setAttribute('id', 'slogan');
-        quote.setAttribute('class', 'slogan');
-        contentEl.appendChild(quote);
+        content = scene.beacons[beaconName];
+
+        if (content.leadsTo) {
+            load(content.leadsTo);
+            return;
+        }
+
+        body.innerHTML = '';
+        quote.innerHTML = '';
 
 
+        if (content.slogan) {
+            quote.innerHTML = content.slogan;
+        }
 
-        body = document.createElement('div');
-        body.setAttribute('id', 'scene-body');
-        body.setAttribute('class', 'text-window');
-        contentEl.appendChild(body);
-
-        image = document.createElement('img');
-        image.setAttribute('id', 'illustration');
+        image.src = '';
         image.setAttribute('class', 'illustration hidden');
-        contentEl.appendChild(image);
+
+        if (content.image) {
+            image.src = 'imgs/' + content.image;
+            image.setAttribute('class', 'illustration');
+        }
+
+        text = content.text.slice(0);
+        text = story.createParagraphs(text);
+
+        body.innerHTML = text;
+
+        beacons.addEvents();
 
     }
 
+    function init() {
+        heading = document.getElementById('scene-title');
+        quote = document.getElementById('slogan');
+        body = document.getElementById('scene-body');
+        image = document.getElementById('illustration');
+        beacons.init(update);
+        load();
+    }
 
-    contentEl = document.getElementById('content');
 
-    setup();
-    load();
-
-
+    module.exports = {
+        init: init,
+        load: load,
+        update: update
+    };
 
 }());
 
-},{}]},{},[1])
+},{"./beacons":1,"./content":2}]},{},[3])
