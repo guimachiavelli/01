@@ -121,24 +121,18 @@
     var beacons = require('./beacons'),
         story = require('./content');
 
-    var scene;
+    var scene, heading, body, text, image, quote;
 
     function enterScene(content) {
-        var heading, body, text, image, quote;
+        var text;
 
-        heading = document.getElementById('scene-title');
         heading.innerHTML = content.title;
-
-        body = document.getElementById('scene-body');
 
         text = content.beacons.description.text;
         text = story.createParagraphs(text);
         body.innerHTML = text;
 
-        image = document.getElementById('illustration');
         image.setAttribute('class', 'illustration hidden');
-
-        quote = document.getElementById('slogan');
 
         if (content.beacons.description.image) {
             image.src = 'imgs/' + content.beacons.description.image;
@@ -151,7 +145,6 @@
 
         beacons.addEvents();
     }
-
 
     function insertContent() {
         if (this.status < 200 && this.status > 400) {
@@ -177,31 +170,28 @@
 
 
     function update(beaconName) {
-        var content, body, text, image, quote;
+        var content, text;
 
         content = scene.beacons[beaconName];
-
-        body = document.getElementById('scene-body');
-        quote = document.getElementById('slogan');
-
-        body.innerHTML = '';
-        quote.innerHTML = '';
 
         if (content.leadsTo) {
             load(content.leadsTo);
             return;
         }
 
+        body.innerHTML = '';
+        quote.innerHTML = '';
+
+
         if (content.slogan) {
             quote.innerHTML = content.slogan;
         }
 
-        image = document.getElementById('illustration');
         image.src = '';
         image.setAttribute('class', 'illustration hidden');
 
         if (content.image) {
-            image.src = 'imgs/' + scene.beacons[beacon].image;
+            image.src = 'imgs/' + content.image;
             image.setAttribute('class', 'illustration');
         }
 
@@ -215,6 +205,10 @@
     }
 
     function init() {
+        heading = document.getElementById('scene-title');
+        quote = document.getElementById('slogan');
+        body = document.getElementById('scene-body');
+        image = document.getElementById('illustration');
         beacons.init(update);
         load();
     }
