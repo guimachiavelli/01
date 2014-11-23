@@ -67,6 +67,230 @@
 
     'use strict';
 
+    var scene = require('./scene');
+
+    function setup() {
+        var el, structure;
+        el = document.getElementById('content');
+
+        structure = [
+            '<h1 id="scene-title" class="scene-title"></h1>',
+            '<div class="points">',
+                'status: <span id="cum"></span> <span id="spirit"></span>',
+            '</div>',
+            '<blockquote id="slogan" class="slogan"></blockquote>',
+            '<div id="scene-body" class="text-window"></div>',
+            '<img src="" id="illustration" class="illustration hidden">'
+        ].join('\n');
+
+        el.innerHTML = structure;
+
+    }
+
+    function main(){
+        setup();
+        scene.init();
+    }
+
+    main();
+
+}());
+
+},{"./scene":4}],3:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var meters, meterScores;
+
+    meterScores = {
+        cum: [
+            'almost empty',
+            'almost empty',
+            'sated',
+            'sated',
+            'hard',
+            'harder',
+            'dripping',
+            'dripping',
+            'about to bust',
+            'cum flowing'
+        ],
+        spirit: [
+            'danger',
+            'danger',
+            'very low',
+            'low',
+            'anarchist',
+            'anarchist',
+            'orgone rebel',
+            'orgone rebel',
+            'orgone rebel',
+            'holy orgone revolutionary'
+        ]
+    };
+
+    function init() {
+        meters = {
+            cum: 10,
+            spirit: 5
+        };
+    }
+
+    function update(meter, amount) {
+        var score = meters[meter];
+        if (!score) {
+            throw new Error('invalid meter');
+        }
+
+        amount = parseInt(amount, 10) || 0;
+
+        score += amount;
+        meters[meter] = score;
+
+        if (score > 10) {
+            score = 10;
+        }
+
+        if (score < 0) {
+            score = 0;
+        }
+
+
+    }
+
+    function getValue(meter) {
+        var score = meters[meter];
+        if (!score) {
+            throw new Error('invalid meter');
+        }
+
+        return meterScores[meter][score - 1];
+    }
+
+
+    module.exports = {
+        init: init,
+        update: update,
+        get: getValue
+    };
+
+}());
+
+},{}],4:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
+    var beacons = require('./beacons'),
+        meters = require('./meters'),
+        textWindow = require('./textWindow');
+
+    var scene, heading, body, illustration, quote, cumMeter, spiritMeter;
+
+
+    function updateScene() {
+        var self = this;
+        if (self.status < 200 && self.status > 400) {
+            return;
+        }
+
+        scene = JSON.parse(self.responseText);
+
+        update('description');
+    }
+
+    function load(scene) {
+        var request;
+        scene = scene || 'intro';
+        request = new XMLHttpRequest();
+        request.open('GET', './data/' + scene + '.json', true);
+        request.onload = updateScene;
+        request.send();
+        request = null;
+    }
+
+    function updateIllustration(image) {
+        illustration.src = '';
+        illustration.className = 'illustration hidden';
+
+        if (image) {
+            illustration.src = 'imgs/' + image;
+            illustration.className = 'illustration';
+        }
+    }
+
+    function updateContent(text) {
+        text = text.slice(0);
+        text = textWindow.createParagraphs(text);
+
+        body.innerHTML = text;
+    }
+
+    function updateSlogan(slogan) {
+        slogan = slogan || '';
+        quote.innerHTML = slogan;
+    }
+
+    function updateMeters(cum, spirit) {
+        cum = cum || 0;
+        spirit = spirit || 0;
+
+        meters.update('cum', cum);
+        meters.update('spirit', spirit);
+
+        cumMeter.innerHTML = meters.get('cum');
+        spiritMeter.innerHTML = meters.get('spirit');
+    }
+
+    function update(beaconName) {
+        var content = scene.beacons[beaconName];
+
+        updateMeters(content.cum, content.spirit);
+
+        if (beaconName === 'description') {
+            heading.innerHTML = scene.title;
+        }
+
+        if (content.leadsTo) {
+            load(content.leadsTo);
+            return;
+        }
+
+        updateIllustration(content.image);
+        updateSlogan(content.slogan);
+        updateContent(content.text);
+
+        beacons.addEvents();
+
+    }
+
+    function init() {
+        heading = document.getElementById('scene-title');
+        quote = document.getElementById('slogan');
+        body = document.getElementById('scene-body');
+        illustration = document.getElementById('illustration');
+        cumMeter = document.getElementById('cum');
+        spiritMeter = document.getElementById('spirit');
+        beacons.init(update);
+        meters.init();
+        load();
+    }
+
+
+    module.exports = {
+        init: init,
+        load: load,
+        update: update
+    };
+
+}());
+
+},{"./beacons":1,"./meters":3,"./textWindow":5}],5:[function(require,module,exports){
+(function(){
+
+    'use strict';
+
     var beacons = require('./beacons');
 
     function createParagraphs(text) {
@@ -87,139 +311,4 @@
 
 }());
 
-},{"./beacons":1}],3:[function(require,module,exports){
-(function(){
-
-    'use strict';
-
-    var scene = require('./scene');
-
-    function setup() {
-        var el, structure;
-        el = document.getElementById('content');
-
-        structure = [
-            '<h1 id="scene-title" class="scene-title"></h1>',
-            '<blockquote id="slogan" class="slogan"></blockquote>',
-            '<div id="scene-body" class="text-window"></div>',
-            '<img src="" id="illustration" class="illustration hidden">'
-        ].join('\n');
-
-        el.innerHTML = structure;
-    }
-
-    setup();
-    scene.init();
-
-}());
-
-},{"./scene":4}],4:[function(require,module,exports){
-(function(){
-
-    'use strict';
-
-    var beacons = require('./beacons'),
-        story = require('./content');
-
-    var scene, heading, body, text, image, quote;
-
-    function enterScene(content) {
-        var text;
-
-        heading.innerHTML = content.title;
-
-        text = content.beacons.description.text;
-        text = story.createParagraphs(text);
-        body.innerHTML = text;
-
-        image.setAttribute('class', 'illustration hidden');
-
-        if (content.beacons.description.image) {
-            image.src = 'imgs/' + content.beacons.description.image;
-            image.setAttribute('class', 'illustration');
-        }
-
-        if (content.beacons.description.slogan) {
-            quote.innerHTML = content.beacons.description.slogan;
-        }
-
-        beacons.addEvents();
-    }
-
-    function insertContent() {
-        if (this.status < 200 && this.status > 400) {
-            return;
-        }
-        var content;
-        content = JSON.parse(this.responseText);
-
-        scene = content;
-
-        enterScene(content);
-    }
-
-
-    function load(scene) {
-        var request;
-        scene = scene || 'intro';
-        request = new XMLHttpRequest();
-        request.open('GET', './data/' + scene + '.json', true);
-        request.onload = insertContent;
-        request.send();
-    }
-
-
-    function update(beaconName) {
-        var content, text;
-
-        content = scene.beacons[beaconName];
-
-        if (content.leadsTo) {
-            load(content.leadsTo);
-            return;
-        }
-
-        body.innerHTML = '';
-        quote.innerHTML = '';
-
-
-        if (content.slogan) {
-            quote.innerHTML = content.slogan;
-        }
-
-        image.src = '';
-        image.setAttribute('class', 'illustration hidden');
-
-        if (content.image) {
-            image.src = 'imgs/' + content.image;
-            image.setAttribute('class', 'illustration');
-        }
-
-        text = content.text.slice(0);
-        text = story.createParagraphs(text);
-
-        body.innerHTML = text;
-
-        beacons.addEvents();
-
-    }
-
-    function init() {
-        heading = document.getElementById('scene-title');
-        quote = document.getElementById('slogan');
-        body = document.getElementById('scene-body');
-        image = document.getElementById('illustration');
-        beacons.init(update);
-        load();
-    }
-
-
-    module.exports = {
-        init: init,
-        load: load,
-        update: update
-    };
-
-}());
-
-},{"./beacons":1,"./content":2}]},{},[3])
+},{"./beacons":1}]},{},[2])

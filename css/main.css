@@ -48,9 +48,14 @@ body {
         color: black;
     }
 
+}
 
+.cum-bar, .spirit-bar {
+    display: block;
+    height: 5px;
+    background-color: red;
+}
 
-
-
-
+.spirit-bar {
+    background-color: blue;
 }
