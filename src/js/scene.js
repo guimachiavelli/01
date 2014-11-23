@@ -5,41 +5,18 @@
     var beacons = require('./beacons'),
         story = require('./content');
 
-    var scene, heading, body, text, image, quote;
+    var scene, heading, body, image, quote, cumMeter, spiritMeter,
+        cum, spirit;
 
-    function enterScene(content) {
-        var text;
-
-        heading.innerHTML = content.title;
-
-        text = content.beacons.description.text;
-        text = story.createParagraphs(text);
-        body.innerHTML = text;
-
-        image.setAttribute('class', 'illustration hidden');
-
-        if (content.beacons.description.image) {
-            image.src = 'imgs/' + content.beacons.description.image;
-            image.setAttribute('class', 'illustration');
-        }
-
-        if (content.beacons.description.slogan) {
-            quote.innerHTML = content.beacons.description.slogan;
-        }
-
-        beacons.addEvents();
-    }
 
     function insertContent() {
         if (this.status < 200 && this.status > 400) {
             return;
         }
-        var content;
-        content = JSON.parse(this.responseText);
 
-        scene = content;
+        scene = JSON.parse(this.responseText);
 
-        enterScene(content);
+        update('description');
     }
 
 
@@ -56,6 +33,10 @@
     function update(beaconName) {
         var content, text;
 
+        if (beaconName === 'description') {
+            heading.innerHTML = scene.title;
+        }
+
         content = scene.beacons[beaconName];
 
         if (content.leadsTo) {
@@ -66,17 +47,16 @@
         body.innerHTML = '';
         quote.innerHTML = '';
 
-
         if (content.slogan) {
             quote.innerHTML = content.slogan;
         }
 
         image.src = '';
-        image.setAttribute('class', 'illustration hidden');
+        image.className = 'illustration hidden';
 
         if (content.image) {
             image.src = 'imgs/' + content.image;
-            image.setAttribute('class', 'illustration');
+            image.className = 'illustration';
         }
 
         text = content.text.slice(0);
