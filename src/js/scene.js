@@ -3,66 +3,83 @@
     'use strict';
 
     var beacons = require('./beacons'),
-        story = require('./content');
+        meters = require('./meters'),
+        textWindow = require('./textWindow');
 
-    var scene, heading, body, image, quote, cumMeter, spiritMeter,
-        cum, spirit;
+    var scene, heading, body, illustration, quote, cumMeter, spiritMeter;
 
 
-    function insertContent() {
-        if (this.status < 200 && this.status > 400) {
+    function updateScene() {
+        var self = this;
+        if (self.status < 200 && self.status > 400) {
             return;
         }
 
-        scene = JSON.parse(this.responseText);
+        scene = JSON.parse(self.responseText);
 
         update('description');
     }
-
 
     function load(scene) {
         var request;
         scene = scene || 'intro';
         request = new XMLHttpRequest();
         request.open('GET', './data/' + scene + '.json', true);
-        request.onload = insertContent;
+        request.onload = updateScene;
         request.send();
+        request = null;
     }
 
+    function updateIllustration(image) {
+        illustration.src = '';
+        illustration.className = 'illustration hidden';
+
+        if (image) {
+            illustration.src = 'imgs/' + image;
+            illustration.className = 'illustration';
+        }
+    }
+
+    function updateContent(text) {
+        text = text.slice(0);
+        text = textWindow.createParagraphs(text);
+
+        body.innerHTML = text;
+    }
+
+    function updateSlogan(slogan) {
+        slogan = slogan || '';
+        quote.innerHTML = slogan;
+    }
+
+    function updateMeters(cum, spirit) {
+        cum = cum || 0;
+        spirit = spirit || 0;
+
+        meters.update('cum', cum);
+        meters.update('spirit', spirit);
+
+        cumMeter.innerHTML = meters.get('cum');
+        spiritMeter.innerHTML = meters.get('spirit');
+    }
 
     function update(beaconName) {
-        var content, text;
+        var content = scene.beacons[beaconName];
+
+        updateMeters(content.cum, content.spirit);
 
         if (beaconName === 'description') {
             heading.innerHTML = scene.title;
         }
-
-        content = scene.beacons[beaconName];
 
         if (content.leadsTo) {
             load(content.leadsTo);
             return;
         }
 
-        body.innerHTML = '';
-        quote.innerHTML = '';
-
-        if (content.slogan) {
-            quote.innerHTML = content.slogan;
-        }
-
-        image.src = '';
-        image.className = 'illustration hidden';
-
-        if (content.image) {
-            image.src = 'imgs/' + content.image;
-            image.className = 'illustration';
-        }
-
-        text = content.text.slice(0);
-        text = story.createParagraphs(text);
-
-        body.innerHTML = text;
+        updateIllustration(content.image);
+        updateSlogan(content.slogan);
+        updateContent(content.text);
 
         beacons.addEvents();
 
@@ -72,8 +89,11 @@
         heading = document.getElementById('scene-title');
         quote = document.getElementById('slogan');
         body = document.getElementById('scene-body');
-        image = document.getElementById('illustration');
+        illustration = document.getElementById('illustration');
+        cumMeter = document.getElementById('cum');
+        spiritMeter = document.getElementById('spirit');
         beacons.init(update);
+        meters.init();
         load();
     }
 
