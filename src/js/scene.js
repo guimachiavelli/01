@@ -66,7 +66,7 @@
     function update(beaconName) {
         var content = scene.beacons[beaconName];
 
-        updateMeters(content.cum, content.spirit);
+        //updateMeters(content.cum, content.spirit);
 
         if (beaconName === 'description') {
             heading.innerHTML = scene.title;
@@ -93,7 +93,7 @@
         cumMeter = document.getElementById('cum');
         spiritMeter = document.getElementById('spirit');
         beacons.init(update);
-        meters.init();
+        //meters.init();
         load();
     }
 
