@@ -75,9 +75,6 @@
 
         structure = [
             '<h1 id="scene-title" class="scene-title"></h1>',
-            '<div class="points">',
-                'status: <span id="cum"></span> <span id="spirit"></span>',
-            '</div>',
             '<blockquote id="slogan" class="slogan"></blockquote>',
             '<div id="scene-body" class="text-window"></div>',
             '<img src="" id="illustration" class="illustration hidden">'
@@ -246,7 +243,7 @@
     function update(beaconName) {
         var content = scene.beacons[beaconName];
 
-        updateMeters(content.cum, content.spirit);
+        //updateMeters(content.cum, content.spirit);
 
         if (beaconName === 'description') {
             heading.innerHTML = scene.title;
@@ -273,7 +270,7 @@
         cumMeter = document.getElementById('cum');
         spiritMeter = document.getElementById('spirit');
         beacons.init(update);
-        meters.init();
+        //meters.init();
         load();
     }
 
