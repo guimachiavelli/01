@@ -34,7 +34,10 @@ none
 “there is no point, then. what you give the world is only gray and hideous things, reflecting a dull and hideous existence, too weak to live, too cowardly to die. begone, and come back only when freedom is all you care about.”
 
 ## is the revolution not worth submission
-none
+‘With human nature caged in a narrow space, whipped daily into submission, how can we speak of its [[potentialities]] and playing with a nice big dick wth big balls?’
+
+## potentialities
+“you are right. you are ready to be our [[fellow of a million shags]], if you wish.”
 
 ## are you lost
 “It is so very significant for the understanding of the emotional plague that the searching for truth becomes the more artificial and futile the closer what it seeks is to the genital emotions of mankind.In this manner, man ‘lost his paradise’ (orgastic root in nature) and fell prey to ‘sin’ (sexual inactivity and shame). we are here to [[fix that]].”
@@ -46,13 +49,13 @@ none
 you feel the voracious hunger for dick and freedom, but there’s still doubt in your head. [[this is the moment]] you’ve been waiting for. do you wish to join the brotherhood or [[leave this place]] and  become a Carcass rotting in resignation, worm-eaten mummies of a decadent society, deceiving yourself and live a nice cozy gaystraight life? 
 
 ## this is the moment
-“very well. make me cum in three moves and you’re in”. you focus on his big guns, beard, good looking, XX uncut cock. [[lick]], [[rim]] or [[fist]]?
+“very well. if we cum together in three moves you’re in.” you focus on his big guns, beard, good looking, XX uncut cock. [[lick]], [[rim]] or [[fist]]?
 
 ## lick
-he seems unmoved, like a good fuck veteran would. [[go deeper]],  [[use your hands]] or [[suck]]?
+he seems unmoved, like a good fuck veteran. [[go deeper]],  [[use your hands]] or [[suck]]?
 
 ## go deeper
-none
+
 
 ## use your hands
 none
@@ -61,10 +64,28 @@ none
 none
 
 ## rim
+It’s super effective! the guy starts yelling “simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my balls, from your balls, from everyone’s balls”. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
+
+## tongue power
+you reach out further inside his anus, your tongue is amazing, you feel that kundalini filling your mouth, producing the Trees of Life of Homo Revolution. branches sprout of your mouth saying  “we affirm that the revolution that must bring freedom and equality can not be made in the name of a cock or a pair of balls but in the name of humanity. do you [[swallow the kundalini]], [[vomit orgone]] or [[recite God and the State]]
+
+## swallow the kundalini
+none
+
+## vomit orgone
+none
+
+## recite God and the State
+none
+
+## orgonejaculation
+none
+
+## ride his cock
 none
 
 ## fist
-you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueero-anarchism is living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
+you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueeranarchism is a living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
 
 ## pump it more
 none
@@ -88,8 +109,7 @@ To eat from the tree of knowledge meant to he expelled from paradise by fire and
 
 
 
-simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my sister site;
+
 
 Orgone does more than just change the weather, it actually changes the dimensions vibrationally so that negative events like acts of terror, do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy states.
 
- Chemtrails seem to just dissapear rather than be nuetralized in a more alchemical sense;
