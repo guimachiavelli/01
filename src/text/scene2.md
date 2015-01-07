@@ -27,6 +27,8 @@ you clean yourself up. time to go to [[piacere]].
 
 ## fanatic
 ‘looking for trouble, eh…? you got reasons for pleasing, you want it all up your bootay? SOMEONE THAT IS MORE LIKE MYSELF…let me tell ya my stache wants one [[date]] with your ass, it shall blaze majestically and gloriously beyond so much civil and social putridity towards joy, towards liberty, towards the sun.
+### slogan
+bootay bootay bootay!!1!
 
 ## date
 ‘The less the natural development of man is influenced by ecclesiastical or political guardianship, the more efficient and harmonious will human personality become, the more will it become the measure of the intellectual culture of the society in which it has grown. near the [[#7 train station]]. Look for tops, bottoms vers. suck a nice big cock. Deepthroat. NSA. You’ll find the heroic warrior, filled with a dream of freedom and cum’.
@@ -50,7 +52,7 @@ A [[notification]] from christeene still blinks on your screen.
 
 ## #7 train station
 ### leads to
-piacere
+train station
 
 ## piacere
 ### leads to
