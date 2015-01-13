@@ -1,7 +1,9 @@
 # #7 Train Station
 
 ## description
-it is enough to say that the places of production no longer contain resistance to capital, which is becoming directly social. Where to meet and begin change? in the Thought that is born only when desire grows hard, like a fat cock that slowly fucks the world balls deep. you arrive at the station, feeling so thirsty. you need to find your [[warrior of cum]], the saviour of all balls and cocks. you see a few guys with a lot of potential: [[the one with the obvsly small tool]], a [[couple of realtors]] (one has a sweet ass) and the [[kinky synidicalist]].
+it is enough to say that the places of production no longer contain resistance to capital, which is becoming directly social. Where to meet and begin change? in the Thought that is born only when desire grows hard, like a fat cock that slowly fucks the world balls deep. 
+
+you arrive at the station, feeling so thirsty. you need to find your [[warrior of cum]], the saviour of all balls and cocks. you see a few guys with a lot of potential: [[the one with the obvsly small tool]], a [[couple of realtors]] (one has a sweet ass) and the [[kinky synidicalist]].
 
 ## warrior of cum
 this isnt a beauty contest but you do wanna be turned on by the revolution. stubborn solitude is fed by what it opposes; hence, this is about fun, about being seriously horny and wanting to fuck. you want to find your warrior and drink all the brotherly cum he has to offer. who shall it be: [[the one with the obvsly small tool]], a [[couple of realtors]] (one has a sweet ass) or the [[kinky synidicalist]]?
@@ -25,7 +27,20 @@ as soon as you arrive, you feel his trousers getting wet and the perfume of cum 
 none
 
 ## wash down his cum with your piss
+he becomes your urinal of free love and you see he likes it. he too was destined to be transformed into a humble tool of bestial slavery; but he has the makings of a revolutionary slut. A [[salute]] to you, oh anarchist of the dick!
+
+### slogan
+Anarchist of the Dick
+
+## salute
+as beautiful as that moment was, you think of your warrior. ‘O Light, why don’t you set me ablaze with sex fluids churning in yr hangers?’ the short guy looks at you, gaping mouth open, asking you to [[continue pissing]]. ås lovely as it is to connect to a fellow man, you’re afraid that [[your warrior is somewhere else]].
+
+## continue pissing
 none
+
+## your warrior is somewhere else
+none
+
 
 ## fear
 none
@@ -46,3 +61,9 @@ I love to have someone master my ass. Dildos,toys,COCKS fingers. I love takin th
 
 
 
+Looking to please a smooth round firm bubblebutt.
+
+SMOKE SOME 420 and make me smoke your pole .
+GRAB ME BY MY HEAD........... AND PUSH YOUR COCK IN TO MY MOUTH, FUCK ME FACE, MAKE ME DROOL ON YOUR COCK AS YOU HOLD MY HEAD ON IT AND CONTROL ME TO SUCK IT THE WAY YOU WANT. 
+
+SLAP YOUR BALLS AGAINST MY CHIN. 
