@@ -24,7 +24,13 @@ you say ‘I see you there, looking up and glancing around while having coffee w
 as soon as you arrive, you feel his trousers getting wet and the perfume of cum reaches your nose. the alley is dark, he is still trembling. wat do? [[lie down on the garbage]] or [[wash down his cum with your piss]]?
 
 ## lie down on the garbage
-none
+he yells at you ’treat me like garbage...make me worship you...smack the shit outta me...write degrading things on me, DADDY.’ you are tempted to [[become his master]], but [[the revolution has no place for the patriarchy]].
+
+## become his master
+as you beat off whilst beating him with your big hard stick, you become the most purulent drops of pus that have spurted from humanity’s symbolic wounds. you have become a new master of the same follies and the same crimes, worth so much and worthless to the eyes of your homo brothers.
+
+## the revolution has no place for the patriarchy
+‘A salute to you, oh human brother! you've got the pole baby I've got the holes, No foul prison could ever hold these rebellious, iconoclastic spirit of ours; now less than ever! it is time for the next socialsexual insurrection. I fraternally clasp the hands of true rebels of all the various tendencies! follow the [[first spark]] of [[heavenly, brotherly orgone]].
 
 ## wash down his cum with your piss
 he becomes your urinal of free love and you see he likes it. he too was destined to be transformed into a humble tool of bestial slavery; but he has the makings of a revolutionary slut. A [[salute]] to you, oh anarchist of the dick!
@@ -36,11 +42,30 @@ Anarchist of the Dick
 as beautiful as that moment was, you think of your warrior. ‘O Light, why don’t you set me ablaze with sex fluids churning in yr hangers?’ the short guy looks at you, gaping mouth open, asking you to [[continue pissing]]. ås lovely as it is to connect to a fellow man, you’re afraid that [[your warrior is somewhere else]].
 
 ## continue pissing
-none
+your discreet kinky piggy does his toilet duties very well. when the flow of yellow manly gold comes stops, he looks at you and says ‘A salute to you, oh human brother! you've got the pole baby I've got the holes, No foul prison could ever hold this rebellious, iconoclastic spirit of mine; now less than ever! it is time for the next socialsexual insurrection. I fraternally clasp the hands of true rebels of all the various tendencies! follow the [[first spark]] of [[heavenly, brotherly orgone]].
+
+## first spark
+as you are about to ask what he means, a blue spark in the end of the alley grabs your attention and the warrior grabs your cock. will you [[go together]]?
+
+## go together
+### leads to
+orgone tunnel
+
+## heavenly, brotherly orgone
+as you’re about to ask, he takes you by the cock to the end of the alley. it is dark and it is as if everything has taken a blue tint. you both continue walking into darkness leaving a trail of sperm until [[you cannot see a thing]].
+
+### slogan
+Siddhartha of a Thousand Cums
+
+## you cannot see a thing
+### leads to
+orgone tunnel
 
 ## your warrior is somewhere else
-none
+Twenty-two months have passed since the day you rejected  the warrior of cum, as the most brutal and slimiest of all monsters, you are destined to be transformed into a humble tool of bestial slavery, a sacrifice on the altar for the stupidest, most grotesque of all human phantasms.
 
+### slogan
+SUB COCKCUSCKER SEEKING DOM
 
 ## fear
 none
@@ -66,4 +91,4 @@ Looking to please a smooth round firm bubblebutt.
 SMOKE SOME 420 and make me smoke your pole .
 GRAB ME BY MY HEAD........... AND PUSH YOUR COCK IN TO MY MOUTH, FUCK ME FACE, MAKE ME DROOL ON YOUR COCK AS YOU HOLD MY HEAD ON IT AND CONTROL ME TO SUCK IT THE WAY YOU WANT. 
 
-SLAP YOUR BALLS AGAINST MY CHIN. 
+SLAP YOUR BALLS AGAINST MY CHIN. I
