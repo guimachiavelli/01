@@ -49,7 +49,7 @@ as you are about to ask what he means, a blue spark in the end of the alley grab
 
 ## go together
 ### leads to
-orgone tunnel
+great sphincter
 
 ## heavenly, brotherly orgone
 as you’re about to ask, he takes you by the cock to the end of the alley. it is dark and it is as if everything has taken a blue tint. you both continue walking into darkness leaving a trail of sperm until [[you cannot see a thing]].
@@ -59,7 +59,7 @@ Siddhartha of a Thousand Cums
 
 ## you cannot see a thing
 ### leads to
-orgone tunnel
+great sphincter
 
 ## your warrior is somewhere else
 Twenty-two months have passed since the day you rejected  the warrior of cum, as the most brutal and slimiest of all monsters, you are destined to be transformed into a humble tool of bestial slavery, a sacrifice on the altar for the stupidest, most grotesque of all human phantasms.
@@ -68,6 +68,21 @@ Twenty-two months have passed since the day you rejected  the warrior of cum, as
 SUB COCKCUSCKER SEEKING DOM
 
 ## fear
+‘fear not, There are Few Greater Pleasures Than Two Men Simply Enjoying The Touch Of Each Other. let us stop living in an atmosphere of fear and Pump in the enthusiasm. does this [[sound inviting]] or do you [[need more convincing]]?’.
+
+## inviting
+‘well then, GRAB ME BY MY HEAD........... AND PUSH YOUR COCK IN TO MY MOUTH, FUCK ME FACE, MAKE ME DROOL ON YOUR COCK AS YOU HOLD MY HEAD ON IT.’ you go to a nearby alley and he does precisely as told, and you are both sure that your own and other people's liberation depends solely on the immediate [[disintegration of everything]] that governs and administers this old world, and that is [[strangling us all]].
+
+## disintegration of everything
+The alienation of people isolated in mass society has pushed them to abandon nature external to the human being to industrial exploitation in exchange for a standardized sex and relationships and little care is taken to find out in exploring.   your amazing beefy omega say: ‘A salute to you, oh human brother! it is time for the next socialsexual insurrection. I fraternally clasp the hands of true rebels of all the various tendencies! follow the [[first spark]] of [[heavenly, brotherly orgone]].
+
+## strangling us all
+‘WE have seen them at work, all these savants: the more hardened the more they have avoided sweet m2m sex; the narrower in their views the more time they have spent in examining some isolated fact in all its aspects; without any experience of life, because they have long known no other men’s steamy cocks and buttholes. let us not allow the prisons of heterosex to limit us. onwards to the great sphincter, oh great dispenser of orgone!’ your warrior of cum grabs you by the hand and you [[go together]] towards a shimmering blue light deep down inside garbage.
+
+## need more convincing
+‘To become a convinced anarchist, and not in name only, you must begin to feel the solidarity that joins them to their comrades, and to learn to bottom either one on one or group/orgy setting and grinding it out until someone takes ur hot load down his throat.’ you jack of at lightning speed in front of everyone and you see your fellows’ eyes [[gleam with pleasure]] at all the white juices. 
+
+## gleam with pleasure
 none
 
 ## couple of realtors
@@ -89,6 +104,6 @@ I love to have someone master my ass. Dildos,toys,COCKS fingers. I love takin th
 Looking to please a smooth round firm bubblebutt.
 
 SMOKE SOME 420 and make me smoke your pole .
-GRAB ME BY MY HEAD........... AND PUSH YOUR COCK IN TO MY MOUTH, FUCK ME FACE, MAKE ME DROOL ON YOUR COCK AS YOU HOLD MY HEAD ON IT AND CONTROL ME TO SUCK IT THE WAY YOU WANT. 
+ AND CONTROL ME TO SUCK IT THE WAY YOU WANT. 
 
 SLAP YOUR BALLS AGAINST MY CHIN. I
