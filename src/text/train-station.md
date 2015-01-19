@@ -83,7 +83,20 @@ The alienation of people isolated in mass society has pushed them to abandon nat
 ‘To become a convinced anarchist, and not in name only, you must begin to feel the solidarity that joins them to their comrades, and to learn to bottom either one on one or group/orgy setting and grinding it out until someone takes ur hot load down his throat.’ you jack of at lightning speed in front of everyone and you see your fellows’ eyes [[gleam with pleasure]] at all the white juices. 
 
 ## gleam with pleasure
-none
+‘brothers!’ you scream whilst nice juicy cum drops from your hands ‘We must put an end to the morality of account books, to the philosophy of credit and debit. We are a gaze, a trace left on a wall, the aftertaste of a lovers kiss. Our love is not like the love that breeds the herd; it [[breeds freedom]] and right as great as the capacity of our potential! CUM FUCK MY BEEFY ASS!’
+
+### slogan
+CUM TO ME WARRIOR OF CUM
+
+## breeds freedom
+The key idea of sexy-hot anarchism is simple: no political or ideological group, our agora will be the assholes and gaping mouths of our brethren. True emancipation can only be brought about by the direct filthy gorgeous intercourse between men (bareback creampie style). you are in the middle of the wrestling fuck fest and never felt so sure of that in your life. there is no warrior of cum, [[we are all cum warriors]]. 
+
+## we are all cum warriors
+In the these times of evil spirits. Of material thugs and mischief, O my brother do not leave me! Lest the evil spirits harm you! all together, all dancing, you all become one giant fuck, one blue fuck that eventually [[explodes in unison cum]], making all the still-hets run away. when they come back, you’re not even there.
+
+## explodes in unison cum
+### leads to
+cum warriors refuge
 
 ## couple of realtors
 HAVE A CAT who will not be a bother.
