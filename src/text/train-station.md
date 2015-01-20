@@ -96,10 +96,35 @@ In the these times of evil spirits. Of material thugs and mischief, O my brother
 
 ## explodes in unison cum
 ### leads to
-cum warriors refuge
+neo pervo bakunian refuge
 
 ## couple of realtors
-HAVE A CAT who will not be a bother.
+One demands to work so that one can consume, continuing in this way to feed the perverse capitalist mechanism that is the real cause of the current situation of generalised lack of free butt-fucks for all. ‘Anyone have a place in the south shore or a large fully tinted SUV and can suck me off around 5 530?’ you ask them. you see the one with cute ass with [[an instant hardon]], the other [[tries do distance himself]] from you, on a call with a client.
+
+## an instant hardon
+Nice person looking to meet same,  Just looking for a little fun, cos The moral world is a world of phantoms, of the spectres of ignorance, fear and cowardice. let us be [[children of the future]], fallen into this world by Chance.
+
+### slogan
+love to suck!!!!!!!!!!!l!!
+
+## children of the future
+let us Swarm like bees: disperse, love cum nectar, be everywhere and yet all of the hive and the sting, proletarian and homos. you kiss and work up a sweat, fall on the ground and roll to the middle of the tracks. ‘use my holes, i'll use your cock’, he says. you rough his hole, trying to cum before [[the train arrives]].
+
+## the train arrives
+Not until the capitalist monster is destroyed will we get rid of the disease which exists in the Senate and all public offices; in the houses of the rich as well as in the miserable barracks of the poor. Mankind must become conscious of their strength and raging hard pricks dripping with cum, they must be free to commence a new homo life with so much sex their cocks will ache, but so much pleasure they will never ask for less. the boy clasps your hand as you climax and whispers in your ear: ‘cum to me, [[Neo-pervo-bakunian]]’.
+
+## Neo-pervo-bakunian
+### leads to
+neo pervo bakunian refuge
+
+## tries do distance himself
+‘no worries, m8, HAVE A CAT who will not be a bother. do you have an achy, tight or sore body? I’ll treat you to a great deep, complete, non-productive sex proletarian massage.’ you grab him and his friend by the balls, whilst [[the preppy one is still on his phone]], and go to [[your favourite warfield]], the toilet.
+
+## the preppy one is still on his phone
+you grab his phone and yell ‘how many people does it take to fix my dick?’. the preppy realtor tries to get a hold of his phone again, but you put it inside your ass and run towards [[your favourite warfield]]. he goes after you, and it feels damn good when the phone starts ringing inside your fuck hole.
+
+## your favourite warfield
+This broadside is written on bathroom walls and on porn sites, but it breathes a voice that is eternal. 
 
 ## kinky synidicalist
 I love to have someone master my ass. Dildos,toys,COCKS fingers. I love takin that big cock down my throat!
