@@ -124,7 +124,27 @@ neo pervo bakunian refuge
 you grab his phone and yell ‘how many people does it take to fix my dick?’. the preppy realtor tries to get a hold of his phone again, but you put it inside your ass and run towards [[your favourite warfield]]. he goes after you, and it feels damn good when the phone starts ringing inside your fuck hole.
 
 ## your favourite warfield
-This broadside is written on bathroom walls and on porn sites, but it breathes a voice that is eternal. 
+as soon as you arrive, the preppy realtor, yells ‘this week is kicking my ass and I need my face fucked’. you smile, happy to oblige, whilst the other one sucks your nips. your truth is written on [[bathroom walls]] and on porn sites, but [[it breathes a voice that is eternal]].
+
+## it breathes a voice that is eternal
+The kinkier the better. Very real! Oral, anal, rimming, cum swap, feltching, ff, spit, snot, piss, scat, toilet, all with the nobility of courage that is the philosophy of action. the bourgeoisie, who are sexual beggars, don’t want to see themselves as equals of the rabble, who are hung beggars with throbbing cocks, but your goal is to give cocks to all who need them, that is the great, surging, living truth that will reconstructing the world, and that will [[usher in the Dawn]]. 
+
+## bathroom walls
+you realise they all pulsate, red and blue, as if the toilets themselves were part of a bigger being, connecting all homes in all bathrooms together, like a spaceship that will lead to the homos revolution. as you bust your nut into the preppy guys hot mouth, you feel as if you were [[entering a new reality]].
+
+## entering a new reality
+### leads to
+orgone land
+
+## usher in the Dawn
+‘SLAP YOUR BALLS AGAINST MY CHIN’, yells the preppy guy. you are about to come, a bit in need of a healing touch when the other one ups his nipsucking game to 1 thousand and it is almost as good as being illumined by the spiritual light of Anarchism. you realise there is [[quite an audience]] watching you.
+
+## quite an audience
+Only in freedom we realize the true force of the social bonds which knit men together, and which are the true foundation of a normal social life. soon after you cum, 10, twenty guys join you on the second round. you are ready to accept human nature and all its wonderful possibilities and [[heavenly, paradisiacal holes]].
+
+## heavenly, paradisiacal holes
+### leads to
+neo pervo bakunian refuge
 
 ## kinky synidicalist
 I love to have someone master my ass. Dildos,toys,COCKS fingers. I love takin that big cock down my throat!
@@ -144,4 +164,4 @@ Looking to please a smooth round firm bubblebutt.
 SMOKE SOME 420 and make me smoke your pole .
  AND CONTROL ME TO SUCK IT THE WAY YOU WANT. 
 
-SLAP YOUR BALLS AGAINST MY CHIN. I
+. I
