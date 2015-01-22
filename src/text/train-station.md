@@ -103,7 +103,6 @@ One demands to work so that one can consume, continuing in this way to feed the 
 
 ## an instant hardon
 Nice person looking to meet same,  Just looking for a little fun, cos The moral world is a world of phantoms, of the spectres of ignorance, fear and cowardice. let us be [[children of the future]], fallen into this world by Chance.
-
 ### slogan
 love to suck!!!!!!!!!!!l!!
 
@@ -169,9 +168,6 @@ he replies ’Looking to please a smooth round firm bubblebutt. I SMOKE SOME 420
 you run to the cops and drop to our knees and start to sniff at the men’s crotches until they were full, bouncing with blood. you run the tip of your tongue up the underside of their shafts, lingering for a moment of their piss slits to fight to the repugnant and tyrannical authority. teeming with life power, you feel an energy overflowing form your cock whilst cum oozes from your sweat, eyes, mouth and every orifice. with a final whisper of ‘beautiful thick cock, amazing loads’, you explode in an orgone vortex. 
 
 this is the end for you, but you know this is the real start of the sexxxxyyyyy sensual touch hot revolution.
-
-## 1on1 sex rampage
-you say ’You are waiting for the revolution! Very well! My own began along time ago! When you are ready – God, yes, what a nice cock, fuck my face! – it won’t nauseate me to swallow all your juices! All societies tremble when the scornful aristocracy of Vagabonds, Unique ones, Unapproachable ones, rulers over the ideal, and Conquerors of Nothing advance without inhibitions. So, come on, HOMOS, forward!’ a ginormous torrent of cum washes your throat, the revolutionary seed eating strong within you. you realise all is open and ready for you and anyone who wishes. you proclaim yourself one of the neo-pervo-bakunians and is thus [[given entrance]]. you and your hot proletarian stud disappear in a flash of cum, just before the police reaches you.
 
 ## given entrance
 ### leads to

@@ -48,7 +48,7 @@
             }
 
             if (token.type === 'paragraph') {
-                if (text[index -1].depth && text[index - 1].depth > 2) {
+                if (text[index - 1].depth && text[index - 1].depth > 2) {
                     return;
                 }
                 beacons[currentBeacon].text.push(token.text);
@@ -70,7 +70,8 @@
 
         files = fs.readdirSync(dirpath);
 
-        files.forEach(function(file, index){
+        files.forEach(function(file){
+            if (file.lastIndexOf('.md') < 0) { return; }
             file = dirpath + '/' + file;
             file = fs.readFileSync(file, {encoding: 'utf8'});
             file = parseMD(file);
