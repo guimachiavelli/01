@@ -79,7 +79,6 @@
             file = JSON.stringify(file, null, 4);
 
             fs.writeFileSync('../public/data/' + filename + '.json', file);
-
         });
 
     }
