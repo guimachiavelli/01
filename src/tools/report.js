@@ -9,8 +9,6 @@
         return text[0] === 'none';
     }
 
-
-
     function parse(file) {
         var title, beacon, text, leadsTo, leadsToPath;
         file = JSON.parse(file);

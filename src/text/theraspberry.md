@@ -122,12 +122,12 @@ you can still try and take part in the [[threesome]], enter one of the [[stalls]
 you wreak havoc and cum for one last time in your life. your member is destroyed gag the fag style. you thought you could take it as rough and messy as any want to give it, but you were wrong. disoriented and lost, you decide to leave the bar and go raise your personal stock price and not fall into loserdom. You want to move to a “safe zone” (a ghetto inside the walls of Straight City), where a new gay Zion will be built, secure within the confines of heteronorms, hetero values and insofar as was possible, heterosex (crowned ideally with bouncing lesbo-gay progeny).
 
 ## ask for the bartender’s help
-‘jock throat on my knees taking anon piss and cum loads down my throat now. Looks unimportant! Just want you to have a full bladder and balls that need emptying. You read what’s on my ass and I’ll be feeling so generous’. you jump over the counter and get down on all fours waiting for the bartender to work his magic. he sticks something up your ass, but it is too late when you realise it isn’t his cock. with that thing inside you see large, scarcely mobile, packets of energy vesicles glimmering with an intense blue. Gradually, the blue glimmer surrounded your body and objects in the room like a hazy, slow-moving, [[grey-blue luminous vapour]].
+‘jock throat on my knees taking anon piss and cum loads down my throat now. Looks unimportant! Just want you to have a full bladder and balls that need emptying. You read what’s on my ass and I’ll be feeling so generous’. you jump over the counter and get down on all fours waiting for the bartender to work his magic. he sticks something up your ass, but it is too late when you realise it isn’t his cock. with that thing inside you see large, scarcely mobile, packets of energy vesicles glimmering with an intense blue. Gradually, the blue glimmer surrounded your body and objects in the room like a hazy, slow-moving, [[grey–blue luminous vapour]].
 
 ## defeat
 you have no place in homo universe. the end.
 
-## grey-blue luminous vapour
+## grey–blue luminous vapour
 ### leads to
 orgone land
 

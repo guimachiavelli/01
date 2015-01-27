@@ -48,6 +48,9 @@ none
 ## fellow of a million shags
 you feel the voracious hunger for dick and freedom, but there’s still doubt in your head. [[this is the moment]] you’ve been waiting for. do you wish to join the brotherhood or [[leave this place]] and  become a Carcass rotting in resignation, worm-eaten mummies of a decadent society, deceiving yourself and live a nice cozy gaystraight life? 
 
+## leave this place
+none
+
 ## this is the moment
 “very well. if we cum together in three moves you’re in.” you focus on his big guns, beard, good looking, XX uncut cock. [[lick]], [[rim]] or [[fist]]?
 
@@ -55,7 +58,7 @@ you feel the voracious hunger for dick and freedom, but there’s still doubt in
 he seems unmoved, like a good fuck veteran. [[go deeper]],  [[use your hands]] or [[suck]]?
 
 ## go deeper
-
+none
 
 ## use your hands
 none
@@ -67,13 +70,15 @@ none
 It’s super effective! the guy starts yelling “simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my balls, from your balls, from everyone’s balls”. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
 
 ## tongue power
-you reach out further inside his anus, your tongue is amazing, you feel that kundalini filling your mouth, producing the Trees of Life of Homo Revolution. branches sprout of your mouth saying  “we affirm that the revolution that must bring freedom and equality can not be made in the name of a cock or a pair of balls but in the name of humanity. do you [[swallow the kundalini]], [[vomit orgone]] or [[recite God and the State]]
+you reach out further inside his anus, your tongue is amazing, you feel that kundalini filling your mouth, producing the Trees of Life of Homo Revolution. branches sprout of your mouth saying  “we affirm that the revolution that must bring freedom and equality can not be made in the name of a single cock or a pair of balls but in the name of humanity. do you [[swallow the kundalini]], [[vomit orgone]] or [[recite God and the State]]
 
 ## swallow the kundalini
-none
+It is a snake, a symbol of the phallus as well as of primal biological motion, that persuades Steve to seduce Adam. to eat the kundalini is to eat from the tree of knowledge, to be again one with the paradise.
+
+once you’re finished, everything seems to dissolve around you. you feel orgone pulsating in your veins, you feel every man in the world that is taking cock and loving it. you are one with them all, the homo revolution is close.
 
 ## vomit orgone
-none
+
 
 ## recite God and the State
 none
@@ -98,16 +103,6 @@ none
 
 
 the only thing left for us to do is to act against the real enemy: our way of life, our values, our habits, our culture, our indifference.
-
-
-
-To eat from the tree of knowledge meant to he expelled from paradise by fire and sword. It is a snake, a symbol of the phallus as well as of primal biological motion, that persuades Steve to seduce Adam. 
-
-
-
-
-
-
 
 
 
