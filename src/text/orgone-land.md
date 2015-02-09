@@ -10,6 +10,39 @@ you are a convinced advocate of economic, sexual and social equality because you
 guys who have stamina and know how to make their presence felt –deep is good! – surround you. one of them says: “Alas! Up to now, consciousness itself has been an atavistic and fearsome phantom. And it will only cease to be so when a human being has learned how to make it the image and mirror of his own unique will. Here we sit, waiting for you!” you have so many questions, you can barely contain yourself. you could ask [[where am I and who are you]], [[who’s got a hard cock to ride me]] or sing [[the hymn of the Homo Revolutionnaire]].
 
 ## who’s got a hard cock to ride me
+‘the fact is that homosexuality is a complicated and mystical interplay of genetics and politics. we all, collectively, have the hardest cock of all times to slip inside your wet, willing hole. [[Mutual oral foreplay is cool]], too. The worst blackmail that society subjects us to is that of choosing between working or dying of hunger and [[our collective love for cock will save]] all from it.’
+
+## Mutual oral foreplay is cool
+you reply ‘I'll suck yours if you'll suck mine! [[:)]] A lot of my work has been devoted to trying to get the truth of the homo tantric mystical experience out in order to destroy crypto-authoritarian society. [[will you help me]]?’
+
+## :)
+‘Homoness is regarded as shameful by barbarians and by those who live under despotic governments because it is apparently not in the interest of such rulers to have great ideas engendered in their subjects, or powerful friendships or passionate love – all of which homosexuality is particularly apt to produce. [[will you help me]]?’ 
+### slogan
+WHERE There Is Nothing
+
+## will you help me
+‘cock is the moon. cock is the garden. cock is you. cock is me. cock all around. cock always seeing. cock always listening. All you need to do is to whisper and cock will hear. become one with us, but retain your [[stinky yummy ass individuality]].’
+
+## stinky yummy ass individuality
+‘STOP LISTEN CARDFULLY BEFORE YOU REPLY!!!! we are usually organising feasts, dances and country excursions, in consequence of our vision of anarchism as the "joy of living and eating ass” and not as [[militant sacrifice and death instinct]]. do you believe a [[Hungry Ass Lickin Tongue is fundamental to the revolution]]?’
+
+## Hungry Ass Lickin Tongue is fundamental to the revolution
+Wherever your ass kisslicking leads you, we hope you will remember the Teaching of Ishomovara; that HOMO Spirit is DIVINE! join us in extreme homoeroticism and life-saving revolutionary poly-sex! the only thing left for us to do is to act against the real enemy: capitalist way of life, capitalist values, capitalist habits, capitalist indifference. you all embrace in a big orgy that lasts for weeks. you are now ready for the revolution.
+### ending
+ready for the revolution
+
+## militant sacrifice and death instinct
+suddenly Aware of your preference for a passive (no power bottoms here hun) role of mere contemplation, the revolution is no more to you. you decide to get your revenge on those who have lived in the first person and acted directly. As voluntary servitude reaches over six billion, as social, technological and environmental catastrophe threatens the mere survival of humankind more every day, you decide to save your own sweet ass.
+### ending
+save your sweet ass
+
+## our collective love for cock will save
+‘I would like to have great iron buttocks, and to put them about the poles of all men, and to push and push till everything got inside. . . . Sometimes I dream I am pushing my own house inside my anus, and sometimes it is the whole authoritarian world that is entering. . . . When everything was inside we would have [[more room]] to get drunk in, to drink contentedly out of the cup of life, out of the [[drunken cup of jizz]].’
+
+## more room
+none
+
+## drunken cup of jizz
 none
 
 ## the hymn of the Homo Revolutionnaire
@@ -32,6 +65,8 @@ none
 
 ## serve this uncut rigid pole
 “there is no point, then. what you give the world is only gray and hideous things, reflecting a dull and hideous existence, too weak to live, too cowardly to die. begone, and come back only when freedom is all you care about.”
+### ending
+servitude
 
 ## is the revolution not worth submission
 ‘With human nature caged in a narrow space, whipped daily into submission, how can we speak of its [[potentialities]] and playing with a nice big dick wth big balls?’
@@ -77,6 +112,9 @@ It is a snake, a symbol of the phallus as well as of primal biological motion, t
 
 once you’re finished, everything seems to dissolve around you. you feel orgone pulsating in your veins, you feel every man in the world that is taking cock and loving it. you are one with them all, the homo revolution is close.
 
+### ending
+kundalini
+
 ## vomit orgone
 none
 
@@ -102,9 +140,13 @@ none
 none
 
 
-the only thing left for us to do is to act against the real enemy: our way of life, our values, our habits, our culture, our indifference.
+
 
 
 
 Orgone does more than just change the weather, it actually changes the dimensions vibrationally so that negative events like acts of terror, do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy states.
+
+
+
+
 

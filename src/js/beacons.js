@@ -2,7 +2,6 @@
 
     'use strict';
 
-
     var beacons = {
 
         update: null,
@@ -52,10 +51,7 @@
 
             return text;
         }
-
-
     };
-
 
     module.exports = beacons;
 
