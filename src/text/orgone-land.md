@@ -7,13 +7,15 @@ you are on a magical vortex of highly unfolded knowledge and cosmic imagination 
 you are a convinced advocate of economic, sexual and social equality because you know that, without it, liberty, justice, human dignity, nipplay, cock, ass, pits, stinky arseholes and the well-being of individuals will never amount to more than a pack of lies. you realise you are [[not alone]].
 
 ## not alone
-guys who have stamina and know how to make their presence felt –deep is good! – surround you. one of them says: “Alas! Up to now, consciousness itself has been an atavistic and fearsome phantom. And it will only cease to be so when a human being has learned how to make it the image and mirror of his own unique will. Here we sit, waiting for you!” you have so many questions, you can barely contain yourself. you could ask [[where am I and who are you]], [[who’s got a hard cock to ride me]] or sing [[the hymn of the Homo Revolutionnaire]].
+guys who have stamina and know how to make their presence felt –deep is good! – surround you. one of them says: “Alas! Up to now, consciousness itself has been an atavistic and fearsome phantom. And it will only cease to be so when human beings have learned how to make it the image and mirror of their own unique will. Here we sit, waiting for you!” you have so many questions, you can barely contain yourself. you could ask [[where am I and who are you]], [[who’s got a hard cock to ride me]] or sing [[the hymn of the Homo Revolutionnaire]].
 
 ## who’s got a hard cock to ride me
-‘the fact is that homosexuality is a complicated and mystical interplay of genetics and politics. we all, collectively, have the hardest cock of all times to slip inside your wet, willing hole. [[Mutual oral foreplay is cool]], too. The worst blackmail that society subjects us to is that of choosing between working or dying of hunger and [[our collective love for cock will save]] all from it.’
+‘the fact is that homoluv is a complicated and mystical interplay of genetics and politics. we all, collectively, have the hardest cock of all times to slip inside your wet, willing hole. [[Mutual oral foreplay is cool]], too. The worst blackmail that society subjects us to is that of choosing between working or dying of hunger and [[our collective love for cock will save]] all from it.’
 
 ## Mutual oral foreplay is cool
-you reply ‘I'll suck yours if you'll suck mine! [[:)]] A lot of my work has been devoted to trying to get the truth of the homo tantric mystical experience out in order to destroy crypto-authoritarian society. [[will you help me]]?’
+you reply ‘I'll suck yours if you'll suck mine! [[:)]]’ 
+
+‘A lot of my work has been devoted to trying to get the truth of the homo tantric mystical experience out in order to destroy crypto-authoritarian society. [[will you help me]]?’
 
 ## :)
 ‘Homoness is regarded as shameful by barbarians and by those who live under despotic governments because it is apparently not in the interest of such rulers to have great ideas engendered in their subjects, or powerful friendships or passionate love – all of which homosexuality is particularly apt to produce. [[will you help me]]?’ 
@@ -40,10 +42,27 @@ save your sweet ass
 ‘I would like to have great iron buttocks, and to put them about the poles of all men, and to push and push till everything got inside. . . . Sometimes I dream I am pushing my own house inside my anus, and sometimes it is the whole authoritarian world that is entering. . . . When everything was inside we would have [[more room]] to get drunk in, to drink contentedly out of the cup of life, out of the [[drunken cup of jizz]].’
 
 ## more room
-none
+CUM OVER CHOKE MY THROAT N FUCK THIS BIG FAT ASS AND LET ME SUCK N LICK YOUR ASS!!!!!!!! NEED COCK NOW!! CALLING THOSE MEN THAT LOVE TO [[FRAGRANTLY VIOLATE ALL PROPERTY AND AUTHORITY]] MY NIBBLES ARE HARD!!!!
+
+## FRAGRANTLY VIOLATE ALL PROPERTY AND AUTHORITY
+are you ready to abandon yourself to a wild embrace, and our large, gaping, passionate mouths? In the midst of so much [[lack of HOT horny action]], you are the only one who can notice that your mind is not dead and your hole can be filled and see the vastest sea of light of complete and [[Negation of every society, of every cult, of every rule and of every religion]]. do you see it?
+
+## Negation of every society, of every cult, of every rule and of every religion
+you are ready, brother. you know it and, thus, with all your freedom, embrace the wand of the force of the orgonic phallus and combat the violence of capital and government!
+### ending
+orgonic phallus
+
+## lack of HOT horny action
+‘Oh ascetic, if you have any problems in making love to the beauties, ask me! I have in that science done quite some research and I do it very well! until then, farewell’. 
+
+disillusioned, you  become one who renounces life because he feels that it is nothing but pain and sorrow and doesn’t find in himself the heroic courage to fuck his own brains out. 
+### ending
+maimed
 
 ## drunken cup of jizz
-none
+you suck, deep throat, gag and drink for a long time, yearning for a hot dude out there who wanna take a dump in yo face. you feel energised and understand that, because of a society that suffers exploitation and domination, a unique life-energetic force in the atmosphere (the orgone energy) became highly agitated and irritated, much in the manner of irritated protoplasm. the Earth's life-energy field is highly disturbed.
+
+two of the hot-dicked, hot-assed guys (s&b) come to you and say: ‘the only way of salvation is activating the kundalini cannon and drenching the world in piss, cum and orgone. are you ready to [[swallow the kundalini]] with us?’
 
 ## the hymn of the Homo Revolutionnaire
 none
@@ -111,7 +130,6 @@ you reach out further inside his anus, your tongue is amazing, you feel that kun
 It is a snake, a symbol of the phallus as well as of primal biological motion, that persuades Steve to seduce Adam. to eat the kundalini is to eat from the tree of knowledge, to be again one with the paradise.
 
 once you’re finished, everything seems to dissolve around you. you feel orgone pulsating in your veins, you feel every man in the world that is taking cock and loving it. you are one with them all, the homo revolution is close.
-
 ### ending
 kundalini
 
@@ -150,3 +168,4 @@ Orgone does more than just change the weather, it actually changes the dimension
 
 
 
+bound only by the promise to be faithful and "not hurt each other."
