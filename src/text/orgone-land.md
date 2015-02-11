@@ -65,6 +65,36 @@ you suck, deep throat, gag and drink for a long time, yearning for a hot dude ou
 two of the hot-dicked, hot-assed guys (s&b) come to you and say: ‘the only way of salvation is activating the kundalini cannon and drenching the world in piss, cum and orgone. are you ready to [[swallow the kundalini]] with us?’
 
 ## the hymn of the Homo Revolutionnaire
+you start from the part you knew: 
+
+‘Ass of mankind, so beautiful and
+hollow, dowry of Mind and Angels,
+we will fire our arrows, honed with cum and lube and howls, against the strongholds of the law and of Society’
+
+you tear up at the beautiful words, and also at the harm capitalism brought to this world. nobody seriously considers [[possible alternatives to capitalism]] any longer, whereas popular imagination is persecuted by the visions of the forthcoming ‘breakdown of nature’, of the end of all life on earth. [[your homo brothers understand you and sing along]].
+
+## possible alternatives to capitalism
+one of the homos tells you: ‘[[Pump sperm in me]] .i looking for fuck me and be my lover .I want your throbbing cock in me shooting your sperm and [[bring capitalism crashing down]]. the alternative to exploitation is the feeling of a hard cock rubbing all over the world’s body.’
+### slogan
+PUMP ME FULL OF YOUR SPERM
+
+## Pump sperm in me
+you happily oblige screwing a willing someone’s brains out with a crowd watching because In the face of a world that presents ethics as the space of authority and law, I think that there is no ethical dimension except in pure raw sweaty kinky fuck, in risk, in the dream. The survival in which we are confined is unjust because it brutalises and uglifies dudes who are totes hot, even if they think they’re not. as you’re about to climax, the guy who’s riding your cock asks: ‘[[are you ready for the mystical journey]]?’
+
+## are you ready for the mystical journey
+The mystical journey is where everyone meets their divine essence, their soul without dogma. The best way to homo revolution is to find the place of radiant shitholes, where spirit meets body and body is infused with spirit — that place is simply a manpussy filled up with countless cocks ravenous with orgone life force. bound only by the promise to be faithful and not hurt each other, you trudge along with your fellow warriors of freeluv.
+### ending
+warriors
+
+## bring capitalism crashing down
+you join on a Deep passionate prayer to the divine, asking the divine for what you need to do the revolution; to stay illumined as you can, clear, forceful and spitting cum out of your ears. it dawns on you that there is no answer and you’ll have to create your own. the future is laid bare in front of you like a nice ass ready to be fucked.
+### ending
+future fuck
+
+## your homo brothers understand you and sing along
+none [[yes! homo POWER S.T.A.R.S. on the street!]]
+
+## yes! homo POWER S.T.A.R.S. on the street!
 none
 
 ## where am I and who are you
@@ -74,10 +104,7 @@ none
 it all makes sense now, the loss of full [[orgonotic contact]] with one's life has taken away intelligence, life, all its determining qualities, active relations or forces, motion itself, without which matter would not even have weight, leaving nothing but impenetrability and absolute immobility in space.
 
 ## orgonotic contact
-another of the guys looking to ride or suck (or preferably both) til you shoot a hot creamy load of spunk for me to savour..and more.. says: “the shamanic ass kundalini path brings the tribal goal into view. we must prepare to fuck in the bed/sofa/carpet others have arranged, make our own HOMO REVOLUTION mY FRIEND!” you reply [[yes! homo POWER S.T.A.R.S. on the street!]] or [[what shall I do]]?
-
-## yes! homo POWER S.T.A.R.S. on the street!
-none
+another of the guys looking to ride or suck (or preferably both) til you shoot a hot creamy load of spunk for me to savour..and more.. says: “the shamanic ass kundalini path brings the tribal goal into view. we must prepare to fuck in the bed/sofa/carpet others have arranged, make our own HOMO REVOLUTION mY FRIEND!” you reply [[what shall I do]]?
 
 ## what shall I do
 “are you willing to to serve me as my truly submissive slave? Let me know which areas of servitude appeal to you - humiliation, punishment, etc. that way you will become the first  heroic and revolutionary regenerator of a great Homo nation.” do you want to [[serve this uncut rigid pole]] that you crave tonguing..foreskin nibbling and pissslit probing to orgasm or [[is the revolution not worth submission]]?
@@ -168,4 +195,4 @@ Orgone does more than just change the weather, it actually changes the dimension
 
 
 
-bound only by the promise to be faithful and "not hurt each other."
+"
