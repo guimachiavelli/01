@@ -92,10 +92,28 @@ you join on a Deep passionate prayer to the divine, asking the divine for what y
 future fuck
 
 ## your homo brothers understand you and sing along
-none [[yes! homo POWER S.T.A.R.S. on the street!]]
+resistance to tyranny is man's highest ideal. So long as tyranny exists, in whatever form, man's [[deepest aspiration]] and hardest shags must resist it as inevitably as man must breathe. yes! [[homo POWER S.T.A.R.S.]] and fucks on the street! that’s what you’re fucking for.
 
-## yes! homo POWER S.T.A.R.S. on the street!
-none
+## homo POWER S.T.A.R.S.
+‘We all choke on splintered bones, dismembered screams, sisterbothers you drag us all, you make us all realise where anarchoorgone heaven of the Homo revolution is. Inside the factories, the workers continue to work in order to produce nothing, and the regime cannot afford dismissal only austerity. gay cum luv is here, Hello, I'm Alex and I love giving massage with sensual completion that frees you from the wage-labour. my friend, my new lover, will you join me and all of us, [[perv queers with a penchant for measuring big dicks with their mouths and arses]]?’ 
+
+## perv queers with a penchant for measuring big dicks with their mouths and arses
+you grab his thick italian sausage and say: ‘we are together, brothers’.
+### ending
+brothers
+
+## deepest aspiration
+the sexual frustration of the proletariat caused a thwarting of its political consciousness; only through a full, uninhibited release of the (HOMO)sexual urge can the working class realise its sexy revolutionary potentialities and historic mission.
+
+‘WHO IS HORNY ENOUGH to Fuck his revvo brother YOU SLIDE IN YOUR COCK INTO MY WARM HOLE UNTIL WERE READY TO [[CREATE A BEAUTIFUL SOCIAL TEMPEST]]? or are you feeling like rejoicing in seeing [[the degeneration that makes its way inside you]]?’
+
+## CREATE A BEAUTIFUL SOCIAL TEMPEST
+you start the most beautiful mystical orgy, you GARGLE WITH STICKY HOT SEMEN of one thousand men, nay, brothers. in the middle of your ages-long fuck, you realise every man in the world gets a minute long glimpse of your hot love making. the revolutionary spirit will surely spread everywhere now, thanks to your inner orgone that will free the proletariat.
+
+## the degeneration that makes its way inside you
+Day after day, your forehead recedes, your mouth becomes more sinister. Day after day, the stigmata of putrefaction are noticed under your yellowing skin.  Go on with your descent into the mud. You languish in hunger and hardships, you vegetate, bestially fertilizing wombs with a swarm of ragged, filthy, scrofulous, stunted brats. you are no longer a homo.
+### ending
+no homo
 
 ## where am I and who are you
 “we are beautiful spiritual disciples of the cock. Balls == life == cosmic orgone energy == orgonomic functional law of nature == law of gravitation, [[do you follow]] or [[are you lost]]?”
@@ -130,7 +148,9 @@ servitude
 you feel the voracious hunger for dick and freedom, but there’s still doubt in your head. [[this is the moment]] you’ve been waiting for. do you wish to join the brotherhood or [[leave this place]] and  become a Carcass rotting in resignation, worm-eaten mummies of a decadent society, deceiving yourself and live a nice cozy gaystraight life? 
 
 ## leave this place
-none
+your a deep, dark sorrow locked inside your asshole that it makes you feel you are both bellow and above your brothers. there is no room for that in the homo revolution. good-bye, slave pig.
+### ending
+no homo
 
 ## this is the moment
 “very well. if we cum together in three moves you’re in.” you focus on his big guns, beard, good looking, XX uncut cock. [[lick]], [[rim]] or [[fist]]?
@@ -139,13 +159,22 @@ none
 he seems unmoved, like a good fuck veteran. [[go deeper]],  [[use your hands]] or [[suck]]?
 
 ## go deeper
-none
+you never knew your tongue could be so long, you stick it in and savour all the musky goodness inside this tight ass pussy, making it wide open with your super homo tongue. [[roleplay god and the state]], [[stick your cock in]] or [[use your mind]]?
+
+## roleplay god and the state
+with your fingers inside his ass, you play out bakunin explaining why religion is a collective insanity and much more boring and less enlightening than rough homo sex. your partner screams with revolutionary, throbbing pleasure. [[you both cum together]].
+
+## stick your cock in
+a bit of cock goes a long way. paint his insides white with all your sperm. [[you cum, but he doesn’t]].
+
+## use your mind
+straining your mind as much as you can, you manage to manipulate enough orgone to liberate all the locked sexual energies inside your mate. his orgasm lasts half hour, and everyone in this place is covered in his cum. [[he came, but you didn’t]].
 
 ## use your hands
-none
+you use your Strong Hands and give him a Deep Healing Massage that evolves into a deep tissue (prostate) massage. Big cock loaded balls... a top. A kisser. a fine example of the proletariat, but all bodies are, all brave men are. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
 
 ## suck
-none
+you work on his bulge and give him a fully nudebody suck… from head to toe. you savour every bit of his musky libertarian frame. blind with pleasure, he recites ‘fields, factories and workshops’. for the grand finale do you [[piss in his mouth]], [[quantum change his cock]] or [[open up a whole tantric vision for homo revvos]]?
 
 ## rim
 It’s super effective! the guy starts yelling “simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my balls, from your balls, from everyone’s balls”. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
@@ -160,6 +189,18 @@ once you’re finished, everything seems to dissolve around you. you feel orgone
 ### ending
 kundalini
 
+## fist
+you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueeranarchism is a living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
+
+## pump it more
+you want to Breed his hot ass so badly, pump ,dump n go looking to get fucked by othrs, u want to use up all energy in the world, so you don’t give a damn for any bullshit job or money or whatever. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
+
+## talk about emma goldman
+none
+
+## jerk him off
+none
+
 ## vomit orgone
 none
 
@@ -172,27 +213,24 @@ none
 ## ride his cock
 none
 
-## fist
-you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueeranarchism is a living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
-
-## pump it more
+## piss in his mouth
 none
 
-## talk about emma goldman
+## quantum change his cock
 none
 
-## jerk him off
+## open up a whole tantric vision for homo revvos
 none
 
+## you both cum together
+none
 
+## he came, but you didn’t
+none
 
-
-
+## you cum, but he doesn’t
+none
 
 Orgone does more than just change the weather, it actually changes the dimensions vibrationally so that negative events like acts of terror, do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy states.
 
-
-
-
-
-"
+The real use of mystical knowledge is to make you strong enough to withstand the full blaze of the pain of reality, to give you the courage to see it without illusion and to give you the even greater courage to make your whole life a testimony to that love that could transfigure suffering.
