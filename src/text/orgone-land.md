@@ -179,8 +179,27 @@ you work on his bulge and give him a fully nudebody suck… from head to toe. yo
 ## rim
 It’s super effective! the guy starts yelling “simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my balls, from your balls, from everyone’s balls”. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
 
+## fist
+you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueeranarchism is a living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
+
+## pump it more
+you want to Breed his hot ass so badly, pump ,dump n go looking to get fucked by othrs, u want to use up all energy in the world, so you don’t give a damn for any bullshit job or money or whatever. [[tongue power]], [[orgonejaculation]] or [[use your mind]]?
+
+## talk about emma goldman
+he screams with pleasure as you say that Puritanism has only repression and merciless persecution to offer anyone, how it creates an environment favourable to growth and spread of diseases. [[tongue power]] or [[orgonejaculation]] to end it all?
+
+## jerk him off
+he deserves to experience some mind-blowing wank-action on this fabulous place. you show off your incredible hand skills, getting rough and aggressive until you start fucking his mouth like a thirsty manhole. [[use your mind]] or [[stick your cock in]]?
+
 ## tongue power
-you reach out further inside his anus, your tongue is amazing, you feel that kundalini filling your mouth, producing the Trees of Life of Homo Revolution. branches sprout of your mouth saying  “we affirm that the revolution that must bring freedom and equality can not be made in the name of a single cock or a pair of balls but in the name of humanity. do you [[swallow the kundalini]], [[vomit orgone]] or [[recite God and the State]]
+you reach out further inside his anus, your tongue is amazing, you feel that kundalini filling your mouth, producing the Trees of Life of Homo Revolution. branches sprout of your mouth saying  “we affirm that the revolution that must bring freedom and equality can not be made in the name of a single cock or a pair of balls but in the name of humanity. do you [[swallow the kundalini]] or [[vomit orgone]]?
+
+## vomit orgone
+all homos can work powerful cockmagick dedicated to the Gods, and the gods are in truth themselves and mankind. holy, holy, holy. drum and dance around the fire, chant and fuck and drink heavenly man milk. thinking of your ages old tradition, you conjure up litres of orgone that fill up everything the light touches.
+
+your partner lies exhausted in a puddle of orgone and you kiss him, drawing inspiration from the essential homo mystics, you see the answer on how to create real inroads into gay consciousness. the future is laid bare in front of you like a nice ass ready to be fucked. 
+### ending
+future fuck
 
 ## swallow the kundalini
 It is a snake, a symbol of the phallus as well as of primal biological motion, that persuades Steve to seduce Adam. to eat the kundalini is to eat from the tree of knowledge, to be again one with the paradise.
@@ -189,26 +208,12 @@ once you’re finished, everything seems to dissolve around you. you feel orgone
 ### ending
 kundalini
 
-## fist
-you cut to the chase and fist the guy with the potency of a hundred suns. he smiles whilst you talk about how sexqueeranarchism is a living force in the affairs of your life, constantly creating new conditions. [[pump it more]], [[talk about emma goldman]] or [[jerk him off]]?
-
-## pump it more
-you want to Breed his hot ass so badly, pump ,dump n go looking to get fucked by othrs, u want to use up all energy in the world, so you don’t give a damn for any bullshit job or money or whatever. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
-
-## talk about emma goldman
-none
-
-## jerk him off
-none
-
-## vomit orgone
-none
-
-## recite God and the State
-none
-
 ## orgonejaculation
-none
+torrents of sweet, bubblegum-like pink orgone comes out of your urethra and the amazing perfume of musty dick, ripe, funky dick, cock cheese and smegma. everyone around you come at the same time. 
+
+flowers blossom on where your cumorgone has fallen blood. and you see now, together with all your partners lovers brothers. you  are those who can turn on the light, know the power of the things they have created. you will come, and take possession,--no longer the wretched scum, but the masters of the world.
+### ending
+brothers
 
 ## ride his cock
 none
@@ -230,6 +235,7 @@ none
 
 ## you cum, but he doesn’t
 none
+
 
 Orgone does more than just change the weather, it actually changes the dimensions vibrationally so that negative events like acts of terror, do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy states.
 
