@@ -216,27 +216,38 @@ flowers blossom on where your cumorgone has fallen blood. and you see now, toget
 brothers
 
 ## ride his cock
-none
+YOU LUBE YOURSELF UP AND FUCK WITH THAT GOOD NICE TIGHT ASS HERE, RIDE THAT COCK GOOD. What a joy to be present at the collapse of a world, Meanwhile the bourgeoisie and the people deceive each other and slaughter each other. you want no slaughter, just good raw fucking and you show that real good. as he’s about to climax, you milk out a creamy load yourself. you scream  as [[you both cum together]].
 
 ## piss in his mouth
-none
+embracing beauty and joy as a radical act of queer protest, you ask him to open his mouth real good. he does and you piss rivers of golden goodness in his mouth. if the production of any commodity necessitates the sacrifice of human life, society should do without that commodity, but it can not do without life and some golden shower for something different. 
 
-## quantum change his cock
-none
+knowing this, he drinks eagerly and happily. after seeing all that, [[you cum, but he doesn’t]];
+
+## quantum change your cock
+you say ‘we homos are proud to be part of that utterly sexed up category. we have come to wash the unbearable social iniquities from the world with our cum.’ a cute boi hands you a quantum cock ring and once you wear it, your cock is instantly inside and outside everyone in the room. the perfume of sex invades the whole place as you all come together as real brothers. 
+
+you grab the thick italian sausages you have around you and say: ‘we are together, brothers’.
+### ending
+brothers
 
 ## open up a whole tantric vision for homo revvos
-none
+Mystical homo Sex is sex elevated from the mundane onto a spiritual plane. Sexuality is actually the most intense of sensuous experiences because all the five senses are simultaneously involved in a sexual act. It is therefore the most direct experience to realise the power of the proletariat. in short, by taking Loads all night long, fucking nice and hard.having hot sweet load deep inside is the sure way to the revolution. you fire up the kaballah central pillar (ur cock) and get ready of show everyone your kundASSlini.
+### ending
+kundalini
 
 ## you both cum together
-none
+‘your orgasm changed the dimensions vibrationally so that negative events like capitalism and the exploitation of the proletariat do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy fucks like the one we just had.’
+
+‘we stand loving ourselves and the world deeply. we are brothers and free spirits because today society oppresses everything and tries to prevent the free expression of nice, good cocks. the revolution is at hand’
+### ending
+brothers
 
 ## he came, but you didn’t
-none
+‘I believed in brotherhood; in human redemption; in love…The self-elevation and self-sucking of men…Elevation of the masses…Ascent of the people…Sublimation of humanity!…through fucking my brains out! take care not only of your brother, love, but also of yourself. cum and let us fuck the future until capitalism is dead.’
+### ending
+future fuck
 
 ## you cum, but he doesn’t
-none
-
-
-Orgone does more than just change the weather, it actually changes the dimensions vibrationally so that negative events like acts of terror, do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy states.
-
-The real use of mystical knowledge is to make you strong enough to withstand the full blaze of the pain of reality, to give you the courage to see it without illusion and to give you the even greater courage to make your whole life a testimony to that love that could transfigure suffering.
+The real use of this mystical sex test was to make you strong enough to withstand the full blaze of the pain of reality, to give you the courage to see it without illusion and to give you the even greater courage to make your whole life a testimony to that raw creamy love that will begin the revolution. let us masturbate for the revolution.
+### ending
+ready for the revolution

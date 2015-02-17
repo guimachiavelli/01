@@ -49,7 +49,7 @@ as you are about to ask what he means, a blue spark in the end of the alley grab
 
 ## go together
 ### leads to
-great sphincter
+orgone land
 
 ## heavenly, brotherly orgone
 as you’re about to ask, he takes you by the cock to the end of the alley. it is dark and it is as if everything has taken a blue tint. you both continue walking into darkness leaving a trail of sperm until [[you cannot see a thing]].
@@ -59,7 +59,7 @@ Siddhartha of a Thousand Cums
 
 ## you cannot see a thing
 ### leads to
-great sphincter
+orgone land
 
 ## your warrior is somewhere else
 Twenty-two months have passed since the day you rejected  the warrior of cum, as the most brutal and slimiest of all monsters, you are destined to be transformed into a humble tool of bestial slavery, a sacrifice on the altar for the stupidest, most grotesque of all human phantasms.
@@ -96,7 +96,7 @@ In the these times of evil spirits. Of material thugs and mischief, O my brother
 
 ## explodes in unison cum
 ### leads to
-neo pervo bakunian refuge
+orgone land
 
 ## couple of realtors
 One demands to work so that one can consume, continuing in this way to feed the perverse capitalist mechanism that is the real cause of the current situation of generalised lack of free butt-fucks for all. ‘Anyone have a place in the south shore or a large fully tinted SUV and can suck me off around 5 530?’ you ask them. you see the one with cute ass with [[an instant hardon]], the other [[tries do distance himself]] from you, on a call with a client.
@@ -114,7 +114,7 @@ Not until the capitalist monster is destroyed will we get rid of the disease whi
 
 ## Neo-pervo-bakunian
 ### leads to
-neo pervo bakunian refuge
+orgone land
 
 ## tries do distance himself
 ‘no worries, m8, HAVE A CAT who will not be a bother. do you have an achy, tight or sore body? I’ll treat you to a great deep, complete, non-productive sex proletarian massage.’ you grab him and his friend by the balls, whilst [[the preppy one is still on his phone]], and go to [[your favourite warfield]], the toilet.
@@ -143,7 +143,7 @@ Only in freedom we realize the true force of the social bonds which knit men tog
 
 ## heavenly, paradisiacal holes
 ### leads to
-neo pervo bakunian refuge
+orgone land
 
 ## kinky synidicalist
 you approach the syndicalist proletarian brother, wondering if you can also be brothers in flesh. ’I love to have someone syndicate my ass, HORNED PUSSY BOI. Dildos,toys,COCKS fingers. I love takin cock down my throat! let us combat [[the spreading rot]] of ANTI-INTELLECTUALISM of entertainment and self-help culture with [[a good fuck]].’
@@ -171,4 +171,4 @@ this is the end for you, but you know this is the real start of the sexxxxyyyyy 
 
 ## given entrance
 ### leads to
-neo pervo bakunian refuge
+orgone land
