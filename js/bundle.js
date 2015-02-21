@@ -3,7 +3,6 @@
 
     'use strict';
 
-
     var beacons = {
 
         update: null,
@@ -53,10 +52,7 @@
 
             return text;
         }
-
-
     };
-
 
     module.exports = beacons;
 
@@ -93,97 +89,15 @@
 
 }());
 
-},{"./scene":4}],3:[function(require,module,exports){
-(function(){
-
-    'use strict';
-
-    var meters, meterScores;
-
-    meterScores = {
-        cum: [
-            'almost empty',
-            'almost empty',
-            'sated',
-            'sated',
-            'hard',
-            'harder',
-            'dripping',
-            'dripping',
-            'about to bust',
-            'cum flowing'
-        ],
-        spirit: [
-            'danger',
-            'danger',
-            'very low',
-            'low',
-            'anarchist',
-            'anarchist',
-            'orgone rebel',
-            'orgone rebel',
-            'orgone rebel',
-            'holy orgone revolutionary'
-        ]
-    };
-
-    function init() {
-        meters = {
-            cum: 10,
-            spirit: 5
-        };
-    }
-
-    function update(meter, amount) {
-        var score = meters[meter];
-        if (!score) {
-            throw new Error('invalid meter');
-        }
-
-        amount = parseInt(amount, 10) || 0;
-
-        score += amount;
-        meters[meter] = score;
-
-        if (score > 10) {
-            score = 10;
-        }
-
-        if (score < 0) {
-            score = 0;
-        }
-
-
-    }
-
-    function getValue(meter) {
-        var score = meters[meter];
-        if (!score) {
-            throw new Error('invalid meter');
-        }
-
-        return meterScores[meter][score - 1];
-    }
-
-
-    module.exports = {
-        init: init,
-        update: update,
-        get: getValue
-    };
-
-}());
-
-},{}],4:[function(require,module,exports){
+},{"./scene":3}],3:[function(require,module,exports){
 (function(){
 
     'use strict';
 
     var beacons = require('./beacons'),
-        meters = require('./meters'),
         textWindow = require('./textWindow');
 
-    var scene, heading, body, illustration, quote, cumMeter, spiritMeter;
+    var scene, heading, body, illustration, quote;
 
 
     function updateScene() {
@@ -229,21 +143,8 @@
         quote.innerHTML = slogan;
     }
 
-    function updateMeters(cum, spirit) {
-        cum = cum || 0;
-        spirit = spirit || 0;
-
-        meters.update('cum', cum);
-        meters.update('spirit', spirit);
-
-        cumMeter.innerHTML = meters.get('cum');
-        spiritMeter.innerHTML = meters.get('spirit');
-    }
-
     function update(beaconName) {
         var content = scene.beacons[beaconName];
-
-        //updateMeters(content.cum, content.spirit);
 
         if (beaconName === 'description') {
             heading.innerHTML = scene.title;
@@ -254,12 +155,11 @@
             return;
         }
 
-        updateIllustration(content.image);
+        updateIllustration(content.ending);
         updateSlogan(content.slogan);
         updateContent(content.text);
 
         beacons.addEvents();
-
     }
 
     function init() {
@@ -267,13 +167,9 @@
         quote = document.getElementById('slogan');
         body = document.getElementById('scene-body');
         illustration = document.getElementById('illustration');
-        cumMeter = document.getElementById('cum');
-        spiritMeter = document.getElementById('spirit');
         beacons.init(update);
-        //meters.init();
         load();
     }
-
 
     module.exports = {
         init: init,
@@ -283,7 +179,7 @@
 
 }());
 
-},{"./beacons":1,"./meters":3,"./textWindow":5}],5:[function(require,module,exports){
+},{"./beacons":1,"./textWindow":4}],4:[function(require,module,exports){
 (function(){
 
     'use strict';

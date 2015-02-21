@@ -34,28 +34,27 @@ body {
     z-index: -1;
 
     -webkit-animation: play .2s infinite;
+    -moz-animation: play .2s infinite;
+    -ms-animation: play .2s infinite;
+    animation: play .2s infinite;
 }
 
 @-webkit-keyframes play {
-    0%, 100% {
-        
-        color: deeppink;
-    }
-
-
-    50% {
-        
-        color: black;
-    }
-
+    0%, 100% { color: deeppink; }
+    50% { color: black; }
 }
 
-.cum-bar, .spirit-bar {
-    display: block;
-    height: 5px;
-    background-color: red;
+@-moz-keyframes play {
+    0%, 100% { color: deeppink; }
+    50% { color: black; }
 }
 
-.spirit-bar {
-    background-color: blue;
+@-ms-keyframes play {
+    0%, 100% { color: deeppink; }
+    50% { color: black; }
+}
+
+@keyframes play {
+    0%, 100% { color: deeppink; }
+    50% { color: black; }
 }
