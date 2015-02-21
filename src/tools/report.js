@@ -10,7 +10,7 @@
     }
 
     function parse(file) {
-        var title, beacon, text, leadsTo, leadsToPath;
+        var title, beacon, text, leadsTo, leadsToPath, ending;
         file = JSON.parse(file);
         title = file.title;
         file = file.beacons;
@@ -18,7 +18,8 @@
         for (beacon in file) {
             text = file[beacon].text;
             leadsTo = file[beacon].leadsTo;
-            leadsToPath = process.cwd() + '/public/data/' + leadsTo + '.json';
+            ending = file[beacon].ending;
+            leadsToPath = 'public/data/' + leadsTo + '.json';
 
             if (emptyText(text)) {
                 console.log('missing text on "' + title + '" at "' + beacon + '"');
@@ -27,6 +28,11 @@
             if (leadsTo !== undefined && fs.existsSync(leadsToPath) === false) {
                 console.log('missing scene: ' + leadsTo);
             }
+
+            if (ending !== undefined) {
+                console.log('ending: ' + ending);
+            }
+
         }
     }
 

@@ -3,10 +3,9 @@
     'use strict';
 
     var beacons = require('./beacons'),
-        meters = require('./meters'),
         textWindow = require('./textWindow');
 
-    var scene, heading, body, illustration, quote, cumMeter, spiritMeter;
+    var scene, heading, body, illustration, quote;
 
 
     function updateScene() {
@@ -52,21 +51,8 @@
         quote.innerHTML = slogan;
     }
 
-    function updateMeters(cum, spirit) {
-        cum = cum || 0;
-        spirit = spirit || 0;
-
-        meters.update('cum', cum);
-        meters.update('spirit', spirit);
-
-        cumMeter.innerHTML = meters.get('cum');
-        spiritMeter.innerHTML = meters.get('spirit');
-    }
-
     function update(beaconName) {
         var content = scene.beacons[beaconName];
-
-        //updateMeters(content.cum, content.spirit);
 
         if (beaconName === 'description') {
             heading.innerHTML = scene.title;
@@ -77,12 +63,11 @@
             return;
         }
 
-        updateIllustration(content.image);
+        updateIllustration(content.ending);
         updateSlogan(content.slogan);
         updateContent(content.text);
 
         beacons.addEvents();
-
     }
 
     function init() {
@@ -90,13 +75,9 @@
         quote = document.getElementById('slogan');
         body = document.getElementById('scene-body');
         illustration = document.getElementById('illustration');
-        cumMeter = document.getElementById('cum');
-        spiritMeter = document.getElementById('spirit');
         beacons.init(update);
-        //meters.init();
         load();
     }
-
 
     module.exports = {
         init: init,
