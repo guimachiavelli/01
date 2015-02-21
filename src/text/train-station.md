@@ -110,9 +110,9 @@ love to suck!!!!!!!!!!!l!!
 let us Swarm like bees: disperse, love cum nectar, be everywhere and yet all of the hive and the sting, proletarian and homos. you kiss and work up a sweat, fall on the ground and roll to the middle of the tracks. ‘use my holes, i'll use your cock’, he says. you rough his hole, trying to cum before [[the train arrives]].
 
 ## the train arrives
-Not until the capitalist monster is destroyed will we get rid of the disease which exists in the Senate and all public offices; in the houses of the rich as well as in the miserable barracks of the poor. Mankind must become conscious of their strength and raging hard pricks dripping with cum, they must be free to commence a new homo life with so much sex their cocks will ache, but so much pleasure they will never ask for less. the boy clasps your hand as you climax and whispers in your ear: ‘cum to me, [[Neo-pervo-bakunian]]’.
+Not until the capitalist monster is destroyed will we get rid of the disease which exists in the Senate and all public offices; in the houses of the rich as well as in the miserable barracks of the poor. Mankind must become conscious of their strength and raging hard pricks dripping with cum, they must be free to commence a new homo life with so much sex their cocks will ache, but so much pleasure they will never ask for less. the boy clasps your hand as you climax and whispers in your ear: ‘cum to me, [[Neo pervo bakunian]]’.
 
-## Neo-pervo-bakunian
+## Neo pervo bakunian
 ### leads to
 orgone land
 
