@@ -70,7 +70,7 @@ SUB COCKCUSCKER SEEKING DOM
 ## fear
 ‘fear not, There are Few Greater Pleasures Than Two Men Simply Enjoying The Touch Of Each Other. let us stop living in an atmosphere of fear and Pump in the enthusiasm. does this [[sound inviting]] or do you [[need more convincing]]?’.
 
-## inviting
+## sound inviting
 ‘well then, GRAB ME BY MY HEAD........... AND PUSH YOUR COCK IN TO MY MOUTH, FUCK ME FACE, MAKE ME DROOL ON YOUR COCK AS YOU HOLD MY HEAD ON IT.’ you go to a nearby alley and he does precisely as told, and you are both sure that your own and other people's liberation depends solely on the immediate [[disintegration of everything]] that governs and administers this old world, and that is [[strangling us all]].
 
 ## disintegration of everything
