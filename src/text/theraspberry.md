@@ -87,7 +87,7 @@ the chants for the holy cock that echo in your mind fade. you melt into nothingn
 you have accustomed yourself to blood and violence. you scarcely smell the odor of the massacres, and every day something new and more incredible awaits you, giving away freedom for spectres that are in easy reach, spectres that come out from the studios of power., the spectres of god and the holy ghost.
 
 ### ending
-melt
+maimed
 
 ## tap your right foot
 soon enough, a filthy minded fucker start teasing his prick with one hand and stretches the other to grab yours. you take it slow, know what to do so to say. and know the best way of doing it.. he starts squeezing it really hard, ask for him to [[let go]] or [[continue]]?
@@ -106,9 +106,7 @@ you think you’re going to faint when someone enters the stall and approach the
 ## agree
 he continues until your revolutionary member is destroyed. you discover yourself becoming one of the demagogic shepherds of the hybrid bourgeois and proletarian flocks, become fetid, filthy, slimy pools. you have found your place within the triumphant mediocrity that dominates and commands.
 ### ending
-slimy pools
-### image
-slimy-pools.gif
+maimed
 
 ## own hole
 you slowly twist your cock and balls until you can put it in your own hole. the feeling is amazing and you see yourself transformed into a superhighway toward the Homo insurrection. the feeling is short lived, however.

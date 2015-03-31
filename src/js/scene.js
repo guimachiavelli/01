@@ -63,7 +63,7 @@
             return;
         }
 
-        updateIllustration(content.ending);
+        //updateIllustration(content.ending);
         updateSlogan(content.slogan);
         updateContent(content.text);
 

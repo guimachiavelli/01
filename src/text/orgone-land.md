@@ -110,6 +110,9 @@ the sexual frustration of the proletariat caused a thwarting of its political co
 ## CREATE A BEAUTIFUL SOCIAL TEMPEST
 you start the most beautiful mystical orgy, you GARGLE WITH STICKY HOT SEMEN of one thousand men, nay, brothers. in the middle of your ages-long fuck, you realise every man in the world gets a minute long glimpse of your hot love making. the revolutionary spirit will surely spread everywhere now, thanks to your inner orgone that will free the proletariat.
 
+### ending
+brothers
+
 ## the degeneration that makes its way inside you
 Day after day, your forehead recedes, your mouth becomes more sinister. Day after day, the stigmata of putrefaction are noticed under your yellowing skin.  Go on with your descent into the mud. You languish in hunger and hardships, you vegetate, bestially fertilizing wombs with a swarm of ragged, filthy, scrofulous, stunted brats. you are no longer a homo.
 ### ending
@@ -211,7 +214,7 @@ kundalini
 ## orgonejaculation
 torrents of sweet, bubblegum-like pink orgone comes out of your urethra and the amazing perfume of musty dick, ripe, funky dick, cock cheese and smegma. everyone around you come at the same time. 
 
-flowers blossom on where your cumorgone has fallen blood. and you see now, together with all your partners lovers brothers. you  are those who can turn on the light, know the power of the things they have created. you will come, and take possession,--no longer the wretched scum, but the masters of the world.
+flowers blossom on where your cumorgone has fallen blood. and you see now, together with all your partners lovers brothers. you  are those who can turn on the light, know the power of the things they have created. you will come, and remove possession, --no longer the wretched scum, but the free-loving brothers of the world.
 ### ending
 brothers
 
