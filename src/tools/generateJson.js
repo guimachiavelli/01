@@ -43,7 +43,7 @@
                 if (action === 'leadsTo') {
                     beacons[currentBeacon][action] = makeSlug(text[index + 1].text);
                 } else {
-                    beacons[currentBeacon][action] = text[index + 1].text;
+                    beacons[currentBeacon][action] = makeSlug(text[index + 1].text);
                 }
             }
 

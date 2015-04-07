@@ -16,6 +16,8 @@ What is written here is not necessarily a reflection of my personal views. This 
 
 The idea very clearly comes from Bruce LaBruce’s The Raspberry Reich/The Revolution Is my Boyfriend, crossed over with a very simplified version of Interactive Fiction stories.
 
+Illustrations by the extra fabulous Pinar&Viola.
+
 You can now [[start the story]] or watch some [[gay porn]].
 
 ## gay porn

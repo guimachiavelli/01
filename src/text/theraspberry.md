@@ -101,8 +101,6 @@ he grabs it harder, just pain, perhaps a few bruises soon, he yells: ‘Life is 
 ## not
 you think you’re going to faint when someone enters the stall and approach their lips to gather the perverse flower of love from your painful cock. the guy from the next stall looses his grip and your new lover [[takes you away]]. you feel helpless and both relaxed and in profound pain. you hope you can get it up after this. 
 
-
-
 ## agree
 he continues until your revolutionary member is destroyed. you discover yourself becoming one of the demagogic shepherds of the hybrid bourgeois and proletarian flocks, become fetid, filthy, slimy pools. you have found your place within the triumphant mediocrity that dominates and commands.
 ### ending
@@ -124,6 +122,8 @@ you wreak havoc and cum for one last time in your life. your member is destroyed
 
 ## defeat
 you have no place in homo universe. the end.
+### ending
+no-homo
 
 ## grey–blue luminous vapour
 ### leads to

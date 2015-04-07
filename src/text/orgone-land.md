@@ -31,7 +31,7 @@ WHERE There Is Nothing
 ## Hungry Ass Lickin Tongue is fundamental to the revolution
 Wherever your ass kisslicking leads you, we hope you will remember the Teaching of Ishomovara; that HOMO Spirit is DIVINE! join us in extreme homoeroticism and life-saving revolutionary poly-sex! the only thing left for us to do is to act against the real enemy: capitalist way of life, capitalist values, capitalist habits, capitalist indifference. you all embrace in a big orgy that lasts for weeks. you are now ready for the revolution.
 ### ending
-ready for the revolution
+ready 4 the revolution
 
 ## militant sacrifice and death instinct
 suddenly Aware of your preference for a passive (no power bottoms here hun) role of mere contemplation, the revolution is no more to you. you decide to get your revenge on those who have lived in the first person and acted directly. As voluntary servitude reaches over six billion, as social, technological and environmental catastrophe threatens the mere survival of humankind more every day, you decide to save your own sweet ass.
@@ -209,7 +209,7 @@ It is a snake, a symbol of the phallus as well as of primal biological motion, t
 
 once you’re finished, everything seems to dissolve around you. you feel orgone pulsating in your veins, you feel every man in the world that is taking cock and loving it. you are one with them all, the homo revolution is close.
 ### ending
-kundalini
+kundasslini
 
 ## orgonejaculation
 torrents of sweet, bubblegum-like pink orgone comes out of your urethra and the amazing perfume of musty dick, ripe, funky dick, cock cheese and smegma. everyone around you come at the same time. 
@@ -236,7 +236,7 @@ brothers
 ## open up a whole tantric vision for homo revvos
 Mystical homo Sex is sex elevated from the mundane onto a spiritual plane. Sexuality is actually the most intense of sensuous experiences because all the five senses are simultaneously involved in a sexual act. It is therefore the most direct experience to realise the power of the proletariat. in short, by taking Loads all night long, fucking nice and hard.having hot sweet load deep inside is the sure way to the revolution. you fire up the kaballah central pillar (ur cock) and get ready of show everyone your kundASSlini.
 ### ending
-kundalini
+kundasslini
 
 ## you both cum together
 ‘your orgasm changed the dimensions vibrationally so that negative events like capitalism and the exploitation of the proletariat do not happen. This is high level magic or the secret if you like that better. Quantum changes within the matrix occur when we project and maintain high energy fucks like the one we just had.’
@@ -253,4 +253,4 @@ future fuck
 ## you cum, but he doesn’t
 The real use of this mystical sex test was to make you strong enough to withstand the full blaze of the pain of reality, to give you the courage to see it without illusion and to give you the even greater courage to make your whole life a testimony to that raw creamy love that will begin the revolution. let us masturbate for the revolution.
 ### ending
-ready for the revolution
+ready 4 the revolution

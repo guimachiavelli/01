@@ -126,7 +126,7 @@
         illustration.className = 'illustration hidden';
 
         if (image) {
-            illustration.src = 'imgs/' + image;
+            illustration.src = 'imgs/' + image + '.jpg';
             illustration.className = 'illustration';
         }
     }
@@ -155,7 +155,7 @@
             return;
         }
 
-        //updateIllustration(content.ending);
+        updateIllustration(content.ending);
         updateSlogan(content.slogan);
         updateContent(content.text);
 

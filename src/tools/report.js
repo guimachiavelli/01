@@ -30,6 +30,7 @@
             }
 
             if (ending !== undefined) {
+                console.log(title);
                 console.log('ending: ' + ending);
             }
 

@@ -160,14 +160,26 @@ orgone land
 
 ## could he be right
 Together with a member of shameful humanity, a comrade in vengeance falls. Who was the pale youth who transformed his avenger’s claw in a A sad and tragic thing? all is over, you realise you are nothing but a CHEAP AND SECOND-RATE (and poorly appoined) HANDMAIDEN TO HETEROWORLD, A poor sister to the SUPERIOR STRAIGHTS.
+### ending
+servitude
 
 ## a good fuck
-he replies ’Looking to please a smooth round firm bubblebutt. I SMOKE SOME 420 and you smoke my pole. whaddya think?’ you engage in some hot open air sex, blowing him and blowing smoke, both with your mancunt and  your mouth. it is delightful, but state repression arrives in the form of smoking police officers. do you [[make holy kake proud]] of you? or do you continue your [[1on1 sex rampage]]?
+he replies ’Looking to please a smooth round firm bubblebutt. I SMOKE SOME 420 and you smoke my pole. whaddya think?’ you engage in some hot open air sex, blowing him and blowing smoke, both with your mancunt and  your mouth. it is delightful, but state repression arrives in the form of smoking hot police officers. do you [[make holy kake proud]] of you? or do you continue your [[1on1 sex rampage]]?
 
 ## make holy kake proud
 you run to the cops and drop to our knees and start to sniff at the men’s crotches until they were full, bouncing with blood. you run the tip of your tongue up the underside of their shafts, lingering for a moment of their piss slits to fight to the repugnant and tyrannical authority. teeming with life power, you feel an energy overflowing form your cock whilst cum oozes from your sweat, eyes, mouth and every orifice. with a final whisper of ‘beautiful thick cock, amazing loads’, you explode in an orgone vortex. 
 
 this is the end for you, but you know this is the real start of the sexxxxyyyyy sensual touch hot revolution.
+
+### ending
+ready 4 the revolution
+
+## 1on1 sex rampage
+your lips gather on a perverse flower of love from your painful cock. one has the right to follow that love without let or hindrance from the outside world! anarchism is a conspicuous protest of the most militant type. as you continue your beautiful love making, your raw sex energy catapults you both to a a mysterious place. you don’t care, [[you have a cock in your mouth and it ain’t gonna suck itself]].
+
+## you have a cock in your mouth and it ain’t gonna suck itself
+### leads to
+orgone land
 
 ## given entrance
 ### leads to

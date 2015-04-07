@@ -12,7 +12,7 @@
             "text": [
                 "this isnt a beauty contest but you do wanna be turned on by the revolution. stubborn solitude is fed by what it opposes; hence, this is about fun, about being seriously horny and wanting to fuck. you want to find your warrior and drink all the brotherly cum he has to offer. who shall it be: [[the one with the obvsly small tool]], a [[couple of realtors]] (one has a sweet ass) or the [[kinky synidicalist]]?"
             ],
-            "slogan": "I suck cockc"
+            "slogan": "i-suck-cockc"
         },
         "the one with the obvsly small tool": {
             "text": [
@@ -53,7 +53,7 @@
             "text": [
                 "he becomes your urinal of free love and you see he likes it. he too was destined to be transformed into a humble tool of bestial slavery; but he has the makings of a revolutionary slut. A [[salute]] to you, oh anarchist of the dick!"
             ],
-            "slogan": "Anarchist of the Dick"
+            "slogan": "anarchist-of-the-dick"
         },
         "salute": {
             "text": [
@@ -78,7 +78,7 @@
             "text": [
                 "as you’re about to ask, he takes you by the cock to the end of the alley. it is dark and it is as if everything has taken a blue tint. you both continue walking into darkness leaving a trail of sperm until [[you cannot see a thing]]."
             ],
-            "slogan": "Siddhartha of a Thousand Cums"
+            "slogan": "siddhartha-of-a-thousand-cums"
         },
         "you cannot see a thing": {
             "text": [],
@@ -88,7 +88,7 @@
             "text": [
                 "Twenty-two months have passed since the day you rejected  the warrior of cum, as the most brutal and slimiest of all monsters, you are destined to be transformed into a humble tool of bestial slavery, a sacrifice on the altar for the stupidest, most grotesque of all human phantasms."
             ],
-            "slogan": "SUB COCKCUSCKER SEEKING DOM"
+            "slogan": "sub-cockcuscker-seeking-dom"
         },
         "fear": {
             "text": [
@@ -119,7 +119,7 @@
             "text": [
                 "‘brothers!’ you scream whilst nice juicy cum drops from your hands ‘We must put an end to the morality of account books, to the philosophy of credit and debit. We are a gaze, a trace left on a wall, the aftertaste of a lovers kiss. Our love is not like the love that breeds the herd; it [[breeds freedom]] and right as great as the capacity of our potential! CUM FUCK MY BEEFY ASS!’"
             ],
-            "slogan": "CUM TO ME WARRIOR OF CUM"
+            "slogan": "cum-to-me-warrior-of-cum"
         },
         "breeds freedom": {
             "text": [
@@ -144,7 +144,7 @@
             "text": [
                 "Nice person looking to meet same,  Just looking for a little fun, cos The moral world is a world of phantoms, of the spectres of ignorance, fear and cowardice. let us be [[children of the future]], fallen into this world by Chance."
             ],
-            "slogan": "love to suck!!!!!!!!!!!l!!"
+            "slogan": "love-to-suckl"
         },
         "children of the future": {
             "text": [
@@ -225,18 +225,29 @@
         "could he be right": {
             "text": [
                 "Together with a member of shameful humanity, a comrade in vengeance falls. Who was the pale youth who transformed his avenger’s claw in a A sad and tragic thing? all is over, you realise you are nothing but a CHEAP AND SECOND-RATE (and poorly appoined) HANDMAIDEN TO HETEROWORLD, A poor sister to the SUPERIOR STRAIGHTS."
-            ]
+            ],
+            "ending": "servitude"
         },
         "a good fuck": {
             "text": [
-                "he replies ’Looking to please a smooth round firm bubblebutt. I SMOKE SOME 420 and you smoke my pole. whaddya think?’ you engage in some hot open air sex, blowing him and blowing smoke, both with your mancunt and  your mouth. it is delightful, but state repression arrives in the form of smoking police officers. do you [[make holy kake proud]] of you? or do you continue your [[1on1 sex rampage]]?"
+                "he replies ’Looking to please a smooth round firm bubblebutt. I SMOKE SOME 420 and you smoke my pole. whaddya think?’ you engage in some hot open air sex, blowing him and blowing smoke, both with your mancunt and  your mouth. it is delightful, but state repression arrives in the form of smoking hot police officers. do you [[make holy kake proud]] of you? or do you continue your [[1on1 sex rampage]]?"
             ]
         },
         "make holy kake proud": {
             "text": [
                 "you run to the cops and drop to our knees and start to sniff at the men’s crotches until they were full, bouncing with blood. you run the tip of your tongue up the underside of their shafts, lingering for a moment of their piss slits to fight to the repugnant and tyrannical authority. teeming with life power, you feel an energy overflowing form your cock whilst cum oozes from your sweat, eyes, mouth and every orifice. with a final whisper of ‘beautiful thick cock, amazing loads’, you explode in an orgone vortex. ",
                 "this is the end for you, but you know this is the real start of the sexxxxyyyyy sensual touch hot revolution."
+            ],
+            "ending": "ready-4-the-revolution"
+        },
+        "1on1 sex rampage": {
+            "text": [
+                "your lips gather on a perverse flower of love from your painful cock. one has the right to follow that love without let or hindrance from the outside world! anarchism is a conspicuous protest of the most militant type. as you continue your beautiful love making, your raw sex energy catapults you both to a a mysterious place. you don’t care, [[you have a cock in your mouth and it ain’t gonna suck itself]]."
             ]
+        },
+        "you have a cock in your mouth and it ain’t gonna suck itself": {
+            "text": [],
+            "leadsTo": "orgone-land"
         },
         "given entrance": {
             "text": [],
