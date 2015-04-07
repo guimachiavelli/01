@@ -71,7 +71,7 @@
             "text": [
                 "getting up, you decide you should enlighten these hot arsed men ‘You're not your job. You're not how much money you have in the bank. You're not the car you drive. You're not the contents of your wallet. You're not your fucking khakis. You're the all-singing, all-dancing crap of the world.’ they ignore you and disperse. you still have [[something written on your sore ass]]."
             ],
-            "slogan": "You're the all-singing, all-dancing crap of the world."
+            "slogan": "youre-the-allsinging-alldancing-crap-of-the-world"
         },
         "something written on your sore ass": {
             "text": [
@@ -182,7 +182,8 @@
         "defeat": {
             "text": [
                 "you have no place in homo universe. the end."
-            ]
+            ],
+            "ending": "nohomo"
         },
         "grey–blue luminous vapour": {
             "text": [],
