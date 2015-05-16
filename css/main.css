@@ -24,7 +24,7 @@ body {
 }
 
 
-@media (min-width: 480px) {
+@media (min-width: 650px) {
     .illustration {
         float: left;
         max-width: calc(100% - 400px);
