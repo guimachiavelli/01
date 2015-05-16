@@ -5,6 +5,10 @@ This is an interactive story about a young man trying to join an anarcha-queer r
 
 You can [[start the story]], read more [[about the project]] or watch some [[gay porn]].
 
+### ending
+intro
+
+
 ## start the story
 ### leads to
 apartment room
