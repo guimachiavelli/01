@@ -20,7 +20,7 @@ What is written here is not necessarily a reflection of my personal views. This 
 
 The idea very clearly comes from Bruce LaBruce’s The Raspberry Reich/The Revolution Is my Boyfriend, crossed over with a very simplified version of Interactive Fiction stories.
 
-Illustrations by the extra fabulous <a href="http://pinar-viola.com">P&V</a>, based on material gathered from deviant art artists: <a href="http://gdboone.deviantart.com/">GDBoone</a>, <a href="http://aniwayalone.deviantart.com/">aniwayalone</a>, <a href="http://flinog.deviantart.com/">flinog</a>, <a href="http://jmariuskl.deviantart.com/">jmariuskl</a>, <a href="http://ehrlik.deviantart.com/">ehrlik</a> and <a href="http://marinaibiza.deviantart.com/">marinaibiza</a>.
+Illustrations by the extra fabulous <a rel="nofollow" href="http://pinar-viola.com">P&V</a>, based on material gathered from deviant art artists: <a href="http://gdboone.deviantart.com/">GDBoone</a>, <a href="http://aniwayalone.deviantart.com/">aniwayalone</a>, <a href="http://flinog.deviantart.com/">flinog</a>, <a href="http://jmariuskl.deviantart.com/">jmariuskl</a>, <a href="http://ehrlik.deviantart.com/">ehrlik</a> and <a href="http://marinaibiza.deviantart.com/">marinaibiza</a>.
 
 You can now [[start the story]] or watch some [[gay porn]].
 
