@@ -36,7 +36,7 @@ ready 4 the revolution
 ## militant sacrifice and death instinct
 suddenly Aware of your preference for a passive (no power bottoms here hun) role of mere contemplation, the revolution is no more to you. you decide to get your revenge on those who have lived in the first person and acted directly. As voluntary servitude reaches over six billion, as social, technological and environmental catastrophe threatens the mere survival of humankind more every day, you decide to save your own sweet ass.
 ### ending
-save your sweet ass
+save ur sweet ass
 
 ## our collective love for cock will save
 ‘I would like to have great iron buttocks, and to put them about the poles of all men, and to push and push till everything got inside. . . . Sometimes I dream I am pushing my own house inside my anus, and sometimes it is the whole authoritarian world that is entering. . . . When everything was inside we would have [[more room]] to get drunk in, to drink contentedly out of the cup of life, out of the [[drunken cup of jizz]].’
@@ -177,7 +177,7 @@ straining your mind as much as you can, you manage to manipulate enough orgone t
 you use your Strong Hands and give him a Deep Healing Massage that evolves into a deep tissue (prostate) massage. Big cock loaded balls... a top. A kisser. a fine example of the proletariat, but all bodies are, all brave men are. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
 
 ## suck
-you work on his bulge and give him a fully nudebody suck… from head to toe. you savour every bit of his musky libertarian frame. blind with pleasure, he recites ‘fields, factories and workshops’. for the grand finale do you [[piss in his mouth]], [[quantum change his cock]] or [[open up a whole tantric vision for homo revvos]]?
+you work on his bulge and give him a fully nudebody suck… from head to toe. you savour every bit of his musky libertarian frame. blind with pleasure, he recites ‘fields, factories and workshops’. for the grand finale do you [[piss in his mouth]], [[quantum change your cock]] or [[open up a whole tantric vision for homo revvos]]?
 
 ## rim
 It’s super effective! the guy starts yelling “simply imagine the skies clear, blowing air out of your mouth with gold energy will help accelerate the process. You have more power than you realize. The radionic enhancement with bio-resonance comes from my balls, from your balls, from everyone’s balls”. [[tongue power]], [[orgonejaculation]] or [[ride his cock]]?
